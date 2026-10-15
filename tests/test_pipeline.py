@@ -245,3 +245,23 @@ def test_browser_only_add_without_audio_tools(tmp_path, monkeypatch):
     (docs / 'assets/browser-song/melody.mp3').write_text('stale')
     add(BAEUME, 'browser-song', docs, audio=False)
     assert not (docs / 'assets/browser-song/melody.mp3').exists()
+
+
+def test_schwalbennest_photo_pickup_and_refrain():
+    song = load_song(EXAMPLE.parent / 'die-kuh-die-sass-im-schwalbennest.musicxml')
+    measures = list(song.score.parts[0].getElementsByClass(stream.Measure))
+    assert len(measures) == 17  # Auftakt, zwölf Takte, vier wiederholte Takte.
+    assert measures[0].duration.quarterLength == .5
+    assert all(m.duration.quarterLength == 2 for m in measures[1:])
+    assert song.score.highestTime == 32.5
+    assert len(song.score.recurse().notes) == 54
+    assert [n.nameWithOctave for n in measures[4].notes] == ['G4', 'G4', 'G4']
+    assert [n.quarterLength for n in measures[4].notes] == [1, .5, .5]
+    assert measures[8].notesAndRests[-1].isRest
+    assert measures[8].notesAndRests[-1].quarterLength == .5
+    for refrain in (measures[9:13], measures[13:17]):
+        assert [n.nameWithOctave for n in refrain[0].notes] == ['D5', 'E5']
+        assert [n.nameWithOctave for n in refrain[1].notes] == ['D5', 'D5', 'B4', 'G4']
+        assert [n.quarterLength for n in refrain[1].notes] == [.75, .25, .5, .5]
+        assert [n.nameWithOctave for n in refrain[3].notes] == ['G4', 'G4']
+        assert [n.quarterLength for n in refrain[3].notes] == [1, 1]

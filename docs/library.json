@@ -1,5 +1,23 @@
 [
   {
+    "title": "Die Kuh, die saß im Schwalbennest",
+    "source": "Aus MusicXML importiert",
+    "bpm": 104.0,
+    "instrument": "clarinet",
+    "duration_seconds": 18.75,
+    "score_duration_seconds": 18.75,
+    "quarters": 32.5,
+    "note_count": 54,
+    "transpose": 0,
+    "files": {
+      "midi": "assets/die-kuh-die-sass-im-schwalbennest/melody.mid",
+      "musicxml": "assets/die-kuh-die-sass-im-schwalbennest/score.musicxml",
+      "csv": "assets/die-kuh-die-sass-im-schwalbennest/notes.csv",
+      "playback": "assets/die-kuh-die-sass-im-schwalbennest/playback.json"
+    },
+    "slug": "die-kuh-die-sass-im-schwalbennest"
+  },
+  {
     "title": "Schlaf, Kindlein, schlaf",
     "source": "Im Codex-Chat korrigierte Notenfolge, ohne Liedtext oder Buchfoto",
     "bpm": 104.0,
