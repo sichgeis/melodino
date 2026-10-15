@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "title": "Viel Glück und viel Segen",
+  "bpm": 104.0,
+  "quarters": 48.0,
+  "notes": [
+    {
+      "at": 0.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 1.0,
+      "duration": 1.0,
+      "midi": 74
+    },
+    {
+      "at": 2.0,
+      "duration": 1.0,
+      "midi": 73
+    },
+    {
+      "at": 3.0,
+      "duration": 0.5,
+      "midi": 71
+    },
+    {
+      "at": 3.5,
+      "duration": 0.5,
+      "midi": 73
+    },
+    {
+      "at": 4.0,
+      "duration": 1.0,
+      "midi": 74
+    },
+    {
+      "at": 5.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 6.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 7.0,
+      "duration": 1.0,
+      "midi": 71
+    },
+    {
+      "at": 8.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 9.0,
+      "duration": 1.0,
+      "midi": 67
+    },
+    {
+      "at": 10.0,
+      "duration": 1.0,
+      "midi": 66
+    },
+    {
+      "at": 11.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 12.0,
+      "duration": 1.0,
+      "midi": 66
+    },
+    {
+      "at": 13.0,
+      "duration": 1.0,
+      "midi": 67
+    },
+    {
+      "at": 14.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 15.0,
+      "duration": 0.5,
+      "midi": 71
+    },
+    {
+      "at": 15.5,
+      "duration": 0.5,
+      "midi": 69
+    },
+    {
+      "at": 16.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 17.0,
+      "duration": 1.0,
+      "midi": 66
+    },
+    {
+      "at": 18.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 19.0,
+      "duration": 0.5,
+      "midi": 67
+    },
+    {
+      "at": 19.5,
+      "duration": 0.5,
+      "midi": 66
+    },
+    {
+      "at": 20.0,
+      "duration": 1.0,
+      "midi": 64
+    },
+    {
+      "at": 21.0,
+      "duration": 1.0,
+      "midi": 64
+    },
+    {
+      "at": 22.0,
+      "duration": 2.0,
+      "midi": 62
+    },
+    {
+      "at": 24.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 25.0,
+      "duration": 1.0,
+      "midi": 74
+    },
+    {
+      "at": 26.0,
+      "duration": 1.0,
+      "midi": 73
+    },
+    {
+      "at": 27.0,
+      "duration": 0.5,
+      "midi": 71
+    },
+    {
+      "at": 27.5,
+      "duration": 0.5,
+      "midi": 73
+    },
+    {
+      "at": 28.0,
+      "duration": 1.0,
+      "midi": 74
+    },
+    {
+      "at": 29.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 30.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 31.0,
+      "duration": 1.0,
+      "midi": 71
+    },
+    {
+      "at": 32.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 33.0,
+      "duration": 1.0,
+      "midi": 67
+    },
+    {
+      "at": 34.0,
+      "duration": 1.0,
+      "midi": 66
+    },
+    {
+      "at": 35.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 36.0,
+      "duration": 1.0,
+      "midi": 66
+    },
+    {
+      "at": 37.0,
+      "duration": 1.0,
+      "midi": 67
+    },
+    {
+      "at": 38.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 39.0,
+      "duration": 0.5,
+      "midi": 71
+    },
+    {
+      "at": 39.5,
+      "duration": 0.5,
+      "midi": 69
+    },
+    {
+      "at": 40.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 41.0,
+      "duration": 1.0,
+      "midi": 66
+    },
+    {
+      "at": 42.0,
+      "duration": 1.0,
+      "midi": 69
+    },
+    {
+      "at": 43.0,
+      "duration": 0.5,
+      "midi": 67
+    },
+    {
+      "at": 43.5,
+      "duration": 0.5,
+      "midi": 66
+    },
+    {
+      "at": 44.0,
+      "duration": 1.0,
+      "midi": 64
+    },
+    {
+      "at": 45.0,
+      "duration": 1.0,
+      "midi": 64
+    },
+    {
+      "at": 46.0,
+      "duration": 2.0,
+      "midi": 62
+    }
+  ]
+}

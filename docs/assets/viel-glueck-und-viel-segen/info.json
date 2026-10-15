@@ -1,0 +1,19 @@
+{
+  "title": "Viel Glück und viel Segen",
+  "source": "Aus MusicXML importiert",
+  "bpm": 104.0,
+  "instrument": "clarinet",
+  "duration_seconds": 27.692307692307693,
+  "score_duration_seconds": 27.692307692307693,
+  "quarters": 48.0,
+  "note_count": 52,
+  "transpose": 0,
+  "measure_quarters": 3.0,
+  "verse_gap_bars": 1,
+  "files": {
+    "midi": "melody.mid",
+    "musicxml": "score.musicxml",
+    "csv": "notes.csv",
+    "playback": "playback.json"
+  }
+}

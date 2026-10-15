@@ -280,3 +280,38 @@ def test_verse_gap_metadata_keeps_notation_unchanged(tmp_path):
     for invalid in (-1, 3, True, float('nan')):
         with pytest.raises(ValueError):
             render(source, tmp_path / 'invalid', audio=False, verse_gap_bars=invalid)
+
+
+def test_viel_glueck_photo_repeat_and_pickup(tmp_path):
+    source = EXAMPLE.parent / 'viel-glueck-und-viel-segen.musicxml'
+    score = load_song(source).score
+    bars = list(score.parts[0].getElementsByClass(stream.Measure))
+    expected = [
+        [('A4', 1)],
+        [('D5', 1), ('C#5', 1), ('B4', .5), ('C#5', .5)],
+        [('D5', 1), ('A4', 1), ('A4', 1)],
+        [('B4', 1), ('A4', 1), ('G4', 1)],
+        [('F#4', 1), ('A4', 1), ('F#4', 1)],
+        [('G4', 1), ('A4', 1), ('B4', .5), ('A4', .5)],
+        [('A4', 1), ('F#4', 1), ('A4', 1)],
+        [('G4', .5), ('F#4', .5), ('E4', 1), ('E4', 1)],
+        [('D4', 2)],
+    ]
+    assert len(bars) == 18
+    assert score.highestTime == 48
+    assert not list(score.recurse().getElementsByClass(note.Rest))
+    assert bars[0].keySignature.sharps == 2
+    assert bars[0].timeSignature.ratioString == '3/4'
+    for actual, wanted in zip(bars, expected * 2):
+        assert [(n.nameWithOctave, n.quarterLength) for n in actual.notes] == wanted
+    info = render(source, tmp_path, bpm=104, voice='clarinet', audio=False, verse_gap_bars=1)
+    assert info['measure_quarters'] == 3
+    assert info['quarters'] == 48
+    assert info['note_count'] == 52
+    playback = json.loads((tmp_path / 'playback.json').read_text())
+    original = events(score, True)
+    assert playback['notes'] == [dict(at=o, duration=d, midi=p) for o, d, p, _, _ in original]
+    for actual, wanted in zip(midi_events(tmp_path / 'melody.mid'), original):
+        assert actual == pytest.approx((wanted[0], wanted[2], wanted[1]), abs=.002)
+    exported = load_song(tmp_path / 'score.musicxml').score
+    assert events(exported, True) == original
