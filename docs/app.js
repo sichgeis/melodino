@@ -1,4 +1,4 @@
-import {player} from './player.js?v=20261015-ios-audio';
+import {player} from './player.js?v=20261015-verse-gap';
 import {instruments} from './score-clock.js';
 const root = document.querySelector('#songs');
 const status = document.querySelector('#status');
@@ -15,6 +15,9 @@ function validate(song) {
       typeof song.title !== 'string' || !['bell', 'clarinet'].includes(song.instrument) ||
       !Number.isFinite(song.bpm) || song.bpm <= 0 || !Number.isFinite(song.quarters) ||
       song.quarters <= 0 || !song.files?.playback) throw Error('Ungültiger Liedeintrag.');
+  if (song.verse_gap_bars !== undefined && ![0, 1, 2].includes(song.verse_gap_bars)) throw Error('Ungültige Strophenpause.');
+  if (song.measure_quarters !== undefined && (!Number.isFinite(song.measure_quarters) || song.measure_quarters <= 0 || song.measure_quarters > 64)) throw Error('Ungültige Taktlänge.');
+  if (song.verse_gap_bars > 0 && song.measure_quarters === undefined) throw Error('Taktlänge fehlt.');
   for (const [kind, path] of Object.entries(song.files)) {
     if (!Object.hasOwn(filenames, kind) || path !== `assets/${song.slug}/${filenames[kind]}`) throw Error('Ungültiger Dateiverweis.');
   }
@@ -46,8 +49,11 @@ function card(song) {
   const instrument = selectField('Instrument', Object.entries(instruments).map(([id, i]) => [id, i.name]));
   instrument.select.value = song.instrument === 'bell' ? 'glockenspiel' : 'clarinet';
   const verses = selectField('Strophen', [['1', '1 Strophe'], ['2', '2 Strophen'], ['3', '3 Strophen'], ['4', '4 Strophen'], ['infinite', 'Endlos ↻']]);
+  const gap = selectField('Strophenpause', [['0', 'keine'], ['1', '1 Takt'], ['2', '2 Takte']]);
+  gap.select.value = String(song.verse_gap_bars ?? 0);
+  gap.select.disabled = !song.measure_quarters;
   const fields = element('div', 'player-fields');
-  fields.append(instrument.wrapper, verses.wrapper);
+  fields.append(instrument.wrapper, verses.wrapper, gap.wrapper);
   const tempoLabel = element('label', 'tempo-label');
   const bpm = element('input');
   bpm.type = 'range'; bpm.min = '40'; bpm.max = '200'; bpm.step = '1';
@@ -90,9 +96,11 @@ function card(song) {
   progress.max = song.quarters;
   progress.value = 0;
   progress.setAttribute('aria-label', 'Fortschritt der Strophe');
-  let state = 'idle', verse = 1;
+  let state = 'idle', verse = 1, inGap = false;
   function display(update) {
     state = update.state;
+    if (update.inGap !== undefined) inGap = update.inGap;
+    if (['idle', 'finished', 'loading'].includes(state)) inGap = false;
     article.dataset.state = state;
     if (update.verse) verse = update.verse;
     if (update.quarter !== undefined) progress.value = update.quarter;
@@ -102,7 +110,7 @@ function card(song) {
     play.disabled = state === 'loading';
     stop.disabled = ['idle', 'error'].includes(state);
     message.classList.toggle('error', state === 'error');
-    const text = update.message || {idle: 'Bereit zum Mitsingen.', loading: 'Klang wird einmalig geladen …', playing: 'Die Melodie spielt.', paused: 'Pausiert.', finished: 'Fertig gesungen.', error: 'Der Klang konnte nicht geladen werden.'}[state];
+    const text = update.message || {idle: 'Bereit zum Mitsingen.', loading: 'Klang wird einmalig geladen …', playing: inGap ? 'Strophenpause · Zeit zum Atmen.' : 'Die Melodie spielt.', paused: 'Pausiert.', finished: 'Fertig gesungen.', error: 'Der Klang konnte nicht geladen werden.'}[state];
     if (message.textContent !== text) message.textContent = text;
     position.textContent = ['playing', 'paused', 'finished'].includes(state)
       ? `Strophe ${verse}${verses.select.value === 'infinite' ? ' · endlos' : ` von ${verses.select.value}`}` : '';
@@ -111,10 +119,10 @@ function card(song) {
     if (state === 'playing') player.pause(article);
     else if (state === 'paused') player.resume(article);
     else player.start(article, {url: song.files.playback, instrument: instrument.select.value,
-      bpm: Number(bpm.value), verses: verses.select.value === 'infinite' ? Infinity : Number(verses.select.value)}, display);
+      gapQuarters: Number(gap.select.value) * (song.measure_quarters ?? 0), bpm: Number(bpm.value), verses: verses.select.value === 'infinite' ? Infinity : Number(verses.select.value)}, display);
   });
   stop.addEventListener('click', () => player.stop(article));
-  for (const select of [instrument.select, verses.select]) select.addEventListener('change', () => player.stop(article));
+  for (const select of [instrument.select, verses.select, gap.select]) select.addEventListener('change', () => player.stop(article));
   const details = element('details', 'download-section');
   details.append(element('summary', '', 'Downloads & Aufnahme'));
   const downloads = element('div', 'downloads');
@@ -127,7 +135,7 @@ function card(song) {
   }
   details.append(downloads);
   if (song.files.wav || song.files.mp3) {
-    details.append(element('p', 'recording-note', 'Die Aufnahme enthält das ursprüngliche Instrument und Tempo. Für nahtlose Strophen den Instrumentenplayer oben verwenden.'));
+    details.append(element('p', 'recording-note', 'Die Aufnahme enthält das ursprüngliche Instrument und Tempo. Für mehrere Strophen den Instrumentenplayer oben verwenden.'));
     const audio = element('audio'); audio.controls = true; audio.preload = 'none';
     audio.setAttribute('aria-label', `Aufnahme: ${song.title}`);
     for (const [kind, type] of [['mp3', 'audio/mpeg'], ['wav', 'audio/wav']]) {

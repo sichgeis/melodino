@@ -31,6 +31,16 @@ dass der Chat etwas ausgeführt oder veröffentlicht hat; den konkreten Zugang n
 - Jeden Takt nachzählen. Auftakte, Mehrstimmigkeit und Bindungen in MusicXML ausdrücken.
 - Übertragung und musikalische Gestaltung getrennt behandeln: zuerst bestätigte Noten,
   danach Tempo, Instrument und ausdrücklich gewünschte Transposition wählen.
+- Für jedes neue Lied die Strophenpause als Wiedergabegestaltung beurteilen und
+  mit `--verse-gap-bars 0|1|2` ausdrücklich speichern. Arbeitsstandard für Mitsingen:
+  1 Takt, wenn kein ausreichender Atemraum erkennbar ist. Bei bereits vorhandenen
+  Schlusspausen oder bewusst nahtlosem Anschluss 0; 2 nur bei begründetem Bedarf.
+  Auftakt allein begründet keine Pause. Schlussdauer, notierte Pausen und Anschluss
+  zum nächsten Auftakt prüfen, mindestens zwei Strophen im Browser durchspielen.
+  Entscheidung kurz begründen; für diesen Gestaltungsvorschlag keine Rückfrage nötig.
+  Unsichere Noten weiterhin klären. Keine Pausen in die bestätigte Partitur erfinden:
+  Metadaten `measure_quarters`/`verse_gap_bars` steuern nur den Browser. Bei wechselnder
+  Taktart den letzten Takt verwenden. Auswahl im Player bleibt veränderbar.
 - Keine Begleitung, keinen Gesang und keine zusätzlichen Töne erfinden.
 - JSON für einfache einstimmige Melodien, Wiederholungen ausdrücklich ausschreiben.
   Dauer in Vierteln; B-4 = deutsches B (B♭), B4 = H, rest = Pause.

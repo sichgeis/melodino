@@ -265,3 +265,18 @@ def test_schwalbennest_photo_pickup_and_refrain():
         assert [n.quarterLength for n in refrain[1].notes] == [.75, .25, .5, .5]
         assert [n.nameWithOctave for n in refrain[3].notes] == ['G4', 'G4']
         assert [n.quarterLength for n in refrain[3].notes] == [1, 1]
+
+
+def test_verse_gap_metadata_keeps_notation_unchanged(tmp_path):
+    from notenstimme.core import render
+    source = Path('examples/was-muessen-das-fuer-baeume-sein.musicxml')
+    first = render(source, tmp_path / 'first', audio=False, verse_gap_bars=0)
+    second = render(source, tmp_path / 'second', audio=False, verse_gap_bars=1)
+    assert first['measure_quarters'] == second['measure_quarters'] == 2
+    assert first['verse_gap_bars'] == 0
+    assert second['verse_gap_bars'] == 1
+    assert (tmp_path / 'first/playback.json').read_bytes() == (tmp_path / 'second/playback.json').read_bytes()
+    assert second['quarters'] == 36
+    for invalid in (-1, 3, True, float('nan')):
+        with pytest.raises(ValueError):
+            render(source, tmp_path / 'invalid', audio=False, verse_gap_bars=invalid)

@@ -16,5 +16,7 @@
     "mp3": "melody.mp3",
     "playback": "playback.json"
   },
-  "soundfont": "FluidR3_GM.sf2"
+  "soundfont": "FluidR3_GM.sf2",
+  "measure_quarters": 4.0,
+  "verse_gap_bars": 0
 }

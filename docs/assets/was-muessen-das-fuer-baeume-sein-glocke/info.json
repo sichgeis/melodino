@@ -15,5 +15,7 @@
     "csv": "notes.csv",
     "mp3": "melody.mp3",
     "playback": "playback.json"
-  }
+  },
+  "measure_quarters": 2.0,
+  "verse_gap_bars": 1
 }

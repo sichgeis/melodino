@@ -7,7 +7,7 @@ Ein hochgeladenes Notenfoto beauftragt auch die Veröffentlichung nach erfolgrei
 ohne weitere Freigaberückfrage, sofern du nichts anderes dazusagst.
 Die statische Seite spielt die Melodie mit Instrumenten-Samples direkt im Browser, ihr singt dazu.
 Wählt Klarinette, Glockenspiel, Klavier oder Flöte und 1–4 Strophen oder endlose Wiederholung.
-Die nächste Strophe beginnt im Takt, ohne die Ausklingpause einer Audiodatei abzuwarten.
+Zwischen Strophen wählt ihr keine Pause, einen oder zwei Takte Atemzeit.
 
 - [Abspielseite](https://sichgeis.github.io/melodino/)
 - [Spezifikation](specs/001-melodino.md) · [Anleitung für Codex](AGENTS.md)
@@ -143,7 +143,7 @@ JSON-Vorzeichen werden explizit am Ton angegeben; `key` ergänzt keine implizite
 Der Browser lädt die Noten aus playback.json und spielt MIDI-Note-On/Off-Ereignisse
 mit SpessaSynth Core 4.3.22 und originalen FluidR3-GM-Samples. Ein kleiner AudioWorklet-
 Sequenzer plant die Noten auf absoluten Samplepositionen; kein JavaScript-Timer startet
-Strophen neu. Auch Auftakt und verkürzter Schluss werden ohne zusätzliche Pause wiederholt.
+Strophen neu. Auftakt und verkürzter Schluss bleiben erhalten; die wählbare Strophenpause kommt nur zwischen Durchgängen hinzu.
 Klänge dürfen über die Strophengrenze ausklingen. Details: specs/003-browser-player.md.
 
 Instrumente ändern keine Tonhöhen. Tempo: 40–200 Viertel/Minute, auch während der
@@ -260,3 +260,14 @@ Danach https://sichgeis.github.io/melodino/, die Browser-Wiedergabe und Notendat
 bei Audioexporten zusätzlich den direkten MP3-Link.
 Alle Ressourcenpfade sind relativ und funktionieren unter `/melodino/`.
 Keine Secrets ins Repository schreiben; Zugang über vorhandene GitHub-Anmeldung.
+
+### Strophenpause zum Mitsingen
+
+Pro Lied: keine / 1 Takt / 2 Takte. Die Pause folgt dem Schluss vor dem nächsten
+Auftakt, zählt im aktuellen Tempo und entfällt nach der letzten Strophe. Ausklingende
+Klänge bleiben hörbar. Änderungen setzen die Wiedergabe zurück. „Bäume“ startet mit
+einem Takt; die anderen bestehenden Fassungen behalten zunächst keine Zusatzpause.
+Neue Exporte verwenden `--verse-gap-bars 1` als Arbeitsstandard; nach Prüfung des
+Schlusses ausdrücklich 0, 1 oder 2 wählen (AGENTS.md). Kein allgemeines musikalisches
+Gesetz: bereits notierte Atempausen berücksichtigen. Einzelaufnahmen und Noten ändern
+sich dadurch nicht. Die CLI speichert den Vorschlag in info.json und im Katalog.

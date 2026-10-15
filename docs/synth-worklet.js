@@ -20,7 +20,7 @@ class MelodinoSynth extends AudioWorkletProcessor {
           this.ready = true;
         } else if (data.type === 'load') {
           if (!this.ready) throw Error('Instrument noch nicht geladen.');
-          this.clock.load(data.score, data.instrument, data.bpm, data.verses);
+          this.clock.load(data.score, data.instrument, data.bpm, data.verses, data.gapQuarters);
           this.reportFrame = 0;
         } else if (data.type === 'play') this.clock.play();
         else if (data.type === 'pause') this.clock.pause();
@@ -39,8 +39,9 @@ class MelodinoSynth extends AudioWorkletProcessor {
     this.clock.render(left, right);
     if (this.clock.state === 'playing' && this.clock.frame >= this.reportFrame) {
       this.reportFrame = this.clock.frame + sampleRate / 5;
-      this.port.postMessage({state: 'playing', verse: this.clock.cycle + 1,
-        quarter: this.clock.quarter % this.clock.length, bpm: this.clock.bpm});
+      const localQuarter = this.clock.quarter - this.clock.cycle * this.clock.stride;
+      this.port.postMessage({state: 'playing', inGap: localQuarter >= this.clock.length, verse: this.clock.cycle + 1,
+        quarter: Math.min(this.clock.length, localQuarter), bpm: this.clock.bpm});
     }
     return true;
   }

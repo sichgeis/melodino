@@ -109,7 +109,7 @@ export class BrowserPlayer {
       }
       if (token !== this.generation) return;
       await this.request({type: 'load', score, instrument: options.instrument, bpm: options.bpm,
-        verses: options.verses});
+        verses: options.verses, gapQuarters: options.gapQuarters});
       if (token !== this.generation) return;
       this.update('playing', {verse: 1, quarter: 0});
       await this.request({type: 'play'});

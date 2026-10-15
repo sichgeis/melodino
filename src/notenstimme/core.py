@@ -190,11 +190,17 @@ def clarinet_audio(score, bpm, soundfont, output):
     return font.name
 
 
-def render(input_path, output, bpm=None, voice='bell', soundfont=None, transpose=0, audio=True):
+def render(input_path, output, bpm=None, voice='bell', soundfont=None, transpose=0, audio=True, verse_gap_bars=1):
     if voice not in {'bell', 'clarinet'}:
         raise ValueError('Unbekanntes Instrument.')
+    if isinstance(verse_gap_bars, bool) or verse_gap_bars not in (0, 1, 2):
+        raise ValueError('Strophenpause muss 0, 1 oder 2 Takte sein.')
     song = load_song(Path(input_path))
     score, bpm = prepare(song, bpm, voice, transpose)
+    signatures = list(score.recurse().getElementsByClass(meter.TimeSignature))
+    if not signatures:
+        raise ValueError('Für die Strophenpause wird eine Taktart benötigt.')
+    measure_quarters = positive(float(signatures[-1].barDuration.quarterLength), 'Taktlänge')
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     # Rendering into a fresh directory avoids stale MP3 after a WAV-only rerender.
@@ -234,7 +240,7 @@ def render(input_path, output, bpm=None, voice='bell', soundfont=None, transpose
     info = dict(title=song.title, source=song.source, bpm=bpm, instrument=voice,
                 duration_seconds=audio_duration, score_duration_seconds=float(score.highestTime) * 60 / bpm,
                 quarters=float(score.highestTime), note_count=sum(e[2] is not None for e in events(score, True)),
-                transpose=transpose, files=files)
+                transpose=transpose, measure_quarters=measure_quarters, verse_gap_bars=verse_gap_bars, files=files)
     if font_name:
         info['soundfont'] = font_name
     (output / 'info.json').write_text(json.dumps(info, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')

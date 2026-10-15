@@ -15,7 +15,9 @@
       "csv": "assets/die-kuh-die-sass-im-schwalbennest/notes.csv",
       "playback": "assets/die-kuh-die-sass-im-schwalbennest/playback.json"
     },
-    "slug": "die-kuh-die-sass-im-schwalbennest"
+    "slug": "die-kuh-die-sass-im-schwalbennest",
+    "measure_quarters": 2.0,
+    "verse_gap_bars": 0
   },
   {
     "title": "Schlaf, Kindlein, schlaf",
@@ -36,7 +38,9 @@
       "playback": "assets/schlaf-kindlein-schlaf-klarinette/playback.json"
     },
     "soundfont": "FluidR3_GM.sf2",
-    "slug": "schlaf-kindlein-schlaf-klarinette"
+    "slug": "schlaf-kindlein-schlaf-klarinette",
+    "measure_quarters": 4.0,
+    "verse_gap_bars": 0
   },
   {
     "title": "Schlaf, Kindlelein, süße",
@@ -54,7 +58,9 @@
       "csv": "assets/schlaf-kindlein-suesse/notes.csv",
       "playback": "assets/schlaf-kindlein-suesse/playback.json"
     },
-    "slug": "schlaf-kindlein-suesse"
+    "slug": "schlaf-kindlein-suesse",
+    "measure_quarters": 3.0,
+    "verse_gap_bars": 0
   },
   {
     "title": "Was müssen das für Bäume sein",
@@ -74,6 +80,8 @@
       "mp3": "assets/was-muessen-das-fuer-baeume-sein-glocke/melody.mp3",
       "playback": "assets/was-muessen-das-fuer-baeume-sein-glocke/playback.json"
     },
-    "slug": "was-muessen-das-fuer-baeume-sein-glocke"
+    "slug": "was-muessen-das-fuer-baeume-sein-glocke",
+    "measure_quarters": 2.0,
+    "verse_gap_bars": 1
   }
 ]

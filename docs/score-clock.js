@@ -36,10 +36,13 @@ export class ScoreClock {
     this.state = 'idle';
     this.frame = 0;
   }
-  load(score, instrument, bpm, verses) {
+  load(score, instrument, bpm, verses, gapQuarters = 0) {
     this.stop();
     this.events = makeEvents(score, instrument);
     this.length = score.quarters;
+    if (!Number.isFinite(gapQuarters) || gapQuarters < 0 || gapQuarters > 128) throw Error('Ungültige Strophenpause.');
+    this.stride = this.length + gapQuarters;
+    this.gap = gapQuarters;
     if (![1, 2, 3, 4, Infinity].includes(verses)) throw Error('Ungültige Strophenzahl.');
     this.verses = verses;
     this.cycle = 0;
@@ -83,7 +86,7 @@ export class ScoreClock {
     while (offset < left.length && this.state === 'playing') {
       const event = this.events[this.index];
       const boundary = !event;
-      const position = this.cycle * this.length + (boundary ? this.length : event.at);
+      const position = this.cycle * this.stride + (boundary ? this.length + (this.cycle + 1 < this.verses ? this.gap : 0) : event.at);
       const eventFrame = this.frameAt(position);
       const count = Math.min(left.length - offset, Math.max(0, eventFrame - this.frame));
       if (count) {
@@ -101,7 +104,7 @@ export class ScoreClock {
           if (offset < left.length) this.synth.process(left, right, offset, left.length - offset);
         } else {
           this.index = 0;
-          this.notify({state: 'playing', verse: this.cycle + 1, frame: this.frame});
+          this.notify({state: 'playing', verse: this.cycle + 1, inGap: false, frame: this.frame});
         }
       } else {
         if (event.on) this.synth.noteOn(0, event.midi, 92);

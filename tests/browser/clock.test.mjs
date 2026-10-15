@@ -99,3 +99,32 @@ test('real engine repeats the uploaded melody with no added tail gap',async()=>{
   assert.equal(starts[120][0],Math.round(72*44100*60/104));
   assert.ok(boundaryEnergies.every(e=>e>1),'No silent tail gap before the next verse');
 });
+
+test('verse gaps preserve pickup notes, absolute timing and omit the final gap',()=>{
+  for (const gap of [0, 2, 4]) {
+    const synth=spy(), clock=new ScoreClock(synth,44100);
+    clock.load(score,'piano',104,3,gap); clock.play();
+    while(clock.state==='playing') render(clock);
+    assert.deepEqual(synth.notes.map(n=>n[1]),[62,67,67,62,67,67,62,67,67]);
+    for(let verse=0;verse<3;verse++) assert.equal(synth.notes[verse*3][0],Math.round(verse*(2+gap)*44100*60/104));
+    assert.equal(clock.frame,Math.round((6+2*gap)*44100*60/104));
+  }
+});
+test('pause and tempo during the gap preserve position and next pickup',()=>{
+  const synth=spy(), clock=new ScoreClock(synth,48000);
+  clock.load(score,'piano',120,2,2);clock.play();
+  render(clock,60000); // 2.5 quarters: inside the gap
+  assert.equal(synth.notes.length,3);
+  clock.pause();render(clock,4800);assert.equal(clock.frame,60000);
+  clock.setTempo(60);assert.equal(clock.quarter,2.5);
+  clock.play();while(clock.state==='playing') render(clock);
+  assert.equal(synth.notes[3][0],132000); // remaining 1.5 quarters at 60 BPM
+  assert.equal(clock.frame,228000);
+});
+test('60 verses with gaps have no drift; invalid gaps are rejected',()=>{
+  const synth=spy(), clock=new ScoreClock(synth,44100);
+  clock.load(score,'piano',104,Infinity,2);clock.play();
+  while(synth.notes.length<181) render(clock);
+  for(let verse=0;verse<=60;verse++) assert.equal(synth.notes[verse*3][0],Math.round(verse*4*44100*60/104));
+  for(const gap of [-1,NaN,Infinity,129,'2']) assert.throws(()=>clock.load(score,'piano',104,2,gap));
+});

@@ -13,5 +13,7 @@
     "musicxml": "score.musicxml",
     "csv": "notes.csv",
     "playback": "playback.json"
-  }
+  },
+  "measure_quarters": 2.0,
+  "verse_gap_bars": 0
 }

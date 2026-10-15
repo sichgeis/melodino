@@ -17,7 +17,7 @@ Nur ein Lied spielt gleichzeitig. Keine Wiedergabe ohne Benutzeraktion.
 - CLI exportiert playback.json: schema_version 1, Titel, Tempo, quarters, notes:
   [{at, duration, midi}]. Einheiten sind Viertel und klingende MIDI-Tonhöhen.
   Bindungen werden zusammengeführt, Akkorde bleiben parallele Töne, Pausen sind Lücken.
-- Die notierte Gesamtzeit bestimmt den Loop. Keine MP3/WAV-Ausklingzeit und kein
+- Die notierte Gesamtzeit plus die gewählte Strophenpause bestimmt den Loop. Keine MP3/WAV-Ausklingzeit und kein
   zusätzliches MIDI-Endpadding. Auftakt und verkürzter Schluss bleiben erhalten.
 - Der Browser spielt daraus eine MIDI-Note-On/Off-Ereignisfolge mit SpessaSynth im AudioWorklet.
   Loops werden im Audio-Thread getaktet, nicht durch JavaScript-Timer neu gestartet.
@@ -55,3 +55,23 @@ Je ein Eintrag: „Schlaf, Kindlein, schlaf“ mit Klarinette/104 BPM (bisher Fa
 „Was müssen das für Bäume sein“ mit Glockenklang/88 BPM (bisher Fassung 3).
 Die beiden übrigen Exporte sind entfernt. Positionsabhängige Fassungsnummern entfallen;
 die Instrumentenwahl bleibt für jedes Lied verfügbar.
+
+## Strophenpause
+
+Der Player bietet „keine / 1 Takt / 2 Takte“ als zusätzliche Atemzeit zwischen
+Strophen. Die Pause folgt der vollständig gespielten Strophe, vor dem nächsten
+Auftakt. Sie zählt im gewählten Tempo; Sample-Ausklingen bleibt erlaubt. Keine
+Zusatzpause vor der ersten oder nach der letzten Strophe. Pause/Fortsetzen und
+Tempoänderungen gelten auch in der Strophenpause; eine geänderte Auswahl setzt zurück.
+Die Anzeige benennt die Strophenpause und hält den Strophenfortschritt am Ende.
+
+`info.json` und Katalog erhalten `measure_quarters` (positive Taktlänge in Vierteln)
+und `verse_gap_bars` (0, 1 oder 2). `render`/`add --verse-gap-bars` speichern den
+gewählten Vorschlag, Standard für neue Exporte: 1. Ohne Metadaten gilt für alte
+Kataloge weiterhin keine Pause. Bei wechselnder Taktart gilt der letzte Takt.
+Noten, playback.json, MIDI, MusicXML und Einzelaufnahmen bleiben unverändert.
+„Was müssen das für Bäume sein“ erhält 1 Takt (2 Viertel); bestehende andere
+Fassungen behalten zunächst 0. Neue Vorschläge werden nach AGENTS.md beurteilt.
+
+Akzeptanz: zusätzliche Dauer nur zwischen Strophen, unveränderte Tonfolge,
+Auftakt, endlos ohne Drift, Tempowechsel/Pause innerhalb der Lücke und Validierung.

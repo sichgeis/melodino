@@ -16,6 +16,7 @@ def main():
         p.add_argument('--instrument', choices=['bell', 'clarinet'], default='bell')
         p.add_argument('--soundfont', type=Path)
         p.add_argument('--no-audio', action='store_true', help='Nur Notendateien für den Browser, ohne WAV/MP3')
+        p.add_argument('--verse-gap-bars', type=int, choices=[0, 1, 2], default=1, help='Zusätzliche Strophenpause im Browser in Takten (Standard: 1)')
         p.add_argument('--transpose', type=int, default=0)
         if command == 'render':
             p.add_argument('--output', type=Path, required=True)
@@ -23,7 +24,7 @@ def main():
             p.add_argument('--slug', required=True)
             p.add_argument('--docs', type=Path, default=Path('docs'), help='Katalogverzeichnis (Standard: docs/)')
     args = parser.parse_args()
-    kwargs = dict(bpm=args.bpm, voice=args.instrument, soundfont=args.soundfont, transpose=args.transpose, audio=not args.no_audio)
+    kwargs = dict(bpm=args.bpm, voice=args.instrument, soundfont=args.soundfont, transpose=args.transpose, audio=not args.no_audio, verse_gap_bars=args.verse_gap_bars)
     try:
         if args.command == 'add':
             info = add(args.input, args.slug, args.docs, **kwargs)
