@@ -125,8 +125,8 @@ in der Eingabe werden in klingende Tonhöhen umgerechnet.
 **Takt 5 ist B♭–B♭–G–G.** Die überprüfte Folge liegt in examples/lied.json
 und identisch in examples/schlaf-kindlein-schlaf.json.
 
-- Glockenklang: eingebauter additiver Synthesizer, 88 Viertel/Minute.
-- Klarinette: FluidSynth mit FluidR3 GM, 104 Viertel/Minute, GM 72 (nullbasiert 71).
+Veröffentlicht ist die bisherige Fassung 2 mit Klarinette und 104 Vierteln/Minute
+(GM 72, nullbasiert 71). Das Instrument ist im Browser frei wählbar.
 
 Keine Begleitung, kein Gesang, keine expressive Interpretation. Beim Python-Audioexport sind Glocken synthetisch und Klarinette ein Sample-Instrument.
 Im Browser verwenden alle vier Instrumente SoundFont-Samples. Instrumentenwahl ändert keine klingenden Tonhöhen;
@@ -192,7 +192,8 @@ Soundbanks und lange gehaltene Windinstrument-Töne.
 G-Dur, 2/4, Achtelauftakt, 60 Töne und 36 Viertel. Der verkürzte Schluss
 ergänzt den Auftakt. Der erste Systemwechsel unterbricht einen Takt;
 dieser bleibt in der Übertragung zusammen. Es gibt keine Begleitung.
-Hörproben: Glockenklang 88 und Klarinette 104 BPM.
+Veröffentlicht ist die bisherige Fassung 3 mit Glockenklang und 88 BPM.
+Das Instrument ist im Browser frei wählbar.
 Details und Prüfkriterien: [Liedspezifikation](specs/002-baeume.md).
 
 ## Tests und lokale Seite

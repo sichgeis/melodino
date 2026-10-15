@@ -47,3 +47,10 @@ Technische Präzisierung: SpessaSynth **Core 4.3.22** übernimmt die SF2-Synthes
 Ein kleiner eigener AudioWorklet-Sequenzer plant die MIDI-Note-On/Off-Ereignisse
 auf absoluten Samplepositionen. Dadurch bleiben Rundungsreste über Strophen erhalten;
 kein Neuankern der Uhr an jedem Loop. Die grafische Oberfläche erhält nur Statusmeldungen.
+
+## Bereinigte Sammlung (15.10.2026)
+
+Je ein Eintrag: „Schlaf, Kindlein, schlaf“ mit Klarinette/104 BPM (bisher Fassung 2),
+„Was müssen das für Bäume sein“ mit Glockenklang/88 BPM (bisher Fassung 3).
+Die beiden übrigen Exporte sind entfernt. Positionsabhängige Fassungsnummern entfallen;
+die Instrumentenwahl bleibt für jedes Lied verfügbar.

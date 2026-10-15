@@ -74,7 +74,7 @@ for(const [instrument,config] of Object.entries(instruments)) test(`real ${instr
 });
 
 test('real engine repeats the uploaded melody with no added tail gap',async()=>{
-  const score=JSON.parse(readFileSync(new URL('../../docs/assets/was-muessen-das-fuer-baeume-sein-klarinette/playback.json',import.meta.url)));
+  const score=JSON.parse(readFileSync(new URL('../../docs/assets/was-muessen-das-fuer-baeume-sein-glocke/playback.json',import.meta.url)));
   const synth=new SpessaSynthProcessor(44100);
   await synth.processorInitialized;
   const data=readFileSync(new URL('../../docs/samples/clarinet.sf2',import.meta.url));

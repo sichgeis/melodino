@@ -31,7 +31,7 @@ function selectField(label, choices) {
   wrapper.append(element('span', '', label), select);
   return {wrapper, select};
 }
-function card(song, index) {
+function card(song) {
   validate(song);
   const article = element('article', 'song');
   article.dataset.state = 'idle';
@@ -40,7 +40,7 @@ function card(song, index) {
   const icon = element('span', 'instrument-icon', '♪');
   icon.setAttribute('aria-hidden', 'true');
   badge.append(icon, element('span', '', 'LIVE-INSTRUMENTE'));
-  top.append(badge, element('span', 'edition', `Fassung ${String(index + 1).padStart(2, '0')}`));
+  top.append(badge);
   const title = element('h3', '', song.title);
   const meta = element('p', 'meta');
   const instrument = selectField('Instrument', Object.entries(instruments).map(([id, i]) => [id, i.name]));
@@ -154,7 +154,7 @@ async function load() {
     const songs = await response.json();
     if (!Array.isArray(songs)) throw Error('Ungültiger Katalog.');
     root.replaceChildren(...songs.map(card));
-    document.querySelector('#count').textContent = `${songs.length} Fassungen`;
+    document.querySelector('#count').textContent = `${songs.length} Lieder`;
     status.textContent = songs.length ? '' : 'Hier ist bald Platz für euer erstes Lied.';
     status.hidden = songs.length > 0;
   } catch {
