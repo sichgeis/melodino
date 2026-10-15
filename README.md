@@ -3,6 +3,8 @@
 **Foto im Codex-Chat → bestätigte Noten → Browser-Instrumente → GitHub Pages.**
 Du fotografierst eine Liederbuchseite mit dem Telefon und lädst sie im Codex-Chat hoch.
 Codex liest die Noten visuell, klärt unsichere Stellen und führt die Python-Pipeline aus.
+Ein hochgeladenes Notenfoto beauftragt auch die Veröffentlichung nach erfolgreicher Prüfung,
+ohne weitere Freigaberückfrage, sofern du nichts anderes dazusagst.
 Die statische Seite spielt die Melodie mit Instrumenten-Samples direkt im Browser, ihr singt dazu.
 Wählt Klarinette, Glockenspiel, Klavier oder Flöte und 1–4 Strophen oder endlose Wiederholung.
 Die nächste Strophe beginnt im Takt, ohne die Ausklingpause einer Audiodatei abzuwarten.

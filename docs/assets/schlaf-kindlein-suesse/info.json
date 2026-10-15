@@ -1,0 +1,17 @@
+{
+  "title": "Schlaf, Kindlelein, süße",
+  "source": "Im Codex-Chat visuell aus einem Notenfoto übertragen; Rhythmus der ersten Strophe, ohne Liedtext oder Buchfoto",
+  "bpm": 104.0,
+  "instrument": "clarinet",
+  "duration_seconds": 17.307692307692307,
+  "score_duration_seconds": 17.307692307692307,
+  "quarters": 30.0,
+  "note_count": 45,
+  "transpose": 0,
+  "files": {
+    "midi": "melody.mid",
+    "musicxml": "score.musicxml",
+    "csv": "notes.csv",
+    "playback": "playback.json"
+  }
+}

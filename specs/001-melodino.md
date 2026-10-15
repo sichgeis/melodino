@@ -8,7 +8,10 @@ Status: implementiert; Browser-Vertrag weiterentwickelt in specs/003-browser-pla
 2. Codex mit Zugriff auf dieses Repository prüft das Foto visuell und klärt unlesbare Stellen.
 3. Codex speichert die bestätigte Übertragung als JSON oder MusicXML. Das Foto bleibt privat.
 4. Codex erzeugt Hörproben über die CLI, prüft Notation und Audio und ergänzt den Katalog.
-5. Auf Veröffentlichungsauftrag committet und pusht Codex die Dateien; GitHub Actions veröffentlicht docs/.
+5. Ein hochgeladenes Notenfoto gilt zugleich als Auftrag, das Lied nach fachlicher Prüfung,
+   Export und Tests ohne weitere Veröffentlichungsrückfrage zu committen und nach main zu pushen;
+   GitHub Actions veröffentlicht docs/. Abweichende ausdrückliche Anweisungen gehen vor.
+   Unlesbare oder musikalisch unsichere Stellen werden weiterhin vorab geklärt.
 6. Christian öffnet die HTTPS-Seite am Telefon und singt zur Instrumentalfassung.
 
 Der ausführende Codex-Chat benötigt eine mit dem Repository verbundene Python-Umgebung,

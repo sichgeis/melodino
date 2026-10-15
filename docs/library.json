@@ -21,6 +21,24 @@
     "slug": "schlaf-kindlein-schlaf-klarinette"
   },
   {
+    "title": "Schlaf, Kindlelein, süße",
+    "source": "Im Codex-Chat visuell aus einem Notenfoto übertragen; Rhythmus der ersten Strophe, ohne Liedtext oder Buchfoto",
+    "bpm": 104.0,
+    "instrument": "clarinet",
+    "duration_seconds": 17.307692307692307,
+    "score_duration_seconds": 17.307692307692307,
+    "quarters": 30.0,
+    "note_count": 45,
+    "transpose": 0,
+    "files": {
+      "midi": "assets/schlaf-kindlein-suesse/melody.mid",
+      "musicxml": "assets/schlaf-kindlein-suesse/score.musicxml",
+      "csv": "assets/schlaf-kindlein-suesse/notes.csv",
+      "playback": "assets/schlaf-kindlein-suesse/playback.json"
+    },
+    "slug": "schlaf-kindlein-suesse"
+  },
+  {
     "title": "Was müssen das für Bäume sein",
     "source": "Aus MusicXML importiert",
     "bpm": 88.0,

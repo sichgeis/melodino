@@ -181,7 +181,11 @@ def test_published_catalog():
         for kind, file in song['files'].items():
             assert file.startswith(f"assets/{song['slug']}/")
             assert (docs / file).stat().st_size > 0
-        assert_audio(docs / song['files']['wav'])
+        if 'wav' in song['files']:
+            assert_audio(docs / song['files']['wav'])
+        playback = json.loads((docs / song['files']['playback']).read_text())
+        assert playback['quarters'] == song['quarters']
+        assert len(playback['notes']) == song['note_count']
 
 
 BAEUME = EXAMPLE.parent / 'was-muessen-das-fuer-baeume-sein.musicxml'

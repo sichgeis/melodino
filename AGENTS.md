@@ -12,7 +12,11 @@ Keine fremden Änderungen verwerfen. Spezifikation bei Vertragsänderungen zuers
 
 Christian fotografiert die Notenseite mit dem Telefon und lädt sie in den Codex-Chat.
 Du überträgst visuell, erzeugst und prüfst die Dateien in einer verbundenen Projektumgebung
-und veröffentlichst auf seinen Auftrag über Git-Push nach main. Die Pipeline muss nicht
+und veröffentlichst über Git-Push nach main. Jedes hochgeladene Notenfoto gilt zugleich
+als Auftrag zur vollständigen Übertragung, Prüfung, Katalogaufnahme und Veröffentlichung;
+frage dafür nicht erneut nach Freigabe. Eine ausdrücklich abweichende Anweisung geht vor.
+Unlesbare oder musikalisch unsichere Stellen weiterhin vor der Veröffentlichung klären.
+Die Pipeline muss nicht
 auf dem Telefon laufen. Ohne Zugriff auf Repository, Python und GitHub nicht behaupten,
 dass der Chat etwas ausgeführt oder veröffentlicht hat; den konkreten Zugang nennen.
 
@@ -51,7 +55,8 @@ dass der Chat etwas ausgeführt oder veröffentlicht hat; den konkreten Zugang n
    beim Audioexport erhalten andere Instrumente andere Slugs. Im Browser lässt sich das
    Instrument direkt wählen. add lädt nichts hoch.
 5. `.venv/bin/pytest -q` und `npm test`; bei Webänderungen responsive Ansicht und Bedienelemente prüfen.
-6. Bei Veröffentlichungsauftrag gezielt nur Projektdateien committen und nach main pushen.
+6. Nach erfolgreicher Prüfung gezielt nur Projektdateien committen und nach main pushen.
+   Der Upload eines Notenfotos erteilt diesen Auftrag bereits; keine weitere Freigabe erfragen.
    Nie Fotos, .venv, node_modules/, work/, vollständige GM-Soundbanks oder Zugangsdaten committen.
    Ausnahme: Die vier kuratierten SF2-Presets unter docs/samples/ sind ausdrücklich
    beauftragte, gemeinsam genutzte Browser-Klangdaten mit Lizenznachweis.
