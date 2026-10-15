@@ -1,4 +1,4 @@
-import {player} from './player.js';
+import {player} from './player.js?v=20261015-ios-audio';
 import {instruments} from './score-clock.js';
 const root = document.querySelector('#songs');
 const status = document.querySelector('#status');
@@ -139,9 +139,9 @@ function card(song) {
     audio.addEventListener('error', () => { error.hidden = false; });
     audio.addEventListener('play', () => {
       player.stop(player.owner);
-      document.querySelectorAll('audio').forEach(other => { if (other !== audio) other.pause(); });
+      document.querySelectorAll('audio:not([data-melodino-output])').forEach(other => { if (other !== audio) other.pause(); });
     });
-    play.addEventListener('click', () => document.querySelectorAll('audio').forEach(other => other.pause()));
+    play.addEventListener('click', () => document.querySelectorAll('audio:not([data-melodino-output])').forEach(other => other.pause()));
     details.append(audio, error);
   }
   article.append(top, title, meta, fields, tempoRow, controls, message, position, progress, details);

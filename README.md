@@ -160,6 +160,28 @@ Alle Dateien werden über dieselbe GitHub-Pages-Seite geladen, ohne CDN oder API
 Der Browsercache kann erneute Downloads vermeiden. Samples enthalten echte Sustain-Loops,
 so dass auch lange Noten bei langsamem Tempo gehalten werden.
 
+### iPhone und Safari: stumme Wiedergabe
+
+WebKit kann Web Audio im Stummmodus anders behandeln als Audio-/Videoplayer.
+Melodino setzt deshalb vor Start und Fortsetzen die optionale AudioSession auf
+`playback`. Der AudioContext und ein lautloser Startbuffer werden direkt beim
+Tippen aktiviert, bevor Noten oder Instrumente heruntergeladen werden.
+Auf älteren iPhones/iPads ohne diese API läuft die tatsächliche Synthesizer-Ausgabe
+über ein im Klick gestartetes HTML-Audioelement mit MediaStream; Mikrofonzugriff ist
+nicht nötig. Andere Browser behalten den direkten Ausgabepfad. Eine blockierte Audiofreischaltung
+meldet nach spätestens acht Sekunden eine erneut versuchbare Fehlermeldung.
+
+Falls das iPhone dennoch stumm bleibt: Medienlautstärke und Bluetooth-Ausgabe prüfen,
+Seite direkt in Safari öffnen und neu laden. Auf älteren iOS-Versionen gegebenenfalls
+den Stummmodus ausschalten. Unter „Kein Ton auf dem iPhone?“ stehen dieselben Hinweise;
+vorhandene Aufnahmen lassen sich auch im separaten Audioplayer abspielen.
+Die Änderung ist durch simulierte iOS-API-/Ausgabetests sowie Browser-/Engine-Tests
+abgesichert; ein physischer iPhone-Test wird dadurch nicht ersetzt.
+
+Hintergrund: [WebKit 251532](https://bugs.webkit.org/show_bug.cgi?id=251532),
+[AudioSession](https://developer.mozilla.org/en-US/docs/Web/API/AudioSession).
+Details: specs/004-ios-audio.md.
+
 Bestehende Aufnahmen bleiben unter „Downloads & Aufnahme“ verfügbar. Sie behalten
 ursprüngliches Instrument und Tempo; für taktgenaue Loops den Hauptplayer verwenden.
 Neue Lieder brauchen mit --no-audio keine MP3/WAV-Dateien. Downloads für MIDI,

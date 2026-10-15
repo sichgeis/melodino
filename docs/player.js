@@ -1,4 +1,5 @@
 import {instruments, validatePlayback} from './score-clock.js';
+import {AudioOutput, configurePlaybackSession} from './audio-output.js';
 
 async function json(url) {
   const response = await fetch(url);
@@ -22,28 +23,32 @@ export class BrowserPlayer {
     if (!this.context) {
       const Context = globalThis.AudioContext || globalThis.webkitAudioContext;
       if (!Context) throw Error('Dieser Browser unterstützt den Instrumentenplayer nicht. Bitte nutze einen Download.');
-      this.context = new Context();
+      const hasPlaybackSession = configurePlaybackSession();
+      this.context = new Context({latencyHint: 'playback'});
+      this.output = new AudioOutput(this.context, {hasPlaybackSession});
       this.context.onstatechange = () => {
         if (this.context.state !== 'running' && this.state === 'playing') {
           this.node?.port.postMessage({type: 'pause'});
+          this.output.pause();
           this.update('paused', {message: 'Wiedergabe unterbrochen. Zum Fortsetzen auf Abspielen tippen.'});
         }
       };
     }
     // Called directly within the user's click, before any asynchronous download.
     if (!this.context.audioWorklet) throw Error('Der Instrumentenplayer benötigt einen aktuellen Browser und HTTPS. Bitte nutze sonst einen Download.');
-    const resume = this.context.resume();
+    const resume = this.output.activate();
     if (!this.initializing) {
       this.initializing = this.context.audioWorklet.addModule(new URL('./synth-worklet.js', import.meta.url))
         .then(() => {
           this.node = new AudioWorkletNode(this.context, 'melodino-synth', {numberOfInputs: 0,
             numberOfOutputs: 1, outputChannelCount: [2]});
           this.node.onprocessorerror = () => {
+            this.output.pause();
             this.update('error', {message: 'Der Instrumentenplayer wurde unterbrochen. Bitte lade die Seite neu.'});
           };
           const gain = this.context.createGain();
           gain.gain.value = .55;
-          this.node.connect(gain).connect(this.context.destination);
+          this.node.connect(gain).connect(this.output.destination);
           this.node.port.onmessage = ({data}) => {
             if (data.id) {
               const pending = this.pending.get(data.id);
@@ -55,6 +60,7 @@ export class BrowserPlayer {
               }
             } else if (data.state && this.state !== 'loading' && this.state !== 'idle') {
               if (this.state === 'paused' && data.state === 'playing') return;
+              if (data.state === 'finished') this.output.finish();
               this.update(data.state, data);
             }
           };
@@ -110,6 +116,7 @@ export class BrowserPlayer {
     } catch (error) {
       if (token === this.generation) {
         this.node?.port.postMessage({type: 'stop'});
+        this.output?.pause();
         this.update('error', {message: error.message});
       }
     }
@@ -117,24 +124,30 @@ export class BrowserPlayer {
   pause(owner) {
     if (this.owner !== owner || this.state !== 'playing') return;
     this.node.port.postMessage({type: 'pause'});
+    this.output?.pause();
     this.update('paused');
   }
   async resume(owner) {
     if (this.owner !== owner || this.state !== 'paused') return;
     const token = this.generation;
     try {
-      await this.context.resume();
+      await this.output.activate();
       if (token !== this.generation) return;
       this.update('playing');
       await this.request({type: 'play'});
     } catch (error) {
-      if (token === this.generation) this.update('error', {message: error.message});
+      if (token === this.generation) {
+        this.node?.port.postMessage({type: 'stop'});
+        this.output?.pause();
+        this.update('error', {message: error.message});
+      }
     }
   }
   stop(owner) {
     if (owner !== this.owner) return;
     ++this.generation;
     this.node?.port.postMessage({type: 'stop'});
+    this.output?.pause();
     this.update('idle');
   }
   tempo(owner, bpm) {

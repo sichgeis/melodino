@@ -31,7 +31,8 @@ Nur ein Lied spielt gleichzeitig. Keine Wiedergabe ohne Benutzeraktion.
 - Katalog und Text werden sicher behandelt; Playback-Daten und alle relativen Pfade
   werden validiert. Fehler sind sichtbar, nach fehlgeschlagenem Laden erneut versuchen.
   Stop während des Ladens und Liedwechsel dürfen keine verspätete Wiedergabe auslösen.
-- iPhone: AudioContext im Klick aktivieren; Unterbrechungen sichtbar pausieren.
+- iPhone: AudioSession playback und Audiostart im Klick; für ältere Versionen
+  Medienausgabe-Route, siehe specs/004-ios-audio.md. Unterbrechungen sichtbar pausieren.
   Betriebssystemunterbrechungen können keine Webanwendung ausschließen.
 
 ## Akzeptanz
