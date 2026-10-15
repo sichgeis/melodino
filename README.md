@@ -1,9 +1,11 @@
 # Melodino
 
-**Foto im Codex-Chat → bestätigte Noten → instrumentale Hörprobe → GitHub Pages.**
+**Foto im Codex-Chat → bestätigte Noten → Browser-Instrumente → GitHub Pages.**
 Du fotografierst eine Liederbuchseite mit dem Telefon und lädst sie im Codex-Chat hoch.
 Codex liest die Noten visuell, klärt unsichere Stellen und führt die Python-Pipeline aus.
-Die statische Seite spielt die Melodie, ihr singt dazu.
+Die statische Seite spielt die Melodie mit Instrumenten-Samples direkt im Browser, ihr singt dazu.
+Wählt Klarinette, Glockenspiel, Klavier oder Flöte und 1–4 Strophen oder endlose Wiederholung.
+Die nächste Strophe beginnt im Takt, ohne die Ausklingpause einer Audiodatei abzuwarten.
 
 - [Abspielseite](https://sichgeis.github.io/melodino/)
 - [Spezifikation](specs/001-melodino.md) · [Anleitung für Codex](AGENTS.md)
@@ -40,7 +42,8 @@ Die mit FluidSynth mitgelieferte kleine Beispielbank ist keine vollständige GM-
 
 Für diese Hörprobe wurde FluidR3 GM aus dem offiziellen Debian-Archiv verwendet
 ([Paketinhalt](https://packages.debian.org/bookworm/all/fluid-soundfont-gm/filelist)).
-Die Bank bleibt lokal, außerhalb des Git-Repository-Inhalts. Reproduzierbare Beschaffung:
+Die vollständige GM-Bank bleibt lokal. Vier daraus isolierte Presets liegen als gemeinsam
+genutzte Browser-Klänge mit Lizenznachweis unter docs/samples/. Reproduzierbare Beschaffung:
 
 ```sh
 mkdir -p work/soundfonts
@@ -52,7 +55,7 @@ export MELODINO_SOUNDFONT="$PWD/work/soundfonts/usr/share/sounds/sf2/FluidR3_GM.
 Alternativ `--soundfont /pfad/GM.sf2`. Auf Linux z. B.
 `sudo apt-get install ffmpeg fluidsynth fluid-soundfont-gm`.
 FluidR3: Frank Wen und Mitwirkende, MIT-Lizenz; siehe THIRD_PARTY_NOTICES.md.
-Keine Soundbank oder absoluten lokalen Pfade werden veröffentlicht.
+Keine vollständige GM-Soundbank und keine absoluten lokalen Pfade werden veröffentlicht.
 
 ## CLI
 
@@ -60,7 +63,7 @@ Alle Befehle aus dem Projektordner mit aktivierter virtueller Umgebung ausführe
 
 ```sh
 notenstimme render examples/lied.json --output work/lied --bpm 88
-notenstimme add examples/lied.json --slug mein-lied --bpm 104 --instrument clarinet
+notenstimme add examples/lied.json --slug mein-lied --bpm 104 --instrument clarinet --no-audio
 notenstimme render examples/lied.json --output work/tiefer --bpm 88 --transpose -2
 notenstimme render partitur.musicxml --output work/partitur --instrument clarinet --soundfont /pfad/GM.sf2
 ```
@@ -71,8 +74,12 @@ aktualisiert `docs/library.json` und damit automatisch die Liedkarten.
 bekommen verschiedene Slugs. Erlaubt: Kleinbuchstaben a–z, Ziffern und einzelne Bindestriche,
 maximal 80 Zeichen. Optional `--docs anderer/ordner` für einen anderen Katalog.
 
-Pro Fassung: melody.mp3 (mit FFmpeg), melody.wav, melody.mid, score.musicxml,
-notes.csv und info.json. CSV enthält Takt, absoluten Beginn in Vierteln ab Liedanfang,
+Pro Fassung immer playback.json (Viertelposition, Dauer und klingende MIDI-Tonhöhe),
+melody.mid, score.musicxml, notes.csv und info.json. Mit `--no-audio` wird keine Aufnahme erzeugt;
+für den Browserplayer sind FluidSynth, SF2 und FFmpeg dann nicht nötig.
+Ohne diese Option zusätzlich melody.mp3 (mit FFmpeg) und melody.wav.
+
+CSV enthält Takt, absoluten Beginn in Vierteln ab Liedanfang,
 Ton und Dauer; Akkorde haben eine Zeile je Ton. info.json enthält Titel, Quelle,
 BPM, Instrument, musikalische und tatsächliche Audiodauer, Viertelsumme, klingende
 Tonanzahl, Transposition, Dateiverweise und ggf. den Soundbank-Dateinamen.
@@ -83,9 +90,9 @@ Die Audiodauer enthält die Ausklingzeit; sie kann länger sein als die Notendau
 Beispielauftrag im mit diesem Projekt verbundenen Codex-Chat:
 
 > Übertrage dieses Notenfoto gemäß AGENTS.md. Kläre unlesbare Stellen mit mir.
-> Erzeuge nach bestätigter Übertragung eine Klarinettenfassung mit 104 BPM,
+> Exportiere nach bestätigter Übertragung mit --no-audio eine Fassung mit 104 BPM,
 > füge sie als „mein-lied“ hinzu und veröffentliche sie auf Melodino.
-> Prüfe anschließend den Player und gib mir den direkten MP3-Link.
+> Prüfe anschließend den Browserplayer und gib mir den Link zur Abspielseite.
 
 Schlüssel, Vorzeichen, Notenlinien bei Schräglage, Rhythmus, Pausen, Bindungen,
 Wiederholungen und Taktlängen werden vor der Klanggestaltung geprüft. Nur die
@@ -121,17 +128,63 @@ und identisch in examples/schlaf-kindlein-schlaf.json.
 - Glockenklang: eingebauter additiver Synthesizer, 88 Viertel/Minute.
 - Klarinette: FluidSynth mit FluidR3 GM, 104 Viertel/Minute, GM 72 (nullbasiert 71).
 
-Keine Begleitung, kein Gesang, keine expressive Interpretation. Glocken sind synthetisch,
-Klarinette ist ein Sample-Instrument. Instrumentenwahl ändert keine klingenden Tonhöhen;
+Keine Begleitung, kein Gesang, keine expressive Interpretation. Beim Python-Audioexport sind Glocken synthetisch und Klarinette ein Sample-Instrument.
+Im Browser verwenden alle vier Instrumente SoundFont-Samples. Instrumentenwahl ändert keine klingenden Tonhöhen;
 die Ausgabe ist keine geschriebene B-Klarinettenstimme. Nur `--transpose` ändert die Tonhöhe.
 Kurze Abstände in der Klarinetten-Audiodatei trennen wiederholte Töne; MIDI und MusicXML
 behalten die vollen notierten Dauern und Bindungen. Einheitliches Exporttempo überschreibt
 alle Tempoänderungen. Ganzzahlige MIDI-Tonhöhen 0–127, keine Mikrotonalität.
 JSON-Vorzeichen werden explizit am Ton angegeben; `key` ergänzt keine impliziten Alterationen.
 
-Der Browser erhält Tonhöhen bei geändertem Abspieltempo, soweit er das unterstützt.
-Downloads enthalten das ursprüngliche Exporttempo. Kein Autoplay; bei Verbindungsproblemen
-erscheint eine Fehlermeldung. Der Player bietet MP3 und WAV; WAV ist auch separat downloadbar.
+## Browserplayer
+
+Der Browser lädt die Noten aus playback.json und spielt MIDI-Note-On/Off-Ereignisse
+mit SpessaSynth Core 4.3.22 und originalen FluidR3-GM-Samples. Ein kleiner AudioWorklet-
+Sequenzer plant die Noten auf absoluten Samplepositionen; kein JavaScript-Timer startet
+Strophen neu. Auch Auftakt und verkürzter Schluss werden ohne zusätzliche Pause wiederholt.
+Klänge dürfen über die Strophengrenze ausklingen. Details: specs/003-browser-player.md.
+
+Instrumente ändern keine Tonhöhen. Tempo: 40–200 Viertel/Minute, auch während der
+Wiedergabe änderbar; Schnellwahl 75/100/125 %. Strophenzahl 1, 2, 3, 4 oder endlos.
+Pause friert Noten und Samples ein; Fortsetzen setzt an derselben Stelle fort.
+Instrument/Strophenzahl wechseln setzt die Wiedergabe zurück; danach erneut starten.
+Nur ein Player spielt. Ein Tippen aktiviert Audio auf iPhone/Safari; kein Autoplay.
+Bei Betriebssystemunterbrechungen ggf. erneut auf Fortsetzen tippen. Hintergrundbetrieb
+und gesperrter Bildschirm werden nicht von allen mobilen Browsern zuverlässig unterstützt.
+
+Die Klänge werden pro Instrument einmal pro Sitzung bei Bedarf geladen:
+Klarinette ca. 0,6 MB, Glockenspiel 0,6 MB, Flöte 1,3 MB, Klavier 7,8 MB.
+Alle Dateien werden über dieselbe GitHub-Pages-Seite geladen, ohne CDN oder API.
+Der Browsercache kann erneute Downloads vermeiden. Samples enthalten echte Sustain-Loops,
+so dass auch lange Noten bei langsamem Tempo gehalten werden.
+
+Bestehende Aufnahmen bleiben unter „Downloads & Aufnahme“ verfügbar. Sie behalten
+ursprüngliches Instrument und Tempo; für taktgenaue Loops den Hauptplayer verwenden.
+Neue Lieder brauchen mit --no-audio keine MP3/WAV-Dateien. Downloads für MIDI,
+MusicXML und Notenliste bleiben erhalten. Bibliothek und Texte werden als Text ausgegeben;
+Notendaten und relative Pfade werden validiert. Ladefehler werden sichtbar gemeldet.
+
+### Entwicklung und Klangdaten reproduzieren
+
+Die fertige Seite benötigt keinen Build. JavaScript-Tests laufen mit Node.js 20+:
+
+```sh
+npm test
+```
+
+Nur um das vendorte Synthesizer-Bundle oder die Klangdaten neu zu erzeugen:
+
+```sh
+npm ci
+npm run vendor
+node scripts/prepare-soundbanks.mjs work/soundfonts/usr/share/sounds/sf2/FluidR3_GM.sf2
+```
+
+Versionen sind in package-lock.json festgelegt. Die erzeugten Browserdateien werden
+committed; node_modules/ bleibt ignoriert. Lizenznachweise: docs/samples/NOTICE.txt,
+docs/vendor/ und THIRD_PARTY_NOTICES.md. Die SF2-Presets wurden isoliert, nicht klanglich verändert.
+Tests prüfen u. a. 60 Strophen ohne Rundungsdrift, Pause/Tempo/Stop, alle vier echten
+Soundbanks und lange gehaltene Windinstrument-Töne.
 
 ## Zweites Lied aus einem Chat-Foto
 
@@ -155,7 +208,7 @@ Klarinettenprogramm und klingende Tonhöhen, WAV/MP3-Decodierung und Signalpegel
 MusicXML mit Akkorden/Bindungen und transponierender Stimme, fehlendes FFmpeg,
 Slug-Sicherheit, Hinzufügen/Ersetzen, Fehlererhalt und Katalogdateien.
 Klarinetten-Audiotest benötigt FluidSynth und GM-SF2, sonst expliziter Skip.
-GitHub CI installiert diese Abhängigkeiten und führt den vollständigen Test aus.
+GitHub CI installiert diese Abhängigkeiten und führt den vollständigen Test sowie `npm test` aus.
 
 ## GitHub Pages
 
@@ -178,6 +231,7 @@ gh run list --workflow pages.yml --limit 1
 gh run watch RUN_ID --exit-status
 ```
 
-Danach https://sichgeis.github.io/melodino/ und den direkten MP3-Link prüfen.
+Danach https://sichgeis.github.io/melodino/, die Browser-Wiedergabe und Notendateien prüfen;
+bei Audioexporten zusätzlich den direkten MP3-Link.
 Alle Ressourcenpfade sind relativ und funktionieren unter `/melodino/`.
 Keine Secrets ins Repository schreiben; Zugang über vorhandene GitHub-Anmeldung.

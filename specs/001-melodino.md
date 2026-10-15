@@ -1,6 +1,6 @@
 # Melodino – Spezifikation 1
 
-Status: implementiert; Akzeptanz durch automatisierte Tests und reale Export-/Pages-Prüfung.
+Status: implementiert; Browser-Vertrag weiterentwickelt in specs/003-browser-player.md; Akzeptanz durch automatisierte Tests und reale Export-/Pages-Prüfung.
 
 ## Nutzerablauf
 
@@ -30,8 +30,8 @@ Ein Chat ohne Zugriff auf diese Umgebung kann Dateien vorschlagen, aber nichts v
 - Add: sichere ASCII-Slugs, relative Dateien unter docs/assets/<slug>; vorhandener Slug ersetzt.
   Renderfehler dürfen den bisherigen Katalog/Export nicht beschädigen. Kein Upload durch add.
   Katalogschreibvorgänge werden serialisiert; Verzeichnistausch und JSON-Schreiben erfolgen atomar.
-- Seite: responsive, deutsch, keine externen Laufzeitabhängigkeiten, kein Autoplay,
-  Loop, Geschwindigkeit 75/100/125 %, Audioquellen MP3/WAV, Downloads und Ladefehler.
+- Seite: responsive, deutsch, selbst gehosteter Browser-Synthesizer, kein Autoplay,
+  taktgenaue Strophen, Instrumentenwahl, Tempo, optionale Audio-Downloads und Ladefehler.
   Katalogwerte werden mit DOM-textContent ausgegeben; Dateipfade werden validiert.
 - Referenz: F-Dur, 4/4, 10 Takte, 40 Viertel, 30 Noten.
   Takt 5 zwingend B-4/B-4/G4/G4. Bell 88, Clarinet 104 BPM.

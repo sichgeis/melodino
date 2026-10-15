@@ -1,0 +1,42 @@
+Melodino Instrumente
+
+Fluid (R3) SoundFont
+Copyright © 2000–2002, 2008 Frank Wen
+Copyright © 2008 Toby Smithe
+
+Quelle: FluidR3_GM.sf2 aus Debian fluid-soundfont-gm 3.1-5.3
+https://deb.debian.org/debian/pool/main/f/fluid-soundfont/
+Die vier SF2-Dateien enthalten jeweils ein unverändertes Preset und seine
+Samples (Klavier GM 1, Glockenspiel GM 10, Klarinette GM 72, Flöte GM 74).
+Auswahl/Neu-Verpackung durch Melodino mit SpessaSynth Core; keine Klangbearbeitung.
+
+Laut README des Debian-Pakets wurde Fluid unter der MIT-Lizenz veröffentlicht:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+SpessaSynth Core 4.3.22, © spessasus, Apache License 2.0:
+../vendor/SpessaSynth-LICENSE.txt
+https://github.com/spessasus/spessasynth_core
+
+Bundled stb-vorbis 0.0.6 decoder wrapper, © spessasus, Apache License 2.0:
+../vendor/stb-vorbis-LICENSE.txt
+https://github.com/spessasus/stb-vorbis
+The included stb_vorbis.c retains its original public-domain dedication (nothings/stb).
+
+Weitere Herkunftsangaben aus dem Debian-Paket: FluidR3-original-notice.txt

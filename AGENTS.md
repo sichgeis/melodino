@@ -2,7 +2,7 @@
 
 ## Projekt und Spezifikation
 
-Lies README.md und specs/001-melodino.md. Python-CLI in src/notenstimme,
+Lies README.md, specs/001-melodino.md und specs/003-browser-player.md. Python-CLI in src/notenstimme,
 statische Seite in docs/. Keine KI-API, Fotoerkennung oder eigener MCP-Server nötig.
 Benutze die virtuelle Umgebung .venv; prüfe Systemwerkzeuge vor Installationen.
 Arbeite auf main, sofern kein paralleler Arbeitsstand Isolation erfordert.
@@ -40,17 +40,24 @@ dass der Chat etwas ausgeführt oder veröffentlicht hat; den konkreten Zugang n
 ## Rendern, Hinzufügen, Veröffentlichen
 
 1. Bestätigte Eingabe unter examples/<lied>.json oder .musicxml speichern.
-2. `.venv/bin/notenstimme render ... --output work/<lied> --bpm 88` zur Kontrolle.
-3. MIDI/MusicXML und Taktlängen gegen die Vorlage prüfen; WAV/MP3 auf Dauer,
-   hörbare Töne und Instrument prüfen. Für Klarinette vorhandenen GM-SF2-Pfad nutzen.
-4. `.venv/bin/notenstimme add ... --slug <sicherer-slug> --bpm 104 --instrument clarinet`
-   aktualisiert Hörprobe und Katalog. Ein Slug steht für eine Fassung; andere Instrumente
-   erhalten andere Slugs. add lädt nichts hoch.
-5. `.venv/bin/pytest -q`; bei Webänderungen responsive Ansicht und Bedienelemente prüfen.
+2. `.venv/bin/notenstimme render ... --output work/<lied> --bpm 88 --no-audio` zur Kontrolle.
+   Für eine zusätzliche Aufnahme --no-audio weglassen.
+3. MIDI/MusicXML, playback.json und Taktlängen gegen die Vorlage prüfen. Browser-Wiedergabe
+   und Strophenübergang prüfen; zusätzliche WAV/MP3 auf Dauer und hörbare Töne prüfen.
+   Nur für Klarinetten-Audioexporte den vorhandenen GM-SF2-Pfad nutzen.
+4. `.venv/bin/notenstimme add ... --slug <sicherer-slug> --bpm 104 --instrument clarinet --no-audio`
+   exportiert kleine Browser-Notendaten (playback.json) und aktualisiert den Katalog.
+   Ohne --no-audio werden zusätzlich WAV/MP3 erzeugt. Ein Slug steht für eine Fassung; andere Instrumente
+   beim Audioexport erhalten andere Instrumente andere Slugs. Im Browser lässt sich das
+   Instrument direkt wählen. add lädt nichts hoch.
+5. `.venv/bin/pytest -q` und `npm test`; bei Webänderungen responsive Ansicht und Bedienelemente prüfen.
 6. Bei Veröffentlichungsauftrag gezielt nur Projektdateien committen und nach main pushen.
-   Nie Fotos, .venv, work/, Soundbanks oder Zugangsdaten committen.
+   Nie Fotos, .venv, node_modules/, work/, vollständige GM-Soundbanks oder Zugangsdaten committen.
+   Ausnahme: Die vier kuratierten SF2-Presets unter docs/samples/ sind ausdrücklich
+   beauftragte, gemeinsam genutzte Browser-Klangdaten mit Lizenznachweis.
 7. GitHub-Action bis zum Ergebnis verfolgen. Erst nach erfolgreichem Deployment die echte
-   HTTPS-Seite, library.json und direkte MP3-Links prüfen, einschließlich /melodino/.
+   HTTPS-Seite, library.json, playback.json und Browser-Wiedergabe prüfen, einschließlich
+   /melodino/. Direkte MP3-Links nur bei zusätzlich erzeugten Aufnahmen prüfen.
    Keine erfolgreiche Veröffentlichung behaupten, solange diese nicht geprüft wurde.
 
 GitHub-Ziel: sichgeis/melodino. Anmeldungen/Berechtigungen tatsächlich prüfen.

@@ -1,8 +1,8 @@
-'use strict';
+import {player} from './player.js';
+import {instruments} from './score-clock.js';
 const root = document.querySelector('#songs');
 const status = document.querySelector('#status');
-const names = {bell: 'Glockenklang', clarinet: 'Klarinette'};
-const filenames = {mp3: 'melody.mp3', wav: 'melody.wav', midi: 'melody.mid', musicxml: 'score.musicxml', csv: 'notes.csv'};
+const filenames = {mp3: 'melody.mp3', wav: 'melody.wav', midi: 'melody.mid', musicxml: 'score.musicxml', csv: 'notes.csv', playback: 'playback.json'};
 const labels = {mp3: 'MP3', wav: 'WAV', midi: 'MIDI', musicxml: 'MusicXML', csv: 'Notenliste'};
 function element(tag, className, text) {
   const node = document.createElement(tag);
@@ -11,93 +11,153 @@ function element(tag, className, text) {
   return node;
 }
 function validate(song) {
-  if (!song || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(song.slug) || song.slug.length > 80 ||
-      typeof song.title !== 'string' || !Object.hasOwn(names, song.instrument) ||
-      !Number.isFinite(song.bpm) || song.bpm <= 0 || !Number.isFinite(song.duration_seconds) ||
-      song.duration_seconds <= 0 || !song.files || !song.files.wav) throw Error('Ungültiger Liedeintrag.');
+  if (!song || typeof song.slug !== 'string' || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(song.slug) || song.slug.length > 80 ||
+      typeof song.title !== 'string' || !['bell', 'clarinet'].includes(song.instrument) ||
+      !Number.isFinite(song.bpm) || song.bpm <= 0 || !Number.isFinite(song.quarters) ||
+      song.quarters <= 0 || !song.files?.playback) throw Error('Ungültiger Liedeintrag.');
   for (const [kind, path] of Object.entries(song.files)) {
-    if (!Object.hasOwn(filenames, kind) || path !== `assets/${song.slug}/${filenames[kind]}`) {
-      throw Error('Ungültiger Dateiverweis.');
-    }
+    if (!Object.hasOwn(filenames, kind) || path !== `assets/${song.slug}/${filenames[kind]}`) throw Error('Ungültiger Dateiverweis.');
   }
+}
+function selectField(label, choices) {
+  const wrapper = element('label', 'field');
+  const select = element('select');
+  select.setAttribute('aria-label', label);
+  for (const [value, name] of choices) {
+    const option = element('option', '', name);
+    option.value = value;
+    select.append(option);
+  }
+  wrapper.append(element('span', '', label), select);
+  return {wrapper, select};
 }
 function card(song, index) {
   validate(song);
-  const article = element('article', `song ${song.instrument}`);
+  const article = element('article', 'song');
+  article.dataset.state = 'idle';
   const top = element('div', 'song-top');
   const badge = element('div', 'instrument');
-  const icon = element('span', 'instrument-icon', song.instrument === 'bell' ? '♩' : '♪');
+  const icon = element('span', 'instrument-icon', '♪');
   icon.setAttribute('aria-hidden', 'true');
-  badge.append(icon, element('span', '', names[song.instrument]));
-  top.append(badge, element('span', 'edition', `Hörprobe ${String(index + 1).padStart(2, '0')}`));
+  badge.append(icon, element('span', '', 'LIVE-INSTRUMENTE'));
+  top.append(badge, element('span', 'edition', `Fassung ${String(index + 1).padStart(2, '0')}`));
   const title = element('h3', '', song.title);
-  const seconds = Math.round(song.duration_seconds);
-  const duration = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`;
-  const meta = element('p', 'meta', `${song.bpm} Viertel / Minute · ${duration} Min.`);
-  const audio = element('audio');
-  audio.controls = true;
-  audio.preload = 'metadata';
-  audio.setAttribute('aria-label', `${song.title}, ${names[song.instrument]}`);
-  for (const [kind, type] of [['mp3', 'audio/mpeg'], ['wav', 'audio/wav']]) {
-    if (!song.files[kind]) continue;
-    const source = element('source');
-    source.src = song.files[kind];
-    source.type = type;
-    audio.append(source);
-  }
-  audio.append('Dein Browser unterstützt den Audioplayer nicht. Nutze die Downloads darunter.');
-  const error = element('p', 'error', 'Die Aufnahme konnte nicht geladen werden. Bitte lade die Seite neu oder nutze den WAV-Download.');
-  error.hidden = true;
-  error.setAttribute('role', 'alert');
-  audio.addEventListener('error', () => { error.hidden = false; });
-  // Only the selected player plays, so two melodies never overlap accidentally.
-  audio.addEventListener('play', () => document.querySelectorAll('audio').forEach(other => { if (other !== audio) other.pause(); }));
-  const controls = element('div', 'controls');
-  const loop = element('label', 'loop');
-  const check = element('input');
-  check.type = 'checkbox';
-  check.addEventListener('change', () => { audio.loop = check.checked; });
-  loop.append(check, 'Wiederholen');
+  const meta = element('p', 'meta');
+  const instrument = selectField('Instrument', Object.entries(instruments).map(([id, i]) => [id, i.name]));
+  instrument.select.value = song.instrument === 'bell' ? 'glockenspiel' : 'clarinet';
+  const verses = selectField('Strophen', [['1', '1 Strophe'], ['2', '2 Strophen'], ['3', '3 Strophen'], ['4', '4 Strophen'], ['infinite', 'Endlos ↻']]);
+  const fields = element('div', 'player-fields');
+  fields.append(instrument.wrapper, verses.wrapper);
+  const tempoLabel = element('label', 'tempo-label');
+  const bpm = element('input');
+  bpm.type = 'range'; bpm.min = '40'; bpm.max = '200'; bpm.step = '1';
+  bpm.value = Math.max(40, Math.min(200, Math.round(song.bpm)));
+  bpm.setAttribute('aria-label', 'Tempo in Vierteln pro Minute');
+  const bpmText = element('span');
+  tempoLabel.append(bpmText, bpm);
   const speed = element('div', 'speed');
   speed.setAttribute('role', 'group');
-  speed.setAttribute('aria-label', 'Abspielgeschwindigkeit');
+  speed.setAttribute('aria-label', 'Tempo-Schnellwahl');
+  const updateTempo = () => {
+    const value = Number(bpm.value);
+    bpmText.textContent = `${value} Viertel / Minute`;
+    const seconds = Math.round(song.quarters * 60 / value);
+    meta.textContent = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')} Min. pro Strophe · Originaltonhöhe`;
+    player.tempo(article, value);
+    speed.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed', String(Number(button.dataset.bpm) === value)));
+  };
   for (const rate of [.75, 1, 1.25]) {
     const button = element('button', '', `${rate * 100} %`);
     button.type = 'button';
-    button.setAttribute('aria-pressed', String(rate === 1));
-    button.addEventListener('click', () => {
-      audio.preservesPitch = true;
-      audio.webkitPreservesPitch = true;
-      audio.playbackRate = rate;
-      speed.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
-    });
+    button.dataset.bpm = Math.max(40, Math.min(200, Math.round(song.bpm * rate)));
+    button.addEventListener('click', () => { bpm.value = button.dataset.bpm; updateTempo(); });
     speed.append(button);
   }
-  controls.append(loop, speed);
+  bpm.addEventListener('input', updateTempo);
+  updateTempo();
+  const tempoRow = element('div', 'tempo-row');
+  tempoRow.append(tempoLabel, speed);
+  const controls = element('div', 'play-controls');
+  const play = element('button', 'play-button', '▶ Abspielen');
+  const stop = element('button', 'stop-button', '■ Zum Anfang');
+  play.type = stop.type = 'button';
+  stop.disabled = true;
+  controls.append(play, stop);
+  const message = element('p', 'player-message', 'Bereit zum Mitsingen.');
+  message.setAttribute('role', 'status');
+  const position = element('p', 'player-position');
+  const progress = element('progress');
+  progress.max = song.quarters;
+  progress.value = 0;
+  progress.setAttribute('aria-label', 'Fortschritt der Strophe');
+  let state = 'idle', verse = 1;
+  function display(update) {
+    state = update.state;
+    article.dataset.state = state;
+    if (update.verse) verse = update.verse;
+    if (update.quarter !== undefined) progress.value = update.quarter;
+    if (state === 'idle') { progress.value = 0; verse = 1; }
+    if (state === 'finished') progress.value = song.quarters;
+    play.textContent = {idle: '▶ Abspielen', loading: 'Instrument lädt …', playing: 'Ⅱ Pause', paused: '▶ Fortsetzen', finished: '▶ Noch einmal', error: '▶ Erneut versuchen'}[state];
+    play.disabled = state === 'loading';
+    stop.disabled = ['idle', 'error'].includes(state);
+    message.classList.toggle('error', state === 'error');
+    const text = update.message || {idle: 'Bereit zum Mitsingen.', loading: 'Klang wird einmalig geladen …', playing: 'Die Melodie spielt.', paused: 'Pausiert.', finished: 'Fertig gesungen.', error: 'Der Klang konnte nicht geladen werden.'}[state];
+    if (message.textContent !== text) message.textContent = text;
+    position.textContent = ['playing', 'paused', 'finished'].includes(state)
+      ? `Strophe ${verse}${verses.select.value === 'infinite' ? ' · endlos' : ` von ${verses.select.value}`}` : '';
+  }
+  play.addEventListener('click', () => {
+    if (state === 'playing') player.pause(article);
+    else if (state === 'paused') player.resume(article);
+    else player.start(article, {url: song.files.playback, instrument: instrument.select.value,
+      bpm: Number(bpm.value), verses: verses.select.value === 'infinite' ? Infinity : Number(verses.select.value)}, display);
+  });
+  stop.addEventListener('click', () => player.stop(article));
+  for (const select of [instrument.select, verses.select]) select.addEventListener('change', () => player.stop(article));
+  const details = element('details', 'download-section');
+  details.append(element('summary', '', 'Downloads & Aufnahme'));
   const downloads = element('div', 'downloads');
-  for (const kind of Object.keys(filenames)) {
+  for (const [kind, label] of Object.entries(labels)) {
     if (!song.files[kind]) continue;
-    const a = element('a', '', labels[kind]);
-    a.href = song.files[kind];
-    a.download = `${song.slug}.${kind === 'midi' ? 'mid' : kind}`;
-    a.setAttribute('aria-label', `${labels[kind]} herunterladen: ${song.title}, ${names[song.instrument]}`);
+    const a = element('a', '', label);
+    a.href = song.files[kind]; a.download = `${song.slug}.${kind === 'midi' ? 'mid' : kind}`;
+    a.setAttribute('aria-label', `${label} herunterladen: ${song.title}`);
     downloads.append(a);
   }
-  article.append(top, title, meta, audio, error, controls, element('div', 'download-title', 'FÜR SPÄTER MITNEHMEN'), downloads);
+  details.append(downloads);
+  if (song.files.wav || song.files.mp3) {
+    details.append(element('p', 'recording-note', 'Die Aufnahme enthält das ursprüngliche Instrument und Tempo. Für nahtlose Strophen den Instrumentenplayer oben verwenden.'));
+    const audio = element('audio'); audio.controls = true; audio.preload = 'none';
+    audio.setAttribute('aria-label', `Aufnahme: ${song.title}`);
+    for (const [kind, type] of [['mp3', 'audio/mpeg'], ['wav', 'audio/wav']]) {
+      if (!song.files[kind]) continue;
+      const source = element('source'); source.src = song.files[kind]; source.type = type; audio.append(source);
+    }
+    const error = element('p', 'error', 'Aufnahme nicht geladen. Bitte nutze den WAV-Download oder versuche es erneut.');
+    error.hidden = true; error.setAttribute('role', 'alert');
+    audio.addEventListener('error', () => { error.hidden = false; });
+    audio.addEventListener('play', () => {
+      player.stop(player.owner);
+      document.querySelectorAll('audio').forEach(other => { if (other !== audio) other.pause(); });
+    });
+    play.addEventListener('click', () => document.querySelectorAll('audio').forEach(other => other.pause()));
+    details.append(audio, error);
+  }
+  article.append(top, title, meta, fields, tempoRow, controls, message, position, progress, details);
   return article;
 }
 async function load() {
   try {
     const response = await fetch('library.json', {cache: 'no-cache'});
-    if (!response.ok) throw Error(`HTTP ${response.status}`);
+    if (!response.ok) throw Error('Katalog nicht erreichbar.');
     const songs = await response.json();
     if (!Array.isArray(songs)) throw Error('Ungültiger Katalog.');
-    const cards = songs.map(card);
-    root.replaceChildren(...cards);
-    document.querySelector('#count').textContent = `${songs.length} Hörproben`;
+    root.replaceChildren(...songs.map(card));
+    document.querySelector('#count').textContent = `${songs.length} Fassungen`;
     status.textContent = songs.length ? '' : 'Hier ist bald Platz für euer erstes Lied.';
     status.hidden = songs.length > 0;
-  } catch (err) {
+  } catch {
     status.textContent = 'Die Liedersammlung konnte nicht geladen werden. Bitte prüfe die Verbindung und lade die Seite erneut.';
     status.setAttribute('role', 'alert');
   }

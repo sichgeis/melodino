@@ -13,6 +13,7 @@
     "midi": "melody.mid",
     "musicxml": "score.musicxml",
     "csv": "notes.csv",
-    "mp3": "melody.mp3"
+    "mp3": "melody.mp3",
+    "playback": "playback.json"
   }
 }

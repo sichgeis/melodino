@@ -190,7 +190,7 @@ def clarinet_audio(score, bpm, soundfont, output):
     return font.name
 
 
-def render(input_path, output, bpm=None, voice='bell', soundfont=None, transpose=0):
+def render(input_path, output, bpm=None, voice='bell', soundfont=None, transpose=0, audio=True):
     if voice not in {'bell', 'clarinet'}:
         raise ValueError('Unbekanntes Instrument.')
     song = load_song(Path(input_path))
@@ -198,7 +198,7 @@ def render(input_path, output, bpm=None, voice='bell', soundfont=None, transpose
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     # Rendering into a fresh directory avoids stale MP3 after a WAV-only rerender.
-    for name in ('melody.mp3', 'melody.wav', 'melody.mid', 'score.musicxml', 'notes.csv', 'info.json'):
+    for name in ('melody.mp3', 'melody.wav', 'melody.mid', 'score.musicxml', 'notes.csv', 'info.json', 'playback.json'):
         (output / name).unlink(missing_ok=True)
     # Preserve incomplete pickup/final measures; do not fill them with hidden rests.
     score.write('musicxml', fp=str(output / 'score.musicxml'), makeNotation=False)
@@ -208,20 +208,29 @@ def render(input_path, output, bpm=None, voice='bell', soundfont=None, transpose
         writer.writerow(['measure', 'onset_quarters', 'pitch', 'duration_quarters'])
         for offset, duration, _, name, measure in events(score):
             writer.writerow([measure, offset, name, duration])
+    playback = dict(schema_version=1, title=song.title, bpm=bpm,
+                    quarters=float(score.highestTime),
+                    notes=[dict(at=offset, duration=duration, midi=pitch)
+                           for offset, duration, pitch, _, _ in events(score, True)
+                           if pitch is not None])
+    (output / 'playback.json').write_text(json.dumps(playback, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     font_name = None
-    if voice == 'bell':
-        bell_audio(score, bpm, output / 'melody.wav')
-    else:
-        font_name = clarinet_audio(score, bpm, soundfont, output / 'melody.wav')
-    files = {'wav': 'melody.wav', 'midi': 'melody.mid', 'musicxml': 'score.musicxml', 'csv': 'notes.csv'}
-    if shutil.which('ffmpeg'):
-        subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(output / 'melody.wav'),
-                        '-codec:a', 'libmp3lame', '-q:a', '2', str(output / 'melody.mp3')], check=True)
-        files['mp3'] = 'melody.mp3'
-    else:
-        warnings.warn('FFmpeg fehlt: WAV verfügbar, MP3 ausgelassen. macOS: brew install ffmpeg')
-    with wave.open(str(output / 'melody.wav')) as wav:
-        audio_duration = wav.getnframes() / wav.getframerate()
+    files = {'midi': 'melody.mid', 'musicxml': 'score.musicxml', 'csv': 'notes.csv', 'playback': 'playback.json'}
+    audio_duration = float(score.highestTime) * 60 / bpm
+    if audio:
+        if voice == 'bell':
+            bell_audio(score, bpm, output / 'melody.wav')
+        else:
+            font_name = clarinet_audio(score, bpm, soundfont, output / 'melody.wav')
+        files['wav'] = 'melody.wav'
+        if shutil.which('ffmpeg'):
+            subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(output / 'melody.wav'),
+                            '-codec:a', 'libmp3lame', '-q:a', '2', str(output / 'melody.mp3')], check=True)
+            files['mp3'] = 'melody.mp3'
+        else:
+            warnings.warn('FFmpeg fehlt: WAV verfügbar, MP3 ausgelassen. macOS: brew install ffmpeg')
+        with wave.open(str(output / 'melody.wav')) as wav:
+            audio_duration = wav.getnframes() / wav.getframerate()
     info = dict(title=song.title, source=song.source, bpm=bpm, instrument=voice,
                 duration_seconds=audio_duration, score_duration_seconds=float(score.highestTime) * 60 / bpm,
                 quarters=float(score.highestTime), note_count=sum(e[2] is not None for e in events(score, True)),

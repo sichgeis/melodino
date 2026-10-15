@@ -1,0 +1,16 @@
+{
+  "name": "melodino-player",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/browser/*.test.mjs",
+    "vendor": "esbuild node_modules/spessasynth_core/dist/index.js --bundle --format=esm --platform=browser --outfile=docs/vendor/spessasynth-core-4.3.22.js --legal-comments=eof"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "spessasynth_core": "4.3.22"
+  }
+}

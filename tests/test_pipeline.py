@@ -159,6 +159,8 @@ def test_musicxml_chords_ties_and_transposing_input(tmp_path):
     assert all(e[1] == 8 for e in merged)
     info = render(path, tmp_path / 'out')
     assert info['note_count'] == 2
+    playback = json.loads((tmp_path / 'out/playback.json').read_text())
+    assert playback['notes'] == [dict(at=0, duration=8, midi=70), dict(at=0, duration=8, midi=74)]
     assert_audio(tmp_path / 'out/melody.wav')
 
 
@@ -220,3 +222,22 @@ def test_baeume_photo_transcription_and_pickup(tmp_path):
         assert pitch == expected[2]
         assert duration == pytest.approx(expected[1], abs=.002)
     assert_audio(tmp_path / 'melody.wav')
+
+
+def test_browser_only_add_without_audio_tools(tmp_path, monkeypatch):
+    monkeypatch.setattr('notenstimme.core.shutil.which', lambda _: None)
+    docs = tmp_path / 'docs'
+    info = add(BAEUME, 'browser-song', docs, voice='clarinet', bpm=104, audio=False)
+    assert 'mp3' not in info['files'] and 'wav' not in info['files']
+    assert info['duration_seconds'] == pytest.approx(36 * 60 / 104)
+    playback = json.loads((docs / info['files']['playback']).read_text())
+    assert playback['quarters'] == 36
+    assert len(playback['notes']) == 60
+    assert playback['notes'][0] == dict(at=0, duration=.5, midi=62)
+    assert playback['notes'][-1] == dict(at=35.5, duration=.5, midi=67)
+    original = events(load_song(BAEUME).score, True)
+    assert playback['notes'] == [dict(at=o, duration=d, midi=p) for o,d,p,_,_ in original if p is not None]
+    # Replacing an earlier audio export with a browser-only edition removes stale audio.
+    (docs / 'assets/browser-song/melody.mp3').write_text('stale')
+    add(BAEUME, 'browser-song', docs, audio=False)
+    assert not (docs / 'assets/browser-song/melody.mp3').exists()
