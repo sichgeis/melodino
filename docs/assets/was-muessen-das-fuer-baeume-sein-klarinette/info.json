@@ -1,0 +1,19 @@
+{
+  "title": "Was müssen das für Bäume sein",
+  "source": "Aus MusicXML importiert",
+  "bpm": 104.0,
+  "instrument": "clarinet",
+  "duration_seconds": 23.320090702947844,
+  "score_duration_seconds": 20.76923076923077,
+  "quarters": 36.0,
+  "note_count": 60,
+  "transpose": 0,
+  "files": {
+    "wav": "melody.wav",
+    "midi": "melody.mid",
+    "musicxml": "score.musicxml",
+    "csv": "notes.csv",
+    "mp3": "melody.mp3"
+  },
+  "soundfont": "FluidR3_GM.sf2"
+}

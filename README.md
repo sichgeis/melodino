@@ -133,6 +133,15 @@ Der Browser erhält Tonhöhen bei geändertem Abspieltempo, soweit er das unters
 Downloads enthalten das ursprüngliche Exporttempo. Kein Autoplay; bei Verbindungsproblemen
 erscheint eine Fehlermeldung. Der Player bietet MP3 und WAV; WAV ist auch separat downloadbar.
 
+## Zweites Lied aus einem Chat-Foto
+
+„Was müssen das für Bäume sein“ liegt als MusicXML in examples/:
+G-Dur, 2/4, Achtelauftakt, 60 Töne und 36 Viertel. Der verkürzte Schluss
+ergänzt den Auftakt. Der erste Systemwechsel unterbricht einen Takt;
+dieser bleibt in der Übertragung zusammen. Es gibt keine Begleitung.
+Hörproben: Glockenklang 88 und Klarinette 104 BPM.
+Details und Prüfkriterien: [Liedspezifikation](specs/002-baeume.md).
+
 ## Tests und lokale Seite
 
 ```sh

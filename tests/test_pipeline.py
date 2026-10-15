@@ -15,7 +15,7 @@ EXAMPLE = Path(__file__).resolve().parents[1] / 'examples/schlaf-kindlein-schlaf
 
 def midi_events(path):
     parsed = converter.parse(str(path), quantizePost=False)
-    return [(float(n.offset), int(n.pitch.midi), float(n.quarterLength)) for n in parsed.flatten().notes]
+    return [(float(n.offset), int(n.pitch.midi), float(n.quarterLength)) for n in parsed.stripTies().flatten().notes]
 
 
 def assert_audio(path):
@@ -170,9 +170,53 @@ def test_published_catalog():
     songs = json.loads(path.read_text())
     assert len(songs) >= 2
     for song in songs:
-        assert song['note_count'] == 30
-        assert song['quarters'] == 40
+        if song['slug'].startswith('schlaf-kindlein-schlaf-'):
+            assert song['note_count'] == 30
+            assert song['quarters'] == 40
+        elif song['slug'].startswith('was-muessen-das-fuer-baeume-sein-'):
+            assert song['note_count'] == 60
+            assert song['quarters'] == 36
         for kind, file in song['files'].items():
             assert file.startswith(f"assets/{song['slug']}/")
             assert (docs / file).stat().st_size > 0
         assert_audio(docs / song['files']['wav'])
+
+
+BAEUME = EXAMPLE.parent / 'was-muessen-das-fuer-baeume-sein.musicxml'
+
+
+def test_baeume_photo_transcription_and_pickup(tmp_path):
+    song = load_song(BAEUME)
+    assert song.title == 'Was müssen das für Bäume sein'
+    score = song.score
+    bars = list(score.parts[0].getElementsByClass(stream.Measure))
+    assert len(bars) == 19
+    assert bars[0].number == 0
+    assert bars[0].duration.quarterLength == .5
+    assert all(m.duration.quarterLength == 2 for m in bars[1:-1])
+    assert bars[-1].duration.quarterLength == 1.5
+    assert score.highestTime == 36
+    assert len(score.recurse().notes) == 60
+    assert not list(score.recurse().getElementsByClass(note.Rest))
+    assert bars[0].notes[0].nameWithOctave == 'D4'
+    assert bars[0].getElementsByClass(meter.TimeSignature)[0].ratioString == '2/4'
+    assert bars[0].keySignature.sharps == 1
+    assert [(n.nameWithOctave, float(n.quarterLength)) for n in bars[4].notes] == [
+        ('B4', 1), ('G4', .5), ('G4', .5)]
+    for number in (7, 17):
+        assert [n.nameWithOctave for n in bars[number].notes] == ['D4', 'D4', 'E4', 'F#4']
+    assert [(n.nameWithOctave, float(n.quarterLength)) for n in bars[-1].notes] == [('G4', 1), ('G4', .5)]
+    info = render(BAEUME, tmp_path, bpm=104)
+    assert info['quarters'] == 36
+    assert info['note_count'] == 60
+    exported = load_song(tmp_path / 'score.musicxml').score
+    assert exported.highestTime == 36
+    assert not list(exported.recurse().getElementsByClass(note.Rest))
+    original = events(score)
+    actual = midi_events(tmp_path / 'melody.mid')
+    assert len(actual) == 60
+    for (offset, pitch, duration), expected in zip(actual, original):
+        assert offset == pytest.approx(expected[0], abs=.002)
+        assert pitch == expected[2]
+        assert duration == pytest.approx(expected[1], abs=.002)
+    assert_audio(tmp_path / 'melody.wav')

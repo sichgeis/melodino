@@ -1,0 +1,18 @@
+{
+  "title": "Was müssen das für Bäume sein",
+  "source": "Aus MusicXML importiert",
+  "bpm": 88.0,
+  "instrument": "bell",
+  "duration_seconds": 25.04546485260771,
+  "score_duration_seconds": 24.545454545454547,
+  "quarters": 36.0,
+  "note_count": 60,
+  "transpose": 0,
+  "files": {
+    "wav": "melody.wav",
+    "midi": "melody.mid",
+    "musicxml": "score.musicxml",
+    "csv": "notes.csv",
+    "mp3": "melody.mp3"
+  }
+}

@@ -79,7 +79,10 @@ def load_song(path: Path) -> Song:
         score = converter.parse(str(path))
         score = score.expandRepeats()
         score = score.toSoundingPitch()
-        title = (score.metadata.title if score.metadata else None) or path.stem
+        title = (
+            (score.metadata.title or score.metadata.movementName)
+            if score.metadata else None
+        ) or path.stem
         source = 'Aus MusicXML importiert'
     else:
         raise ValueError('Eingabe muss JSON oder MusicXML sein.')
@@ -197,7 +200,8 @@ def render(input_path, output, bpm=None, voice='bell', soundfont=None, transpose
     # Rendering into a fresh directory avoids stale MP3 after a WAV-only rerender.
     for name in ('melody.mp3', 'melody.wav', 'melody.mid', 'score.musicxml', 'notes.csv', 'info.json'):
         (output / name).unlink(missing_ok=True)
-    score.write('musicxml', fp=str(output / 'score.musicxml'))
+    # Preserve incomplete pickup/final measures; do not fill them with hidden rests.
+    score.write('musicxml', fp=str(output / 'score.musicxml'), makeNotation=False)
     score.write('midi', fp=str(output / 'melody.mid'))
     with (output / 'notes.csv').open('w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)

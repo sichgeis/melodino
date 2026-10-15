@@ -37,5 +37,44 @@
     },
     "soundfont": "FluidR3_GM.sf2",
     "slug": "schlaf-kindlein-schlaf-klarinette"
+  },
+  {
+    "title": "Was müssen das für Bäume sein",
+    "source": "Aus MusicXML importiert",
+    "bpm": 88.0,
+    "instrument": "bell",
+    "duration_seconds": 25.04546485260771,
+    "score_duration_seconds": 24.545454545454547,
+    "quarters": 36.0,
+    "note_count": 60,
+    "transpose": 0,
+    "files": {
+      "wav": "assets/was-muessen-das-fuer-baeume-sein-glocke/melody.wav",
+      "midi": "assets/was-muessen-das-fuer-baeume-sein-glocke/melody.mid",
+      "musicxml": "assets/was-muessen-das-fuer-baeume-sein-glocke/score.musicxml",
+      "csv": "assets/was-muessen-das-fuer-baeume-sein-glocke/notes.csv",
+      "mp3": "assets/was-muessen-das-fuer-baeume-sein-glocke/melody.mp3"
+    },
+    "slug": "was-muessen-das-fuer-baeume-sein-glocke"
+  },
+  {
+    "title": "Was müssen das für Bäume sein",
+    "source": "Aus MusicXML importiert",
+    "bpm": 104.0,
+    "instrument": "clarinet",
+    "duration_seconds": 23.320090702947844,
+    "score_duration_seconds": 20.76923076923077,
+    "quarters": 36.0,
+    "note_count": 60,
+    "transpose": 0,
+    "files": {
+      "wav": "assets/was-muessen-das-fuer-baeume-sein-klarinette/melody.wav",
+      "midi": "assets/was-muessen-das-fuer-baeume-sein-klarinette/melody.mid",
+      "musicxml": "assets/was-muessen-das-fuer-baeume-sein-klarinette/score.musicxml",
+      "csv": "assets/was-muessen-das-fuer-baeume-sein-klarinette/notes.csv",
+      "mp3": "assets/was-muessen-das-fuer-baeume-sein-klarinette/melody.mp3"
+    },
+    "soundfont": "FluidR3_GM.sf2",
+    "slug": "was-muessen-das-fuer-baeume-sein-klarinette"
   }
 ]
