@@ -1,0 +1,19 @@
+{
+  "title": "Schlaf, Kindlein, schlaf",
+  "source": "Im Codex-Chat korrigierte Notenfolge, ohne Liedtext oder Buchfoto",
+  "bpm": 104.0,
+  "instrument": "clarinet",
+  "duration_seconds": 25.61015873015873,
+  "score_duration_seconds": 23.076923076923077,
+  "quarters": 40.0,
+  "note_count": 30,
+  "transpose": 0,
+  "files": {
+    "wav": "melody.wav",
+    "midi": "melody.mid",
+    "musicxml": "score.musicxml",
+    "csv": "notes.csv",
+    "mp3": "melody.mp3"
+  },
+  "soundfont": "FluidR3_GM.sf2"
+}
