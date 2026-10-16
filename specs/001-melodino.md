@@ -47,3 +47,5 @@ MusicXML-Akkorde/Bindungen, nicht stummes Audio, fehlendes FFmpeg, Slugs/Katalog
 Browserprüfung und HTTPS-Checks ergänzen den Testlauf, siehe README.
 
 Beauftragte instrumentale Arrangements auf der Hauptseite: specs/008-main-arrangements.md.
+
+Beauftragter gemeinfreier Text im Mitsing-Labor: specs/009-singalong.md.

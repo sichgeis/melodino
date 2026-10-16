@@ -1,5 +1,5 @@
-import {configureScore} from './song-options.js?v=20261016-main-arrangements';
-import {validatePlayback, scoreTracks} from './score-clock.js?v=20261016-main-arrangements';
+import {configureScore} from './song-options.js?v=20261016-singalong';
+import {validatePlayback, scoreTracks} from './score-clock.js?v=20261016-singalong';
 import {AudioOutput, configurePlaybackSession} from './audio-output.js';
 
 async function json(url) {
@@ -39,7 +39,7 @@ export class BrowserPlayer {
     if (!this.context.audioWorklet) throw Error('Der Instrumentenplayer benötigt einen aktuellen Browser und HTTPS. Bitte nutze sonst einen Download.');
     const resume = this.output.activate();
     if (!this.initializing) {
-      this.initializing = this.context.audioWorklet.addModule(new URL('./synth-worklet.js?v=20261016-main-arrangements', import.meta.url))
+      this.initializing = this.context.audioWorklet.addModule(new URL('./synth-worklet.js?v=20261016-singalong', import.meta.url))
         .then(() => {
           this.node = new AudioWorkletNode(this.context, 'melodino-synth', {numberOfInputs: 0,
             numberOfOutputs: 1, outputChannelCount: [2]});
@@ -122,7 +122,7 @@ export class BrowserPlayer {
       }
       if (token !== this.generation) return;
       await this.request({type: 'load', score, instrument, bpm: options.bpm,
-        verses: options.verses, gapQuarters: options.gapQuarters, backing: options.backing ?? 1, melody: options.melody ?? true, rhythm: options.rhythm ?? true, accompaniment: options.accompaniment ?? true});
+        verses: options.verses, gapQuarters: options.gapQuarters, reportHz: options.reportHz ?? 5, backing: options.backing ?? 1, melody: options.melody ?? true, rhythm: options.rhythm ?? true, accompaniment: options.accompaniment ?? true});
       if (token !== this.generation) return;
       this.update('playing', {verse: 1, quarter: 0});
       await this.request({type: 'play'});

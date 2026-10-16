@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#244b3e"><meta name="description" content="Melodino Mitsing-Labor: Liedtext, Musik und drei Ansichten zum gemeinsamen Singen.">
+  <title>Melodino · Gemeinsam mitsingen</title>
+  <link rel="stylesheet" href="style.css?v=20261016-singalong"><link rel="stylesheet" href="singalong.css">
+  <script type="module" src="singalong.js?v=20261016-singalong"></script>
+</head>
+<body>
+  <header class="masthead"><a class="brand" href="./">♫ melodino</a><a href="experiments.html">Zu den Experimenten</a></header>
+  <main class="sing-main">
+    <section class="sing-intro"><span class="eyebrow">MITSING-LABOR</span><h1>Zusammen<br>ein Lied.</h1>
+      <p>Die Musik begleitet euch. Der Text zeigt, wo ihr seid.</p>
+    </section>
+    <article class="sing-player" id="sing-player" data-state="idle">
+      <h2>Schlaf, Kindlein, schlaf</h2>
+      <p class="sing-meta">Recherchierte Melodie · drei vertraute Textstrophen</p>
+      <p id="load-message" role="status">Text und Musik werden vorbereitet …</p>
+      <div id="ready" hidden>
+        <div class="view-tabs" role="group" aria-label="Textansicht">
+          <button type="button" data-view="sheet" aria-pressed="true">A · Strophe</button>
+          <button type="button" data-view="karaoke" aria-pressed="false">B · Karaoke</button>
+          <button type="button" data-view="scroll" aria-pressed="false">C · Lauftext</button>
+        </div>
+        <p id="view-description" class="view-description"></p>
+        <div class="sing-controls play-controls"><button type="button" class="play-button" id="play">▶ Gemeinsam singen</button><button type="button" class="stop-button" id="stop" disabled>■ Anfang</button></div>
+        <p id="play-status" class="player-message" role="status">Lest die erste Zeile, dann startet die Musik.</p>
+        <p id="verse-status" class="sing-meta"></p>
+        <progress id="sing-progress" max="40" value="0" aria-label="Fortschritt der Strophe"></progress>
+        <div id="lyrics" class="lyric-viewport mode-sheet" tabindex="0" aria-label="Liedtext zum Mitsingen"></div>
+        <label class="follow-control" id="follow-control" hidden><input type="checkbox" id="follow" checked>Text automatisch folgen</label>
+        <details class="sing-settings"><summary>Strophen & Klang</summary>
+          <fieldset><legend>Welche Strophen singen wir?</legend><div id="verse-choices"></div></fieldset>
+          <p class="settings-hint" id="selection-summary"></p>
+          <div class="player-fields">
+            <label class="field"><span>Klang</span><select id="arrangement" aria-label="Klang"><option value="gentle">Sanft begleitet</option><option value="warm">Pur und warm</option><option value="lively">Lebhaft begleitet</option></select></label>
+            <label class="field"><span>Strophenpause</span><select id="gap" aria-label="Strophenpause"><option value="0">keine</option><option value="4">1 Takt</option><option value="8">2 Takte</option></select></label>
+          </div>
+          <label class="tempo-label"><span id="tempo-text">88 Viertel / Minute</span><input type="range" id="tempo" min="40" max="200" value="88" aria-label="Tempo"></label>
+          <label class="follow-control"><input type="checkbox" id="melody" checked>Melodie als Hilfe mitspielen</label>
+          <p class="settings-hint">Die Musik spielt einmal für jede gewählte Textstrophe. Die lange Schlussnote lässt Zeit zum Atmen; eine zusätzliche Pause könnt ihr hier wählen.</p>
+        </details>
+      </div>
+    </article>
+    <details class="sing-notes"><summary>Was probieren wir hier aus?</summary>
+      <p><strong>A · Strophe:</strong> Alles auf einen Blick, mit markierter aktueller Zeile.</p>
+      <p><strong>B · Karaoke:</strong> Die aktuelle Silbe und die nächste Zeile als Vorschau.</p>
+      <p><strong>C · Lauftext:</strong> Alle ausgewählten Strophen in großer Schrift; der Textbereich folgt der Musik. Automatisches Scrollen ist abschaltbar.</p>
+      <p>Die Ansicht kann während des Singens wechseln. Musik und Text folgen derselben musikalischen Uhr. Die Anzeige kann je nach Gerät leicht vom hörbaren Ton abweichen.</p>
+      <p>Historischer Text aus <a href="https://textgridrep.de/browse/4bjqm.0?lang=de">Des Knaben Wunderhorn (1808)</a>, Strophen 1, 2 und 4; Schreibweise leicht normalisiert. Auswahl auch bei <a href="https://www.liederkiste.com/index.php?a=schlaf-kindlein-schlaf&l=de">Liederkiste</a>. Die goldene Schelle wird hier als dritte ausgewählte Textstrophe angezeigt.</p>
+    </details>
+    <details class="audio-help"><summary>Kein Ton auf dem iPhone?</summary><p>Medienlautstärke und Bluetooth-Ausgabe prüfen. Seite direkt in Safari öffnen und erneut auf Abspielen tippen. Bei älteren iPhones gegebenenfalls den Stummmodus ausschalten.</p></details>
+  </main>
+  <footer><a href="experiments.html">Zurück ins Klanglabor</a><p>Ihr bringt die Stimmen mit.</p><p class="credits">FluidR3 GM · SpessaSynth · <a href="samples/NOTICE.txt">Klanglizenzen</a></p></footer>
+</body>
+</html>

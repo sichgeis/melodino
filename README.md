@@ -327,3 +327,33 @@ bleiben als Solo bedienbar. Nach Ersetzen der Quelle verhindert der Player, dass
 veraltete Arrangements andere Melodien spielen. Falls der Arrangementkatalog nicht
 lädt, bleiben die Solomelodien mit sichtbarem Hinweis verfügbar.
 Spezifikation: [Klangvarianten auf der Hauptseite](specs/008-main-arrangements.md).
+
+
+## Mitsing-Labor: Text und Musik
+
+[Am Telefon ausprobieren](https://sichgeis.github.io/melodino/singalong.html), auch
+im Experimentbereich verlinkt. Drei Ansichten: Strophenblatt mit Zeilenmarkierung,
+Karaoke mit Silbenmarkierung und nächste-Zeile-Vorschau, Lauftext mit abschaltbarer
+automatischer Folge innerhalb des Textbereichs. Ansichten wechseln ohne Musikneustart.
+
+Drei historische Textstrophen aus „Des Knaben Wunderhorn“ (1808), Nr. 1, 2 und 4,
+als drei ausgewählte Strophen angezeigt. Nur die angehakten Texte werden gesungen:
+Musik und Strophenzahl ergeben sich daraus automatisch. Keine unabhängige Anzahl
+und keine endlose Wiederholung im Mitsing-Labor. Die Hauptseite bleibt vorerst beim
+bisherigen Bedienkonzept. Kein Gesang aus dem Computer; ihr singt zur Begleitung.
+
+Default: recherchierte Melodie, sanfte Begleitung, 88 Viertel/Minute, keine zusätzliche
+Strophenpause wegen der langen Schlussnote. Tempo und Strophenpause sind veränderbar.
+Die Noten werden im bestehenden MIDI-Sequenzer wiederholt; weder MP3-Verkettung noch
+zusätzliche große Audioexporte. Zeilen/Silben sind ausdrücklich in Vierteln zugeordnet,
+auch die Einsätze auf Position 7, 15 und 23 vor dem nächsten Taktanfang.
+Der AudioWorklet meldet für dieses Experiment bis zu 30 Positionen pro Sekunde;
+die Anzeige nutzt diese musikalische Uhr. Pause und Tempo bleiben synchron.
+Geräte-Ausgabelatenz kann einen kleinen sicht-/hörbaren Versatz verursachen.
+
+Daten: docs/lyrics/schlaf-kindlein-schlaf.json. Reproduzieren mit
+`node scripts/prepare-lyrics.mjs`. Änderungen der Rhythmik müssen erneut gegen die
+Silben geprüft werden; die Seite lehnt unpassende Zuordnungen ab. Texte werden über
+DOM-textContent ausgegeben. Die Textfreigabe gilt gezielt für diese gemeinfreie
+Überlieferung; keine modernen Buchtexte oder Bilder wurden veröffentlicht.
+Quellen/Entscheidungen: research/singalong.md; Vertrag: specs/009-singalong.md.

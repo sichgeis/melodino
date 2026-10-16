@@ -1,0 +1,648 @@
+{
+  "schema_version": 1,
+  "title": "Schlaf, Kindlein, schlaf",
+  "quarters": 40,
+  "source": "Historische Strophen 1, 2 und 4 aus Des Knaben Wunderhorn (1808); Rechtschreibung und Interpunktion leicht normalisiert.",
+  "sources": [
+    "https://textgridrep.de/browse/4bjqm.0?lang=de",
+    "https://www.liederkiste.com/index.php?a=schlaf-kindlein-schlaf&l=de"
+  ],
+  "verses": [
+    {
+      "id": "home",
+      "label": "Vater und Mutter",
+      "historical_number": 1,
+      "lines": [
+        {
+          "text": "Schlaf, Kindlein, schlaf!",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 2,
+              "text": "Schlaf,",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 1,
+              "text": "Kind",
+              "spaceAfter": false
+            },
+            {
+              "at": 3,
+              "duration": 1,
+              "text": "lein,",
+              "spaceAfter": true
+            },
+            {
+              "at": 4,
+              "duration": 3,
+              "text": "schlaf!",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Der Vater hüt’ die Schaf,",
+          "cues": [
+            {
+              "at": 7,
+              "duration": 1,
+              "text": "Der",
+              "spaceAfter": true
+            },
+            {
+              "at": 8,
+              "duration": 1,
+              "text": "Va",
+              "spaceAfter": false
+            },
+            {
+              "at": 9,
+              "duration": 1,
+              "text": "ter",
+              "spaceAfter": true
+            },
+            {
+              "at": 10,
+              "duration": 1,
+              "text": "hüt’",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 1,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 12,
+              "duration": 3,
+              "text": "Schaf,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "die Mutter schüttelt’s Bäumelein,",
+          "cues": [
+            {
+              "at": 15,
+              "duration": 1,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 16,
+              "duration": 1,
+              "text": "Mut",
+              "spaceAfter": false
+            },
+            {
+              "at": 17,
+              "duration": 1,
+              "text": "ter",
+              "spaceAfter": true
+            },
+            {
+              "at": 18,
+              "duration": 1,
+              "text": "schüt",
+              "spaceAfter": false
+            },
+            {
+              "at": 19,
+              "duration": 1,
+              "text": "telt’s",
+              "spaceAfter": true
+            },
+            {
+              "at": 20,
+              "duration": 1,
+              "text": "Bäu",
+              "spaceAfter": false
+            },
+            {
+              "at": 21,
+              "duration": 1,
+              "text": "me",
+              "spaceAfter": false
+            },
+            {
+              "at": 22,
+              "duration": 1,
+              "text": "lein,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "da fällt herab ein Träumelein.",
+          "cues": [
+            {
+              "at": 23,
+              "duration": 1,
+              "text": "da",
+              "spaceAfter": true
+            },
+            {
+              "at": 24,
+              "duration": 1,
+              "text": "fällt",
+              "spaceAfter": true
+            },
+            {
+              "at": 25,
+              "duration": 1,
+              "text": "he",
+              "spaceAfter": false
+            },
+            {
+              "at": 26,
+              "duration": 1,
+              "text": "rab",
+              "spaceAfter": true
+            },
+            {
+              "at": 27,
+              "duration": 1,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 28,
+              "duration": 1,
+              "text": "Träu",
+              "spaceAfter": false
+            },
+            {
+              "at": 29,
+              "duration": 1,
+              "text": "me",
+              "spaceAfter": false
+            },
+            {
+              "at": 30,
+              "duration": 2,
+              "text": "lein.",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Schlaf, Kindlein, schlaf!",
+          "cues": [
+            {
+              "at": 32,
+              "duration": 2,
+              "text": "Schlaf,",
+              "spaceAfter": true
+            },
+            {
+              "at": 34,
+              "duration": 1,
+              "text": "Kind",
+              "spaceAfter": false
+            },
+            {
+              "at": 35,
+              "duration": 1,
+              "text": "lein,",
+              "spaceAfter": true
+            },
+            {
+              "at": 36,
+              "duration": 4,
+              "text": "schlaf!",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sky",
+      "label": "Schäfchen am Himmel",
+      "historical_number": 2,
+      "lines": [
+        {
+          "text": "Schlaf, Kindlein, schlaf!",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 2,
+              "text": "Schlaf,",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 1,
+              "text": "Kind",
+              "spaceAfter": false
+            },
+            {
+              "at": 3,
+              "duration": 1,
+              "text": "lein,",
+              "spaceAfter": true
+            },
+            {
+              "at": 4,
+              "duration": 3,
+              "text": "schlaf!",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Am Himmel ziehn die Schaf,",
+          "cues": [
+            {
+              "at": 7,
+              "duration": 1,
+              "text": "Am",
+              "spaceAfter": true
+            },
+            {
+              "at": 8,
+              "duration": 1,
+              "text": "Him",
+              "spaceAfter": false
+            },
+            {
+              "at": 9,
+              "duration": 1,
+              "text": "mel",
+              "spaceAfter": true
+            },
+            {
+              "at": 10,
+              "duration": 1,
+              "text": "ziehn",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 1,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 12,
+              "duration": 3,
+              "text": "Schaf,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "die Sternlein sind die Lämmerlein,",
+          "cues": [
+            {
+              "at": 15,
+              "duration": 1,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 16,
+              "duration": 1,
+              "text": "Stern",
+              "spaceAfter": false
+            },
+            {
+              "at": 17,
+              "duration": 1,
+              "text": "lein",
+              "spaceAfter": true
+            },
+            {
+              "at": 18,
+              "duration": 1,
+              "text": "sind",
+              "spaceAfter": true
+            },
+            {
+              "at": 19,
+              "duration": 1,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 20,
+              "duration": 1,
+              "text": "Läm",
+              "spaceAfter": false
+            },
+            {
+              "at": 21,
+              "duration": 1,
+              "text": "mer",
+              "spaceAfter": false
+            },
+            {
+              "at": 22,
+              "duration": 1,
+              "text": "lein,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "der Mond, der ist das Schäferlein.",
+          "cues": [
+            {
+              "at": 23,
+              "duration": 1,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 24,
+              "duration": 1,
+              "text": "Mond,",
+              "spaceAfter": true
+            },
+            {
+              "at": 25,
+              "duration": 1,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 26,
+              "duration": 1,
+              "text": "ist",
+              "spaceAfter": true
+            },
+            {
+              "at": 27,
+              "duration": 1,
+              "text": "das",
+              "spaceAfter": true
+            },
+            {
+              "at": 28,
+              "duration": 1,
+              "text": "Schä",
+              "spaceAfter": false
+            },
+            {
+              "at": 29,
+              "duration": 1,
+              "text": "fer",
+              "spaceAfter": false
+            },
+            {
+              "at": 30,
+              "duration": 2,
+              "text": "lein.",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Schlaf, Kindlein, schlaf!",
+          "cues": [
+            {
+              "at": 32,
+              "duration": 2,
+              "text": "Schlaf,",
+              "spaceAfter": true
+            },
+            {
+              "at": 34,
+              "duration": 1,
+              "text": "Kind",
+              "spaceAfter": false
+            },
+            {
+              "at": 35,
+              "duration": 1,
+              "text": "lein,",
+              "spaceAfter": true
+            },
+            {
+              "at": 36,
+              "duration": 4,
+              "text": "schlaf!",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bell",
+      "label": "Die goldene Schelle",
+      "historical_number": 4,
+      "lines": [
+        {
+          "text": "Schlaf, Kindlein, schlaf!",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 2,
+              "text": "Schlaf,",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 1,
+              "text": "Kind",
+              "spaceAfter": false
+            },
+            {
+              "at": 3,
+              "duration": 1,
+              "text": "lein,",
+              "spaceAfter": true
+            },
+            {
+              "at": 4,
+              "duration": 3,
+              "text": "schlaf!",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "So schenk ich dir ein Schaf",
+          "cues": [
+            {
+              "at": 7,
+              "duration": 1,
+              "text": "So",
+              "spaceAfter": true
+            },
+            {
+              "at": 8,
+              "duration": 1,
+              "text": "schenk",
+              "spaceAfter": true
+            },
+            {
+              "at": 9,
+              "duration": 1,
+              "text": "ich",
+              "spaceAfter": true
+            },
+            {
+              "at": 10,
+              "duration": 1,
+              "text": "dir",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 1,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 12,
+              "duration": 3,
+              "text": "Schaf",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "mit einer goldnen Schelle fein,",
+          "cues": [
+            {
+              "at": 15,
+              "duration": 1,
+              "text": "mit",
+              "spaceAfter": true
+            },
+            {
+              "at": 16,
+              "duration": 1,
+              "text": "ei",
+              "spaceAfter": false
+            },
+            {
+              "at": 17,
+              "duration": 1,
+              "text": "ner",
+              "spaceAfter": true
+            },
+            {
+              "at": 18,
+              "duration": 1,
+              "text": "gold",
+              "spaceAfter": false
+            },
+            {
+              "at": 19,
+              "duration": 1,
+              "text": "nen",
+              "spaceAfter": true
+            },
+            {
+              "at": 20,
+              "duration": 1,
+              "text": "Schel",
+              "spaceAfter": false
+            },
+            {
+              "at": 21,
+              "duration": 1,
+              "text": "le",
+              "spaceAfter": true
+            },
+            {
+              "at": 22,
+              "duration": 1,
+              "text": "fein,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "das soll dein Spielgeselle sein.",
+          "cues": [
+            {
+              "at": 23,
+              "duration": 1,
+              "text": "das",
+              "spaceAfter": true
+            },
+            {
+              "at": 24,
+              "duration": 1,
+              "text": "soll",
+              "spaceAfter": true
+            },
+            {
+              "at": 25,
+              "duration": 1,
+              "text": "dein",
+              "spaceAfter": true
+            },
+            {
+              "at": 26,
+              "duration": 1,
+              "text": "Spiel",
+              "spaceAfter": false
+            },
+            {
+              "at": 27,
+              "duration": 1,
+              "text": "ge",
+              "spaceAfter": false
+            },
+            {
+              "at": 28,
+              "duration": 1,
+              "text": "sel",
+              "spaceAfter": false
+            },
+            {
+              "at": 29,
+              "duration": 1,
+              "text": "le",
+              "spaceAfter": true
+            },
+            {
+              "at": 30,
+              "duration": 2,
+              "text": "sein.",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Schlaf, Kindlein, schlaf!",
+          "cues": [
+            {
+              "at": 32,
+              "duration": 2,
+              "text": "Schlaf,",
+              "spaceAfter": true
+            },
+            {
+              "at": 34,
+              "duration": 1,
+              "text": "Kind",
+              "spaceAfter": false
+            },
+            {
+              "at": 35,
+              "duration": 1,
+              "text": "lein,",
+              "spaceAfter": true
+            },
+            {
+              "at": 36,
+              "duration": 4,
+              "text": "schlaf!",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
