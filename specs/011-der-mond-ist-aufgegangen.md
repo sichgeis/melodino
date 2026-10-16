@@ -2,7 +2,9 @@
 
 Visuell aus dem am 16.10.2026 hochgeladenen Notenfoto übertragen.
 Melodie laut Vorlage: Johann Abraham Peter Schulz (1790).
-Das Foto, Buchtext und Illustrationen werden nicht übernommen.
+Das Foto und Illustrationen werden nicht übernommen. Die fünf abgebildeten
+Textstrophen von Matthias Claudius werden auf ausdrücklichen Folgeauftrag
+als auswählbarer Mitsingtext übernommen.
 
 ## Bestätigte Noten
 
@@ -38,6 +40,17 @@ Vier Browservarianten mit getrennten instrumentalen Begleitspuren.
 Der Akkordplan folgt den Symbolen der Vorlage (F, C, Dm, Gm, Am, B♭);
 Voicings, Bass, Dynamik und Rhythmus sind eigene Arrangementvorschläge.
 Originaldownloads enthalten ausschließlich die Melodie.
+
+## Mitsingtext
+
+Die fünf Strophen folgen dem bereitgestellten Foto einschließlich dessen
+Auswahl und Nummerierung; keine fehlenden Strophen aus anderen Quellen ergänzen.
+Je sechs Zeilen, Beginn bei Viertelposition 0, 8, 16, 24, 32 und 40.
+42 Text-Cues je Strophe entsprechen den 42 Melodietönen. Die notierte Pause
+bei Position 23 bleibt ohne Cue. Am Ende der dritten Strophe bleibt das
+gedruckte „sehen“ erhalten, auf dem letzten Ton zusammengezogen als „sehn“
+gesungen. Noten und Instrumentaldownloads bleiben unverändert.
+Alle fünf Strophen sind zunächst ausgewählt; ihre Auswahl bestimmt die Musikdurchgänge.
 
 ## Prüfung
 

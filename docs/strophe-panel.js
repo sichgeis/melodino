@@ -1,4 +1,4 @@
-import {selectedVerses,lyricPosition,validateLyrics} from './lyric-timing.js';
+import {selectedVerses,lyricPosition,validateLyrics} from './lyric-timing.js?v=20261016-mond-text';
 function el(tag,text,className){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(className)n.className=className;return n;}
 export function validateTextCatalog(catalog,songs){
   if(!catalog||catalog.schema_version!==1||!Array.isArray(catalog.songs))throw Error('Ungültiger Textkatalog.');
@@ -30,7 +30,7 @@ export function createStrophePanel(data,source,onSelection){
     const label=`Textstrophe ${data.verses.indexOf(verse)+1} · ${position.verseIndex+1} von ${chosen.length}`;
     if(heading.textContent!==label)heading.textContent=label;
     [...body.children].forEach((row,i)=>{
-      const active=i===position.lineIndex&&['playing','paused'].includes(snapshot.state)&&!snapshot.inGap;
+      const active=i===position.lineIndex&&position.cueIndex>=0&&['playing','paused'].includes(snapshot.state)&&!snapshot.inGap;
       row.classList.toggle('active-line',active);
       if(active)row.setAttribute('aria-current','true');else row.removeAttribute('aria-current');
     });

@@ -1,0 +1,1453 @@
+{
+  "schema_version": 1,
+  "title": "Der Mond ist aufgegangen",
+  "quarters": 48,
+  "source": "Matthias Claudius; fünf Strophen gemäß dem vom Nutzer bereitgestellten Notenfoto, auf ausdrücklichen Auftrag übertragen. Gedruckte Auswahl und Wortlaut beibehalten; sehen am Ende von Strophe 3 wird auf einem Ton als sehn gesungen.",
+  "verses": [
+    {
+      "id": "moon",
+      "label": "Der Mond ist aufgegangen",
+      "historical_number": 1,
+      "lines": [
+        {
+          "text": "Der Mond ist aufgegangen,",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 1,
+              "text": "Der",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 1,
+              "text": "Mond",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 1,
+              "text": "ist",
+              "spaceAfter": true
+            },
+            {
+              "at": 3,
+              "duration": 1,
+              "text": "auf",
+              "spaceAfter": false
+            },
+            {
+              "at": 4,
+              "duration": 1,
+              "text": "ge",
+              "spaceAfter": false
+            },
+            {
+              "at": 5,
+              "duration": 2,
+              "text": "gan",
+              "spaceAfter": false
+            },
+            {
+              "at": 7,
+              "duration": 1,
+              "text": "gen,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "die goldnen Sternlein prangen",
+          "cues": [
+            {
+              "at": 8,
+              "duration": 1,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 9,
+              "duration": 1,
+              "text": "gold",
+              "spaceAfter": false
+            },
+            {
+              "at": 10,
+              "duration": 1,
+              "text": "nen",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 1,
+              "text": "Stern",
+              "spaceAfter": false
+            },
+            {
+              "at": 12,
+              "duration": 1,
+              "text": "lein",
+              "spaceAfter": true
+            },
+            {
+              "at": 13,
+              "duration": 2,
+              "text": "pran",
+              "spaceAfter": false
+            },
+            {
+              "at": 15,
+              "duration": 1,
+              "text": "gen",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "am Himmel hell und klar.",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 1,
+              "text": "am",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 1,
+              "text": "Him",
+              "spaceAfter": false
+            },
+            {
+              "at": 18,
+              "duration": 1,
+              "text": "mel",
+              "spaceAfter": true
+            },
+            {
+              "at": 19,
+              "duration": 1,
+              "text": "hell",
+              "spaceAfter": true
+            },
+            {
+              "at": 20,
+              "duration": 1,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 21,
+              "duration": 2,
+              "text": "klar.",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Der Wald steht schwarz und schweiget,",
+          "cues": [
+            {
+              "at": 24,
+              "duration": 1,
+              "text": "Der",
+              "spaceAfter": true
+            },
+            {
+              "at": 25,
+              "duration": 1,
+              "text": "Wald",
+              "spaceAfter": true
+            },
+            {
+              "at": 26,
+              "duration": 1,
+              "text": "steht",
+              "spaceAfter": true
+            },
+            {
+              "at": 27,
+              "duration": 1,
+              "text": "schwarz",
+              "spaceAfter": true
+            },
+            {
+              "at": 28,
+              "duration": 1,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 2,
+              "text": "schwei",
+              "spaceAfter": false
+            },
+            {
+              "at": 31,
+              "duration": 1,
+              "text": "get,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "und aus den Wiesen steiget",
+          "cues": [
+            {
+              "at": 32,
+              "duration": 1,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 33,
+              "duration": 1,
+              "text": "aus",
+              "spaceAfter": true
+            },
+            {
+              "at": 34,
+              "duration": 1,
+              "text": "den",
+              "spaceAfter": true
+            },
+            {
+              "at": 35,
+              "duration": 1,
+              "text": "Wie",
+              "spaceAfter": false
+            },
+            {
+              "at": 36,
+              "duration": 1,
+              "text": "sen",
+              "spaceAfter": true
+            },
+            {
+              "at": 37,
+              "duration": 2,
+              "text": "stei",
+              "spaceAfter": false
+            },
+            {
+              "at": 39,
+              "duration": 1,
+              "text": "get",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "der weiße Nebel wunderbar.",
+          "cues": [
+            {
+              "at": 40,
+              "duration": 1,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 41,
+              "duration": 1,
+              "text": "wei",
+              "spaceAfter": false
+            },
+            {
+              "at": 42,
+              "duration": 1,
+              "text": "ße",
+              "spaceAfter": true
+            },
+            {
+              "at": 43,
+              "duration": 1,
+              "text": "Ne",
+              "spaceAfter": false
+            },
+            {
+              "at": 44,
+              "duration": 1,
+              "text": "bel",
+              "spaceAfter": true
+            },
+            {
+              "at": 45,
+              "duration": 1,
+              "text": "wun",
+              "spaceAfter": false
+            },
+            {
+              "at": 46,
+              "duration": 1,
+              "text": "der",
+              "spaceAfter": false
+            },
+            {
+              "at": 47,
+              "duration": 1,
+              "text": "bar.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "world",
+      "label": "Wie ist die Welt so stille",
+      "historical_number": 2,
+      "lines": [
+        {
+          "text": "Wie ist die Welt so stille",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 1,
+              "text": "Wie",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 1,
+              "text": "ist",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 1,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 3,
+              "duration": 1,
+              "text": "Welt",
+              "spaceAfter": true
+            },
+            {
+              "at": 4,
+              "duration": 1,
+              "text": "so",
+              "spaceAfter": true
+            },
+            {
+              "at": 5,
+              "duration": 2,
+              "text": "stil",
+              "spaceAfter": false
+            },
+            {
+              "at": 7,
+              "duration": 1,
+              "text": "le",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "und in der Dämmrung Hülle",
+          "cues": [
+            {
+              "at": 8,
+              "duration": 1,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 9,
+              "duration": 1,
+              "text": "in",
+              "spaceAfter": true
+            },
+            {
+              "at": 10,
+              "duration": 1,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 1,
+              "text": "Dämm",
+              "spaceAfter": false
+            },
+            {
+              "at": 12,
+              "duration": 1,
+              "text": "rung",
+              "spaceAfter": true
+            },
+            {
+              "at": 13,
+              "duration": 2,
+              "text": "Hül",
+              "spaceAfter": false
+            },
+            {
+              "at": 15,
+              "duration": 1,
+              "text": "le",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "so traulich und so hold",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 1,
+              "text": "so",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 1,
+              "text": "trau",
+              "spaceAfter": false
+            },
+            {
+              "at": 18,
+              "duration": 1,
+              "text": "lich",
+              "spaceAfter": true
+            },
+            {
+              "at": 19,
+              "duration": 1,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 20,
+              "duration": 1,
+              "text": "so",
+              "spaceAfter": true
+            },
+            {
+              "at": 21,
+              "duration": 2,
+              "text": "hold",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "als eine stille Kammer,",
+          "cues": [
+            {
+              "at": 24,
+              "duration": 1,
+              "text": "als",
+              "spaceAfter": true
+            },
+            {
+              "at": 25,
+              "duration": 1,
+              "text": "ei",
+              "spaceAfter": false
+            },
+            {
+              "at": 26,
+              "duration": 1,
+              "text": "ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 27,
+              "duration": 1,
+              "text": "stil",
+              "spaceAfter": false
+            },
+            {
+              "at": 28,
+              "duration": 1,
+              "text": "le",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 2,
+              "text": "Kam",
+              "spaceAfter": false
+            },
+            {
+              "at": 31,
+              "duration": 1,
+              "text": "mer,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "wo ihr des Tages Jammer",
+          "cues": [
+            {
+              "at": 32,
+              "duration": 1,
+              "text": "wo",
+              "spaceAfter": true
+            },
+            {
+              "at": 33,
+              "duration": 1,
+              "text": "ihr",
+              "spaceAfter": true
+            },
+            {
+              "at": 34,
+              "duration": 1,
+              "text": "des",
+              "spaceAfter": true
+            },
+            {
+              "at": 35,
+              "duration": 1,
+              "text": "Ta",
+              "spaceAfter": false
+            },
+            {
+              "at": 36,
+              "duration": 1,
+              "text": "ges",
+              "spaceAfter": true
+            },
+            {
+              "at": 37,
+              "duration": 2,
+              "text": "Jam",
+              "spaceAfter": false
+            },
+            {
+              "at": 39,
+              "duration": 1,
+              "text": "mer",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "verschlafen und vergessen sollt.",
+          "cues": [
+            {
+              "at": 40,
+              "duration": 1,
+              "text": "ver",
+              "spaceAfter": false
+            },
+            {
+              "at": 41,
+              "duration": 1,
+              "text": "schla",
+              "spaceAfter": false
+            },
+            {
+              "at": 42,
+              "duration": 1,
+              "text": "fen",
+              "spaceAfter": true
+            },
+            {
+              "at": 43,
+              "duration": 1,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 44,
+              "duration": 1,
+              "text": "ver",
+              "spaceAfter": false
+            },
+            {
+              "at": 45,
+              "duration": 1,
+              "text": "ges",
+              "spaceAfter": false
+            },
+            {
+              "at": 46,
+              "duration": 1,
+              "text": "sen",
+              "spaceAfter": true
+            },
+            {
+              "at": 47,
+              "duration": 1,
+              "text": "sollt.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seeing",
+      "label": "Seht ihr den Mond dort stehen?",
+      "historical_number": 3,
+      "lines": [
+        {
+          "text": "Seht ihr den Mond dort stehen?",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 1,
+              "text": "Seht",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 1,
+              "text": "ihr",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 1,
+              "text": "den",
+              "spaceAfter": true
+            },
+            {
+              "at": 3,
+              "duration": 1,
+              "text": "Mond",
+              "spaceAfter": true
+            },
+            {
+              "at": 4,
+              "duration": 1,
+              "text": "dort",
+              "spaceAfter": true
+            },
+            {
+              "at": 5,
+              "duration": 2,
+              "text": "ste",
+              "spaceAfter": false
+            },
+            {
+              "at": 7,
+              "duration": 1,
+              "text": "hen?",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Er ist nur halb zu sehen",
+          "cues": [
+            {
+              "at": 8,
+              "duration": 1,
+              "text": "Er",
+              "spaceAfter": true
+            },
+            {
+              "at": 9,
+              "duration": 1,
+              "text": "ist",
+              "spaceAfter": true
+            },
+            {
+              "at": 10,
+              "duration": 1,
+              "text": "nur",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 1,
+              "text": "halb",
+              "spaceAfter": true
+            },
+            {
+              "at": 12,
+              "duration": 1,
+              "text": "zu",
+              "spaceAfter": true
+            },
+            {
+              "at": 13,
+              "duration": 2,
+              "text": "se",
+              "spaceAfter": false
+            },
+            {
+              "at": 15,
+              "duration": 1,
+              "text": "hen",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "und ist doch rund und schön:",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 1,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 1,
+              "text": "ist",
+              "spaceAfter": true
+            },
+            {
+              "at": 18,
+              "duration": 1,
+              "text": "doch",
+              "spaceAfter": true
+            },
+            {
+              "at": 19,
+              "duration": 1,
+              "text": "rund",
+              "spaceAfter": true
+            },
+            {
+              "at": 20,
+              "duration": 1,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 21,
+              "duration": 2,
+              "text": "schön:",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "So sind wohl manche Sachen,",
+          "cues": [
+            {
+              "at": 24,
+              "duration": 1,
+              "text": "So",
+              "spaceAfter": true
+            },
+            {
+              "at": 25,
+              "duration": 1,
+              "text": "sind",
+              "spaceAfter": true
+            },
+            {
+              "at": 26,
+              "duration": 1,
+              "text": "wohl",
+              "spaceAfter": true
+            },
+            {
+              "at": 27,
+              "duration": 1,
+              "text": "man",
+              "spaceAfter": false
+            },
+            {
+              "at": 28,
+              "duration": 1,
+              "text": "che",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 2,
+              "text": "Sa",
+              "spaceAfter": false
+            },
+            {
+              "at": 31,
+              "duration": 1,
+              "text": "chen,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "die wir getrost belachen,",
+          "cues": [
+            {
+              "at": 32,
+              "duration": 1,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 33,
+              "duration": 1,
+              "text": "wir",
+              "spaceAfter": true
+            },
+            {
+              "at": 34,
+              "duration": 1,
+              "text": "ge",
+              "spaceAfter": false
+            },
+            {
+              "at": 35,
+              "duration": 1,
+              "text": "trost",
+              "spaceAfter": true
+            },
+            {
+              "at": 36,
+              "duration": 1,
+              "text": "be",
+              "spaceAfter": false
+            },
+            {
+              "at": 37,
+              "duration": 2,
+              "text": "la",
+              "spaceAfter": false
+            },
+            {
+              "at": 39,
+              "duration": 1,
+              "text": "chen,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "weil unsre Augen sie nicht sehen.",
+          "cues": [
+            {
+              "at": 40,
+              "duration": 1,
+              "text": "weil",
+              "spaceAfter": true
+            },
+            {
+              "at": 41,
+              "duration": 1,
+              "text": "uns",
+              "spaceAfter": false
+            },
+            {
+              "at": 42,
+              "duration": 1,
+              "text": "re",
+              "spaceAfter": true
+            },
+            {
+              "at": 43,
+              "duration": 1,
+              "text": "Au",
+              "spaceAfter": false
+            },
+            {
+              "at": 44,
+              "duration": 1,
+              "text": "gen",
+              "spaceAfter": true
+            },
+            {
+              "at": 45,
+              "duration": 1,
+              "text": "sie",
+              "spaceAfter": true
+            },
+            {
+              "at": 46,
+              "duration": 1,
+              "text": "nicht",
+              "spaceAfter": true
+            },
+            {
+              "at": 47,
+              "duration": 1,
+              "text": "sehen.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "label": "Wir stolzen Menschenkinder",
+      "historical_number": 4,
+      "lines": [
+        {
+          "text": "Wir stolzen Menschenkinder",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 1,
+              "text": "Wir",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 1,
+              "text": "stol",
+              "spaceAfter": false
+            },
+            {
+              "at": 2,
+              "duration": 1,
+              "text": "zen",
+              "spaceAfter": true
+            },
+            {
+              "at": 3,
+              "duration": 1,
+              "text": "Men",
+              "spaceAfter": false
+            },
+            {
+              "at": 4,
+              "duration": 1,
+              "text": "schen",
+              "spaceAfter": false
+            },
+            {
+              "at": 5,
+              "duration": 2,
+              "text": "kin",
+              "spaceAfter": false
+            },
+            {
+              "at": 7,
+              "duration": 1,
+              "text": "der",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "sind eitel arme Sünder",
+          "cues": [
+            {
+              "at": 8,
+              "duration": 1,
+              "text": "sind",
+              "spaceAfter": true
+            },
+            {
+              "at": 9,
+              "duration": 1,
+              "text": "ei",
+              "spaceAfter": false
+            },
+            {
+              "at": 10,
+              "duration": 1,
+              "text": "tel",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 1,
+              "text": "ar",
+              "spaceAfter": false
+            },
+            {
+              "at": 12,
+              "duration": 1,
+              "text": "me",
+              "spaceAfter": true
+            },
+            {
+              "at": 13,
+              "duration": 2,
+              "text": "Sün",
+              "spaceAfter": false
+            },
+            {
+              "at": 15,
+              "duration": 1,
+              "text": "der",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "und wissen gar nicht viel.",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 1,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 1,
+              "text": "wis",
+              "spaceAfter": false
+            },
+            {
+              "at": 18,
+              "duration": 1,
+              "text": "sen",
+              "spaceAfter": true
+            },
+            {
+              "at": 19,
+              "duration": 1,
+              "text": "gar",
+              "spaceAfter": true
+            },
+            {
+              "at": 20,
+              "duration": 1,
+              "text": "nicht",
+              "spaceAfter": true
+            },
+            {
+              "at": 21,
+              "duration": 2,
+              "text": "viel.",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Wir spinnen Luftgespinste",
+          "cues": [
+            {
+              "at": 24,
+              "duration": 1,
+              "text": "Wir",
+              "spaceAfter": true
+            },
+            {
+              "at": 25,
+              "duration": 1,
+              "text": "spin",
+              "spaceAfter": false
+            },
+            {
+              "at": 26,
+              "duration": 1,
+              "text": "nen",
+              "spaceAfter": true
+            },
+            {
+              "at": 27,
+              "duration": 1,
+              "text": "Luft",
+              "spaceAfter": false
+            },
+            {
+              "at": 28,
+              "duration": 1,
+              "text": "ge",
+              "spaceAfter": false
+            },
+            {
+              "at": 29,
+              "duration": 2,
+              "text": "spins",
+              "spaceAfter": false
+            },
+            {
+              "at": 31,
+              "duration": 1,
+              "text": "te",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "und suchen viele Künste",
+          "cues": [
+            {
+              "at": 32,
+              "duration": 1,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 33,
+              "duration": 1,
+              "text": "su",
+              "spaceAfter": false
+            },
+            {
+              "at": 34,
+              "duration": 1,
+              "text": "chen",
+              "spaceAfter": true
+            },
+            {
+              "at": 35,
+              "duration": 1,
+              "text": "vie",
+              "spaceAfter": false
+            },
+            {
+              "at": 36,
+              "duration": 1,
+              "text": "le",
+              "spaceAfter": true
+            },
+            {
+              "at": 37,
+              "duration": 2,
+              "text": "Küns",
+              "spaceAfter": false
+            },
+            {
+              "at": 39,
+              "duration": 1,
+              "text": "te",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "und kommen weiter von dem Ziel.",
+          "cues": [
+            {
+              "at": 40,
+              "duration": 1,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 41,
+              "duration": 1,
+              "text": "kom",
+              "spaceAfter": false
+            },
+            {
+              "at": 42,
+              "duration": 1,
+              "text": "men",
+              "spaceAfter": true
+            },
+            {
+              "at": 43,
+              "duration": 1,
+              "text": "wei",
+              "spaceAfter": false
+            },
+            {
+              "at": 44,
+              "duration": 1,
+              "text": "ter",
+              "spaceAfter": true
+            },
+            {
+              "at": 45,
+              "duration": 1,
+              "text": "von",
+              "spaceAfter": true
+            },
+            {
+              "at": 46,
+              "duration": 1,
+              "text": "dem",
+              "spaceAfter": true
+            },
+            {
+              "at": 47,
+              "duration": 1,
+              "text": "Ziel.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "label": "So legt euch denn, ihr Brüder",
+      "historical_number": 5,
+      "lines": [
+        {
+          "text": "So legt euch denn, ihr Brüder,",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 1,
+              "text": "So",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 1,
+              "text": "legt",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 1,
+              "text": "euch",
+              "spaceAfter": true
+            },
+            {
+              "at": 3,
+              "duration": 1,
+              "text": "denn,",
+              "spaceAfter": true
+            },
+            {
+              "at": 4,
+              "duration": 1,
+              "text": "ihr",
+              "spaceAfter": true
+            },
+            {
+              "at": 5,
+              "duration": 2,
+              "text": "Brü",
+              "spaceAfter": false
+            },
+            {
+              "at": 7,
+              "duration": 1,
+              "text": "der,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "in Gottes Namen nieder;",
+          "cues": [
+            {
+              "at": 8,
+              "duration": 1,
+              "text": "in",
+              "spaceAfter": true
+            },
+            {
+              "at": 9,
+              "duration": 1,
+              "text": "Got",
+              "spaceAfter": false
+            },
+            {
+              "at": 10,
+              "duration": 1,
+              "text": "tes",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 1,
+              "text": "Na",
+              "spaceAfter": false
+            },
+            {
+              "at": 12,
+              "duration": 1,
+              "text": "men",
+              "spaceAfter": true
+            },
+            {
+              "at": 13,
+              "duration": 2,
+              "text": "nie",
+              "spaceAfter": false
+            },
+            {
+              "at": 15,
+              "duration": 1,
+              "text": "der;",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "kalt ist der Abendhauch.",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 1,
+              "text": "kalt",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 1,
+              "text": "ist",
+              "spaceAfter": true
+            },
+            {
+              "at": 18,
+              "duration": 1,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 19,
+              "duration": 1,
+              "text": "A",
+              "spaceAfter": false
+            },
+            {
+              "at": 20,
+              "duration": 1,
+              "text": "bend",
+              "spaceAfter": false
+            },
+            {
+              "at": 21,
+              "duration": 2,
+              "text": "hauch.",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Verschon uns, Gott, mit Strafen",
+          "cues": [
+            {
+              "at": 24,
+              "duration": 1,
+              "text": "Ver",
+              "spaceAfter": false
+            },
+            {
+              "at": 25,
+              "duration": 1,
+              "text": "schon",
+              "spaceAfter": true
+            },
+            {
+              "at": 26,
+              "duration": 1,
+              "text": "uns,",
+              "spaceAfter": true
+            },
+            {
+              "at": 27,
+              "duration": 1,
+              "text": "Gott,",
+              "spaceAfter": true
+            },
+            {
+              "at": 28,
+              "duration": 1,
+              "text": "mit",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 2,
+              "text": "Stra",
+              "spaceAfter": false
+            },
+            {
+              "at": 31,
+              "duration": 1,
+              "text": "fen",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "und lass uns ruhig schlafen",
+          "cues": [
+            {
+              "at": 32,
+              "duration": 1,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 33,
+              "duration": 1,
+              "text": "lass",
+              "spaceAfter": true
+            },
+            {
+              "at": 34,
+              "duration": 1,
+              "text": "uns",
+              "spaceAfter": true
+            },
+            {
+              "at": 35,
+              "duration": 1,
+              "text": "ru",
+              "spaceAfter": false
+            },
+            {
+              "at": 36,
+              "duration": 1,
+              "text": "hig",
+              "spaceAfter": true
+            },
+            {
+              "at": 37,
+              "duration": 2,
+              "text": "schla",
+              "spaceAfter": false
+            },
+            {
+              "at": 39,
+              "duration": 1,
+              "text": "fen",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "und unsern kranken Nachbarn auch.",
+          "cues": [
+            {
+              "at": 40,
+              "duration": 1,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 41,
+              "duration": 1,
+              "text": "un",
+              "spaceAfter": false
+            },
+            {
+              "at": 42,
+              "duration": 1,
+              "text": "sern",
+              "spaceAfter": true
+            },
+            {
+              "at": 43,
+              "duration": 1,
+              "text": "kran",
+              "spaceAfter": false
+            },
+            {
+              "at": 44,
+              "duration": 1,
+              "text": "ken",
+              "spaceAfter": true
+            },
+            {
+              "at": 45,
+              "duration": 1,
+              "text": "Nach",
+              "spaceAfter": false
+            },
+            {
+              "at": 46,
+              "duration": 1,
+              "text": "barn",
+              "spaceAfter": true
+            },
+            {
+              "at": 47,
+              "duration": 1,
+              "text": "auch.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -387,3 +387,8 @@ deshalb nicht verwendet.
 übertragen: F-Dur, 4/4 mit Viertelauftakt, 42 Töne, 88 BPM. Vier Klangvarianten
 und ein Takt Atemzeit zwischen Strophen; Originaldownloads ohne Begleitung.
 Übertragung und Prüfkriterien: [Liedspezifikation](specs/011-der-mond-ist-aufgegangen.md).
+
+Die fünf abgebildeten Textstrophen von „Der Mond ist aufgegangen“ sind auf
+Folgeauftrag als Mitsingtext integriert. Aktive Zeile und frei wählbare
+Strophen folgen der Musik; während der notierten Pause bleibt die Markierung aus.
+Textdaten reproduzieren: `node scripts/prepare-mond-lyrics.mjs`.

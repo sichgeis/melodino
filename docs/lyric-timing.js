@@ -1,6 +1,6 @@
 export function validateLyrics(data, score) {
   if(!data||data.schema_version!==1||typeof data.title!=='string'||!Number.isFinite(data.quarters)||data.quarters<=0||
-      !Array.isArray(data.verses)||!data.verses.length||data.verses.length>4)throw Error('Ungültiger Liedtext.');
+      !Array.isArray(data.verses)||!data.verses.length||data.verses.length>20)throw Error('Ungültiger Liedtext.');
   const ids=new Set();
   for(const verse of data.verses){
     if(!verse||typeof verse.id!=='string'||!/^[a-z]+$/.test(verse.id)||ids.has(verse.id)||typeof verse.label!=='string'||
@@ -10,7 +10,7 @@ export function validateLyrics(data, score) {
       if(typeof line.text!=='string'||!line.text.length||line.text.length>500||!Array.isArray(line.cues)||!line.cues.length)throw Error('Ungültige Textzeile.');
       let text='';
       for(const cue of line.cues){
-        if(!cue||!Number.isFinite(cue.at)||Math.abs(cue.at-end)>1e-7||!Number.isFinite(cue.duration)||cue.duration<=0||
+        if(!cue||!Number.isFinite(cue.at)||cue.at<end-1e-7||(count===0&&cue.at!==0)||!Number.isFinite(cue.duration)||cue.duration<=0||
             cue.at+cue.duration>data.quarters+1e-7||typeof cue.text!=='string'||!cue.text.length||cue.text.length>80||typeof cue.spaceAfter!=='boolean')throw Error('Ungültige Silbenposition.');
         text+=cue.text+(cue.spaceAfter?' ':'');end=cue.at+cue.duration;count++;
       }

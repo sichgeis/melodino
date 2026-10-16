@@ -62,3 +62,41 @@ test('bad or stale alignment is rejected before singing starts',()=>{
   ]){const copy=structuredClone(data);mutate(copy);assert.throws(()=>validateLyrics(copy,source));}
   const stale=structuredClone(source);stale.notes[0].duration=1;assert.throws(()=>validateLyrics(data,stale));
 });
+
+test('five photographed Mond verses match the unchanged melody and leave its rest unmarked',()=>{
+  const text=read('lyrics/der-mond-ist-aufgegangen.json'),melody=read('assets/der-mond-ist-aufgegangen/playback.json');
+  assert.equal(validateLyrics(text,melody),text);
+  assert.deepEqual(text.verses.map(v=>v.historical_number),[1,2,3,4,5]);
+  for(const verse of text.verses){
+    assert.equal(verse.lines.length,6);
+    assert.deepEqual(verse.lines.map(l=>l.cues[0].at),[0,8,16,24,32,40]);
+    assert.deepEqual(verse.lines.flatMap(l=>l.cues).map(c=>[c.at,c.duration]),melody.notes.map(n=>[n.at,n.duration]));
+  }
+  const at=q=>lyricPosition(text.verses,48,{state:'playing',verse:1,quarter:q});
+  assert.equal(at(22.99).lineIndex,2);assert.ok(at(22.99).cueIndex>=0);
+  assert.equal(at(23).cueIndex,-1);assert.equal(at(23.99).cueIndex,-1);
+  assert.equal(at(24).lineIndex,3);assert.equal(at(24).cueIndex,0);
+  const queue=selectedVerses(text,['moon','night']);
+  assert.equal(queue.length,2);assert.equal(queue[1].historical_number,5);
+  assert.equal(lyricPosition(queue,48,{state:'playing',verse:2,quarter:0}).verseIndex,1);
+  assert.equal(text.verses[2].lines[5].text,'weil unsre Augen sie nicht sehen.');
+  assert.equal(text.verses[4].lines[5].text,'und unsern kranken Nachbarn auch.');
+  const stale=structuredClone(text);stale.verses[0].lines[2].cues.at(-1).duration++;
+  assert.throws(()=>validateLyrics(stale,melody));
+  const overlap=structuredClone(text);overlap.verses[0].lines[1].cues[0].at--;
+  assert.throws(()=>validateLyrics(overlap,melody));
+  const tooMany=structuredClone(text);tooMany.verses=Array(21).fill(text.verses[0]);
+  assert.throws(()=>validateLyrics(tooMany,melody));
+});
+
+test('all five Mond texts play through with exact verse starts and no final gap',()=>{
+  const text=read('lyrics/der-mond-ist-aufgegangen.json'),melody=read('assets/der-mond-ist-aufgegangen/playback.json');
+  const starts=[];
+  const synth={stopAllChannels(){},programChange(){},controllerChange(){},process(){},noteOff(){},noteOn(channel,midi){starts.push([clock.frame,midi]);}};
+  const clock=new ScoreClock(synth,8000);clock.load(melody,'clarinet',200,text.verses.length,4);clock.play();
+  while(clock.state==='playing')clock.render(new Float32Array(128),new Float32Array(128));
+  assert.equal(starts.length,210);
+  for(let verse=0;verse<5;verse++)assert.equal(starts[verse*42][0],clock.frameAt(verse*52));
+  assert.equal(clock.frame,clock.frameAt(256));
+  for(const invalid of [0,21,1.5,NaN,'5'])assert.throws(()=>clock.load(melody,'clarinet',88,invalid));
+});

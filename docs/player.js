@@ -1,5 +1,5 @@
 import {configureScore} from './song-options.js?v=20261016-singalong';
-import {validatePlayback, scoreTracks} from './score-clock.js?v=20261016-singalong';
+import {validatePlayback, scoreTracks} from './score-clock.js?v=20261016-mond-text';
 import {AudioOutput, configurePlaybackSession} from './audio-output.js';
 
 async function json(url) {
@@ -39,7 +39,7 @@ export class BrowserPlayer {
     if (!this.context.audioWorklet) throw Error('Der Instrumentenplayer benötigt einen aktuellen Browser und HTTPS. Bitte nutze sonst einen Download.');
     const resume = this.output.activate();
     if (!this.initializing) {
-      this.initializing = this.context.audioWorklet.addModule(new URL('./synth-worklet.js?v=20261016-singalong', import.meta.url))
+      this.initializing = this.context.audioWorklet.addModule(new URL('./synth-worklet.js?v=20261016-mond-text', import.meta.url))
         .then(() => {
           this.node = new AudioWorkletNode(this.context, 'melodino-synth', {numberOfInputs: 0,
             numberOfOutputs: 1, outputChannelCount: [2]});

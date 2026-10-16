@@ -1,5 +1,12 @@
 # Strophen auf der Hauptseite
 
+Ergänzung: „Der Mond ist aufgegangen“ erhält auf Folgeauftrag die fünf
+Strophen aus dem Nutzerfoto. Textformat und Audio-Engine erlauben bis zu
+20 Strophen. Die instrumentale Wiederholungswahl bleibt bei 1–4 und endlos.
+Cues dürfen notierte Pausen überspringen; bei zugeordneter Quelle müssen
+Beginn und Dauer jedes Cues weiterhin genau dem jeweiligen Melodieton
+entsprechen. Eine Pause erzeugt keine aktive Silbe und keine aktive Zeile.
+
 Die im Mitsing-Labor bevorzugte Ansicht A wird in die normalen Liedkarten übernommen.
 Eine Textstrophe mit aktiver Zeile, keine Karaoke-/Lauftext-Umschalter. Bei Liedern
 mit geprüftem Text bestimmt die Strophenauswahl die Zahl der Musikdurchgänge.

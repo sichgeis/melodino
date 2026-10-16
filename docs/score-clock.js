@@ -63,7 +63,7 @@ export class ScoreClock {
     if (!Number.isFinite(gapQuarters) || gapQuarters < 0 || gapQuarters > 128) throw Error('Ungültige Strophenpause.');
     this.stride = this.length + gapQuarters;
     this.gap = gapQuarters;
-    if (![1, 2, 3, 4, Infinity].includes(verses)) throw Error('Ungültige Strophenzahl.');
+    if (verses !== Infinity && (!Number.isInteger(verses) || verses < 1 || verses > 20)) throw Error('Ungültige Strophenzahl.');
     this.verses = verses;
     this.cycle = 0;
     this.index = 0;

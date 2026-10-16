@@ -1,5 +1,5 @@
 import {SoundBankLoader, SpessaSynthProcessor, SpessaLog} from './vendor/spessasynth-core-4.3.22.js';
-import {ScoreClock} from './score-clock.js?v=20261016-singalong';
+import {ScoreClock} from './score-clock.js?v=20261016-mond-text';
 SpessaLog.info = () => {};
 SpessaLog.group = () => {};
 SpessaLog.groupCollapsed = () => {};

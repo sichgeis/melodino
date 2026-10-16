@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
   "songs": [
-    {"slug":"schlaf-kindlein-schlaf-klarinette","url":"lyrics/schlaf-kindlein-schlaf.json","preferredVersion":"researched"}
+    {"slug":"schlaf-kindlein-schlaf-klarinette","url":"lyrics/schlaf-kindlein-schlaf.json","preferredVersion":"researched"},
+    {"slug":"der-mond-ist-aufgegangen","url":"lyrics/der-mond-ist-aufgegangen.json","preferredVersion":"original"}
   ]
 }
