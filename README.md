@@ -382,3 +382,8 @@ Alle HTML-Seiten enthalten `noindex, nofollow`. Das bittet Suchmaschinen, sie ni
 zu indexieren, macht aber weder GitHub Pages noch das öffentliche Repository privat.
 Eine robots.txt-Sperre würde das Auslesen der Meta-Angabe verhindern und wird
 deshalb nicht verwendet.
+
+„Der Mond ist aufgegangen“ ist aus dem Notenfoto als instrumentale Melodie
+übertragen: F-Dur, 4/4 mit Viertelauftakt, 42 Töne, 88 BPM. Vier Klangvarianten
+und ein Takt Atemzeit zwischen Strophen; Originaldownloads ohne Begleitung.
+Übertragung und Prüfkriterien: [Liedspezifikation](specs/011-der-mond-ist-aufgegangen.md).

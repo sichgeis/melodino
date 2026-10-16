@@ -4,6 +4,7 @@ const read=path=>JSON.parse(readFileSync(path,'utf8'));
 const write=(path,data)=>writeFileSync(path,JSON.stringify(data,null,2)+'\n');
 const output='docs/arrangements';mkdirSync(output,{recursive:true});
 const curated={
+  'der-mond-ist-aufgegangen':{measure:4,pickup:1,plan:[[0,'F'],[1,'C'],[2,'Dm'],[3,'Gm'],[4,'F'],[5,'C'],[7,'F'],[9,'Dm'],[10,'Am'],[11,'Bb'],[12,'F'],[13,'Gm'],[15,'F'],[17,'Dm'],[18,'Am'],[19,'Bb'],[20,'F'],[21,'C'],[24,'F'],[25,'C'],[26,'Dm'],[27,'Gm'],[28,'F'],[29,'C'],[31,'F'],[33,'Dm'],[34,'Am'],[35,'Bb'],[36,'F'],[37,'Gm'],[39,'F'],[41,'Dm'],[42,'Am'],[43,'Bb'],[44,'F'],[45,'C'],[47,'F']]},
   'schilf-bleicht':{measure:3,pickup:0,plan:[[0,'Gm'],[3,'Bb'],[6,'D7'],[9,'Gm'],[10,'D7'],[12,'Gm'],[15,'Bb'],[18,'D7'],[21,'Gm'],[24,'Bb'],[27,'F'],[30,'Gm'],[33,'D7'],[36,'Gm'],[39,'Bb'],[42,'D7'],[45,'Gm']]},
   'schlaf-kindlein-suesse':{measure:3,pickup:0,plan:[[0,'F'],[3,'F'],[6,'C7'],[9,'F'],[12,'C'],[15,'F'],[18,'C'],[21,'F'],[24,'F'],[27,'C7'],[28.5,'F']]},
   'die-kuh-die-sass-im-schwalbennest':{measure:2,pickup:.5,plan:[[.5,'G'],[4.5,'D'],[6.5,'G'],[12.5,'D'],[14.5,'G'],[16.5,'G'],[17.5,'Em'],[18.5,'G'],[20.5,'D'],[22.5,'G'],[24.5,'G'],[25.5,'Em'],[26.5,'G'],[28.5,'D'],[30.5,'G']]},

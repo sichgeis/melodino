@@ -2,6 +2,41 @@
   "schema_version": 1,
   "songs": [
     {
+      "slug": "der-mond-ist-aufgegangen",
+      "versions": [
+        {
+          "id": "original",
+          "label": "Übertragene Melodie",
+          "variants": [
+            {
+              "id": "reference",
+              "label": "Solo · ohne Begleitung",
+              "description": "Nur die Melodie, mit eurem Wunschinstrument.",
+              "url": "arrangements/der-mond-ist-aufgegangen-original-reference.json"
+            },
+            {
+              "id": "warm",
+              "label": "Pur und warm",
+              "description": "Sanfte Phrasendynamik und dezenter Raumklang.",
+              "url": "arrangements/der-mond-ist-aufgegangen-original-warm.json"
+            },
+            {
+              "id": "gentle",
+              "label": "Sanft begleitet",
+              "description": "Klarinette mit leisen Klavierakkorden und akustischem Bass.",
+              "url": "arrangements/der-mond-ist-aufgegangen-original-gentle.json"
+            },
+            {
+              "id": "lively",
+              "label": "Lebhaft begleitet",
+              "description": "Flöte mit Nylongitarre, Bass und einem leisen Holzpuls.",
+              "url": "arrangements/der-mond-ist-aufgegangen-original-lively.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "slug": "die-kuh-die-sass-im-schwalbennest",
       "versions": [
         {

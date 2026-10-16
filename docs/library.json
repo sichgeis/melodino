@@ -1,5 +1,25 @@
 [
   {
+    "title": "Der Mond ist aufgegangen",
+    "source": "Aus MusicXML importiert",
+    "bpm": 88.0,
+    "instrument": "clarinet",
+    "duration_seconds": 32.72727272727273,
+    "score_duration_seconds": 32.72727272727273,
+    "quarters": 48.0,
+    "note_count": 42,
+    "transpose": 0,
+    "measure_quarters": 4.0,
+    "verse_gap_bars": 1,
+    "files": {
+      "midi": "assets/der-mond-ist-aufgegangen/melody.mid",
+      "musicxml": "assets/der-mond-ist-aufgegangen/score.musicxml",
+      "csv": "assets/der-mond-ist-aufgegangen/notes.csv",
+      "playback": "assets/der-mond-ist-aufgegangen/playback.json"
+    },
+    "slug": "der-mond-ist-aufgegangen"
+  },
+  {
     "title": "Die Kuh, die saß im Schwalbennest",
     "source": "Aus MusicXML importiert",
     "bpm": 104.0,

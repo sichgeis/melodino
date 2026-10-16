@@ -1,0 +1,1149 @@
+{
+  "schema_version": 2,
+  "title": "Der Mond ist aufgegangen",
+  "bpm": 88,
+  "quarters": 48,
+  "room": 0.27,
+  "tracks": [
+    {
+      "role": "melody",
+      "instrument": "clarinet",
+      "volume": 94,
+      "pan": 64,
+      "notes": [
+        {
+          "at": 0,
+          "duration": 1,
+          "midi": 65,
+          "velocity": 78
+        },
+        {
+          "at": 1,
+          "duration": 1,
+          "midi": 67,
+          "velocity": 80
+        },
+        {
+          "at": 2,
+          "duration": 1,
+          "midi": 65,
+          "velocity": 78
+        },
+        {
+          "at": 3,
+          "duration": 1,
+          "midi": 70,
+          "velocity": 80
+        },
+        {
+          "at": 4,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 81
+        },
+        {
+          "at": 5,
+          "duration": 2,
+          "midi": 67,
+          "velocity": 85
+        },
+        {
+          "at": 7,
+          "duration": 1,
+          "midi": 65,
+          "velocity": 83
+        },
+        {
+          "at": 8,
+          "duration": 1,
+          "midi": 67,
+          "velocity": 84
+        },
+        {
+          "at": 9,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 87
+        },
+        {
+          "at": 10,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 84
+        },
+        {
+          "at": 11,
+          "duration": 1,
+          "midi": 72,
+          "velocity": 83
+        },
+        {
+          "at": 12,
+          "duration": 1,
+          "midi": 70,
+          "velocity": 83
+        },
+        {
+          "at": 13,
+          "duration": 2,
+          "midi": 70,
+          "velocity": 85
+        },
+        {
+          "at": 15,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 80
+        },
+        {
+          "at": 16,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 78
+        },
+        {
+          "at": 17,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 80
+        },
+        {
+          "at": 18,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 78
+        },
+        {
+          "at": 19,
+          "duration": 1,
+          "midi": 70,
+          "velocity": 80
+        },
+        {
+          "at": 20,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 81
+        },
+        {
+          "at": 21,
+          "duration": 2,
+          "midi": 67,
+          "velocity": 85
+        },
+        {
+          "at": 24,
+          "duration": 1,
+          "midi": 65,
+          "velocity": 84
+        },
+        {
+          "at": 25,
+          "duration": 1,
+          "midi": 67,
+          "velocity": 87
+        },
+        {
+          "at": 26,
+          "duration": 1,
+          "midi": 65,
+          "velocity": 84
+        },
+        {
+          "at": 27,
+          "duration": 1,
+          "midi": 70,
+          "velocity": 83
+        },
+        {
+          "at": 28,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 83
+        },
+        {
+          "at": 29,
+          "duration": 2,
+          "midi": 67,
+          "velocity": 85
+        },
+        {
+          "at": 31,
+          "duration": 1,
+          "midi": 65,
+          "velocity": 80
+        },
+        {
+          "at": 32,
+          "duration": 1,
+          "midi": 67,
+          "velocity": 78
+        },
+        {
+          "at": 33,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 80
+        },
+        {
+          "at": 34,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 78
+        },
+        {
+          "at": 35,
+          "duration": 1,
+          "midi": 72,
+          "velocity": 80
+        },
+        {
+          "at": 36,
+          "duration": 1,
+          "midi": 70,
+          "velocity": 81
+        },
+        {
+          "at": 37,
+          "duration": 2,
+          "midi": 70,
+          "velocity": 85
+        },
+        {
+          "at": 39,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 83
+        },
+        {
+          "at": 40,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 84
+        },
+        {
+          "at": 41,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 87
+        },
+        {
+          "at": 42,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 84
+        },
+        {
+          "at": 43,
+          "duration": 1,
+          "midi": 70,
+          "velocity": 83
+        },
+        {
+          "at": 44,
+          "duration": 1,
+          "midi": 69,
+          "velocity": 83
+        },
+        {
+          "at": 45,
+          "duration": 1,
+          "midi": 67,
+          "velocity": 85
+        },
+        {
+          "at": 46,
+          "duration": 1,
+          "midi": 67,
+          "velocity": 81
+        },
+        {
+          "at": 47,
+          "duration": 1,
+          "midi": 65,
+          "velocity": 80
+        }
+      ]
+    },
+    {
+      "role": "backing",
+      "instrument": "piano",
+      "volume": 74,
+      "pan": 49,
+      "notes": [
+        {
+          "at": 1,
+          "duration": 0.84,
+          "midi": 48,
+          "velocity": 52
+        },
+        {
+          "at": 1.12,
+          "duration": 0.72,
+          "midi": 55,
+          "velocity": 54
+        },
+        {
+          "at": 1.24,
+          "duration": 0.6,
+          "midi": 64,
+          "velocity": 56
+        },
+        {
+          "at": 2,
+          "duration": 0.84,
+          "midi": 50,
+          "velocity": 52
+        },
+        {
+          "at": 2.12,
+          "duration": 0.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 2.24,
+          "duration": 0.6,
+          "midi": 65,
+          "velocity": 56
+        },
+        {
+          "at": 3,
+          "duration": 0.84,
+          "midi": 55,
+          "velocity": 52
+        },
+        {
+          "at": 3.12,
+          "duration": 0.72,
+          "midi": 58,
+          "velocity": 54
+        },
+        {
+          "at": 3.24,
+          "duration": 0.6,
+          "midi": 62,
+          "velocity": 56
+        },
+        {
+          "at": 4,
+          "duration": 0.84,
+          "midi": 53,
+          "velocity": 52
+        },
+        {
+          "at": 4.12,
+          "duration": 0.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 4.24,
+          "duration": 0.6,
+          "midi": 60,
+          "velocity": 56
+        },
+        {
+          "at": 5,
+          "duration": 1.84,
+          "midi": 48,
+          "velocity": 52
+        },
+        {
+          "at": 5.12,
+          "duration": 1.72,
+          "midi": 55,
+          "velocity": 54
+        },
+        {
+          "at": 5.24,
+          "duration": 1.6,
+          "midi": 64,
+          "velocity": 56
+        },
+        {
+          "at": 7,
+          "duration": 1.84,
+          "midi": 53,
+          "velocity": 52
+        },
+        {
+          "at": 7.12,
+          "duration": 1.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 7.24,
+          "duration": 1.6,
+          "midi": 60,
+          "velocity": 56
+        },
+        {
+          "at": 9,
+          "duration": 0.84,
+          "midi": 50,
+          "velocity": 52
+        },
+        {
+          "at": 9.12,
+          "duration": 0.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 9.24,
+          "duration": 0.6,
+          "midi": 65,
+          "velocity": 56
+        },
+        {
+          "at": 10,
+          "duration": 0.84,
+          "midi": 45,
+          "velocity": 52
+        },
+        {
+          "at": 10.12,
+          "duration": 0.72,
+          "midi": 52,
+          "velocity": 54
+        },
+        {
+          "at": 10.24,
+          "duration": 0.6,
+          "midi": 60,
+          "velocity": 56
+        },
+        {
+          "at": 11,
+          "duration": 0.84,
+          "midi": 46,
+          "velocity": 52
+        },
+        {
+          "at": 11.12,
+          "duration": 0.72,
+          "midi": 53,
+          "velocity": 54
+        },
+        {
+          "at": 11.24,
+          "duration": 0.6,
+          "midi": 62,
+          "velocity": 56
+        },
+        {
+          "at": 12,
+          "duration": 0.84,
+          "midi": 53,
+          "velocity": 52
+        },
+        {
+          "at": 12.12,
+          "duration": 0.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 12.24,
+          "duration": 0.6,
+          "midi": 60,
+          "velocity": 56
+        },
+        {
+          "at": 13,
+          "duration": 1.84,
+          "midi": 55,
+          "velocity": 52
+        },
+        {
+          "at": 13.12,
+          "duration": 1.72,
+          "midi": 58,
+          "velocity": 54
+        },
+        {
+          "at": 13.24,
+          "duration": 1.6,
+          "midi": 62,
+          "velocity": 56
+        },
+        {
+          "at": 15,
+          "duration": 1.84,
+          "midi": 53,
+          "velocity": 52
+        },
+        {
+          "at": 15.12,
+          "duration": 1.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 15.24,
+          "duration": 1.6,
+          "midi": 60,
+          "velocity": 56
+        },
+        {
+          "at": 17,
+          "duration": 0.84,
+          "midi": 50,
+          "velocity": 52
+        },
+        {
+          "at": 17.12,
+          "duration": 0.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 17.24,
+          "duration": 0.6,
+          "midi": 65,
+          "velocity": 56
+        },
+        {
+          "at": 18,
+          "duration": 0.84,
+          "midi": 45,
+          "velocity": 52
+        },
+        {
+          "at": 18.12,
+          "duration": 0.72,
+          "midi": 52,
+          "velocity": 54
+        },
+        {
+          "at": 18.24,
+          "duration": 0.6,
+          "midi": 60,
+          "velocity": 56
+        },
+        {
+          "at": 19,
+          "duration": 0.84,
+          "midi": 46,
+          "velocity": 52
+        },
+        {
+          "at": 19.12,
+          "duration": 0.72,
+          "midi": 53,
+          "velocity": 54
+        },
+        {
+          "at": 19.24,
+          "duration": 0.6,
+          "midi": 62,
+          "velocity": 56
+        },
+        {
+          "at": 20,
+          "duration": 0.84,
+          "midi": 53,
+          "velocity": 52
+        },
+        {
+          "at": 20.12,
+          "duration": 0.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 20.24,
+          "duration": 0.6,
+          "midi": 60,
+          "velocity": 56
+        },
+        {
+          "at": 21,
+          "duration": 2.84,
+          "midi": 48,
+          "velocity": 52
+        },
+        {
+          "at": 21.12,
+          "duration": 2.7199999999999998,
+          "midi": 55,
+          "velocity": 54
+        },
+        {
+          "at": 21.24,
+          "duration": 2.5999999999999996,
+          "midi": 64,
+          "velocity": 56
+        },
+        {
+          "at": 24,
+          "duration": 0.84,
+          "midi": 53,
+          "velocity": 52
+        },
+        {
+          "at": 24.12,
+          "duration": 0.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 24.24,
+          "duration": 0.6,
+          "midi": 60,
+          "velocity": 56
+        },
+        {
+          "at": 25,
+          "duration": 0.84,
+          "midi": 48,
+          "velocity": 52
+        },
+        {
+          "at": 25.12,
+          "duration": 0.72,
+          "midi": 55,
+          "velocity": 54
+        },
+        {
+          "at": 25.24,
+          "duration": 0.6,
+          "midi": 64,
+          "velocity": 56
+        },
+        {
+          "at": 26,
+          "duration": 0.84,
+          "midi": 50,
+          "velocity": 52
+        },
+        {
+          "at": 26.12,
+          "duration": 0.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 26.24,
+          "duration": 0.6,
+          "midi": 65,
+          "velocity": 56
+        },
+        {
+          "at": 27,
+          "duration": 0.84,
+          "midi": 55,
+          "velocity": 52
+        },
+        {
+          "at": 27.12,
+          "duration": 0.72,
+          "midi": 58,
+          "velocity": 54
+        },
+        {
+          "at": 27.24,
+          "duration": 0.6,
+          "midi": 62,
+          "velocity": 56
+        },
+        {
+          "at": 28,
+          "duration": 0.84,
+          "midi": 53,
+          "velocity": 52
+        },
+        {
+          "at": 28.12,
+          "duration": 0.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 28.24,
+          "duration": 0.6,
+          "midi": 60,
+          "velocity": 56
+        },
+        {
+          "at": 29,
+          "duration": 1.84,
+          "midi": 48,
+          "velocity": 52
+        },
+        {
+          "at": 29.12,
+          "duration": 1.72,
+          "midi": 55,
+          "velocity": 54
+        },
+        {
+          "at": 29.24,
+          "duration": 1.6,
+          "midi": 64,
+          "velocity": 56
+        },
+        {
+          "at": 31,
+          "duration": 1.84,
+          "midi": 53,
+          "velocity": 52
+        },
+        {
+          "at": 31.12,
+          "duration": 1.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 31.24,
+          "duration": 1.6,
+          "midi": 60,
+          "velocity": 56
+        },
+        {
+          "at": 33,
+          "duration": 0.84,
+          "midi": 50,
+          "velocity": 52
+        },
+        {
+          "at": 33.12,
+          "duration": 0.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 33.24,
+          "duration": 0.6,
+          "midi": 65,
+          "velocity": 56
+        },
+        {
+          "at": 34,
+          "duration": 0.84,
+          "midi": 45,
+          "velocity": 52
+        },
+        {
+          "at": 34.12,
+          "duration": 0.72,
+          "midi": 52,
+          "velocity": 54
+        },
+        {
+          "at": 34.24,
+          "duration": 0.6,
+          "midi": 60,
+          "velocity": 56
+        },
+        {
+          "at": 35,
+          "duration": 0.84,
+          "midi": 46,
+          "velocity": 52
+        },
+        {
+          "at": 35.12,
+          "duration": 0.72,
+          "midi": 53,
+          "velocity": 54
+        },
+        {
+          "at": 35.24,
+          "duration": 0.6,
+          "midi": 62,
+          "velocity": 56
+        },
+        {
+          "at": 36,
+          "duration": 0.84,
+          "midi": 53,
+          "velocity": 52
+        },
+        {
+          "at": 36.12,
+          "duration": 0.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 36.24,
+          "duration": 0.6,
+          "midi": 60,
+          "velocity": 56
+        },
+        {
+          "at": 37,
+          "duration": 1.84,
+          "midi": 55,
+          "velocity": 52
+        },
+        {
+          "at": 37.12,
+          "duration": 1.72,
+          "midi": 58,
+          "velocity": 54
+        },
+        {
+          "at": 37.24,
+          "duration": 1.6,
+          "midi": 62,
+          "velocity": 56
+        },
+        {
+          "at": 39,
+          "duration": 1.84,
+          "midi": 53,
+          "velocity": 52
+        },
+        {
+          "at": 39.12,
+          "duration": 1.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 39.24,
+          "duration": 1.6,
+          "midi": 60,
+          "velocity": 56
+        },
+        {
+          "at": 41,
+          "duration": 0.84,
+          "midi": 50,
+          "velocity": 52
+        },
+        {
+          "at": 41.12,
+          "duration": 0.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 41.24,
+          "duration": 0.6,
+          "midi": 65,
+          "velocity": 56
+        },
+        {
+          "at": 42,
+          "duration": 0.84,
+          "midi": 45,
+          "velocity": 52
+        },
+        {
+          "at": 42.12,
+          "duration": 0.72,
+          "midi": 52,
+          "velocity": 54
+        },
+        {
+          "at": 42.24,
+          "duration": 0.6,
+          "midi": 60,
+          "velocity": 56
+        },
+        {
+          "at": 43,
+          "duration": 0.84,
+          "midi": 46,
+          "velocity": 52
+        },
+        {
+          "at": 43.12,
+          "duration": 0.72,
+          "midi": 53,
+          "velocity": 54
+        },
+        {
+          "at": 43.24,
+          "duration": 0.6,
+          "midi": 62,
+          "velocity": 56
+        },
+        {
+          "at": 44,
+          "duration": 0.84,
+          "midi": 53,
+          "velocity": 52
+        },
+        {
+          "at": 44.12,
+          "duration": 0.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 44.24,
+          "duration": 0.6,
+          "midi": 60,
+          "velocity": 56
+        },
+        {
+          "at": 45,
+          "duration": 1.84,
+          "midi": 48,
+          "velocity": 52
+        },
+        {
+          "at": 45.12,
+          "duration": 1.72,
+          "midi": 55,
+          "velocity": 54
+        },
+        {
+          "at": 45.24,
+          "duration": 1.6,
+          "midi": 64,
+          "velocity": 56
+        },
+        {
+          "at": 47,
+          "duration": 0.84,
+          "midi": 53,
+          "velocity": 52
+        },
+        {
+          "at": 47.12,
+          "duration": 0.72,
+          "midi": 57,
+          "velocity": 54
+        },
+        {
+          "at": 47.24,
+          "duration": 0.6,
+          "midi": 60,
+          "velocity": 56
+        }
+      ]
+    },
+    {
+      "role": "backing",
+      "instrument": "bass",
+      "volume": 80,
+      "pan": 67,
+      "notes": [
+        {
+          "at": 1,
+          "duration": 0.78,
+          "midi": 36,
+          "velocity": 62
+        },
+        {
+          "at": 2,
+          "duration": 0.78,
+          "midi": 38,
+          "velocity": 62
+        },
+        {
+          "at": 3,
+          "duration": 0.78,
+          "midi": 43,
+          "velocity": 62
+        },
+        {
+          "at": 4,
+          "duration": 0.78,
+          "midi": 41,
+          "velocity": 62
+        },
+        {
+          "at": 5,
+          "duration": 1.56,
+          "midi": 36,
+          "velocity": 62
+        },
+        {
+          "at": 7,
+          "duration": 1.56,
+          "midi": 41,
+          "velocity": 62
+        },
+        {
+          "at": 9,
+          "duration": 0.78,
+          "midi": 38,
+          "velocity": 62
+        },
+        {
+          "at": 10,
+          "duration": 0.78,
+          "midi": 33,
+          "velocity": 62
+        },
+        {
+          "at": 11,
+          "duration": 0.78,
+          "midi": 34,
+          "velocity": 62
+        },
+        {
+          "at": 12,
+          "duration": 0.78,
+          "midi": 41,
+          "velocity": 62
+        },
+        {
+          "at": 13,
+          "duration": 1.56,
+          "midi": 43,
+          "velocity": 62
+        },
+        {
+          "at": 15,
+          "duration": 1.56,
+          "midi": 41,
+          "velocity": 62
+        },
+        {
+          "at": 17,
+          "duration": 0.78,
+          "midi": 38,
+          "velocity": 62
+        },
+        {
+          "at": 18,
+          "duration": 0.78,
+          "midi": 33,
+          "velocity": 62
+        },
+        {
+          "at": 19,
+          "duration": 0.78,
+          "midi": 34,
+          "velocity": 62
+        },
+        {
+          "at": 20,
+          "duration": 0.78,
+          "midi": 41,
+          "velocity": 62
+        },
+        {
+          "at": 21,
+          "duration": 1.6,
+          "midi": 36,
+          "velocity": 62
+        },
+        {
+          "at": 24,
+          "duration": 0.78,
+          "midi": 41,
+          "velocity": 62
+        },
+        {
+          "at": 25,
+          "duration": 0.78,
+          "midi": 36,
+          "velocity": 62
+        },
+        {
+          "at": 26,
+          "duration": 0.78,
+          "midi": 38,
+          "velocity": 62
+        },
+        {
+          "at": 27,
+          "duration": 0.78,
+          "midi": 43,
+          "velocity": 62
+        },
+        {
+          "at": 28,
+          "duration": 0.78,
+          "midi": 41,
+          "velocity": 62
+        },
+        {
+          "at": 29,
+          "duration": 1.56,
+          "midi": 36,
+          "velocity": 62
+        },
+        {
+          "at": 31,
+          "duration": 1.56,
+          "midi": 41,
+          "velocity": 62
+        },
+        {
+          "at": 33,
+          "duration": 0.78,
+          "midi": 38,
+          "velocity": 62
+        },
+        {
+          "at": 34,
+          "duration": 0.78,
+          "midi": 33,
+          "velocity": 62
+        },
+        {
+          "at": 35,
+          "duration": 0.78,
+          "midi": 34,
+          "velocity": 62
+        },
+        {
+          "at": 36,
+          "duration": 0.78,
+          "midi": 41,
+          "velocity": 62
+        },
+        {
+          "at": 37,
+          "duration": 1.56,
+          "midi": 43,
+          "velocity": 62
+        },
+        {
+          "at": 39,
+          "duration": 1.56,
+          "midi": 41,
+          "velocity": 62
+        },
+        {
+          "at": 41,
+          "duration": 0.78,
+          "midi": 38,
+          "velocity": 62
+        },
+        {
+          "at": 42,
+          "duration": 0.78,
+          "midi": 33,
+          "velocity": 62
+        },
+        {
+          "at": 43,
+          "duration": 0.78,
+          "midi": 34,
+          "velocity": 62
+        },
+        {
+          "at": 44,
+          "duration": 0.78,
+          "midi": 41,
+          "velocity": 62
+        },
+        {
+          "at": 45,
+          "duration": 1.56,
+          "midi": 36,
+          "velocity": 62
+        },
+        {
+          "at": 47,
+          "duration": 0.78,
+          "midi": 41,
+          "velocity": 62
+        }
+      ]
+    }
+  ]
+}
