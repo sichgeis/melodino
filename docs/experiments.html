@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#244b3e">
+  <title>Melodino · Klangexperimente</title>
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="experiments.css">
+  <script type="module" src="experiments.js?v=20261016-1"></script>
+</head>
+<body>
+  <header class="masthead"><a class="brand" href="./">♫ melodino</a><a href="./">Zur Liedersammlung</a></header>
+  <main>
+    <section class="lab-intro"><span class="eyebrow">HÖREN · VERGLEICHEN · AUSPROBIEREN</span>
+      <h1>Klanglabor.</h1><p>Wie klingt gemeinsames Singen am schönsten? Vergleicht puren Klang, sanfte Begleitung und eine kleine akustische Band.</p>
+      <p class="lab-note">Die Begleitstimmen sind neue Arrangementvorschläge. Alle Varianten eines Liedes starten im gleichen Tempo. Die Melodie behält ihre Tonhöhen und ihren Rhythmus.</p>
+    </section>
+    <aside class="research" id="melodievergleich"><h2>Welche Schlaf-Melodie kennt ihr?</h2>
+      <p>Euer Höreindruck bestätigt sich: Die bisher gespeicherte Melodie unterscheidet sich in vier Takten von den hier verglichenen veröffentlichten Fassungen. Unten könnt ihr beide Melodien hören. Die Sammlung bleibt unverändert.</p>
+      <details><summary>Notenvergleich und Quellen</summary>
+        <p>In F-Dur: Takt 2 endet dort auf C4 statt F4; Takt 3 lautet A4–A4–G4–G4 statt C5–C5–B♭4–B♭4; Takt 4 F4–F4 statt A4–G4; Takt 9 beginnt mit B♭4 statt A4. Der korrigierte fünfte Takt B♭–B♭–G–G stimmt überein.</p>
+        <p>Visuell verglichen: <a href="https://www.liederkiste.com/downloads/schlaf-kindlein-schlaf.pdf">Liederkiste (F-Dur)</a> und <a href="https://www.singkinderlieder.de/backend/fileadmin/Noten_PDF_mit_Grafik/005-Sing-Kinderlieder-Schlaf-Kindlein-schlaf-Noten.pdf">Sing Kinderlieder (C-Dur)</a>. Beide schreiben die Melodie Johann Friedrich Reichardt zu. Zum Hören wurde die zweite Quelle nach F übertragen.</p>
+        <p>Ohne das damalige Schlaf-Notenfoto lässt sich nicht entscheiden, ob die Abweichung aus dem Buch oder der Übertragung stammt. Deshalb heißt die neue Fassung „recherchierte Melodie“ und ersetzt die bisherige nicht.</p>
+      </details>
+    </aside>
+    <p id="status" role="status">Hörvarianten werden geladen …</p>
+    <div id="experiments" class="songs"></div>
+    <aside class="tip"><span aria-hidden="true">♪</span><p>Zum Vergleichen die Lautstärke am Telefon gleich lassen. Mit „Melodie hörbar“ könnt ihr die Melodiestimme ausschalten und nur zur Begleitung singen. Ein Instrument klingt erst nach dem ersten Laden; bitte auf Abspielen tippen.</p></aside>
+    <details class="audio-help"><summary>Kein Ton auf dem iPhone?</summary><p>Medienlautstärke und Bluetooth prüfen. Direkt in Safari öffnen, neu laden und auf Abspielen tippen. Auf älteren iPhones gegebenenfalls den Stummmodus ausschalten.</p></details>
+  </main>
+  <footer><a href="./">Zur Liedersammlung</a><p>Klangvorschläge zum gemeinsamen Ausprobieren.</p><p class="credits">FluidR3 GM · SpessaSynth · <a href="samples/NOTICE.txt">Klanglizenzen</a></p></footer>
+</body>
+</html>

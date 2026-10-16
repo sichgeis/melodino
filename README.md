@@ -44,7 +44,7 @@ Die mit FluidSynth mitgelieferte kleine Beispielbank ist keine vollständige GM-
 
 Für diese Hörprobe wurde FluidR3 GM aus dem offiziellen Debian-Archiv verwendet
 ([Paketinhalt](https://packages.debian.org/bookworm/all/fluid-soundfont-gm/filelist)).
-Die vollständige GM-Bank bleibt lokal. Vier daraus isolierte Presets liegen als gemeinsam
+Die vollständige GM-Bank bleibt lokal. Sieben daraus isolierte Presets liegen als gemeinsam
 genutzte Browser-Klänge mit Lizenznachweis unter docs/samples/. Reproduzierbare Beschaffung:
 
 ```sh
@@ -130,7 +130,8 @@ und identisch in examples/schlaf-kindlein-schlaf.json.
 Veröffentlicht ist die bisherige Fassung 2 mit Klarinette und 104 Vierteln/Minute
 (GM 72, nullbasiert 71). Das Instrument ist im Browser frei wählbar.
 
-Keine Begleitung, kein Gesang, keine expressive Interpretation. Beim Python-Audioexport sind Glocken synthetisch und Klarinette ein Sample-Instrument.
+Die reguläre Sammlung enthält reine Melodien ohne Begleitung oder Gesang.
+Das separat beauftragte Klanglabor enthält ausdrücklich gekennzeichnete Arrangementvorschläge. Beim Python-Audioexport sind Glocken synthetisch und Klarinette ein Sample-Instrument.
 Im Browser verwenden alle vier Instrumente SoundFont-Samples. Instrumentenwahl ändert keine klingenden Tonhöhen;
 die Ausgabe ist keine geschriebene B-Klarinettenstimme. Nur `--transpose` ändert die Tonhöhe.
 Kurze Abstände in der Klarinetten-Audiodatei trennen wiederholte Töne; MIDI und MusicXML
@@ -271,3 +272,34 @@ Neue Exporte verwenden `--verse-gap-bars 1` als Arbeitsstandard; nach Prüfung d
 Schlusses ausdrücklich 0, 1 oder 2 wählen (AGENTS.md). Kein allgemeines musikalisches
 Gesetz: bereits notierte Atempausen berücksichtigen. Einzelaufnahmen und Noten ändern
 sich dadurch nicht. Die CLI speichert den Vorschlag in info.json und im Katalog.
+
+
+## Klanglabor / Experimente
+
+[Hörvarianten auf GitHub Pages](https://sichgeis.github.io/melodino/experiments.html).
+Drei Vergleichskarten: Bäume, bisherige Schlaf-Melodie und separat recherchierte
+Schlaf-Melodie. Je vier Einstellungen: ursprüngliches Solo, warmes Solo mit Dynamik,
+sanfte Klarinette/Klavier/Bass-Begleitung und Flöte/Nylongitarre/Bass/Holzblock.
+Melodie an/aus und Begleitlautstärke lassen sich während der Wiedergabe regeln.
+Alle Stimmen teilen eine samplegenaue Uhr, auch bei Tempoänderungen und Strophenpausen.
+Die reguläre Sammlung und ihre Noten wurden nicht ersetzt.
+
+Das sind selbst erstellte Begleitvorschläge, keine rekonstruierten Bucharrangements.
+Bäume verwendet die Akkordwechsel der Fotovorlage; Schlaf verwendet eine eigene einfache
+Harmonisierung. Die warmen Fassungen verändern Anschlagsstärken und Raummischung,
+nicht Tonhöhen, Einsatzpositionen oder notierte Dauern. Die vorhandenen FluidR3-Samples
+bleiben die Klangbasis: kein neues professionelles Orchester-Samplepaket. Neue
+Klangfarben: Nylongitarre ca. 1,7 MB, akustischer Bass 0,9 MB und Holzblock 0,05 MB.
+
+Reproduzierbar mit `node scripts/prepare-experiments.mjs` (keine Systemaudio-Tools).
+Die Daten liegen getrennt unter docs/experiments/. Das erweiterte Browserformat
+unterstützt mehrere Instrumentenspuren mit Lautstärke/Panorama und Anschlagsstärken;
+die CLI und das bestehende schema_version 1 bleiben kompatibel.
+Siehe [Spezifikation](specs/007-experiments.md).
+
+Die Melodierecherche fand Abweichungen in Takt 2, 3, 4 und 9; der korrigierte Takt 5
+stimmt. Die Quellen stimmen nach Transposition miteinander überein. Ob das Buch eine
+andere Variante druckt oder die frühere Übertragung abwich, lässt sich ohne dessen
+Foto nicht entscheiden. Details und Quellen: [Recherche](research/schlaf-kindlein-schlaf.md).
+Die neue Vergleichsmelodie liegt unter examples/schlaf-kindlein-schlaf-vergleich.json.
+Keine fremden PDFs, Bilder, Liedtexte oder Tonaufnahmen sind enthalten.

@@ -7,7 +7,7 @@ if(!input) throw Error('Usage: node scripts/prepare-soundbanks.mjs /path/FluidR3
 const data=readFileSync(input);
 const original=SoundBankLoader.fromArrayBuffer(data.buffer.slice(data.byteOffset,data.byteOffset+data.byteLength));
 mkdirSync('docs/samples',{recursive:true});
-for(const [name,program] of [['piano',0],['glockenspiel',9],['clarinet',71],['flute',73]]) {
+for(const [name,program] of [['piano',0],['glockenspiel',9],['clarinet',71],['flute',73],['guitar',24],['bass',32],['woodblock',115]]) {
   const preset=original.presets.find(p=>p.bankMSB===0&&p.bankLSB===0&&!p.isGMGSDrum&&p.program===program);
   if(!preset) throw Error(`Missing GM program ${program}`);
   const bank=new BasicSoundBank();

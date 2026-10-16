@@ -1,5 +1,5 @@
-import {player} from './player.js?v=20261015-verse-gap';
-import {instruments} from './score-clock.js';
+import {player} from './player.js?v=20261016-experiments';
+import {instruments} from './score-clock.js?v=20261016-experiments';
 const root = document.querySelector('#songs');
 const status = document.querySelector('#status');
 const filenames = {mp3: 'melody.mp3', wav: 'melody.wav', midi: 'melody.mid', musicxml: 'score.musicxml', csv: 'notes.csv', playback: 'playback.json'};
@@ -46,7 +46,7 @@ function card(song) {
   top.append(badge);
   const title = element('h3', '', song.title);
   const meta = element('p', 'meta');
-  const instrument = selectField('Instrument', Object.entries(instruments).map(([id, i]) => [id, i.name]));
+  const instrument = selectField('Instrument', Object.entries(instruments).filter(([id]) => ['clarinet', 'glockenspiel', 'piano', 'flute'].includes(id)).map(([id, i]) => [id, i.name]));
   instrument.select.value = song.instrument === 'bell' ? 'glockenspiel' : 'clarinet';
   const verses = selectField('Strophen', [['1', '1 Strophe'], ['2', '2 Strophen'], ['3', '3 Strophen'], ['4', '4 Strophen'], ['infinite', 'Endlos ↻']]);
   const gap = selectField('Strophenpause', [['0', 'keine'], ['1', '1 Takt'], ['2', '2 Takte']]);

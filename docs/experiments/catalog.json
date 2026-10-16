@@ -1,0 +1,104 @@
+[
+  {
+    "id": "sleep",
+    "title": "Schlaf, Kindlein, schlaf · bisherige Melodie",
+    "bpm": 104,
+    "quarters": 40,
+    "measure_quarters": 4,
+    "verse_gap_bars": 0,
+    "variants": [
+      {
+        "id": "reference",
+        "label": "0 · Bisheriger Soloklang",
+        "description": "Zum direkten Vergleich: ursprünglicher Klang ohne neue Begleitung.",
+        "url": "experiments/data/sleep-reference.json"
+      },
+      {
+        "id": "warm",
+        "label": "A · Pur und warm",
+        "description": "Klarinette, sanfte Phrasendynamik und dezenter Raum.",
+        "url": "experiments/data/sleep-warm.json"
+      },
+      {
+        "id": "gentle",
+        "label": "B · Sanft begleitet",
+        "description": "Klarinette mit leisen gebrochenen Klavierakkorden und akustischem Bass.",
+        "url": "experiments/data/sleep-gentle.json"
+      },
+      {
+        "id": "lively",
+        "label": "C · Lebhaft begleitet",
+        "description": "Flöte, gezupfte Nylongitarre, Bass und ein leiser Holzpuls.",
+        "url": "experiments/data/sleep-lively.json"
+      }
+    ]
+  },
+  {
+    "id": "sleep-standard",
+    "title": "Schlaf, Kindlein, schlaf · recherchierte Melodie",
+    "bpm": 104,
+    "quarters": 40,
+    "measure_quarters": 4,
+    "verse_gap_bars": 0,
+    "variants": [
+      {
+        "id": "reference",
+        "label": "0 · Bisheriger Soloklang",
+        "description": "Zum direkten Vergleich: ursprünglicher Klang ohne neue Begleitung.",
+        "url": "experiments/data/sleep-standard-reference.json"
+      },
+      {
+        "id": "warm",
+        "label": "A · Pur und warm",
+        "description": "Klarinette, sanfte Phrasendynamik und dezenter Raum.",
+        "url": "experiments/data/sleep-standard-warm.json"
+      },
+      {
+        "id": "gentle",
+        "label": "B · Sanft begleitet",
+        "description": "Klarinette mit leisen gebrochenen Klavierakkorden und akustischem Bass.",
+        "url": "experiments/data/sleep-standard-gentle.json"
+      },
+      {
+        "id": "lively",
+        "label": "C · Lebhaft begleitet",
+        "description": "Flöte, gezupfte Nylongitarre, Bass und ein leiser Holzpuls.",
+        "url": "experiments/data/sleep-standard-lively.json"
+      }
+    ]
+  },
+  {
+    "id": "trees",
+    "title": "Was müssen das für Bäume sein",
+    "bpm": 88,
+    "quarters": 36,
+    "measure_quarters": 2,
+    "verse_gap_bars": 1,
+    "variants": [
+      {
+        "id": "reference",
+        "label": "0 · Bisheriger Soloklang",
+        "description": "Zum direkten Vergleich: ursprünglicher Klang ohne neue Begleitung.",
+        "url": "experiments/data/trees-reference.json"
+      },
+      {
+        "id": "warm",
+        "label": "A · Pur und warm",
+        "description": "Klarinette, sanfte Phrasendynamik und dezenter Raum.",
+        "url": "experiments/data/trees-warm.json"
+      },
+      {
+        "id": "gentle",
+        "label": "B · Sanft begleitet",
+        "description": "Klarinette mit leisen gebrochenen Klavierakkorden und akustischem Bass.",
+        "url": "experiments/data/trees-gentle.json"
+      },
+      {
+        "id": "lively",
+        "label": "C · Lebhaft begleitet",
+        "description": "Flöte, gezupfte Nylongitarre, Bass und ein leiser Holzpuls.",
+        "url": "experiments/data/trees-lively.json"
+      }
+    ]
+  }
+]

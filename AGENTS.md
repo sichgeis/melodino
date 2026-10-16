@@ -42,6 +42,8 @@ dass der Chat etwas ausgeführt oder veröffentlicht hat; den konkreten Zugang n
   Metadaten `measure_quarters`/`verse_gap_bars` steuern nur den Browser. Bei wechselnder
   Taktart den letzten Takt verwenden. Auswahl im Player bleibt veränderbar.
 - Keine Begleitung, keinen Gesang und keine zusätzlichen Töne erfinden.
+  Ausnahme: Im ausdrücklich beauftragten Klanglabor sind eigene instrumentale
+  Arrangementvorschläge erlaubt; sie bleiben von bestätigter Melodie und Sammlung getrennt.
 - JSON für einfache einstimmige Melodien, Wiederholungen ausdrücklich ausschreiben.
   Dauer in Vierteln; B-4 = deutsches B (B♭), B4 = H, rest = Pause.
 - MusicXML für Akkorde/komplexere Notation. Klingende Tonhöhen werden exportiert.
@@ -68,7 +70,7 @@ dass der Chat etwas ausgeführt oder veröffentlicht hat; den konkreten Zugang n
 6. Nach erfolgreicher Prüfung gezielt nur Projektdateien committen und nach main pushen.
    Der Upload eines Notenfotos erteilt diesen Auftrag bereits; keine weitere Freigabe erfragen.
    Nie Fotos, .venv, node_modules/, work/, vollständige GM-Soundbanks oder Zugangsdaten committen.
-   Ausnahme: Die vier kuratierten SF2-Presets unter docs/samples/ sind ausdrücklich
+   Ausnahme: Die sieben kuratierten SF2-Presets unter docs/samples/ sind ausdrücklich
    beauftragte, gemeinsam genutzte Browser-Klangdaten mit Lizenznachweis.
 7. GitHub-Action bis zum Ergebnis verfolgen. Erst nach erfolgreichem Deployment die echte
    HTTPS-Seite, library.json, playback.json und Browser-Wiedergabe prüfen, einschließlich

@@ -1,4 +1,4 @@
-import {instruments, validatePlayback} from './score-clock.js';
+import {validatePlayback, scoreTracks} from './score-clock.js?v=20261016-experiments';
 import {AudioOutput, configurePlaybackSession} from './audio-output.js';
 
 async function json(url) {
@@ -38,7 +38,7 @@ export class BrowserPlayer {
     if (!this.context.audioWorklet) throw Error('Der Instrumentenplayer benötigt einen aktuellen Browser und HTTPS. Bitte nutze sonst einen Download.');
     const resume = this.output.activate();
     if (!this.initializing) {
-      this.initializing = this.context.audioWorklet.addModule(new URL('./synth-worklet.js', import.meta.url))
+      this.initializing = this.context.audioWorklet.addModule(new URL('./synth-worklet.js?v=20261016-experiments', import.meta.url))
         .then(() => {
           this.node = new AudioWorkletNode(this.context, 'melodino-synth', {numberOfInputs: 0,
             numberOfOutputs: 1, outputChannelCount: [2]});
@@ -98,18 +98,19 @@ export class BrowserPlayer {
         this.scores.set(options.url, score);
       }
       if (token !== this.generation) return;
-      if (!Object.hasOwn(instruments, options.instrument)) throw Error('Unbekanntes Instrument.');
-      if (!this.banks.has(options.instrument)) {
-        const response = await fetch(new URL(`./samples/${options.instrument}.sf2`, import.meta.url));
+      const needed = new Set(scoreTracks(score, options.instrument).map(track => track.instrument));
+      for (const instrument of needed) {
+        if (this.banks.has(instrument)) continue;
+        const response = await fetch(new URL(`./samples/${instrument}.sf2`, import.meta.url));
         if (!response.ok) throw Error('Das Instrument konnte nicht geladen werden. Bitte versuche es erneut.');
         const binary = await response.arrayBuffer();
         if (token !== this.generation) return;
-        await this.request({type: 'bank', instrument: options.instrument, binary});
-        this.banks.add(options.instrument);
+        await this.request({type: 'bank', instrument, binary});
+        this.banks.add(instrument);
       }
       if (token !== this.generation) return;
       await this.request({type: 'load', score, instrument: options.instrument, bpm: options.bpm,
-        verses: options.verses, gapQuarters: options.gapQuarters});
+        verses: options.verses, gapQuarters: options.gapQuarters, backing: options.backing ?? 1, melody: options.melody ?? true});
       if (token !== this.generation) return;
       this.update('playing', {verse: 1, quarter: 0});
       await this.request({type: 'play'});
@@ -149,6 +150,11 @@ export class BrowserPlayer {
     this.node?.port.postMessage({type: 'stop'});
     this.output?.pause();
     this.update('idle');
+  }
+  mix(owner, backing, melody) {
+    if (this.owner === owner && ['playing', 'paused'].includes(this.state)) {
+      this.node.port.postMessage({type: 'mix', backing, melody});
+    }
   }
   tempo(owner, bpm) {
     if (this.owner === owner && ['playing', 'paused'].includes(this.state)) {

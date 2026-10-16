@@ -6,8 +6,9 @@ Copyright © 2008 Toby Smithe
 
 Quelle: FluidR3_GM.sf2 aus Debian fluid-soundfont-gm 3.1-5.3
 https://deb.debian.org/debian/pool/main/f/fluid-soundfont/
-Die vier SF2-Dateien enthalten jeweils ein unverändertes Preset und seine
-Samples (Klavier GM 1, Glockenspiel GM 10, Klarinette GM 72, Flöte GM 74).
+Die sieben SF2-Dateien enthalten jeweils ein unverändertes Preset und seine
+Samples (Klavier GM 1, Glockenspiel GM 10, Klarinette GM 72, Flöte GM 74,
+Nylongitarre GM 25, akustischer Bass GM 33, Holzblock GM 116).
 Auswahl/Neu-Verpackung durch Melodino mit SpessaSynth Core; keine Klangbearbeitung.
 
 Laut README des Debian-Pakets wurde Fluid unter der MIT-Lizenz veröffentlicht:
