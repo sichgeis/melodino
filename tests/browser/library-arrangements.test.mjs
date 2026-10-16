@@ -58,7 +58,7 @@ test('melody, accompaniment and rhythm switches independently control actual MID
   clock.mix(.5,true,false,true);
   assert.deepEqual(controls.slice(-4),score.tracks.map((t,c)=>[c,7,t.role==='melody'?t.volume:t.role==='backing'?Math.round(t.volume*.5):0]));
 });
-for(const slug of ['die-kuh-die-sass-im-schwalbennest','schlaf-kindlein-suesse','viel-glueck-und-viel-segen'])
+for(const slug of ['schilf-bleicht','die-kuh-die-sass-im-schwalbennest','schlaf-kindlein-suesse','viel-glueck-und-viel-segen'])
   for(const variant of ['gentle','lively'])test(`real arranged audio and two-verse timing: ${slug}/${variant}`,async()=>{
     const entry=catalog.songs.find(s=>s.slug===slug),song=library.find(s=>s.slug===slug);
     const score=read(entry.versions[0].variants.find(v=>v.id===variant).url);

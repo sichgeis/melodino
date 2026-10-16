@@ -315,3 +315,26 @@ def test_viel_glueck_photo_repeat_and_pickup(tmp_path):
         assert actual == pytest.approx((wanted[0], wanted[2], wanted[1]), abs=.002)
     exported = load_song(tmp_path / 'score.musicxml').score
     assert events(exported, True) == original
+
+
+def test_schilf_singing_form_exports_exact_written_notes():
+    root = EXAMPLE.parents[1]
+    song = load_song(root / 'examples/schilf-bleicht.json')
+    measures = list(song.score.parts[0].getElementsByClass(stream.Measure))
+    assert len(measures) == 16
+    assert all(m.duration.quarterLength == 3 for m in measures)
+    assert song.score.highestTime == 48
+    assert len(song.score.recurse().notes) == 72
+    for index in (3, 7, 11):
+        assert measures[index].notes[2].nameWithOctave == 'F#4'
+    assert measures[-1].notes[0].quarterLength == 3
+    expected = [(float(n.offset), int(n.pitch.midi), float(n.quarterLength))
+                for n in song.score.flatten().notes]
+    exported = root / 'docs/assets/schilf-bleicht'
+    actual = midi_events(exported / 'melody.mid')
+    assert len(actual) == len(expected)
+    for a, e in zip(actual, expected):
+        assert a == pytest.approx(e, abs=.002)
+    xml = converter.parse(str(exported / 'score.musicxml'))
+    assert [(int(n.pitch.midi), float(n.quarterLength)) for n in xml.flatten().notes] == [
+        (midi_pitch, duration) for _, midi_pitch, duration in expected]

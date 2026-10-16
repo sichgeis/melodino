@@ -1,6 +1,6 @@
 // Shared deterministic arrangement renderer. Musical plans are supplied per song.
 const chords = {
-  F: [53,57,60], C: [48,55,64], C7: [48,58,64], Gm: [55,58,62],
+  Bb: [46,53,62], D7: [50,54,60], F: [53,57,60], C: [48,55,64], C7: [48,58,64], Gm: [55,58,62],
   G: [55,59,62], D: [50,57,62], Em: [52,55,59], A: [45,52,61], Bm: [47,54,62]
 };
 

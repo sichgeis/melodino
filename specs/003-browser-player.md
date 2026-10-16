@@ -82,3 +82,6 @@ Solo, pur und warm, sanft begleitet und lebhaft begleitet. Die Begleitstimmen si
 eigene Arrangementvorschläge. Melodie, Begleitung und Rhythmus sind unabhängig
 schaltbar; Instrumentenwahl verändert nur die Melodiespur. Erweiterte Einstellungen
 stehen in einem aufklappbaren Bereich. Vertrag und Prüfung: specs/008-main-arrangements.md.
+
+Textlieder auf der Hauptseite: specs/010-main-strophes.md ergänzt die instrumentale
+Wiederholungswahl um geprüfte Textstrophen und automatische Durchgangszahl.

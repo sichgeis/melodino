@@ -6,7 +6,7 @@ Codex liest die Noten visuell, klärt unsichere Stellen und führt die Python-Pi
 Ein hochgeladenes Notenfoto beauftragt auch die Veröffentlichung nach erfolgreicher Prüfung,
 ohne weitere Freigaberückfrage, sofern du nichts anderes dazusagst.
 Die statische Seite spielt die Melodie mit Instrumenten-Samples direkt im Browser, ihr singt dazu.
-Wählt Klarinette, Glockenspiel, Klavier oder Flöte und 1–4 Strophen oder endlose Wiederholung.
+Wählt Klarinette, Glockenspiel, Klavier oder Flöte. Bei hinterlegtem Liedtext bestimmt die Auswahl der Textstrophen automatisch die Zahl der Musikdurchgänge; sonst 1–4 Durchgänge oder endlose Wiederholung.
 Zwischen Strophen wählt ihr keine Pause, einen oder zwei Takte Atemzeit.
 
 - [Abspielseite](https://sichgeis.github.io/melodino/)
@@ -148,7 +148,7 @@ Strophen neu. Auftakt und verkürzter Schluss bleiben erhalten; die wählbare St
 Klänge dürfen über die Strophengrenze ausklingen. Details: specs/003-browser-player.md.
 
 Instrumente ändern keine Tonhöhen. Tempo: 40–200 Viertel/Minute, auch während der
-Wiedergabe änderbar; Schnellwahl 75/100/125 %. Strophenzahl 1, 2, 3, 4 oder endlos.
+Wiedergabe änderbar; Schnellwahl 75/100/125 %. Bei Instrumentalliedern Strophenzahl 1, 2, 3, 4 oder endlos; bei Textliedern zählt die Textauswahl.
 Pause friert Noten und Samples ein; Fortsetzen setzt an derselben Stelle fort.
 Instrument/Strophenzahl wechseln setzt die Wiedergabe zurück; danach erneut starten.
 Nur ein Player spielt. Ein Tippen aktiviert Audio auf iPhone/Safari; kein Autoplay.
@@ -339,8 +339,8 @@ automatischer Folge innerhalb des Textbereichs. Ansichten wechseln ohne Musikneu
 Drei historische Textstrophen aus „Des Knaben Wunderhorn“ (1808), Nr. 1, 2 und 4,
 als drei ausgewählte Strophen angezeigt. Nur die angehakten Texte werden gesungen:
 Musik und Strophenzahl ergeben sich daraus automatisch. Keine unabhängige Anzahl
-und keine endlose Wiederholung im Mitsing-Labor. Die Hauptseite bleibt vorerst beim
-bisherigen Bedienkonzept. Kein Gesang aus dem Computer; ihr singt zur Begleitung.
+und keine endlose Wiederholung bei Textliedern. Die bevorzugte Strophenansicht ist
+jetzt auch auf der Hauptseite verfügbar. Kein Gesang aus dem Computer; ihr singt zur Begleitung.
 
 Default: recherchierte Melodie, sanfte Begleitung, 88 Viertel/Minute, keine zusätzliche
 Strophenpause wegen der langen Schlussnote. Tempo und Strophenpause sind veränderbar.
@@ -357,3 +357,28 @@ Silben geprüft werden; die Seite lehnt unpassende Zuordnungen ab. Texte werden 
 DOM-textContent ausgegeben. Die Textfreigabe gilt gezielt für diese gemeinfreie
 Überlieferung; keine modernen Buchtexte oder Bilder wurden veröffentlicht.
 Quellen/Entscheidungen: research/singalong.md; Vertrag: specs/009-singalong.md.
+
+## Mitsingen auf der Hauptseite
+
+„Schlaf, Kindlein, schlaf“ zeigt die aktuelle Textstrophe und markiert die aktive
+Zeile anhand der Audio-Uhr. Unter „Strophen & Klang“ wählt ihr die drei vorhandenen
+Textstrophen einzeln aus. Auswahl 1+3 spielt zwei Durchgänge, mit den passenden
+Texten; keine Auswahl deaktiviert den Start. Die Gesamtdauer folgt Auswahl, Tempo
+und Strophenpause. Pause hält auch die Textposition an. Die recherchierte Melodie
+ist hier vorbelegt, beide Fassungen bleiben auswählbar. Downloads enthalten weiterhin
+die ursprüngliche Fassung. Der Laborvergleich bleibt zum Experimentieren erhalten.
+
+Zuordnung in `docs/lyrics/catalog.json`; Daten müssen gegen alle angebotenen
+Melodiefassungen validiert sein. Bei Lade-/Zuordnungsfehlern bleibt Instrumental
+mit sichtbarem Hinweis möglich. Lieder ohne hinterlegten Text behalten ihre
+Wiederholungswahl. Vertrag: specs/010-main-strophes.md.
+
+„Schilf bleicht · Kiefern im Wind“ ist als instrumentale AB-Singfassung der alten
+schwedischen Melodie ergänzt (G-Moll, 3/4, 92 BPM). Vier Klangvarianten, ein Takt
+Atemzeit zwischen Durchgängen, MIDI/XML/Notenliste. Der moderne deutsche Text
+ist noch nicht enthalten; Recherche und Formentscheidung: research/schilf-bleicht.md.
+
+Alle HTML-Seiten enthalten `noindex, nofollow`. Das bittet Suchmaschinen, sie nicht
+zu indexieren, macht aber weder GitHub Pages noch das öffentliche Repository privat.
+Eine robots.txt-Sperre würde das Auslesen der Meta-Angabe verhindern und wird
+deshalb nicht verwendet.

@@ -4,6 +4,7 @@ const read=path=>JSON.parse(readFileSync(path,'utf8'));
 const write=(path,data)=>writeFileSync(path,JSON.stringify(data,null,2)+'\n');
 const output='docs/arrangements';mkdirSync(output,{recursive:true});
 const curated={
+  'schilf-bleicht':{measure:3,pickup:0,plan:[[0,'Gm'],[3,'Bb'],[6,'D7'],[9,'Gm'],[10,'D7'],[12,'Gm'],[15,'Bb'],[18,'D7'],[21,'Gm'],[24,'Bb'],[27,'F'],[30,'Gm'],[33,'D7'],[36,'Gm'],[39,'Bb'],[42,'D7'],[45,'Gm']]},
   'schlaf-kindlein-suesse':{measure:3,pickup:0,plan:[[0,'F'],[3,'F'],[6,'C7'],[9,'F'],[12,'C'],[15,'F'],[18,'C'],[21,'F'],[24,'F'],[27,'C7'],[28.5,'F']]},
   'die-kuh-die-sass-im-schwalbennest':{measure:2,pickup:.5,plan:[[.5,'G'],[4.5,'D'],[6.5,'G'],[12.5,'D'],[14.5,'G'],[16.5,'G'],[17.5,'Em'],[18.5,'G'],[20.5,'D'],[22.5,'G'],[24.5,'G'],[25.5,'Em'],[26.5,'G'],[28.5,'D'],[30.5,'G']]},
   'viel-glueck-und-viel-segen':{measure:3,pickup:1,plan:[[1,'D'],[2,'A'],[3,'Bm'],[4,'D'],[5,'A'],[7,'G'],[10,'D'],[13,'G'],[16,'D'],[19,'G'],[20,'A'],[22,'D'],[24,'A'],[25,'D'],[26,'A'],[27,'Bm'],[28,'D'],[29,'A'],[31,'G'],[34,'D'],[37,'G'],[40,'D'],[43,'G'],[44,'A'],[46,'D']]}

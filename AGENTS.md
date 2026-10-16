@@ -53,8 +53,8 @@ dass der Chat etwas ausgeführt oder veröffentlicht hat; den konkreten Zugang n
 - Originalbilder nicht standardmäßig veröffentlichen, nicht unter docs/ ablegen,
   nicht committen. Temporäre Fotos allenfalls in ignoriertem private/ halten.
   Keine Liedtexte, Buchillustrationen oder sonstige Buchbestandteile übernehmen.
-  Ausnahme: Für das Mitsing-Labor sind die historisch gemeinfreien Schlaf-Kindlein-
-  Textstrophen ausdrücklich beauftragt (specs/009-singalong.md). Silben/Notenpositionen
+  Ausnahme: Für Mitsing-Labor und Hauptseite sind die historisch gemeinfreien Schlaf-Kindlein-
+  Textstrophen ausdrücklich beauftragt (specs/009-singalong.md und specs/010-main-strophes.md). Silben/Notenpositionen
   und Quellen prüfen; daraus folgt keine Freigabe für Texte anderer Lieder.
 - Referenzlied: Takt 5 ist B-4, B-4, G4, G4. Niemals C5, C5, A4, A4 übernehmen.
 

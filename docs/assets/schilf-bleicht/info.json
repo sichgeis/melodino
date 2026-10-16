@@ -1,0 +1,19 @@
+{
+  "title": "Schilf bleicht · Kiefern im Wind",
+  "source": "Traditionelle schwedische Melodie Vårvindar friska; visuell nach flutetunes.com/tunes.php?id=5448 geprüft. Singform AB, beide Teile einmal; ohne deutschen Liedtext. Siehe research/schilf-bleicht.md.",
+  "bpm": 92.0,
+  "instrument": "clarinet",
+  "duration_seconds": 31.304347826086957,
+  "score_duration_seconds": 31.304347826086957,
+  "quarters": 48.0,
+  "note_count": 72,
+  "transpose": 0,
+  "measure_quarters": 3.0,
+  "verse_gap_bars": 1,
+  "files": {
+    "midi": "melody.mid",
+    "musicxml": "score.musicxml",
+    "csv": "notes.csv",
+    "playback": "playback.json"
+  }
+}
