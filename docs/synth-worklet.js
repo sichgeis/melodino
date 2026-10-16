@@ -1,5 +1,5 @@
 import {SoundBankLoader, SpessaSynthProcessor, SpessaLog} from './vendor/spessasynth-core-4.3.22.js';
-import {ScoreClock} from './score-clock.js?v=20261016-experiments';
+import {ScoreClock} from './score-clock.js?v=20261016-main-arrangements';
 SpessaLog.info = () => {};
 SpessaLog.group = () => {};
 SpessaLog.groupCollapsed = () => {};
@@ -21,12 +21,12 @@ class MelodinoSynth extends AudioWorkletProcessor {
         } else if (data.type === 'load') {
           if (!this.ready) throw Error('Instrument noch nicht geladen.');
           this.clock.load(data.score, data.instrument, data.bpm, data.verses, data.gapQuarters);
-          this.clock.mix(data.backing ?? 1, data.melody ?? true);
+          this.clock.mix(data.backing ?? 1, data.melody ?? true, data.rhythm ?? true, data.accompaniment ?? true);
           this.reportFrame = 0;
         } else if (data.type === 'play') this.clock.play();
         else if (data.type === 'pause') this.clock.pause();
         else if (data.type === 'stop') this.clock.stop();
-        else if (data.type === 'mix') this.clock.mix(data.backing, data.melody);
+        else if (data.type === 'mix') this.clock.mix(data.backing, data.melody, data.rhythm ?? true, data.accompaniment ?? true);
         else if (data.type === 'tempo') this.clock.setTempo(data.bpm);
         this.port.postMessage({id: data.id, ok: true});
       } catch (error) {

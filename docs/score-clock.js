@@ -18,7 +18,7 @@ export function validatePlayback(score) {
   let count = 0;
   for (const track of tracks) {
     if (score.schema_version === 2 && (!Object.hasOwn(instruments, track.instrument) ||
-        !['melody', 'backing'].includes(track.role) ||
+        !['melody', 'backing', 'rhythm'].includes(track.role) ||
         !Number.isInteger(track.volume) || track.volume < 0 || track.volume > 127 ||
         !Number.isInteger(track.pan) || track.pan < 0 || track.pan > 127)) throw Error('Ungültige Stimme.');
     if (!Array.isArray(track.notes) || !track.notes.length) throw Error('Ungültige Noten.');
@@ -81,10 +81,10 @@ export class ScoreClock {
     this.mix(1, true);
     this.state = 'paused';
   }
-  mix(backing = 1, melody = true) {
-    if (!Number.isFinite(backing) || backing < 0 || backing > 1 || typeof melody !== 'boolean') throw Error('Ungültige Mischung.');
+  mix(backing = 1, melody = true, rhythm = true, accompaniment = true) {
+    if (!Number.isFinite(backing) || backing < 0 || backing > 1 || [melody, rhythm, accompaniment].some(value => typeof value !== 'boolean')) throw Error('Ungültige Mischung.');
     this.tracks?.forEach((track, channel) => {
-      const gain = track.role === 'melody' ? Number(melody) : backing;
+      const gain = track.role === 'melody' ? Number(melody) : backing * Number(track.role === 'rhythm' ? rhythm : accompaniment);
       this.synth.controllerChange?.(channel, 7, Math.round(track.volume * gain));
     });
   }

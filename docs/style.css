@@ -4,3 +4,24 @@
 .audio-help{margin-top:24px;font-size:13px;color:var(--muted)}.audio-help summary{cursor:pointer;min-height:44px;display:list-item;padding:10px 0;color:var(--green)}.audio-help p{max-width:700px;line-height:1.8;padding:8px 0 16px}
 
 .masthead{gap:16px}.masthead>a:not(.brand){font-size:13px;text-align:right;line-height:1.4}
+
+/* Primary actions stay visible; sound and timing details open only when needed. */
+.main-fields{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:12px;margin-bottom:10px}
+.arrangement-description{font-size:12px;line-height:1.55;color:var(--muted);min-height:38px;margin:0 0 20px}
+.sound-settings{border-top:1px solid var(--line);margin:4px 0 12px;padding-top:4px}
+.sound-settings>summary{cursor:pointer;min-height:46px;padding:11px 0;font-size:13px;font-weight:600}
+.sound-settings[open]>summary{margin-bottom:10px}
+.sound-settings .player-fields{margin-bottom:20px}
+.track-toggles{display:flex;flex-wrap:wrap;gap:6px 17px;margin:2px 0 16px}
+.track-toggle{display:flex;align-items:center;gap:7px;min-height:44px;font-size:12px;cursor:pointer}
+.track-toggle input{width:19px;height:19px;accent-color:var(--green);margin:0}
+.track-toggle:has(input:disabled){color:var(--muted);opacity:.6;cursor:default}
+.mix-label{margin:0 0 10px}.mix-label input{min-height:32px}
+.settings-hint{font-size:11px;color:var(--muted);margin:10px 0 18px}
+.song>.meta{margin-bottom:20px}.song .download-section summary{font-size:12px}
+@media(max-width:380px){.main-fields{grid-template-columns:1fr}.arrangement-description{min-height:0}}
+
+.sound-settings .melody-version{grid-column:1/-1}
+
+.songs{align-items:start}.song-top{flex-wrap:wrap;gap:8px}
+@media(max-width:380px){.sound-settings .player-fields{grid-template-columns:1fr}}

@@ -128,10 +128,10 @@ in der Eingabe werden in klingende Tonhöhen umgerechnet.
 und identisch in examples/schlaf-kindlein-schlaf.json.
 
 Veröffentlicht ist die bisherige Fassung 2 mit Klarinette und 104 Vierteln/Minute
-(GM 72, nullbasiert 71). Das Instrument ist im Browser frei wählbar.
+(GM 72, nullbasiert 71). Das Melodieinstrument ist unter „Klang & Einstellungen“ frei wählbar.
 
-Die reguläre Sammlung enthält reine Melodien ohne Begleitung oder Gesang.
-Das separat beauftragte Klanglabor enthält ausdrücklich gekennzeichnete Arrangementvorschläge. Beim Python-Audioexport sind Glocken synthetisch und Klarinette ein Sample-Instrument.
+Die Sammlung bietet bestätigte Melodien mit separat erstellten, optionalen Begleitstimmen.
+Melodie, Begleitung und Rhythmus sind einzeln schaltbar. Es gibt keinen Gesang. Beim Python-Audioexport sind Glocken synthetisch und Klarinette ein Sample-Instrument.
 Im Browser verwenden alle vier Instrumente SoundFont-Samples. Instrumentenwahl ändert keine klingenden Tonhöhen;
 die Ausgabe ist keine geschriebene B-Klarinettenstimme. Nur `--transpose` ändert die Tonhöhe.
 Kurze Abstände in der Klarinetten-Audiodatei trennen wiederholte Töne; MIDI und MusicXML
@@ -141,7 +141,7 @@ JSON-Vorzeichen werden explizit am Ton angegeben; `key` ergänzt keine implizite
 
 ## Browserplayer
 
-Der Browser lädt die Noten aus playback.json und spielt MIDI-Note-On/Off-Ereignisse
+Der Browser lädt die Melodie oder ein geprüftes Arrangement und spielt MIDI-Note-On/Off-Ereignisse
 mit SpessaSynth Core 4.3.22 und originalen FluidR3-GM-Samples. Ein kleiner AudioWorklet-
 Sequenzer plant die Noten auf absoluten Samplepositionen; kein JavaScript-Timer startet
 Strophen neu. Auftakt und verkürzter Schluss bleiben erhalten; die wählbare Strophenpause kommt nur zwischen Durchgängen hinzu.
@@ -216,9 +216,9 @@ Soundbanks und lange gehaltene Windinstrument-Töne.
 „Was müssen das für Bäume sein“ liegt als MusicXML in examples/:
 G-Dur, 2/4, Achtelauftakt, 60 Töne und 36 Viertel. Der verkürzte Schluss
 ergänzt den Auftakt. Der erste Systemwechsel unterbricht einen Takt;
-dieser bleibt in der Übertragung zusammen. Es gibt keine Begleitung.
+dieser bleibt in der Übertragung zusammen. Die bestätigte Quelle enthält nur die Melodie; optionale Begleitungen sind eigene Arrangements.
 Veröffentlicht ist die bisherige Fassung 3 mit Glockenklang und 88 BPM.
-Das Instrument ist im Browser frei wählbar.
+Das Melodieinstrument ist unter „Klang & Einstellungen“ frei wählbar.
 Details und Prüfkriterien: [Liedspezifikation](specs/002-baeume.md).
 
 ## Tests und lokale Seite
@@ -303,3 +303,27 @@ andere Variante druckt oder die frühere Übertragung abwich, lässt sich ohne d
 Foto nicht entscheiden. Details und Quellen: [Recherche](research/schlaf-kindlein-schlaf.md).
 Die neue Vergleichsmelodie liegt unter examples/schlaf-kindlein-schlaf-vergleich.json.
 Keine fremden PDFs, Bilder, Liedtexte oder Tonaufnahmen sind enthalten.
+
+
+## Klangvarianten in der Sammlung
+
+Alle fünf vorhandenen Lieder bieten „Solo“, „Pur und warm“, „Sanft begleitet“ und
+„Lebhaft begleitet“. Standard ist sanfte Begleitung. Nur Klangwahl, Strophen und
+Wiedergabe sind ständig sichtbar. Unter „Klang & Einstellungen“ lassen sich Tempo,
+Instrument, Strophenpause, Begleitlautstärke und die Schalter für Melodie, Begleitung
+und Rhythmus bedienen. Instrument „Automatisch“ wählt Klarinette oder
+Flöte; ein manuelles Instrument ersetzt nur die Melodiestimme.
+
+„Schlaf, Kindlein, schlaf“ hat dort auch die ausdrücklich bezeichnete recherchierte
+Melodiefassung. Die ursprüngliche bleibt Standard. MIDI/XML/CSV/MP3/WAV-Downloads
+beziehen sich weiterhin auf die ursprünglichen Exporte; Browser-Arrangements und die
+alternative Melodie verändern diese Dateien nicht.
+
+Begleitungen reproduzieren: `node scripts/prepare-library-arrangements.mjs`.
+Akkordpläne sind pro Lied gesetzt und als Gestaltung zu prüfen. Das gemeinsame
+Rendern steht in scripts/arrangement-tools.mjs. Für weitere Lieder zuerst exportieren,
+dann einen passenden Plan aufnehmen und das Skript ausführen. Neue Lieder ohne Plan
+bleiben als Solo bedienbar. Nach Ersetzen der Quelle verhindert der Player, dass
+veraltete Arrangements andere Melodien spielen. Falls der Arrangementkatalog nicht
+lädt, bleiben die Solomelodien mit sichtbarem Hinweis verfügbar.
+Spezifikation: [Klangvarianten auf der Hauptseite](specs/008-main-arrangements.md).

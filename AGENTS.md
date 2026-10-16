@@ -42,8 +42,10 @@ dass der Chat etwas ausgeführt oder veröffentlicht hat; den konkreten Zugang n
   Metadaten `measure_quarters`/`verse_gap_bars` steuern nur den Browser. Bei wechselnder
   Taktart den letzten Takt verwenden. Auswahl im Player bleibt veränderbar.
 - Keine Begleitung, keinen Gesang und keine zusätzlichen Töne erfinden.
-  Ausnahme: Im ausdrücklich beauftragten Klanglabor sind eigene instrumentale
-  Arrangementvorschläge erlaubt; sie bleiben von bestätigter Melodie und Sammlung getrennt.
+  Ausnahme: Für Klanglabor und Hauptseite sind eigene instrumentale Arrangementvorschläge
+  ausdrücklich beauftragt. Sie bleiben als Begleitspuren von der bestätigten Melodie
+  getrennt; Originalnoten und Originaldownloads nicht verändern. Neue Akkordpläne
+  unter scripts/prepare-library-arrangements.mjs pflegen, danach das Skript ausführen.
 - JSON für einfache einstimmige Melodien, Wiederholungen ausdrücklich ausschreiben.
   Dauer in Vierteln; B-4 = deutsches B (B♭), B4 = H, rest = Pause.
 - MusicXML für Akkorde/komplexere Notation. Klingende Tonhöhen werden exportiert.

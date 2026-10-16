@@ -5,7 +5,7 @@ Status: implementiert; Python-/Engine-Tests und Browserprüfung ergänzen die Ak
 ## Verhalten
 
 Der Hauptplayer spielt die bestätigten Noten im Browser mit echten SoundFont-Samples.
-Wählbar: Klarinette, Glockenspiel, Klavier und Flöte. Keine Begleitung oder zusätzlichen Töne.
+Wählbar: Klarinette, Glockenspiel, Klavier und Flöte. Bestätigte Melodie und separat beauftragte Begleitspuren; siehe specs/008-main-arrangements.md.
 Tempo 40–200 Viertel/Minute, Schnellwahl 75/100/125 % des Ausgangstempos.
 Strophenzahl 1, 2, 3, 4 oder endlos. Start/Pause/Fortsetzen und Stop/zum Anfang.
 Eine Änderung von Instrument oder Strophenzahl beginnt die Fassung nach erneutem Start neu;
@@ -75,3 +75,10 @@ Fassungen behalten zunächst 0. Neue Vorschläge werden nach AGENTS.md beurteilt
 
 Akzeptanz: zusätzliche Dauer nur zwischen Strophen, unveränderte Tonfolge,
 Auftakt, endlos ohne Drift, Tempowechsel/Pause innerhalb der Lücke und Validierung.
+
+## Klangvarianten auf der Hauptseite
+
+Solo, pur und warm, sanft begleitet und lebhaft begleitet. Die Begleitstimmen sind
+eigene Arrangementvorschläge. Melodie, Begleitung und Rhythmus sind unabhängig
+schaltbar; Instrumentenwahl verändert nur die Melodiespur. Erweiterte Einstellungen
+stehen in einem aufklappbaren Bereich. Vertrag und Prüfung: specs/008-main-arrangements.md.

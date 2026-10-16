@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "songs": [
+    {
+      "slug": "die-kuh-die-sass-im-schwalbennest",
+      "versions": [
+        {
+          "id": "original",
+          "label": "Übertragene Melodie",
+          "variants": [
+            {
+              "id": "reference",
+              "label": "Solo · ohne Begleitung",
+              "description": "Nur die Melodie, mit eurem Wunschinstrument.",
+              "url": "arrangements/die-kuh-die-sass-im-schwalbennest-original-reference.json"
+            },
+            {
+              "id": "warm",
+              "label": "Pur und warm",
+              "description": "Sanfte Phrasendynamik und dezenter Raumklang.",
+              "url": "arrangements/die-kuh-die-sass-im-schwalbennest-original-warm.json"
+            },
+            {
+              "id": "gentle",
+              "label": "Sanft begleitet",
+              "description": "Klarinette mit leisen Klavierakkorden und akustischem Bass.",
+              "url": "arrangements/die-kuh-die-sass-im-schwalbennest-original-gentle.json"
+            },
+            {
+              "id": "lively",
+              "label": "Lebhaft begleitet",
+              "description": "Flöte mit Nylongitarre, Bass und einem leisen Holzpuls.",
+              "url": "arrangements/die-kuh-die-sass-im-schwalbennest-original-lively.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "schlaf-kindlein-schlaf-klarinette",
+      "versions": [
+        {
+          "id": "original",
+          "label": "Übertragene Melodie",
+          "variants": [
+            {
+              "id": "reference",
+              "label": "Solo · ohne Begleitung",
+              "description": "Nur die Melodie, mit eurem Wunschinstrument.",
+              "url": "arrangements/schlaf-kindlein-schlaf-klarinette-original-reference.json"
+            },
+            {
+              "id": "warm",
+              "label": "Pur und warm",
+              "description": "Sanfte Phrasendynamik und dezenter Raumklang.",
+              "url": "arrangements/schlaf-kindlein-schlaf-klarinette-original-warm.json"
+            },
+            {
+              "id": "gentle",
+              "label": "Sanft begleitet",
+              "description": "Klarinette mit leisen Klavierakkorden und akustischem Bass.",
+              "url": "arrangements/schlaf-kindlein-schlaf-klarinette-original-gentle.json"
+            },
+            {
+              "id": "lively",
+              "label": "Lebhaft begleitet",
+              "description": "Flöte mit Nylongitarre, Bass und einem leisen Holzpuls.",
+              "url": "arrangements/schlaf-kindlein-schlaf-klarinette-original-lively.json"
+            }
+          ]
+        },
+        {
+          "id": "researched",
+          "label": "Recherchierte Melodie",
+          "variants": [
+            {
+              "id": "reference",
+              "label": "Solo · ohne Begleitung",
+              "description": "Nur die Melodie, mit eurem Wunschinstrument.",
+              "url": "arrangements/schlaf-kindlein-schlaf-klarinette-researched-reference.json"
+            },
+            {
+              "id": "warm",
+              "label": "Pur und warm",
+              "description": "Sanfte Phrasendynamik und dezenter Raumklang.",
+              "url": "arrangements/schlaf-kindlein-schlaf-klarinette-researched-warm.json"
+            },
+            {
+              "id": "gentle",
+              "label": "Sanft begleitet",
+              "description": "Klarinette mit leisen Klavierakkorden und akustischem Bass.",
+              "url": "arrangements/schlaf-kindlein-schlaf-klarinette-researched-gentle.json"
+            },
+            {
+              "id": "lively",
+              "label": "Lebhaft begleitet",
+              "description": "Flöte mit Nylongitarre, Bass und einem leisen Holzpuls.",
+              "url": "arrangements/schlaf-kindlein-schlaf-klarinette-researched-lively.json"
+            }
+          ],
+          "source": "arrangements/schlaf-kindlein-schlaf-klarinette-researched-source.json"
+        }
+      ]
+    },
+    {
+      "slug": "schlaf-kindlein-suesse",
+      "versions": [
+        {
+          "id": "original",
+          "label": "Übertragene Melodie",
+          "variants": [
+            {
+              "id": "reference",
+              "label": "Solo · ohne Begleitung",
+              "description": "Nur die Melodie, mit eurem Wunschinstrument.",
+              "url": "arrangements/schlaf-kindlein-suesse-original-reference.json"
+            },
+            {
+              "id": "warm",
+              "label": "Pur und warm",
+              "description": "Sanfte Phrasendynamik und dezenter Raumklang.",
+              "url": "arrangements/schlaf-kindlein-suesse-original-warm.json"
+            },
+            {
+              "id": "gentle",
+              "label": "Sanft begleitet",
+              "description": "Klarinette mit leisen Klavierakkorden und akustischem Bass.",
+              "url": "arrangements/schlaf-kindlein-suesse-original-gentle.json"
+            },
+            {
+              "id": "lively",
+              "label": "Lebhaft begleitet",
+              "description": "Flöte mit Nylongitarre, Bass und einem leisen Holzpuls.",
+              "url": "arrangements/schlaf-kindlein-suesse-original-lively.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "viel-glueck-und-viel-segen",
+      "versions": [
+        {
+          "id": "original",
+          "label": "Übertragene Melodie",
+          "variants": [
+            {
+              "id": "reference",
+              "label": "Solo · ohne Begleitung",
+              "description": "Nur die Melodie, mit eurem Wunschinstrument.",
+              "url": "arrangements/viel-glueck-und-viel-segen-original-reference.json"
+            },
+            {
+              "id": "warm",
+              "label": "Pur und warm",
+              "description": "Sanfte Phrasendynamik und dezenter Raumklang.",
+              "url": "arrangements/viel-glueck-und-viel-segen-original-warm.json"
+            },
+            {
+              "id": "gentle",
+              "label": "Sanft begleitet",
+              "description": "Klarinette mit leisen Klavierakkorden und akustischem Bass.",
+              "url": "arrangements/viel-glueck-und-viel-segen-original-gentle.json"
+            },
+            {
+              "id": "lively",
+              "label": "Lebhaft begleitet",
+              "description": "Flöte mit Nylongitarre, Bass und einem leisen Holzpuls.",
+              "url": "arrangements/viel-glueck-und-viel-segen-original-lively.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "was-muessen-das-fuer-baeume-sein-glocke",
+      "versions": [
+        {
+          "id": "original",
+          "label": "Übertragene Melodie",
+          "variants": [
+            {
+              "id": "reference",
+              "label": "Solo · ohne Begleitung",
+              "description": "Nur die Melodie, mit eurem Wunschinstrument.",
+              "url": "arrangements/was-muessen-das-fuer-baeume-sein-glocke-original-reference.json"
+            },
+            {
+              "id": "warm",
+              "label": "Pur und warm",
+              "description": "Sanfte Phrasendynamik und dezenter Raumklang.",
+              "url": "arrangements/was-muessen-das-fuer-baeume-sein-glocke-original-warm.json"
+            },
+            {
+              "id": "gentle",
+              "label": "Sanft begleitet",
+              "description": "Klarinette mit leisen Klavierakkorden und akustischem Bass.",
+              "url": "arrangements/was-muessen-das-fuer-baeume-sein-glocke-original-gentle.json"
+            },
+            {
+              "id": "lively",
+              "label": "Lebhaft begleitet",
+              "description": "Flöte mit Nylongitarre, Bass und einem leisen Holzpuls.",
+              "url": "arrangements/was-muessen-das-fuer-baeume-sein-glocke-original-lively.json"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

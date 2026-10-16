@@ -1,4 +1,5 @@
-import {validatePlayback, scoreTracks} from './score-clock.js?v=20261016-experiments';
+import {configureScore} from './song-options.js?v=20261016-main-arrangements';
+import {validatePlayback, scoreTracks} from './score-clock.js?v=20261016-main-arrangements';
 import {AudioOutput, configurePlaybackSession} from './audio-output.js';
 
 async function json(url) {
@@ -38,7 +39,7 @@ export class BrowserPlayer {
     if (!this.context.audioWorklet) throw Error('Der Instrumentenplayer benötigt einen aktuellen Browser und HTTPS. Bitte nutze sonst einen Download.');
     const resume = this.output.activate();
     if (!this.initializing) {
-      this.initializing = this.context.audioWorklet.addModule(new URL('./synth-worklet.js?v=20261016-experiments', import.meta.url))
+      this.initializing = this.context.audioWorklet.addModule(new URL('./synth-worklet.js?v=20261016-main-arrangements', import.meta.url))
         .then(() => {
           this.node = new AudioWorkletNode(this.context, 'melodino-synth', {numberOfInputs: 0,
             numberOfOutputs: 1, outputChannelCount: [2]});
@@ -98,7 +99,18 @@ export class BrowserPlayer {
         this.scores.set(options.url, score);
       }
       if (token !== this.generation) return;
-      const needed = new Set(scoreTracks(score, options.instrument).map(track => track.instrument));
+      let source;
+      if (options.sourceUrl) {
+        source = this.scores.get(options.sourceUrl);
+        if (!source) {
+          source = await json(options.sourceUrl);
+          this.scores.set(options.sourceUrl, source);
+        }
+      }
+      if (token !== this.generation) return;
+      score = configureScore(score, options.melodyInstrument, source);
+      const instrument = options.melodyInstrument ?? options.instrument;
+      const needed = new Set(scoreTracks(score, instrument).map(track => track.instrument));
       for (const instrument of needed) {
         if (this.banks.has(instrument)) continue;
         const response = await fetch(new URL(`./samples/${instrument}.sf2`, import.meta.url));
@@ -109,8 +121,8 @@ export class BrowserPlayer {
         this.banks.add(instrument);
       }
       if (token !== this.generation) return;
-      await this.request({type: 'load', score, instrument: options.instrument, bpm: options.bpm,
-        verses: options.verses, gapQuarters: options.gapQuarters, backing: options.backing ?? 1, melody: options.melody ?? true});
+      await this.request({type: 'load', score, instrument, bpm: options.bpm,
+        verses: options.verses, gapQuarters: options.gapQuarters, backing: options.backing ?? 1, melody: options.melody ?? true, rhythm: options.rhythm ?? true, accompaniment: options.accompaniment ?? true});
       if (token !== this.generation) return;
       this.update('playing', {verse: 1, quarter: 0});
       await this.request({type: 'play'});
@@ -151,9 +163,9 @@ export class BrowserPlayer {
     this.output?.pause();
     this.update('idle');
   }
-  mix(owner, backing, melody) {
+  mix(owner, backing, melody, rhythm = true, accompaniment = true) {
     if (this.owner === owner && ['playing', 'paused'].includes(this.state)) {
-      this.node.port.postMessage({type: 'mix', backing, melody});
+      this.node.port.postMessage({type: 'mix', backing, melody, rhythm, accompaniment});
     }
   }
   tempo(owner, bpm) {

@@ -38,10 +38,12 @@ Ein Chat ohne Zugriff auf diese Umgebung kann Dateien vorschlagen, aber nichts v
   Katalogwerte werden mit DOM-textContent ausgegeben; Dateipfade werden validiert.
 - Referenz: F-Dur, 4/4, 10 Takte, 40 Viertel, 30 Noten.
   Takt 5 zwingend B-4/B-4/G4/G4. Bell 88, Clarinet 104 BPM.
-- Grenzen: keine OCR/API, Begleitung, Gesang, Texte, Illustrationen oder Veröffentlichung der Fotos.
+- Grenzen: keine OCR/API, Gesang, Texte, Illustrationen oder Veröffentlichung der Fotos.
 
 ## Prüfnachweise
 
 `pytest`: Takte, Referenzmelodie, MIDI, Tempo/Transposition, Klangprogramm,
 MusicXML-Akkorde/Bindungen, nicht stummes Audio, fehlendes FFmpeg, Slugs/Katalog/Dateiverweise.
 Browserprüfung und HTTPS-Checks ergänzen den Testlauf, siehe README.
+
+Beauftragte instrumentale Arrangements auf der Hauptseite: specs/008-main-arrangements.md.

@@ -1,5 +1,6 @@
-import {player} from './player.js?v=20261016-experiments';
-import {instruments} from './score-clock.js?v=20261016-experiments';
+import {validateArrangements} from './song-options.js?v=20261016-main-arrangements';
+import {player} from './player.js?v=20261016-main-arrangements';
+import {instruments} from './score-clock.js?v=20261016-main-arrangements';
 const root = document.querySelector('#songs');
 const status = document.querySelector('#status');
 const filenames = {mp3: 'melody.mp3', wav: 'melody.wav', midi: 'melody.mid', musicxml: 'score.musicxml', csv: 'notes.csv', playback: 'playback.json'};
@@ -34,26 +35,70 @@ function selectField(label, choices) {
   wrapper.append(element('span', '', label), select);
   return {wrapper, select};
 }
-function card(song) {
+function card(song, arrangement) {
   validate(song);
   const article = element('article', 'song');
   article.dataset.state = 'idle';
+  article.id = song.slug;
   const top = element('div', 'song-top');
   const badge = element('div', 'instrument');
   const icon = element('span', 'instrument-icon', '♪');
   icon.setAttribute('aria-hidden', 'true');
   badge.append(icon, element('span', '', 'LIVE-INSTRUMENTE'));
-  top.append(badge);
+  const versionBadge = element('span', 'edition', 'Recherchierte Melodie');
+  versionBadge.hidden = true;
+  top.append(badge, versionBadge);
   const title = element('h3', '', song.title);
   const meta = element('p', 'meta');
-  const instrument = selectField('Instrument', Object.entries(instruments).filter(([id]) => ['clarinet', 'glockenspiel', 'piano', 'flute'].includes(id)).map(([id, i]) => [id, i.name]));
-  instrument.select.value = song.instrument === 'bell' ? 'glockenspiel' : 'clarinet';
-  const verses = selectField('Strophen', [['1', '1 Strophe'], ['2', '2 Strophen'], ['3', '3 Strophen'], ['4', '4 Strophen'], ['infinite', 'Endlos ↻']]);
-  const gap = selectField('Strophenpause', [['0', 'keine'], ['1', '1 Takt'], ['2', '2 Takte']]);
-  gap.select.value = String(song.verse_gap_bars ?? 0);
-  gap.select.disabled = !song.measure_quarters;
-  const fields = element('div', 'player-fields');
-  fields.append(instrument.wrapper, verses.wrapper, gap.wrapper);
+  const version = selectField('Melodiefassung', (arrangement?.versions ?? [{id: 'original', label: 'Übertragene Melodie'}]).map(v => [v.id, v.label]));
+  version.wrapper.classList.add('melody-version');
+  const availableVersions = arrangement?.versions ?? [];
+  const currentVersion = () => availableVersions.find(v => v.id === version.select.value);
+  const style = selectField('Klang', (currentVersion()?.variants ?? [{id:'reference',label:'Solo · ohne Begleitung'}]).map(v => [v.id, v.label]));
+  style.select.value = arrangement ? 'gentle' : 'reference';
+  const description = element('p', 'arrangement-description');
+  const instrument = selectField('Melodieinstrument', [['auto','Automatisch'], ...Object.entries(instruments).filter(([id]) => ['clarinet','glockenspiel','piano','flute','guitar'].includes(id)).map(([id,i]) => [id,i.name])]);
+  const verses = selectField('Strophen', [['1','1 Strophe'],['2','2 Strophen'],['3','3 Strophen'],['4','4 Strophen'],['infinite','Endlos ↻']]);
+  const gap = selectField('Strophenpause', [['0','keine'],['1','1 Takt'],['2','2 Takte']]);
+  gap.select.value = String(song.verse_gap_bars ?? 0);gap.select.disabled = !song.measure_quarters;
+  const fields = element('div', 'player-fields main-fields');fields.append(style.wrapper, verses.wrapper);
+  const settings = element('details', 'sound-settings');
+  settings.append(element('summary', '', 'Klang & Einstellungen'));
+  const extraFields = element('div', 'player-fields');
+  if (availableVersions.length > 1) extraFields.append(version.wrapper);
+  extraFields.append(instrument.wrapper, gap.wrapper);
+  const toggles = element('div', 'track-toggles');
+  function toggle(label) {
+    const wrapper = element('label', 'track-toggle');
+    const input = element('input');input.type='checkbox';input.checked=true;
+    wrapper.append(input,element('span','',label));toggles.append(wrapper);return input;
+  }
+  const melody = toggle('Melodie'), accompaniment = toggle('Begleitung'), rhythm = toggle('Rhythmus');
+  const mixLabel = element('label', 'tempo-label mix-label'), mixText = element('span');
+  const mix = element('input');mix.type='range';mix.min='0';mix.max='100';mix.value='80';mix.setAttribute('aria-label','Begleitlautstärke');
+  mixLabel.append(mixText,mix);
+  const mixHint = element('p', 'settings-hint', 'Begleitung und Rhythmus sind eigene Arrangementvorschläge.');
+  function updateMix() {
+    mixText.textContent=`Begleitlautstärke: ${mix.value} %`;
+    player.mix(article,Number(mix.value)/100,melody.checked,rhythm.checked,accompaniment.checked);
+  }
+  for (const input of [melody,accompaniment,rhythm]) input.addEventListener('change',updateMix);
+  mix.addEventListener('input',updateMix);updateMix();
+  function updateStyle() {
+    player.stop(article);
+    versionBadge.hidden = version.select.value !== 'researched';
+    const choice = currentVersion()?.variants.find(v => v.id === style.select.value);
+    const text = choice?.description ?? 'Nur die Melodie, mit eurem Wunschinstrument.';
+    description.textContent = instrument.select.value === 'auto' ? text : text.replace(/^(Klarinette|Flöte)/, instruments[instrument.select.value].name);
+    const backing = ['gentle','lively'].includes(style.select.value);
+    accompaniment.disabled = !backing;rhythm.disabled = style.select.value !== 'lively';mix.disabled = !backing;
+    melody.disabled = !backing;
+    if (!backing) melody.checked = true;
+  }
+  instrument.select.addEventListener('change',updateStyle);
+  style.select.addEventListener('change',updateStyle);
+  version.select.addEventListener('change',updateStyle);
+  updateStyle();
   const tempoLabel = element('label', 'tempo-label');
   const bpm = element('input');
   bpm.type = 'range'; bpm.min = '40'; bpm.max = '200'; bpm.step = '1';
@@ -83,6 +128,7 @@ function card(song) {
   updateTempo();
   const tempoRow = element('div', 'tempo-row');
   tempoRow.append(tempoLabel, speed);
+  settings.append(extraFields, tempoRow, toggles, mixLabel, mixHint);
   const controls = element('div', 'play-controls');
   const play = element('button', 'play-button', '▶ Abspielen');
   const stop = element('button', 'stop-button', '■ Zum Anfang');
@@ -98,7 +144,9 @@ function card(song) {
   progress.setAttribute('aria-label', 'Fortschritt der Strophe');
   let state = 'idle', verse = 1, inGap = false;
   function display(update) {
+    const previous = state;
     state = update.state;
+    if (state === 'playing' && previous === 'loading') updateMix();
     if (update.inGap !== undefined) inGap = update.inGap;
     if (['idle', 'finished', 'loading'].includes(state)) inGap = false;
     article.dataset.state = state;
@@ -106,11 +154,11 @@ function card(song) {
     if (update.quarter !== undefined) progress.value = update.quarter;
     if (state === 'idle') { progress.value = 0; verse = 1; }
     if (state === 'finished') progress.value = song.quarters;
-    play.textContent = {idle: '▶ Abspielen', loading: 'Instrument lädt …', playing: 'Ⅱ Pause', paused: '▶ Fortsetzen', finished: '▶ Noch einmal', error: '▶ Erneut versuchen'}[state];
+    play.textContent = {idle: '▶ Abspielen', loading: 'Klänge laden …', playing: 'Ⅱ Pause', paused: '▶ Fortsetzen', finished: '▶ Noch einmal', error: '▶ Erneut versuchen'}[state];
     play.disabled = state === 'loading';
     stop.disabled = ['idle', 'error'].includes(state);
     message.classList.toggle('error', state === 'error');
-    const text = update.message || {idle: 'Bereit zum Mitsingen.', loading: 'Klang wird einmalig geladen …', playing: inGap ? 'Strophenpause · Zeit zum Atmen.' : 'Die Melodie spielt.', paused: 'Pausiert.', finished: 'Fertig gesungen.', error: 'Der Klang konnte nicht geladen werden.'}[state];
+    const text = update.message || {idle: 'Bereit zum Mitsingen.', loading: 'Klang wird einmalig geladen …', playing: inGap ? 'Strophenpause · Zeit zum Atmen.' : 'Die Musik spielt.', paused: 'Pausiert.', finished: 'Fertig gesungen.', error: 'Der Klang konnte nicht geladen werden.'}[state];
     if (message.textContent !== text) message.textContent = text;
     position.textContent = ['playing', 'paused', 'finished'].includes(state)
       ? `Strophe ${verse}${verses.select.value === 'infinite' ? ' · endlos' : ` von ${verses.select.value}`}` : '';
@@ -118,11 +166,23 @@ function card(song) {
   play.addEventListener('click', () => {
     if (state === 'playing') player.pause(article);
     else if (state === 'paused') player.resume(article);
-    else player.start(article, {url: song.files.playback, instrument: instrument.select.value,
-      gapQuarters: Number(gap.select.value) * (song.measure_quarters ?? 0), bpm: Number(bpm.value), verses: verses.select.value === 'infinite' ? Infinity : Number(verses.select.value)}, display);
+    else {
+      const choice = currentVersion()?.variants.find(v => v.id === style.select.value);
+      // Plain solo follows the actual source directly; it also remains a safe fallback.
+      const source = currentVersion()?.source ?? song.files.playback;
+      const plain = style.select.value === 'reference';
+      player.start(article, {url: plain ? source : (choice?.url ?? source),
+        sourceUrl: plain ? undefined : source,
+        instrument: song.instrument === 'bell' ? 'glockenspiel' : 'clarinet',
+        melodyInstrument: instrument.select.value === 'auto' ? undefined : instrument.select.value,
+        backing: Number(mix.value)/100, melody: melody.checked,
+        accompaniment: accompaniment.checked, rhythm: rhythm.checked,
+        gapQuarters: Number(gap.select.value)*(song.measure_quarters ?? 0),bpm:Number(bpm.value),
+        verses:verses.select.value === 'infinite' ? Infinity : Number(verses.select.value)}, display);
+    }
   });
   stop.addEventListener('click', () => player.stop(article));
-  for (const select of [instrument.select, verses.select, gap.select]) select.addEventListener('change', () => player.stop(article));
+  for (const select of [verses.select, gap.select]) select.addEventListener('change', () => player.stop(article));
   const details = element('details', 'download-section');
   details.append(element('summary', '', 'Downloads & Aufnahme'));
   const downloads = element('div', 'downloads');
@@ -133,7 +193,7 @@ function card(song) {
     a.setAttribute('aria-label', `${label} herunterladen: ${song.title}`);
     downloads.append(a);
   }
-  details.append(downloads);
+  details.append(element('p','recording-note','Downloads enthalten die ursprüngliche übertragene Melodie. Begleitstimmen und recherchierte Alternativen sind nur im Browserplayer hörbar.'),downloads);
   if (song.files.wav || song.files.mp3) {
     details.append(element('p', 'recording-note', 'Die Aufnahme enthält das ursprüngliche Instrument und Tempo. Für mehrere Strophen den Instrumentenplayer oben verwenden.'));
     const audio = element('audio'); audio.controls = true; audio.preload = 'none';
@@ -152,7 +212,7 @@ function card(song) {
     play.addEventListener('click', () => document.querySelectorAll('audio:not([data-melodino-output])').forEach(other => other.pause()));
     details.append(audio, error);
   }
-  article.append(top, title, meta, fields, tempoRow, controls, message, position, progress, details);
+  article.append(top, title, meta, fields, description, controls, message, position, progress, settings, details);
   return article;
 }
 async function load() {
@@ -161,10 +221,17 @@ async function load() {
     if (!response.ok) throw Error('Katalog nicht erreichbar.');
     const songs = await response.json();
     if (!Array.isArray(songs)) throw Error('Ungültiger Katalog.');
-    root.replaceChildren(...songs.map(card));
+    let arrangements, fallback = false;
+    try {
+      const response = await fetch('arrangements/catalog.json', {cache: 'no-cache'});
+      if (!response.ok) throw Error('Begleitungen nicht erreichbar.');
+      arrangements = validateArrangements(await response.json(), songs);
+    } catch { fallback = true; }
+    root.replaceChildren(...songs.map(song => card(song, arrangements?.songs.find(entry => entry.slug === song.slug))));
     document.querySelector('#count').textContent = `${songs.length} Lieder`;
     status.textContent = songs.length ? '' : 'Hier ist bald Platz für euer erstes Lied.';
-    status.hidden = songs.length > 0;
+    if (fallback) status.textContent = 'Begleitungen sind gerade nicht erreichbar. Die Solomelodien könnt ihr weiterhin abspielen.';
+    status.hidden = songs.length > 0 && !fallback;
   } catch {
     status.textContent = 'Die Liedersammlung konnte nicht geladen werden. Bitte prüfe die Verbindung und lade die Seite erneut.';
     status.setAttribute('role', 'alert');

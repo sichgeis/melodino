@@ -1,0 +1,242 @@
+{
+  "schema_version": 2,
+  "title": "Schlaf, Kindlelein, süße",
+  "bpm": 104,
+  "quarters": 30,
+  "room": 1,
+  "tracks": [
+    {
+      "role": "melody",
+      "instrument": "clarinet",
+      "volume": 100,
+      "pan": 64,
+      "notes": [
+        {
+          "at": 0,
+          "duration": 1.5,
+          "midi": 69
+        },
+        {
+          "at": 1.5,
+          "duration": 0.5,
+          "midi": 67
+        },
+        {
+          "at": 2,
+          "duration": 0.5,
+          "midi": 69
+        },
+        {
+          "at": 2.5,
+          "duration": 0.5,
+          "midi": 67
+        },
+        {
+          "at": 3,
+          "duration": 1.5,
+          "midi": 65
+        },
+        {
+          "at": 4.5,
+          "duration": 1,
+          "midi": 60
+        },
+        {
+          "at": 5.5,
+          "duration": 0.5,
+          "midi": 69
+        },
+        {
+          "at": 6,
+          "duration": 0.5,
+          "midi": 72
+        },
+        {
+          "at": 6.5,
+          "duration": 0.5,
+          "midi": 74
+        },
+        {
+          "at": 7,
+          "duration": 0.5,
+          "midi": 72
+        },
+        {
+          "at": 7.5,
+          "duration": 0.5,
+          "midi": 70
+        },
+        {
+          "at": 8,
+          "duration": 0.5,
+          "midi": 72
+        },
+        {
+          "at": 8.5,
+          "duration": 0.5,
+          "midi": 70
+        },
+        {
+          "at": 9,
+          "duration": 1.5,
+          "midi": 69
+        },
+        {
+          "at": 10.5,
+          "duration": 1,
+          "midi": 65
+        },
+        {
+          "at": 11.5,
+          "duration": 0.5,
+          "midi": 65
+        },
+        {
+          "at": 12,
+          "duration": 0.5,
+          "midi": 67
+        },
+        {
+          "at": 12.5,
+          "duration": 0.5,
+          "midi": 67
+        },
+        {
+          "at": 13,
+          "duration": 0.5,
+          "midi": 67
+        },
+        {
+          "at": 13.5,
+          "duration": 0.5,
+          "midi": 72
+        },
+        {
+          "at": 14,
+          "duration": 0.5,
+          "midi": 72
+        },
+        {
+          "at": 14.5,
+          "duration": 0.5,
+          "midi": 72
+        },
+        {
+          "at": 15,
+          "duration": 0.5,
+          "midi": 69
+        },
+        {
+          "at": 15.5,
+          "duration": 0.5,
+          "midi": 69
+        },
+        {
+          "at": 16,
+          "duration": 0.5,
+          "midi": 69
+        },
+        {
+          "at": 16.5,
+          "duration": 0.5,
+          "midi": 65
+        },
+        {
+          "at": 17,
+          "duration": 0.5,
+          "midi": 65
+        },
+        {
+          "at": 17.5,
+          "duration": 0.5,
+          "midi": 65
+        },
+        {
+          "at": 18,
+          "duration": 0.5,
+          "midi": 67
+        },
+        {
+          "at": 18.5,
+          "duration": 0.5,
+          "midi": 67
+        },
+        {
+          "at": 19,
+          "duration": 0.5,
+          "midi": 67
+        },
+        {
+          "at": 19.5,
+          "duration": 0.5,
+          "midi": 72
+        },
+        {
+          "at": 20,
+          "duration": 0.5,
+          "midi": 72
+        },
+        {
+          "at": 20.5,
+          "duration": 0.5,
+          "midi": 72
+        },
+        {
+          "at": 21,
+          "duration": 0.5,
+          "midi": 69
+        },
+        {
+          "at": 21.5,
+          "duration": 0.5,
+          "midi": 69
+        },
+        {
+          "at": 22,
+          "duration": 0.5,
+          "midi": 69
+        },
+        {
+          "at": 22.5,
+          "duration": 0.5,
+          "midi": 65
+        },
+        {
+          "at": 23,
+          "duration": 0.5,
+          "midi": 65
+        },
+        {
+          "at": 24,
+          "duration": 1.5,
+          "midi": 69
+        },
+        {
+          "at": 25.5,
+          "duration": 0.5,
+          "midi": 65
+        },
+        {
+          "at": 26,
+          "duration": 0.5,
+          "midi": 69
+        },
+        {
+          "at": 26.5,
+          "duration": 0.5,
+          "midi": 65
+        },
+        {
+          "at": 27,
+          "duration": 1.5,
+          "midi": 67
+        },
+        {
+          "at": 28.5,
+          "duration": 1.5,
+          "midi": 65
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "schema_version": 2,
+  "title": "Viel Glück und viel Segen",
+  "bpm": 104,
+  "quarters": 48,
+  "room": 1,
+  "tracks": [
+    {
+      "role": "melody",
+      "instrument": "clarinet",
+      "volume": 100,
+      "pan": 64,
+      "notes": [
+        {
+          "at": 0,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 1,
+          "duration": 1,
+          "midi": 74
+        },
+        {
+          "at": 2,
+          "duration": 1,
+          "midi": 73
+        },
+        {
+          "at": 3,
+          "duration": 0.5,
+          "midi": 71
+        },
+        {
+          "at": 3.5,
+          "duration": 0.5,
+          "midi": 73
+        },
+        {
+          "at": 4,
+          "duration": 1,
+          "midi": 74
+        },
+        {
+          "at": 5,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 6,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 7,
+          "duration": 1,
+          "midi": 71
+        },
+        {
+          "at": 8,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 9,
+          "duration": 1,
+          "midi": 67
+        },
+        {
+          "at": 10,
+          "duration": 1,
+          "midi": 66
+        },
+        {
+          "at": 11,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 12,
+          "duration": 1,
+          "midi": 66
+        },
+        {
+          "at": 13,
+          "duration": 1,
+          "midi": 67
+        },
+        {
+          "at": 14,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 15,
+          "duration": 0.5,
+          "midi": 71
+        },
+        {
+          "at": 15.5,
+          "duration": 0.5,
+          "midi": 69
+        },
+        {
+          "at": 16,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 17,
+          "duration": 1,
+          "midi": 66
+        },
+        {
+          "at": 18,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 19,
+          "duration": 0.5,
+          "midi": 67
+        },
+        {
+          "at": 19.5,
+          "duration": 0.5,
+          "midi": 66
+        },
+        {
+          "at": 20,
+          "duration": 1,
+          "midi": 64
+        },
+        {
+          "at": 21,
+          "duration": 1,
+          "midi": 64
+        },
+        {
+          "at": 22,
+          "duration": 2,
+          "midi": 62
+        },
+        {
+          "at": 24,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 25,
+          "duration": 1,
+          "midi": 74
+        },
+        {
+          "at": 26,
+          "duration": 1,
+          "midi": 73
+        },
+        {
+          "at": 27,
+          "duration": 0.5,
+          "midi": 71
+        },
+        {
+          "at": 27.5,
+          "duration": 0.5,
+          "midi": 73
+        },
+        {
+          "at": 28,
+          "duration": 1,
+          "midi": 74
+        },
+        {
+          "at": 29,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 30,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 31,
+          "duration": 1,
+          "midi": 71
+        },
+        {
+          "at": 32,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 33,
+          "duration": 1,
+          "midi": 67
+        },
+        {
+          "at": 34,
+          "duration": 1,
+          "midi": 66
+        },
+        {
+          "at": 35,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 36,
+          "duration": 1,
+          "midi": 66
+        },
+        {
+          "at": 37,
+          "duration": 1,
+          "midi": 67
+        },
+        {
+          "at": 38,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 39,
+          "duration": 0.5,
+          "midi": 71
+        },
+        {
+          "at": 39.5,
+          "duration": 0.5,
+          "midi": 69
+        },
+        {
+          "at": 40,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 41,
+          "duration": 1,
+          "midi": 66
+        },
+        {
+          "at": 42,
+          "duration": 1,
+          "midi": 69
+        },
+        {
+          "at": 43,
+          "duration": 0.5,
+          "midi": 67
+        },
+        {
+          "at": 43.5,
+          "duration": 0.5,
+          "midi": 66
+        },
+        {
+          "at": 44,
+          "duration": 1,
+          "midi": 64
+        },
+        {
+          "at": 45,
+          "duration": 1,
+          "midi": 64
+        },
+        {
+          "at": 46,
+          "duration": 2,
+          "midi": 62
+        }
+      ]
+    }
+  ]
+}
