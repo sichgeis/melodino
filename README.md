@@ -401,3 +401,15 @@ Atemzeit zwischen Strophen. Aktive Textteile folgen der Musik; „Gra-“ in Str
 wird über zwei Töne gesungen und doppelt unterstrichen. Die Textanpassung in
 Strophe 5 ist direkt beim Text erklärt. Autorenangabe bleibt sichtbar; Foto und
 Illustrationen werden nicht veröffentlicht. [Details](specs/012-meine-biber-haben-fieber.md).
+
+## In einem Harung, jung und stramm
+
+Aus dem Nutzerfoto übertragene Volksliedfassung in G-Dur und 4/4 mit allen fünf
+abgebildeten Textstrophen. Der erste Teil ist zweimal ausgeschrieben; pro Strophe
+64 Viertel und 68 klingende Töne. Der gebundene Schlusston bleibt erhalten, die
+vorletzte Textsilbe wird über vier Töne gezogen und entsprechend markiert.
+104 Viertel/Minute, Klarinette und ein Takt zusätzliche Atemzeit zwischen Strophen.
+Strophenauswahl und synchrone Textmarkierung auf der Hauptseite; eigene optionale
+Begleitungen nach den gedruckten Akkorden. Foto und Illustrationen bleiben privat.
+Reproduzieren: CLI-Export gemäß specs/013-in-einem-harung.md, danach
+`node scripts/prepare-harung-lyrics.mjs` und `node scripts/prepare-library-arrangements.mjs`.

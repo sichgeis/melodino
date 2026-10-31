@@ -15,6 +15,11 @@
       "slug": "meine-biber-haben-fieber",
       "url": "lyrics/meine-biber-haben-fieber.json",
       "preferredVersion": "original"
+    },
+    {
+      "slug": "in-einem-harung",
+      "url": "lyrics/in-einem-harung.json",
+      "preferredVersion": "original"
     }
   ]
 }

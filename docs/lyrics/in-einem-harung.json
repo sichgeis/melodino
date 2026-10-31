@@ -1,0 +1,2174 @@
+{
+  "schema_version": 1,
+  "title": "In einem Harung, jung und stramm",
+  "quarters": 64,
+  "credit": "Volkslied · Text und Melodie gemäß dem bereitgestellten Notenfoto.",
+  "source": "Fünf Strophen aus dem Nutzerfoto auf ausdrücklichen Auftrag übertragen. Wiederholung ausgeschrieben. Gedruckter Wortlaut einschließlich „fund“ beibehalten; Apostrophe und Satzzeichen typografisch normalisiert.",
+  "verses": [
+    {
+      "id": "flounder",
+      "label": "Harung und Flunder",
+      "lines": [
+        {
+          "text": "In einen Harung, jung und stramm,",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 0.5,
+              "text": "In",
+              "spaceAfter": true
+            },
+            {
+              "at": 0.5,
+              "duration": 0.5,
+              "text": "ei",
+              "spaceAfter": false
+            },
+            {
+              "at": 1,
+              "duration": 0.5,
+              "text": "nen",
+              "spaceAfter": true
+            },
+            {
+              "at": 1.5,
+              "duration": 1,
+              "text": "Ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 2.5,
+              "duration": 1,
+              "text": "rung,",
+              "spaceAfter": true
+            },
+            {
+              "at": 3.5,
+              "duration": 1,
+              "text": "jung",
+              "spaceAfter": true
+            },
+            {
+              "at": 4.5,
+              "duration": 1,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 5.5,
+              "duration": 1,
+              "text": "stramm,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "zwo, drei, vier, ss-ta-ta, ti-ral-la-la,",
+          "cues": [
+            {
+              "at": 6.5,
+              "duration": 1,
+              "text": "zwo,",
+              "spaceAfter": true
+            },
+            {
+              "at": 7.5,
+              "duration": 1,
+              "text": "drei,",
+              "spaceAfter": true
+            },
+            {
+              "at": 8.5,
+              "duration": 1,
+              "text": "vier,",
+              "spaceAfter": true
+            },
+            {
+              "at": 9.5,
+              "duration": 1,
+              "text": "ss-",
+              "spaceAfter": false
+            },
+            {
+              "at": 10.5,
+              "duration": 1,
+              "text": "ta-",
+              "spaceAfter": false
+            },
+            {
+              "at": 11.5,
+              "duration": 1.5,
+              "text": "ta,",
+              "spaceAfter": true
+            },
+            {
+              "at": 13,
+              "duration": 0.5,
+              "text": "ti-",
+              "spaceAfter": false
+            },
+            {
+              "at": 13.5,
+              "duration": 1,
+              "text": "ral-",
+              "spaceAfter": false
+            },
+            {
+              "at": 14.5,
+              "duration": 1,
+              "text": "la-",
+              "spaceAfter": false
+            },
+            {
+              "at": 15.5,
+              "duration": 0.5,
+              "text": "la,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "der auf dem Meeresgrunde schwamm,",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 0.5,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 16.5,
+              "duration": 0.5,
+              "text": "auf",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 0.5,
+              "text": "dem",
+              "spaceAfter": true
+            },
+            {
+              "at": 17.5,
+              "duration": 1,
+              "text": "Mee",
+              "spaceAfter": false
+            },
+            {
+              "at": 18.5,
+              "duration": 1,
+              "text": "res",
+              "spaceAfter": false
+            },
+            {
+              "at": 19.5,
+              "duration": 1,
+              "text": "grun",
+              "spaceAfter": false
+            },
+            {
+              "at": 20.5,
+              "duration": 1,
+              "text": "de",
+              "spaceAfter": true
+            },
+            {
+              "at": 21.5,
+              "duration": 1,
+              "text": "schwamm,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "zwo, drei, vier, ss-ta-ta, ti-ral-la-la,",
+          "cues": [
+            {
+              "at": 22.5,
+              "duration": 1,
+              "text": "zwo,",
+              "spaceAfter": true
+            },
+            {
+              "at": 23.5,
+              "duration": 1,
+              "text": "drei,",
+              "spaceAfter": true
+            },
+            {
+              "at": 24.5,
+              "duration": 1,
+              "text": "vier,",
+              "spaceAfter": true
+            },
+            {
+              "at": 25.5,
+              "duration": 1,
+              "text": "ss-",
+              "spaceAfter": false
+            },
+            {
+              "at": 26.5,
+              "duration": 1,
+              "text": "ta-",
+              "spaceAfter": false
+            },
+            {
+              "at": 27.5,
+              "duration": 1.5,
+              "text": "ta,",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 0.5,
+              "text": "ti-",
+              "spaceAfter": false
+            },
+            {
+              "at": 29.5,
+              "duration": 1,
+              "text": "ral-",
+              "spaceAfter": false
+            },
+            {
+              "at": 30.5,
+              "duration": 1,
+              "text": "la-",
+              "spaceAfter": false
+            },
+            {
+              "at": 31.5,
+              "duration": 0.5,
+              "text": "la,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "verliebte sich, o Wunder,",
+          "cues": [
+            {
+              "at": 32.5,
+              "duration": 1,
+              "text": "ver",
+              "spaceAfter": false
+            },
+            {
+              "at": 33.5,
+              "duration": 1.5,
+              "text": "lieb",
+              "spaceAfter": false
+            },
+            {
+              "at": 35,
+              "duration": 0.5,
+              "text": "te",
+              "spaceAfter": true
+            },
+            {
+              "at": 35.5,
+              "duration": 1.5,
+              "text": "sich,",
+              "spaceAfter": true
+            },
+            {
+              "at": 37,
+              "duration": 0.5,
+              "text": "o",
+              "spaceAfter": true
+            },
+            {
+              "at": 37.5,
+              "duration": 1,
+              "text": "Wun",
+              "spaceAfter": false
+            },
+            {
+              "at": 38.5,
+              "duration": 1.5,
+              "text": "der,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "’ne olle Flunder, ’ne olle Flunder,",
+          "cues": [
+            {
+              "at": 40,
+              "duration": 0.5,
+              "text": "’ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 40.5,
+              "duration": 0.5,
+              "text": "ol",
+              "spaceAfter": false
+            },
+            {
+              "at": 41,
+              "duration": 0.5,
+              "text": "le",
+              "spaceAfter": true
+            },
+            {
+              "at": 41.5,
+              "duration": 1,
+              "text": "Flun",
+              "spaceAfter": false
+            },
+            {
+              "at": 42.5,
+              "duration": 1.5,
+              "text": "der,",
+              "spaceAfter": true
+            },
+            {
+              "at": 44,
+              "duration": 0.5,
+              "text": "’ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 44.5,
+              "duration": 0.5,
+              "text": "ol",
+              "spaceAfter": false
+            },
+            {
+              "at": 45,
+              "duration": 0.5,
+              "text": "le",
+              "spaceAfter": true
+            },
+            {
+              "at": 45.5,
+              "duration": 1,
+              "text": "Flun",
+              "spaceAfter": false
+            },
+            {
+              "at": 46.5,
+              "duration": 2,
+              "text": "der,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "verliebte sich, o Wunder, ’ne olle Flunder.",
+          "cues": [
+            {
+              "at": 48.5,
+              "duration": 1,
+              "text": "ver",
+              "spaceAfter": false
+            },
+            {
+              "at": 49.5,
+              "duration": 1.5,
+              "text": "lieb",
+              "spaceAfter": false
+            },
+            {
+              "at": 51,
+              "duration": 0.5,
+              "text": "te",
+              "spaceAfter": true
+            },
+            {
+              "at": 51.5,
+              "duration": 1.5,
+              "text": "sich,",
+              "spaceAfter": true
+            },
+            {
+              "at": 53,
+              "duration": 0.5,
+              "text": "o",
+              "spaceAfter": true
+            },
+            {
+              "at": 53.5,
+              "duration": 1,
+              "text": "Wun",
+              "spaceAfter": false
+            },
+            {
+              "at": 54.5,
+              "duration": 1.5,
+              "text": "der,",
+              "spaceAfter": true
+            },
+            {
+              "at": 56,
+              "duration": 0.5,
+              "text": "’ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 56.5,
+              "duration": 0.5,
+              "text": "ol",
+              "spaceAfter": false
+            },
+            {
+              "at": 57,
+              "duration": 0.5,
+              "text": "le",
+              "spaceAfter": true
+            },
+            {
+              "at": 57.5,
+              "duration": 4,
+              "text": "Flun",
+              "spaceAfter": false
+            },
+            {
+              "at": 61.5,
+              "duration": 2.5,
+              "text": "der.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ],
+      "historical_number": 1,
+      "performance_note": "Die vorletzte Silbe am Schluss über vier Töne singen (doppelt unterstrichen)."
+    },
+    {
+      "id": "herring",
+      "label": "Du bist verrückt",
+      "lines": [
+        {
+          "text": "Der Harung sprach: „Du bist verrückt,",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 0.5,
+              "text": "Der",
+              "spaceAfter": true
+            },
+            {
+              "at": 0.5,
+              "duration": 0.5,
+              "text": "Ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 1,
+              "duration": 0.5,
+              "text": "rung",
+              "spaceAfter": true
+            },
+            {
+              "at": 1.5,
+              "duration": 1,
+              "text": "sprach:",
+              "spaceAfter": true
+            },
+            {
+              "at": 2.5,
+              "duration": 1,
+              "text": "„Du",
+              "spaceAfter": true
+            },
+            {
+              "at": 3.5,
+              "duration": 1,
+              "text": "bist",
+              "spaceAfter": true
+            },
+            {
+              "at": 4.5,
+              "duration": 1,
+              "text": "ver",
+              "spaceAfter": false
+            },
+            {
+              "at": 5.5,
+              "duration": 1,
+              "text": "rückt,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "zwo, drei, vier, ss-ta-ta, ti-ral-la-la,",
+          "cues": [
+            {
+              "at": 6.5,
+              "duration": 1,
+              "text": "zwo,",
+              "spaceAfter": true
+            },
+            {
+              "at": 7.5,
+              "duration": 1,
+              "text": "drei,",
+              "spaceAfter": true
+            },
+            {
+              "at": 8.5,
+              "duration": 1,
+              "text": "vier,",
+              "spaceAfter": true
+            },
+            {
+              "at": 9.5,
+              "duration": 1,
+              "text": "ss-",
+              "spaceAfter": false
+            },
+            {
+              "at": 10.5,
+              "duration": 1,
+              "text": "ta-",
+              "spaceAfter": false
+            },
+            {
+              "at": 11.5,
+              "duration": 1.5,
+              "text": "ta,",
+              "spaceAfter": true
+            },
+            {
+              "at": 13,
+              "duration": 0.5,
+              "text": "ti-",
+              "spaceAfter": false
+            },
+            {
+              "at": 13.5,
+              "duration": 1,
+              "text": "ral-",
+              "spaceAfter": false
+            },
+            {
+              "at": 14.5,
+              "duration": 1,
+              "text": "la-",
+              "spaceAfter": false
+            },
+            {
+              "at": 15.5,
+              "duration": 0.5,
+              "text": "la,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "du bist mir viel zu platt gedrückt,",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 0.5,
+              "text": "du",
+              "spaceAfter": true
+            },
+            {
+              "at": 16.5,
+              "duration": 0.5,
+              "text": "bist",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 0.5,
+              "text": "mir",
+              "spaceAfter": true
+            },
+            {
+              "at": 17.5,
+              "duration": 1,
+              "text": "viel",
+              "spaceAfter": true
+            },
+            {
+              "at": 18.5,
+              "duration": 1,
+              "text": "zu",
+              "spaceAfter": true
+            },
+            {
+              "at": 19.5,
+              "duration": 1,
+              "text": "platt",
+              "spaceAfter": true
+            },
+            {
+              "at": 20.5,
+              "duration": 1,
+              "text": "ge",
+              "spaceAfter": false
+            },
+            {
+              "at": 21.5,
+              "duration": 1,
+              "text": "drückt,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "zwo, drei, vier, ss-ta-ta, ti-ral-la-la,",
+          "cues": [
+            {
+              "at": 22.5,
+              "duration": 1,
+              "text": "zwo,",
+              "spaceAfter": true
+            },
+            {
+              "at": 23.5,
+              "duration": 1,
+              "text": "drei,",
+              "spaceAfter": true
+            },
+            {
+              "at": 24.5,
+              "duration": 1,
+              "text": "vier,",
+              "spaceAfter": true
+            },
+            {
+              "at": 25.5,
+              "duration": 1,
+              "text": "ss-",
+              "spaceAfter": false
+            },
+            {
+              "at": 26.5,
+              "duration": 1,
+              "text": "ta-",
+              "spaceAfter": false
+            },
+            {
+              "at": 27.5,
+              "duration": 1.5,
+              "text": "ta,",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 0.5,
+              "text": "ti-",
+              "spaceAfter": false
+            },
+            {
+              "at": 29.5,
+              "duration": 1,
+              "text": "ral-",
+              "spaceAfter": false
+            },
+            {
+              "at": 30.5,
+              "duration": 1,
+              "text": "la-",
+              "spaceAfter": false
+            },
+            {
+              "at": 31.5,
+              "duration": 0.5,
+              "text": "la,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "rutsch mir den Buckel runter,",
+          "cues": [
+            {
+              "at": 32.5,
+              "duration": 1,
+              "text": "rutsch",
+              "spaceAfter": true
+            },
+            {
+              "at": 33.5,
+              "duration": 1.5,
+              "text": "mir",
+              "spaceAfter": true
+            },
+            {
+              "at": 35,
+              "duration": 0.5,
+              "text": "den",
+              "spaceAfter": true
+            },
+            {
+              "at": 35.5,
+              "duration": 1.5,
+              "text": "Bu",
+              "spaceAfter": false
+            },
+            {
+              "at": 37,
+              "duration": 0.5,
+              "text": "ckel",
+              "spaceAfter": true
+            },
+            {
+              "at": 37.5,
+              "duration": 1,
+              "text": "run",
+              "spaceAfter": false
+            },
+            {
+              "at": 38.5,
+              "duration": 1.5,
+              "text": "ter,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "du olle Flunder, du olle Flunder,",
+          "cues": [
+            {
+              "at": 40,
+              "duration": 0.5,
+              "text": "du",
+              "spaceAfter": true
+            },
+            {
+              "at": 40.5,
+              "duration": 0.5,
+              "text": "ol",
+              "spaceAfter": false
+            },
+            {
+              "at": 41,
+              "duration": 0.5,
+              "text": "le",
+              "spaceAfter": true
+            },
+            {
+              "at": 41.5,
+              "duration": 1,
+              "text": "Flun",
+              "spaceAfter": false
+            },
+            {
+              "at": 42.5,
+              "duration": 1.5,
+              "text": "der,",
+              "spaceAfter": true
+            },
+            {
+              "at": 44,
+              "duration": 0.5,
+              "text": "du",
+              "spaceAfter": true
+            },
+            {
+              "at": 44.5,
+              "duration": 0.5,
+              "text": "ol",
+              "spaceAfter": false
+            },
+            {
+              "at": 45,
+              "duration": 0.5,
+              "text": "le",
+              "spaceAfter": true
+            },
+            {
+              "at": 45.5,
+              "duration": 1,
+              "text": "Flun",
+              "spaceAfter": false
+            },
+            {
+              "at": 46.5,
+              "duration": 2,
+              "text": "der,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "rutsch mir den Buckel runter, du olle Flunder!“",
+          "cues": [
+            {
+              "at": 48.5,
+              "duration": 1,
+              "text": "rutsch",
+              "spaceAfter": true
+            },
+            {
+              "at": 49.5,
+              "duration": 1.5,
+              "text": "mir",
+              "spaceAfter": true
+            },
+            {
+              "at": 51,
+              "duration": 0.5,
+              "text": "den",
+              "spaceAfter": true
+            },
+            {
+              "at": 51.5,
+              "duration": 1.5,
+              "text": "Bu",
+              "spaceAfter": false
+            },
+            {
+              "at": 53,
+              "duration": 0.5,
+              "text": "ckel",
+              "spaceAfter": true
+            },
+            {
+              "at": 53.5,
+              "duration": 1,
+              "text": "run",
+              "spaceAfter": false
+            },
+            {
+              "at": 54.5,
+              "duration": 1.5,
+              "text": "ter,",
+              "spaceAfter": true
+            },
+            {
+              "at": 56,
+              "duration": 0.5,
+              "text": "du",
+              "spaceAfter": true
+            },
+            {
+              "at": 56.5,
+              "duration": 0.5,
+              "text": "ol",
+              "spaceAfter": false
+            },
+            {
+              "at": 57,
+              "duration": 0.5,
+              "text": "le",
+              "spaceAfter": true
+            },
+            {
+              "at": 57.5,
+              "duration": 4,
+              "text": "Flun",
+              "spaceAfter": false
+            },
+            {
+              "at": 61.5,
+              "duration": 2.5,
+              "text": "der!“",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ],
+      "historical_number": 2,
+      "performance_note": "Die vorletzte Silbe am Schluss über vier Töne singen (doppelt unterstrichen)."
+    },
+    {
+      "id": "gold",
+      "label": "Ein Goldstück",
+      "lines": [
+        {
+          "text": "Da stieß die Flunder auf den Grund,",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 0.5,
+              "text": "Da",
+              "spaceAfter": true
+            },
+            {
+              "at": 0.5,
+              "duration": 0.5,
+              "text": "stieß",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 0.5,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 1.5,
+              "duration": 1,
+              "text": "Flun",
+              "spaceAfter": false
+            },
+            {
+              "at": 2.5,
+              "duration": 1,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 3.5,
+              "duration": 1,
+              "text": "auf",
+              "spaceAfter": true
+            },
+            {
+              "at": 4.5,
+              "duration": 1,
+              "text": "den",
+              "spaceAfter": true
+            },
+            {
+              "at": 5.5,
+              "duration": 1,
+              "text": "Grund,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "zwo, drei, vier, ss-ta-ta, ti-ral-la-la,",
+          "cues": [
+            {
+              "at": 6.5,
+              "duration": 1,
+              "text": "zwo,",
+              "spaceAfter": true
+            },
+            {
+              "at": 7.5,
+              "duration": 1,
+              "text": "drei,",
+              "spaceAfter": true
+            },
+            {
+              "at": 8.5,
+              "duration": 1,
+              "text": "vier,",
+              "spaceAfter": true
+            },
+            {
+              "at": 9.5,
+              "duration": 1,
+              "text": "ss-",
+              "spaceAfter": false
+            },
+            {
+              "at": 10.5,
+              "duration": 1,
+              "text": "ta-",
+              "spaceAfter": false
+            },
+            {
+              "at": 11.5,
+              "duration": 1.5,
+              "text": "ta,",
+              "spaceAfter": true
+            },
+            {
+              "at": 13,
+              "duration": 0.5,
+              "text": "ti-",
+              "spaceAfter": false
+            },
+            {
+              "at": 13.5,
+              "duration": 1,
+              "text": "ral-",
+              "spaceAfter": false
+            },
+            {
+              "at": 14.5,
+              "duration": 1,
+              "text": "la-",
+              "spaceAfter": false
+            },
+            {
+              "at": 15.5,
+              "duration": 0.5,
+              "text": "la,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "wo sie ein großes Geldstück fund,",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 0.5,
+              "text": "wo",
+              "spaceAfter": true
+            },
+            {
+              "at": 16.5,
+              "duration": 0.5,
+              "text": "sie",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 0.5,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 17.5,
+              "duration": 1,
+              "text": "gro",
+              "spaceAfter": false
+            },
+            {
+              "at": 18.5,
+              "duration": 1,
+              "text": "ßes",
+              "spaceAfter": true
+            },
+            {
+              "at": 19.5,
+              "duration": 1,
+              "text": "Geld",
+              "spaceAfter": false
+            },
+            {
+              "at": 20.5,
+              "duration": 1,
+              "text": "stück",
+              "spaceAfter": true
+            },
+            {
+              "at": 21.5,
+              "duration": 1,
+              "text": "fund,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "zwo, drei, vier, ss-ta-ta, ti-ral-la-la,",
+          "cues": [
+            {
+              "at": 22.5,
+              "duration": 1,
+              "text": "zwo,",
+              "spaceAfter": true
+            },
+            {
+              "at": 23.5,
+              "duration": 1,
+              "text": "drei,",
+              "spaceAfter": true
+            },
+            {
+              "at": 24.5,
+              "duration": 1,
+              "text": "vier,",
+              "spaceAfter": true
+            },
+            {
+              "at": 25.5,
+              "duration": 1,
+              "text": "ss-",
+              "spaceAfter": false
+            },
+            {
+              "at": 26.5,
+              "duration": 1,
+              "text": "ta-",
+              "spaceAfter": false
+            },
+            {
+              "at": 27.5,
+              "duration": 1.5,
+              "text": "ta,",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 0.5,
+              "text": "ti-",
+              "spaceAfter": false
+            },
+            {
+              "at": 29.5,
+              "duration": 1,
+              "text": "ral-",
+              "spaceAfter": false
+            },
+            {
+              "at": 30.5,
+              "duration": 1,
+              "text": "la-",
+              "spaceAfter": false
+            },
+            {
+              "at": 31.5,
+              "duration": 0.5,
+              "text": "la,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "ein Goldstück von zehn Rubel,",
+          "cues": [
+            {
+              "at": 32.5,
+              "duration": 1,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 33.5,
+              "duration": 1.5,
+              "text": "Gold",
+              "spaceAfter": false
+            },
+            {
+              "at": 35,
+              "duration": 0.5,
+              "text": "stück",
+              "spaceAfter": true
+            },
+            {
+              "at": 35.5,
+              "duration": 1.5,
+              "text": "von",
+              "spaceAfter": true
+            },
+            {
+              "at": 37,
+              "duration": 0.5,
+              "text": "zehn",
+              "spaceAfter": true
+            },
+            {
+              "at": 37.5,
+              "duration": 1,
+              "text": "Ru",
+              "spaceAfter": false
+            },
+            {
+              "at": 38.5,
+              "duration": 1.5,
+              "text": "bel,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "o welch ein Jubel, o welch ein Jubel,",
+          "cues": [
+            {
+              "at": 40,
+              "duration": 0.5,
+              "text": "o",
+              "spaceAfter": true
+            },
+            {
+              "at": 40.5,
+              "duration": 0.5,
+              "text": "welch",
+              "spaceAfter": true
+            },
+            {
+              "at": 41,
+              "duration": 0.5,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 41.5,
+              "duration": 1,
+              "text": "Ju",
+              "spaceAfter": false
+            },
+            {
+              "at": 42.5,
+              "duration": 1.5,
+              "text": "bel,",
+              "spaceAfter": true
+            },
+            {
+              "at": 44,
+              "duration": 0.5,
+              "text": "o",
+              "spaceAfter": true
+            },
+            {
+              "at": 44.5,
+              "duration": 0.5,
+              "text": "welch",
+              "spaceAfter": true
+            },
+            {
+              "at": 45,
+              "duration": 0.5,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 45.5,
+              "duration": 1,
+              "text": "Ju",
+              "spaceAfter": false
+            },
+            {
+              "at": 46.5,
+              "duration": 2,
+              "text": "bel,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "ein Goldstück von zehn Rubel, o welch ein Jubel!",
+          "cues": [
+            {
+              "at": 48.5,
+              "duration": 1,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 49.5,
+              "duration": 1.5,
+              "text": "Gold",
+              "spaceAfter": false
+            },
+            {
+              "at": 51,
+              "duration": 0.5,
+              "text": "stück",
+              "spaceAfter": true
+            },
+            {
+              "at": 51.5,
+              "duration": 1.5,
+              "text": "von",
+              "spaceAfter": true
+            },
+            {
+              "at": 53,
+              "duration": 0.5,
+              "text": "zehn",
+              "spaceAfter": true
+            },
+            {
+              "at": 53.5,
+              "duration": 1,
+              "text": "Ru",
+              "spaceAfter": false
+            },
+            {
+              "at": 54.5,
+              "duration": 1.5,
+              "text": "bel,",
+              "spaceAfter": true
+            },
+            {
+              "at": 56,
+              "duration": 0.5,
+              "text": "o",
+              "spaceAfter": true
+            },
+            {
+              "at": 56.5,
+              "duration": 0.5,
+              "text": "welch",
+              "spaceAfter": true
+            },
+            {
+              "at": 57,
+              "duration": 0.5,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 57.5,
+              "duration": 4,
+              "text": "Ju",
+              "spaceAfter": false
+            },
+            {
+              "at": 61.5,
+              "duration": 2.5,
+              "text": "bel!",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ],
+      "historical_number": 3,
+      "performance_note": "Die vorletzte Silbe am Schluss über vier Töne singen (doppelt unterstrichen)."
+    },
+    {
+      "id": "rich",
+      "label": "Die olle Schrulle",
+      "lines": [
+        {
+          "text": "Da war die olle Schrulle reich,",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 0.5,
+              "text": "Da",
+              "spaceAfter": true
+            },
+            {
+              "at": 0.5,
+              "duration": 0.5,
+              "text": "war",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 0.5,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 1.5,
+              "duration": 1,
+              "text": "ol",
+              "spaceAfter": false
+            },
+            {
+              "at": 2.5,
+              "duration": 1,
+              "text": "le",
+              "spaceAfter": true
+            },
+            {
+              "at": 3.5,
+              "duration": 1,
+              "text": "Schru",
+              "spaceAfter": false
+            },
+            {
+              "at": 4.5,
+              "duration": 1,
+              "text": "lle",
+              "spaceAfter": true
+            },
+            {
+              "at": 5.5,
+              "duration": 1,
+              "text": "reich,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "zwo, drei, vier, ss-ta-ta, ti-ral-la-la,",
+          "cues": [
+            {
+              "at": 6.5,
+              "duration": 1,
+              "text": "zwo,",
+              "spaceAfter": true
+            },
+            {
+              "at": 7.5,
+              "duration": 1,
+              "text": "drei,",
+              "spaceAfter": true
+            },
+            {
+              "at": 8.5,
+              "duration": 1,
+              "text": "vier,",
+              "spaceAfter": true
+            },
+            {
+              "at": 9.5,
+              "duration": 1,
+              "text": "ss-",
+              "spaceAfter": false
+            },
+            {
+              "at": 10.5,
+              "duration": 1,
+              "text": "ta-",
+              "spaceAfter": false
+            },
+            {
+              "at": 11.5,
+              "duration": 1.5,
+              "text": "ta,",
+              "spaceAfter": true
+            },
+            {
+              "at": 13,
+              "duration": 0.5,
+              "text": "ti-",
+              "spaceAfter": false
+            },
+            {
+              "at": 13.5,
+              "duration": 1,
+              "text": "ral-",
+              "spaceAfter": false
+            },
+            {
+              "at": 14.5,
+              "duration": 1,
+              "text": "la-",
+              "spaceAfter": false
+            },
+            {
+              "at": 15.5,
+              "duration": 0.5,
+              "text": "la,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "da nahm der Harung sie sogleich,",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 0.5,
+              "text": "da",
+              "spaceAfter": true
+            },
+            {
+              "at": 16.5,
+              "duration": 0.5,
+              "text": "nahm",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 0.5,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 17.5,
+              "duration": 1,
+              "text": "Ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 18.5,
+              "duration": 1,
+              "text": "rung",
+              "spaceAfter": true
+            },
+            {
+              "at": 19.5,
+              "duration": 1,
+              "text": "sie",
+              "spaceAfter": true
+            },
+            {
+              "at": 20.5,
+              "duration": 1,
+              "text": "so",
+              "spaceAfter": false
+            },
+            {
+              "at": 21.5,
+              "duration": 1,
+              "text": "gleich,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "zwo, drei, vier, ss-ta-ta, ti-ral-la-la,",
+          "cues": [
+            {
+              "at": 22.5,
+              "duration": 1,
+              "text": "zwo,",
+              "spaceAfter": true
+            },
+            {
+              "at": 23.5,
+              "duration": 1,
+              "text": "drei,",
+              "spaceAfter": true
+            },
+            {
+              "at": 24.5,
+              "duration": 1,
+              "text": "vier,",
+              "spaceAfter": true
+            },
+            {
+              "at": 25.5,
+              "duration": 1,
+              "text": "ss-",
+              "spaceAfter": false
+            },
+            {
+              "at": 26.5,
+              "duration": 1,
+              "text": "ta-",
+              "spaceAfter": false
+            },
+            {
+              "at": 27.5,
+              "duration": 1.5,
+              "text": "ta,",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 0.5,
+              "text": "ti-",
+              "spaceAfter": false
+            },
+            {
+              "at": 29.5,
+              "duration": 1,
+              "text": "ral-",
+              "spaceAfter": false
+            },
+            {
+              "at": 30.5,
+              "duration": 1,
+              "text": "la-",
+              "spaceAfter": false
+            },
+            {
+              "at": 31.5,
+              "duration": 0.5,
+              "text": "la,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "denn so ein alter Harung,",
+          "cues": [
+            {
+              "at": 32.5,
+              "duration": 1,
+              "text": "denn",
+              "spaceAfter": true
+            },
+            {
+              "at": 33.5,
+              "duration": 1.5,
+              "text": "so",
+              "spaceAfter": true
+            },
+            {
+              "at": 35,
+              "duration": 0.5,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 35.5,
+              "duration": 1.5,
+              "text": "al",
+              "spaceAfter": false
+            },
+            {
+              "at": 37,
+              "duration": 0.5,
+              "text": "ter",
+              "spaceAfter": true
+            },
+            {
+              "at": 37.5,
+              "duration": 1,
+              "text": "Ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 38.5,
+              "duration": 1.5,
+              "text": "rung,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "der hat Erfahrung, der hat Erfahrung,",
+          "cues": [
+            {
+              "at": 40,
+              "duration": 0.5,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 40.5,
+              "duration": 0.5,
+              "text": "hat",
+              "spaceAfter": true
+            },
+            {
+              "at": 41,
+              "duration": 0.5,
+              "text": "Er",
+              "spaceAfter": false
+            },
+            {
+              "at": 41.5,
+              "duration": 1,
+              "text": "fah",
+              "spaceAfter": false
+            },
+            {
+              "at": 42.5,
+              "duration": 1.5,
+              "text": "rung,",
+              "spaceAfter": true
+            },
+            {
+              "at": 44,
+              "duration": 0.5,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 44.5,
+              "duration": 0.5,
+              "text": "hat",
+              "spaceAfter": true
+            },
+            {
+              "at": 45,
+              "duration": 0.5,
+              "text": "Er",
+              "spaceAfter": false
+            },
+            {
+              "at": 45.5,
+              "duration": 1,
+              "text": "fah",
+              "spaceAfter": false
+            },
+            {
+              "at": 46.5,
+              "duration": 2,
+              "text": "rung,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "denn so ein alter Harung, der hat Erfahrung.",
+          "cues": [
+            {
+              "at": 48.5,
+              "duration": 1,
+              "text": "denn",
+              "spaceAfter": true
+            },
+            {
+              "at": 49.5,
+              "duration": 1.5,
+              "text": "so",
+              "spaceAfter": true
+            },
+            {
+              "at": 51,
+              "duration": 0.5,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 51.5,
+              "duration": 1.5,
+              "text": "al",
+              "spaceAfter": false
+            },
+            {
+              "at": 53,
+              "duration": 0.5,
+              "text": "ter",
+              "spaceAfter": true
+            },
+            {
+              "at": 53.5,
+              "duration": 1,
+              "text": "Ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 54.5,
+              "duration": 1.5,
+              "text": "rung,",
+              "spaceAfter": true
+            },
+            {
+              "at": 56,
+              "duration": 0.5,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 56.5,
+              "duration": 0.5,
+              "text": "hat",
+              "spaceAfter": true
+            },
+            {
+              "at": 57,
+              "duration": 0.5,
+              "text": "Er",
+              "spaceAfter": false
+            },
+            {
+              "at": 57.5,
+              "duration": 4,
+              "text": "fah",
+              "spaceAfter": false
+            },
+            {
+              "at": 61.5,
+              "duration": 2.5,
+              "text": "rung.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ],
+      "historical_number": 4,
+      "performance_note": "Die vorletzte Silbe am Schluss über vier Töne singen (doppelt unterstrichen)."
+    },
+    {
+      "id": "moral",
+      "label": "Die Moral",
+      "lines": [
+        {
+          "text": "Und die Moral von der Geschicht?",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 0.5,
+              "text": "Und",
+              "spaceAfter": true
+            },
+            {
+              "at": 0.5,
+              "duration": 0.5,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 0.5,
+              "text": "Mo",
+              "spaceAfter": false
+            },
+            {
+              "at": 1.5,
+              "duration": 1,
+              "text": "ral",
+              "spaceAfter": true
+            },
+            {
+              "at": 2.5,
+              "duration": 1,
+              "text": "von",
+              "spaceAfter": true
+            },
+            {
+              "at": 3.5,
+              "duration": 1,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 4.5,
+              "duration": 1,
+              "text": "Ge",
+              "spaceAfter": false
+            },
+            {
+              "at": 5.5,
+              "duration": 1,
+              "text": "schicht?",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "zwo, drei, vier, ss-ta-ta, ti-ral-la-la,",
+          "cues": [
+            {
+              "at": 6.5,
+              "duration": 1,
+              "text": "zwo,",
+              "spaceAfter": true
+            },
+            {
+              "at": 7.5,
+              "duration": 1,
+              "text": "drei,",
+              "spaceAfter": true
+            },
+            {
+              "at": 8.5,
+              "duration": 1,
+              "text": "vier,",
+              "spaceAfter": true
+            },
+            {
+              "at": 9.5,
+              "duration": 1,
+              "text": "ss-",
+              "spaceAfter": false
+            },
+            {
+              "at": 10.5,
+              "duration": 1,
+              "text": "ta-",
+              "spaceAfter": false
+            },
+            {
+              "at": 11.5,
+              "duration": 1.5,
+              "text": "ta,",
+              "spaceAfter": true
+            },
+            {
+              "at": 13,
+              "duration": 0.5,
+              "text": "ti-",
+              "spaceAfter": false
+            },
+            {
+              "at": 13.5,
+              "duration": 1,
+              "text": "ral-",
+              "spaceAfter": false
+            },
+            {
+              "at": 14.5,
+              "duration": 1,
+              "text": "la-",
+              "spaceAfter": false
+            },
+            {
+              "at": 15.5,
+              "duration": 0.5,
+              "text": "la,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Verlieb dich in ’nen Harung nicht,",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 0.5,
+              "text": "Ver",
+              "spaceAfter": false
+            },
+            {
+              "at": 16.5,
+              "duration": 0.5,
+              "text": "lieb",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 0.5,
+              "text": "dich",
+              "spaceAfter": true
+            },
+            {
+              "at": 17.5,
+              "duration": 1,
+              "text": "in",
+              "spaceAfter": true
+            },
+            {
+              "at": 18.5,
+              "duration": 1,
+              "text": "’nen",
+              "spaceAfter": true
+            },
+            {
+              "at": 19.5,
+              "duration": 1,
+              "text": "Ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 20.5,
+              "duration": 1,
+              "text": "rung",
+              "spaceAfter": true
+            },
+            {
+              "at": 21.5,
+              "duration": 1,
+              "text": "nicht,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "zwo, drei, vier, ss-ta-ta, ti-ral-la-la,",
+          "cues": [
+            {
+              "at": 22.5,
+              "duration": 1,
+              "text": "zwo,",
+              "spaceAfter": true
+            },
+            {
+              "at": 23.5,
+              "duration": 1,
+              "text": "drei,",
+              "spaceAfter": true
+            },
+            {
+              "at": 24.5,
+              "duration": 1,
+              "text": "vier,",
+              "spaceAfter": true
+            },
+            {
+              "at": 25.5,
+              "duration": 1,
+              "text": "ss-",
+              "spaceAfter": false
+            },
+            {
+              "at": 26.5,
+              "duration": 1,
+              "text": "ta-",
+              "spaceAfter": false
+            },
+            {
+              "at": 27.5,
+              "duration": 1.5,
+              "text": "ta,",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 0.5,
+              "text": "ti-",
+              "spaceAfter": false
+            },
+            {
+              "at": 29.5,
+              "duration": 1,
+              "text": "ral-",
+              "spaceAfter": false
+            },
+            {
+              "at": 30.5,
+              "duration": 1,
+              "text": "la-",
+              "spaceAfter": false
+            },
+            {
+              "at": 31.5,
+              "duration": 0.5,
+              "text": "la,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "denn so ein alter Harung,",
+          "cues": [
+            {
+              "at": 32.5,
+              "duration": 1,
+              "text": "denn",
+              "spaceAfter": true
+            },
+            {
+              "at": 33.5,
+              "duration": 1.5,
+              "text": "so",
+              "spaceAfter": true
+            },
+            {
+              "at": 35,
+              "duration": 0.5,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 35.5,
+              "duration": 1.5,
+              "text": "al",
+              "spaceAfter": false
+            },
+            {
+              "at": 37,
+              "duration": 0.5,
+              "text": "ter",
+              "spaceAfter": true
+            },
+            {
+              "at": 37.5,
+              "duration": 1,
+              "text": "Ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 38.5,
+              "duration": 1.5,
+              "text": "rung,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "der hat Erfahrung, der hat Erfahrung,",
+          "cues": [
+            {
+              "at": 40,
+              "duration": 0.5,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 40.5,
+              "duration": 0.5,
+              "text": "hat",
+              "spaceAfter": true
+            },
+            {
+              "at": 41,
+              "duration": 0.5,
+              "text": "Er",
+              "spaceAfter": false
+            },
+            {
+              "at": 41.5,
+              "duration": 1,
+              "text": "fah",
+              "spaceAfter": false
+            },
+            {
+              "at": 42.5,
+              "duration": 1.5,
+              "text": "rung,",
+              "spaceAfter": true
+            },
+            {
+              "at": 44,
+              "duration": 0.5,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 44.5,
+              "duration": 0.5,
+              "text": "hat",
+              "spaceAfter": true
+            },
+            {
+              "at": 45,
+              "duration": 0.5,
+              "text": "Er",
+              "spaceAfter": false
+            },
+            {
+              "at": 45.5,
+              "duration": 1,
+              "text": "fah",
+              "spaceAfter": false
+            },
+            {
+              "at": 46.5,
+              "duration": 2,
+              "text": "rung,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "denn so ein alter Harung, der hat Erfahrung.",
+          "cues": [
+            {
+              "at": 48.5,
+              "duration": 1,
+              "text": "denn",
+              "spaceAfter": true
+            },
+            {
+              "at": 49.5,
+              "duration": 1.5,
+              "text": "so",
+              "spaceAfter": true
+            },
+            {
+              "at": 51,
+              "duration": 0.5,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 51.5,
+              "duration": 1.5,
+              "text": "al",
+              "spaceAfter": false
+            },
+            {
+              "at": 53,
+              "duration": 0.5,
+              "text": "ter",
+              "spaceAfter": true
+            },
+            {
+              "at": 53.5,
+              "duration": 1,
+              "text": "Ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 54.5,
+              "duration": 1.5,
+              "text": "rung,",
+              "spaceAfter": true
+            },
+            {
+              "at": 56,
+              "duration": 0.5,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 56.5,
+              "duration": 0.5,
+              "text": "hat",
+              "spaceAfter": true
+            },
+            {
+              "at": 57,
+              "duration": 0.5,
+              "text": "Er",
+              "spaceAfter": false
+            },
+            {
+              "at": 57.5,
+              "duration": 4,
+              "text": "fah",
+              "spaceAfter": false
+            },
+            {
+              "at": 61.5,
+              "duration": 2.5,
+              "text": "rung.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ],
+      "historical_number": 5,
+      "performance_note": "Die vorletzte Silbe am Schluss über vier Töne singen (doppelt unterstrichen)."
+    }
+  ]
+}

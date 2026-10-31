@@ -40,6 +40,26 @@
     "verse_gap_bars": 0
   },
   {
+    "title": "In einem Harung, jung und stramm",
+    "source": "Aus MusicXML importiert",
+    "bpm": 104.0,
+    "instrument": "clarinet",
+    "duration_seconds": 36.92307692307692,
+    "score_duration_seconds": 36.92307692307692,
+    "quarters": 64.0,
+    "note_count": 68,
+    "transpose": 0,
+    "measure_quarters": 4.0,
+    "verse_gap_bars": 1,
+    "files": {
+      "midi": "assets/in-einem-harung/melody.mid",
+      "musicxml": "assets/in-einem-harung/score.musicxml",
+      "csv": "assets/in-einem-harung/notes.csv",
+      "playback": "assets/in-einem-harung/playback.json"
+    },
+    "slug": "in-einem-harung"
+  },
+  {
     "title": "Meine Biber haben Fieber",
     "source": "Aus MusicXML importiert",
     "bpm": 88.0,

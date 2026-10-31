@@ -115,3 +115,21 @@ test('Biber texts cover all original notes; melisma holds across its note bounda
   const acrossRest=structuredClone(text);acrossRest.verses[0].lines[0].cues.at(-1).duration=2;assert.throws(()=>validateLyrics(acrossRest,score));
   const missing=structuredClone(text);missing.verses[0].lines[0].cues.shift();assert.throws(()=>validateLyrics(missing,score));
 });
+
+test('Harung repeats the printed opening and aligns all five texts including rest, slur and tied ending',()=>{
+  const text=read('lyrics/in-einem-harung.json'),melody=read('assets/in-einem-harung/playback.json');
+  assert.equal(validateLyrics(text,melody),text);
+  assert.equal(melody.quarters,64);assert.equal(melody.notes.length,68);
+  assert.deepEqual(melody.notes.filter(n=>n.at<16).map(n=>[n.at,n.duration,n.midi]),
+    melody.notes.filter(n=>n.at>=16&&n.at<32).map(n=>[n.at-16,n.duration,n.midi]));
+  assert.equal(melody.notes.filter(n=>n.at>=32&&n.at<32.5).length,0);
+  assert.deepEqual(melody.notes.slice(-5).map(n=>[n.at,n.duration,n.midi]),
+    [[57.5,1,71],[58.5,1,69],[59.5,1,72],[60.5,1,66],[61.5,2.5,67]]);
+  assert.equal(text.verses.length,5);
+  for(const verse of text.verses){
+    assert.deepEqual(verse.lines.map(l=>l.cues[0].at),[0,6.5,16,22.5,32.5,40,48.5]);
+    assert.equal(verse.lines.at(-1).cues.at(-2).at,57.5);
+    assert.equal(verse.lines.at(-1).cues.at(-2).duration,4);
+  }
+  assert.equal(lyricPosition(text.verses,64,{state:'playing',verse:1,quarter:32.1}).cueIndex,-1);
+});
