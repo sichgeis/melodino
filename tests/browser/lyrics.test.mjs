@@ -133,3 +133,22 @@ test('Harung repeats the printed opening and aligns all five texts including res
   }
   assert.equal(lyricPosition(text.verses,64,{state:'playing',verse:1,quarter:32.1}).cueIndex,-1);
 });
+
+test('Weiblein aligns three texts to both canon sections and leaves written closing rests silent',()=>{
+  const text=read('lyrics/ging-ein-weiblein.json'),melody=read('assets/ging-ein-weiblein/playback.json');
+  assert.equal(validateLyrics(text,melody),text);
+  assert.equal(text.verses.length,3);assert.equal(melody.quarters,32);assert.equal(melody.notes.length,58);
+  for(const verse of text.verses){
+    assert.deepEqual(verse.lines.map(l=>l.cues[0].at),[0,4,8,12,16,20,24,28]);
+    assert.deepEqual(verse.lines.flatMap(l=>l.cues).map(c=>[c.at,c.duration]),melody.notes.map(n=>[n.at,n.duration]));
+    assert.deepEqual(verse.lines.slice(0,4).map(l=>l.text),verse.lines.slice(4).map(l=>l.text));
+  }
+  for(const quarter of [15,15.99,31,31.99])assert.equal(lyricPosition(text.verses,32,{state:'playing',quarter}).cueIndex,-1);
+  assert.equal(lyricPosition(text.verses,32,{state:'playing',quarter:16}).lineIndex,4);
+  assert.throws(()=>validateLyrics(text)); // A closing gap needs the actual melody as evidence.
+  const missing=structuredClone(text);missing.verses[0].lines.at(-1).cues.pop();
+  missing.verses[0].lines.at(-1).text='halfen rütteln,';
+  assert.throws(()=>validateLyrics(missing,melody));
+  const acrossRest=structuredClone(text);acrossRest.verses[0].lines.at(-1).cues.at(-1).duration=2;
+  assert.throws(()=>validateLyrics(acrossRest,melody));
+});

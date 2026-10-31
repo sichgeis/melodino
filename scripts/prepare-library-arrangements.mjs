@@ -4,6 +4,7 @@ const read=path=>JSON.parse(readFileSync(path,'utf8'));
 const write=(path,data)=>writeFileSync(path,JSON.stringify(data,null,2)+'\n');
 const output='docs/arrangements';mkdirSync(output,{recursive:true});
 const curated={
+  'ging-ein-weiblein':{measure:2,pickup:0,plan:[[0,'G'],[1,'C'],[2,'G'],[4,'D'],[6,'G'],[8,'G'],[9,'C'],[10,'G'],[12,'D'],[14,'G'],[16,'G'],[17,'C'],[18,'G'],[20,'D'],[22,'G'],[24,'G'],[25,'C'],[26,'G'],[28,'D'],[30,'G']]},
   'in-einem-harung':{measure:4,pickup:1.5,plan:[[1.5,'G'],[5.5,'D'],[9.5,'D'],[13.5,'G'],[17.5,'G'],[21.5,'D'],[25.5,'D'],[29.5,'G'],[33.5,'C'],[37.5,'G'],[41.5,'D'],[45.5,'G'],[49.5,'C'],[53.5,'G'],[57.5,'D7'],[61.5,'G']]},
   'meine-biber-haben-fieber':{measure:2,pickup:1,plan:[[1,'F'],[11,'C'],[17,'F'],[19,'F7'],[21,'Bb'],[23,'G'],[25,'C'],[31,'F']]},
   'der-mond-ist-aufgegangen':{measure:4,pickup:1,plan:[[0,'F'],[1,'C'],[2,'Dm'],[3,'Gm'],[4,'F'],[5,'C'],[7,'F'],[9,'Dm'],[10,'Am'],[11,'Bb'],[12,'F'],[13,'Gm'],[15,'F'],[17,'Dm'],[18,'Am'],[19,'Bb'],[20,'F'],[21,'C'],[24,'F'],[25,'C'],[26,'Dm'],[27,'Gm'],[28,'F'],[29,'C'],[31,'F'],[33,'Dm'],[34,'Am'],[35,'Bb'],[36,'F'],[37,'Gm'],[39,'F'],[41,'Dm'],[42,'Am'],[43,'Bb'],[44,'F'],[45,'C'],[47,'F']]},

@@ -1,4 +1,4 @@
-import {selectedVerses,lyricPosition,validateLyrics} from './lyric-timing.js?v=20261031-melisma';
+import {selectedVerses,lyricPosition,validateLyrics} from './lyric-timing.js?v=20261031-closing-rest';
 function el(tag,text,className){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(className)n.className=className;return n;}
 export function validateTextCatalog(catalog,songs){
   if(!catalog||catalog.schema_version!==1||!Array.isArray(catalog.songs))throw Error('Ungültiger Textkatalog.');

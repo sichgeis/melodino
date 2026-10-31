@@ -40,6 +40,26 @@
     "verse_gap_bars": 0
   },
   {
+    "title": "Ging ein Weiblein Nüsse schütteln",
+    "source": "Aus MusicXML importiert",
+    "bpm": 104.0,
+    "instrument": "clarinet",
+    "duration_seconds": 18.46153846153846,
+    "score_duration_seconds": 18.46153846153846,
+    "quarters": 32.0,
+    "note_count": 58,
+    "transpose": 0,
+    "measure_quarters": 2.0,
+    "verse_gap_bars": 0,
+    "files": {
+      "midi": "assets/ging-ein-weiblein/melody.mid",
+      "musicxml": "assets/ging-ein-weiblein/score.musicxml",
+      "csv": "assets/ging-ein-weiblein/notes.csv",
+      "playback": "assets/ging-ein-weiblein/playback.json"
+    },
+    "slug": "ging-ein-weiblein"
+  },
+  {
     "title": "In einem Harung, jung und stramm",
     "source": "Aus MusicXML importiert",
     "bpm": 104.0,

@@ -375,3 +375,35 @@ def test_biber_photograph_matches_exported_notes_and_shortened_bars():
     assert len(actual_midi) == len(original) == 55
     for actual, wanted in zip(actual_midi, original):
         assert actual == pytest.approx((wanted[0], wanted[2], wanted[1]), abs=.002)
+
+
+def test_weiblein_photo_notes_rests_fermatas_and_exports():
+    root = EXAMPLE.parent.parent
+    expected_rows = [
+        'G4 G4 F#4 E4', 'D4 D4 G4 G4', 'F#4 F#4 A4 A4', 'G4 G4 B4 B4',
+        'G4 G4 F#4 E4', 'D4 D4 G4 G4', 'F#4 F#4 A4 A4', 'G4',
+        'G4 A4 B4 C5', 'E5 D5 B4 B4', 'D5 C5 A4 A4', 'C5 B4 G4 G4',
+        'G4 A4 B4 C5', 'E5 D5 B4 B4', 'D5 C5 A4 A4', 'G4',
+    ]
+    for path in ['examples/ging-ein-weiblein.musicxml', 'docs/assets/ging-ein-weiblein/score.musicxml']:
+        score = converter.parse(str(root / path))
+        bars = list(score.parts[0].getElementsByClass(stream.Measure))
+        assert len(bars) == 16
+        assert score.highestTime == 32
+        assert bars[0].keySignature.sharps == 1
+        assert bars[0].timeSignature.ratioString == '2/4'
+        for i, (bar, names) in enumerate(zip(bars, expected_rows)):
+            assert bar.duration.quarterLength == 2
+            assert [n.nameWithOctave for n in bar.notes] == names.split()
+            assert [n.quarterLength for n in bar.notes] == ([1] if i in (7, 15) else [.5]*4)
+            if i in (7, 15):
+                rest = list(bar.getElementsByClass(note.Rest))[0]
+                assert rest.offset == 1 and rest.quarterLength == 1
+                assert any(e.classes[0] == 'Fermata' for e in rest.expressions)
+    original = [e for e in events(score, True) if e[2] is not None]
+    playback = json.loads((root / 'docs/assets/ging-ein-weiblein/playback.json').read_text())
+    assert playback['notes'] == [dict(at=o, duration=d, midi=p) for o, d, p, _, _ in original]
+    actual_midi = midi_events(root / 'docs/assets/ging-ein-weiblein/melody.mid')
+    assert len(actual_midi) == 58
+    for actual, wanted in zip(actual_midi, original):
+        assert actual == pytest.approx((wanted[0], wanted[2], wanted[1]), abs=.002)

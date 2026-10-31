@@ -20,6 +20,11 @@
       "slug": "in-einem-harung",
       "url": "lyrics/in-einem-harung.json",
       "preferredVersion": "original"
+    },
+    {
+      "slug": "ging-ein-weiblein",
+      "url": "lyrics/ging-ein-weiblein.json",
+      "preferredVersion": "original"
     }
   ]
 }

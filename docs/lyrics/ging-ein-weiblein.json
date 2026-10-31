@@ -1,0 +1,1197 @@
+{
+  "schema_version": 1,
+  "title": "Ging ein Weiblein Nüsse schütteln",
+  "quarters": 32,
+  "credit": "Volkslied · Text und Melodie gemäß dem bereitgestellten Notenfoto.",
+  "source": "Drei Strophen auf ausdrücklichen Nutzerauftrag aus dem Foto übertragen. Jede Strophe wird auf beide Kanonabschnitte gesungen. Gedruckte Formen „Himbeern“ und „die Schuh“ beibehalten.",
+  "verses": [
+    {
+      "id": "nuts",
+      "label": "Nüsse schütteln",
+      "lines": [
+        {
+          "text": "Ging ein Weiblein Nüsse schütteln,",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 0.5,
+              "text": "Ging",
+              "spaceAfter": true
+            },
+            {
+              "at": 0.5,
+              "duration": 0.5,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 0.5,
+              "text": "Weib",
+              "spaceAfter": false
+            },
+            {
+              "at": 1.5,
+              "duration": 0.5,
+              "text": "lein",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 0.5,
+              "text": "Nüs",
+              "spaceAfter": false
+            },
+            {
+              "at": 2.5,
+              "duration": 0.5,
+              "text": "se",
+              "spaceAfter": true
+            },
+            {
+              "at": 3,
+              "duration": 0.5,
+              "text": "schüt",
+              "spaceAfter": false
+            },
+            {
+              "at": 3.5,
+              "duration": 0.5,
+              "text": "teln,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Nüsse schütteln, Nüsse schütteln;",
+          "cues": [
+            {
+              "at": 4,
+              "duration": 0.5,
+              "text": "Nüs",
+              "spaceAfter": false
+            },
+            {
+              "at": 4.5,
+              "duration": 0.5,
+              "text": "se",
+              "spaceAfter": true
+            },
+            {
+              "at": 5,
+              "duration": 0.5,
+              "text": "schüt",
+              "spaceAfter": false
+            },
+            {
+              "at": 5.5,
+              "duration": 0.5,
+              "text": "teln,",
+              "spaceAfter": true
+            },
+            {
+              "at": 6,
+              "duration": 0.5,
+              "text": "Nüs",
+              "spaceAfter": false
+            },
+            {
+              "at": 6.5,
+              "duration": 0.5,
+              "text": "se",
+              "spaceAfter": true
+            },
+            {
+              "at": 7,
+              "duration": 0.5,
+              "text": "schüt",
+              "spaceAfter": false
+            },
+            {
+              "at": 7.5,
+              "duration": 0.5,
+              "text": "teln;",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "alle Kinder halfen rütteln,",
+          "cues": [
+            {
+              "at": 8,
+              "duration": 0.5,
+              "text": "al",
+              "spaceAfter": false
+            },
+            {
+              "at": 8.5,
+              "duration": 0.5,
+              "text": "le",
+              "spaceAfter": true
+            },
+            {
+              "at": 9,
+              "duration": 0.5,
+              "text": "Kin",
+              "spaceAfter": false
+            },
+            {
+              "at": 9.5,
+              "duration": 0.5,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 10,
+              "duration": 0.5,
+              "text": "hal",
+              "spaceAfter": false
+            },
+            {
+              "at": 10.5,
+              "duration": 0.5,
+              "text": "fen",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 0.5,
+              "text": "rüt",
+              "spaceAfter": false
+            },
+            {
+              "at": 11.5,
+              "duration": 0.5,
+              "text": "teln,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "halfen rütteln, rums.",
+          "cues": [
+            {
+              "at": 12,
+              "duration": 0.5,
+              "text": "hal",
+              "spaceAfter": false
+            },
+            {
+              "at": 12.5,
+              "duration": 0.5,
+              "text": "fen",
+              "spaceAfter": true
+            },
+            {
+              "at": 13,
+              "duration": 0.5,
+              "text": "rüt",
+              "spaceAfter": false
+            },
+            {
+              "at": 13.5,
+              "duration": 0.5,
+              "text": "teln,",
+              "spaceAfter": true
+            },
+            {
+              "at": 14,
+              "duration": 1,
+              "text": "rums.",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Ging ein Weiblein Nüsse schütteln,",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 0.5,
+              "text": "Ging",
+              "spaceAfter": true
+            },
+            {
+              "at": 16.5,
+              "duration": 0.5,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 0.5,
+              "text": "Weib",
+              "spaceAfter": false
+            },
+            {
+              "at": 17.5,
+              "duration": 0.5,
+              "text": "lein",
+              "spaceAfter": true
+            },
+            {
+              "at": 18,
+              "duration": 0.5,
+              "text": "Nüs",
+              "spaceAfter": false
+            },
+            {
+              "at": 18.5,
+              "duration": 0.5,
+              "text": "se",
+              "spaceAfter": true
+            },
+            {
+              "at": 19,
+              "duration": 0.5,
+              "text": "schüt",
+              "spaceAfter": false
+            },
+            {
+              "at": 19.5,
+              "duration": 0.5,
+              "text": "teln,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Nüsse schütteln, Nüsse schütteln;",
+          "cues": [
+            {
+              "at": 20,
+              "duration": 0.5,
+              "text": "Nüs",
+              "spaceAfter": false
+            },
+            {
+              "at": 20.5,
+              "duration": 0.5,
+              "text": "se",
+              "spaceAfter": true
+            },
+            {
+              "at": 21,
+              "duration": 0.5,
+              "text": "schüt",
+              "spaceAfter": false
+            },
+            {
+              "at": 21.5,
+              "duration": 0.5,
+              "text": "teln,",
+              "spaceAfter": true
+            },
+            {
+              "at": 22,
+              "duration": 0.5,
+              "text": "Nüs",
+              "spaceAfter": false
+            },
+            {
+              "at": 22.5,
+              "duration": 0.5,
+              "text": "se",
+              "spaceAfter": true
+            },
+            {
+              "at": 23,
+              "duration": 0.5,
+              "text": "schüt",
+              "spaceAfter": false
+            },
+            {
+              "at": 23.5,
+              "duration": 0.5,
+              "text": "teln;",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "alle Kinder halfen rütteln,",
+          "cues": [
+            {
+              "at": 24,
+              "duration": 0.5,
+              "text": "al",
+              "spaceAfter": false
+            },
+            {
+              "at": 24.5,
+              "duration": 0.5,
+              "text": "le",
+              "spaceAfter": true
+            },
+            {
+              "at": 25,
+              "duration": 0.5,
+              "text": "Kin",
+              "spaceAfter": false
+            },
+            {
+              "at": 25.5,
+              "duration": 0.5,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 26,
+              "duration": 0.5,
+              "text": "hal",
+              "spaceAfter": false
+            },
+            {
+              "at": 26.5,
+              "duration": 0.5,
+              "text": "fen",
+              "spaceAfter": true
+            },
+            {
+              "at": 27,
+              "duration": 0.5,
+              "text": "rüt",
+              "spaceAfter": false
+            },
+            {
+              "at": 27.5,
+              "duration": 0.5,
+              "text": "teln,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "halfen rütteln, rums.",
+          "cues": [
+            {
+              "at": 28,
+              "duration": 0.5,
+              "text": "hal",
+              "spaceAfter": false
+            },
+            {
+              "at": 28.5,
+              "duration": 0.5,
+              "text": "fen",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 0.5,
+              "text": "rüt",
+              "spaceAfter": false
+            },
+            {
+              "at": 29.5,
+              "duration": 0.5,
+              "text": "teln,",
+              "spaceAfter": true
+            },
+            {
+              "at": 30,
+              "duration": 1,
+              "text": "rums.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ],
+      "historical_number": 1,
+      "performance_note": "Den Text in beiden Melodieabschnitten singen. Die Ziffern 1 und 2 in der Vorlage markieren Kanoneinsätze; der Player spielt die Melodie einstimmig."
+    },
+    {
+      "id": "raspberries",
+      "label": "Himbeern pflücken",
+      "lines": [
+        {
+          "text": "Ging ein Weiblein Himbeern pflücken,",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 0.5,
+              "text": "Ging",
+              "spaceAfter": true
+            },
+            {
+              "at": 0.5,
+              "duration": 0.5,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 0.5,
+              "text": "Weib",
+              "spaceAfter": false
+            },
+            {
+              "at": 1.5,
+              "duration": 0.5,
+              "text": "lein",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 0.5,
+              "text": "Him",
+              "spaceAfter": false
+            },
+            {
+              "at": 2.5,
+              "duration": 0.5,
+              "text": "beern",
+              "spaceAfter": true
+            },
+            {
+              "at": 3,
+              "duration": 0.5,
+              "text": "pflü",
+              "spaceAfter": false
+            },
+            {
+              "at": 3.5,
+              "duration": 0.5,
+              "text": "cken,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Himbeern pflücken, Himbeern pflücken;",
+          "cues": [
+            {
+              "at": 4,
+              "duration": 0.5,
+              "text": "Him",
+              "spaceAfter": false
+            },
+            {
+              "at": 4.5,
+              "duration": 0.5,
+              "text": "beern",
+              "spaceAfter": true
+            },
+            {
+              "at": 5,
+              "duration": 0.5,
+              "text": "pflü",
+              "spaceAfter": false
+            },
+            {
+              "at": 5.5,
+              "duration": 0.5,
+              "text": "cken,",
+              "spaceAfter": true
+            },
+            {
+              "at": 6,
+              "duration": 0.5,
+              "text": "Him",
+              "spaceAfter": false
+            },
+            {
+              "at": 6.5,
+              "duration": 0.5,
+              "text": "beern",
+              "spaceAfter": true
+            },
+            {
+              "at": 7,
+              "duration": 0.5,
+              "text": "pflü",
+              "spaceAfter": false
+            },
+            {
+              "at": 7.5,
+              "duration": 0.5,
+              "text": "cken;",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "riss dabei den Rock in Stücken,",
+          "cues": [
+            {
+              "at": 8,
+              "duration": 0.5,
+              "text": "riss",
+              "spaceAfter": true
+            },
+            {
+              "at": 8.5,
+              "duration": 0.5,
+              "text": "da",
+              "spaceAfter": false
+            },
+            {
+              "at": 9,
+              "duration": 0.5,
+              "text": "bei",
+              "spaceAfter": true
+            },
+            {
+              "at": 9.5,
+              "duration": 0.5,
+              "text": "den",
+              "spaceAfter": true
+            },
+            {
+              "at": 10,
+              "duration": 0.5,
+              "text": "Rock",
+              "spaceAfter": true
+            },
+            {
+              "at": 10.5,
+              "duration": 0.5,
+              "text": "in",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 0.5,
+              "text": "Stü",
+              "spaceAfter": false
+            },
+            {
+              "at": 11.5,
+              "duration": 0.5,
+              "text": "cken,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Rock in Stücken, rums.",
+          "cues": [
+            {
+              "at": 12,
+              "duration": 0.5,
+              "text": "Rock",
+              "spaceAfter": true
+            },
+            {
+              "at": 12.5,
+              "duration": 0.5,
+              "text": "in",
+              "spaceAfter": true
+            },
+            {
+              "at": 13,
+              "duration": 0.5,
+              "text": "Stü",
+              "spaceAfter": false
+            },
+            {
+              "at": 13.5,
+              "duration": 0.5,
+              "text": "cken,",
+              "spaceAfter": true
+            },
+            {
+              "at": 14,
+              "duration": 1,
+              "text": "rums.",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Ging ein Weiblein Himbeern pflücken,",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 0.5,
+              "text": "Ging",
+              "spaceAfter": true
+            },
+            {
+              "at": 16.5,
+              "duration": 0.5,
+              "text": "ein",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 0.5,
+              "text": "Weib",
+              "spaceAfter": false
+            },
+            {
+              "at": 17.5,
+              "duration": 0.5,
+              "text": "lein",
+              "spaceAfter": true
+            },
+            {
+              "at": 18,
+              "duration": 0.5,
+              "text": "Him",
+              "spaceAfter": false
+            },
+            {
+              "at": 18.5,
+              "duration": 0.5,
+              "text": "beern",
+              "spaceAfter": true
+            },
+            {
+              "at": 19,
+              "duration": 0.5,
+              "text": "pflü",
+              "spaceAfter": false
+            },
+            {
+              "at": 19.5,
+              "duration": 0.5,
+              "text": "cken,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Himbeern pflücken, Himbeern pflücken;",
+          "cues": [
+            {
+              "at": 20,
+              "duration": 0.5,
+              "text": "Him",
+              "spaceAfter": false
+            },
+            {
+              "at": 20.5,
+              "duration": 0.5,
+              "text": "beern",
+              "spaceAfter": true
+            },
+            {
+              "at": 21,
+              "duration": 0.5,
+              "text": "pflü",
+              "spaceAfter": false
+            },
+            {
+              "at": 21.5,
+              "duration": 0.5,
+              "text": "cken,",
+              "spaceAfter": true
+            },
+            {
+              "at": 22,
+              "duration": 0.5,
+              "text": "Him",
+              "spaceAfter": false
+            },
+            {
+              "at": 22.5,
+              "duration": 0.5,
+              "text": "beern",
+              "spaceAfter": true
+            },
+            {
+              "at": 23,
+              "duration": 0.5,
+              "text": "pflü",
+              "spaceAfter": false
+            },
+            {
+              "at": 23.5,
+              "duration": 0.5,
+              "text": "cken;",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "riss dabei den Rock in Stücken,",
+          "cues": [
+            {
+              "at": 24,
+              "duration": 0.5,
+              "text": "riss",
+              "spaceAfter": true
+            },
+            {
+              "at": 24.5,
+              "duration": 0.5,
+              "text": "da",
+              "spaceAfter": false
+            },
+            {
+              "at": 25,
+              "duration": 0.5,
+              "text": "bei",
+              "spaceAfter": true
+            },
+            {
+              "at": 25.5,
+              "duration": 0.5,
+              "text": "den",
+              "spaceAfter": true
+            },
+            {
+              "at": 26,
+              "duration": 0.5,
+              "text": "Rock",
+              "spaceAfter": true
+            },
+            {
+              "at": 26.5,
+              "duration": 0.5,
+              "text": "in",
+              "spaceAfter": true
+            },
+            {
+              "at": 27,
+              "duration": 0.5,
+              "text": "Stü",
+              "spaceAfter": false
+            },
+            {
+              "at": 27.5,
+              "duration": 0.5,
+              "text": "cken,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Rock in Stücken, rums.",
+          "cues": [
+            {
+              "at": 28,
+              "duration": 0.5,
+              "text": "Rock",
+              "spaceAfter": true
+            },
+            {
+              "at": 28.5,
+              "duration": 0.5,
+              "text": "in",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 0.5,
+              "text": "Stü",
+              "spaceAfter": false
+            },
+            {
+              "at": 29.5,
+              "duration": 0.5,
+              "text": "cken,",
+              "spaceAfter": true
+            },
+            {
+              "at": 30,
+              "duration": 1,
+              "text": "rums.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ],
+      "historical_number": 2,
+      "performance_note": "Den Text in beiden Melodieabschnitten singen. Die Ziffern 1 und 2 in der Vorlage markieren Kanoneinsätze; der Player spielt die Melodie einstimmig."
+    },
+    {
+      "id": "mending",
+      "label": "Flicken müssen",
+      "lines": [
+        {
+          "text": "Hat nicht nur den Rock zerrissen,",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 0.5,
+              "text": "Hat",
+              "spaceAfter": true
+            },
+            {
+              "at": 0.5,
+              "duration": 0.5,
+              "text": "nicht",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 0.5,
+              "text": "nur",
+              "spaceAfter": true
+            },
+            {
+              "at": 1.5,
+              "duration": 0.5,
+              "text": "den",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 0.5,
+              "text": "Rock",
+              "spaceAfter": true
+            },
+            {
+              "at": 2.5,
+              "duration": 0.5,
+              "text": "zer",
+              "spaceAfter": false
+            },
+            {
+              "at": 3,
+              "duration": 0.5,
+              "text": "ris",
+              "spaceAfter": false
+            },
+            {
+              "at": 3.5,
+              "duration": 0.5,
+              "text": "sen,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Rock zerrissen, Rock zerrissen;",
+          "cues": [
+            {
+              "at": 4,
+              "duration": 0.5,
+              "text": "Rock",
+              "spaceAfter": true
+            },
+            {
+              "at": 4.5,
+              "duration": 0.5,
+              "text": "zer",
+              "spaceAfter": false
+            },
+            {
+              "at": 5,
+              "duration": 0.5,
+              "text": "ris",
+              "spaceAfter": false
+            },
+            {
+              "at": 5.5,
+              "duration": 0.5,
+              "text": "sen,",
+              "spaceAfter": true
+            },
+            {
+              "at": 6,
+              "duration": 0.5,
+              "text": "Rock",
+              "spaceAfter": true
+            },
+            {
+              "at": 6.5,
+              "duration": 0.5,
+              "text": "zer",
+              "spaceAfter": false
+            },
+            {
+              "at": 7,
+              "duration": 0.5,
+              "text": "ris",
+              "spaceAfter": false
+            },
+            {
+              "at": 7.5,
+              "duration": 0.5,
+              "text": "sen;",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "wird die Schuh auch flicken müssen,",
+          "cues": [
+            {
+              "at": 8,
+              "duration": 0.5,
+              "text": "wird",
+              "spaceAfter": true
+            },
+            {
+              "at": 8.5,
+              "duration": 0.5,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 9,
+              "duration": 0.5,
+              "text": "Schuh",
+              "spaceAfter": true
+            },
+            {
+              "at": 9.5,
+              "duration": 0.5,
+              "text": "auch",
+              "spaceAfter": true
+            },
+            {
+              "at": 10,
+              "duration": 0.5,
+              "text": "fli",
+              "spaceAfter": false
+            },
+            {
+              "at": 10.5,
+              "duration": 0.5,
+              "text": "cken",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 0.5,
+              "text": "müs",
+              "spaceAfter": false
+            },
+            {
+              "at": 11.5,
+              "duration": 0.5,
+              "text": "sen,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "flicken müssen, rums.",
+          "cues": [
+            {
+              "at": 12,
+              "duration": 0.5,
+              "text": "fli",
+              "spaceAfter": false
+            },
+            {
+              "at": 12.5,
+              "duration": 0.5,
+              "text": "cken",
+              "spaceAfter": true
+            },
+            {
+              "at": 13,
+              "duration": 0.5,
+              "text": "müs",
+              "spaceAfter": false
+            },
+            {
+              "at": 13.5,
+              "duration": 0.5,
+              "text": "sen,",
+              "spaceAfter": true
+            },
+            {
+              "at": 14,
+              "duration": 1,
+              "text": "rums.",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Hat nicht nur den Rock zerrissen,",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 0.5,
+              "text": "Hat",
+              "spaceAfter": true
+            },
+            {
+              "at": 16.5,
+              "duration": 0.5,
+              "text": "nicht",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 0.5,
+              "text": "nur",
+              "spaceAfter": true
+            },
+            {
+              "at": 17.5,
+              "duration": 0.5,
+              "text": "den",
+              "spaceAfter": true
+            },
+            {
+              "at": 18,
+              "duration": 0.5,
+              "text": "Rock",
+              "spaceAfter": true
+            },
+            {
+              "at": 18.5,
+              "duration": 0.5,
+              "text": "zer",
+              "spaceAfter": false
+            },
+            {
+              "at": 19,
+              "duration": 0.5,
+              "text": "ris",
+              "spaceAfter": false
+            },
+            {
+              "at": 19.5,
+              "duration": 0.5,
+              "text": "sen,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Rock zerrissen, Rock zerrissen;",
+          "cues": [
+            {
+              "at": 20,
+              "duration": 0.5,
+              "text": "Rock",
+              "spaceAfter": true
+            },
+            {
+              "at": 20.5,
+              "duration": 0.5,
+              "text": "zer",
+              "spaceAfter": false
+            },
+            {
+              "at": 21,
+              "duration": 0.5,
+              "text": "ris",
+              "spaceAfter": false
+            },
+            {
+              "at": 21.5,
+              "duration": 0.5,
+              "text": "sen,",
+              "spaceAfter": true
+            },
+            {
+              "at": 22,
+              "duration": 0.5,
+              "text": "Rock",
+              "spaceAfter": true
+            },
+            {
+              "at": 22.5,
+              "duration": 0.5,
+              "text": "zer",
+              "spaceAfter": false
+            },
+            {
+              "at": 23,
+              "duration": 0.5,
+              "text": "ris",
+              "spaceAfter": false
+            },
+            {
+              "at": 23.5,
+              "duration": 0.5,
+              "text": "sen;",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "wird die Schuh auch flicken müssen,",
+          "cues": [
+            {
+              "at": 24,
+              "duration": 0.5,
+              "text": "wird",
+              "spaceAfter": true
+            },
+            {
+              "at": 24.5,
+              "duration": 0.5,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 25,
+              "duration": 0.5,
+              "text": "Schuh",
+              "spaceAfter": true
+            },
+            {
+              "at": 25.5,
+              "duration": 0.5,
+              "text": "auch",
+              "spaceAfter": true
+            },
+            {
+              "at": 26,
+              "duration": 0.5,
+              "text": "fli",
+              "spaceAfter": false
+            },
+            {
+              "at": 26.5,
+              "duration": 0.5,
+              "text": "cken",
+              "spaceAfter": true
+            },
+            {
+              "at": 27,
+              "duration": 0.5,
+              "text": "müs",
+              "spaceAfter": false
+            },
+            {
+              "at": 27.5,
+              "duration": 0.5,
+              "text": "sen,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "flicken müssen, rums.",
+          "cues": [
+            {
+              "at": 28,
+              "duration": 0.5,
+              "text": "fli",
+              "spaceAfter": false
+            },
+            {
+              "at": 28.5,
+              "duration": 0.5,
+              "text": "cken",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 0.5,
+              "text": "müs",
+              "spaceAfter": false
+            },
+            {
+              "at": 29.5,
+              "duration": 0.5,
+              "text": "sen,",
+              "spaceAfter": true
+            },
+            {
+              "at": 30,
+              "duration": 1,
+              "text": "rums.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ],
+      "historical_number": 3,
+      "performance_note": "Den Text in beiden Melodieabschnitten singen. Die Ziffern 1 und 2 in der Vorlage markieren Kanoneinsätze; der Player spielt die Melodie einstimmig."
+    }
+  ]
+}

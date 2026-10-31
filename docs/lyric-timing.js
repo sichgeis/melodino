@@ -18,7 +18,7 @@ export function validateLyrics(data, score) {
       }
       if(text.trimEnd()!==line.text)throw Error('Text und Silben stimmen nicht überein.');
     }
-    if(Math.abs(end-data.quarters)>1e-7||count>1000)throw Error('Unvollständige Textzuordnung.');
+    if((!score&&Math.abs(end-data.quarters)>1e-7)||count>1000)throw Error('Unvollständige Textzuordnung.');
     if(score){
       const cues=verse.lines.flatMap(l=>l.cues);
       const mismatch=()=>{throw Error('Text und Melodierhythmus passen nicht zusammen.');};

@@ -50,3 +50,9 @@ Noten oder Pausen. Alle Töne bleiben genau einmal zugeordnet. Die Hauptansicht
 markiert aktive Cues, kennzeichnet Melismen doppelt unterstrichen und zeigt den
 optionalen Strophenhinweis performance_note. Mehrere Silben auf einem Ton werden
 als gemeinsamer Cue mit ausdrücklichem Hinweis gespeichert, ohne Noten zu ändern.
+
+Notierte Schlusspausen (Einzelauftrag „Ging ein Weiblein“, specs/014): Mit
+zugeordneter Melodie darf das letzte Text-Cue vor dem Strophenende enden,
+wenn danach ausschließlich notierte Pause folgt. Weiterhin alle Melodietöne
+genau einmal abdecken und keine Pause mit Text überspannen. Ohne zugeordnete
+Melodie bleibt vollständige zeitliche Abdeckung bis Strophenende erforderlich.
