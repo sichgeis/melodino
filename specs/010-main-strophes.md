@@ -43,3 +43,10 @@ MIDI/XML/Playback/Arrange validiert, mobile Ansicht, Python/JS, Pages/HTTPS/Brow
 Alle HTML-Einstiegsseiten erhalten robots=noindex,nofollow. Keine robots.txt-Sperre:
 Crawler müssen die Meta-Angabe lesen können. Das ist ein Indexierungswunsch und
 keine Zugriffskontrolle; Pages und öffentliches Repository bleiben erreichbar.
+
+Melismen (Einzelauftrag „Meine Biber haben Fieber“, specs/012): Ein Text-Cue darf
+mehrere lückenlos aufeinanderfolgende Melodietöne abdecken; kein Überspringen von
+Noten oder Pausen. Alle Töne bleiben genau einmal zugeordnet. Die Hauptansicht
+markiert aktive Cues, kennzeichnet Melismen doppelt unterstrichen und zeigt den
+optionalen Strophenhinweis performance_note. Mehrere Silben auf einem Ton werden
+als gemeinsamer Cue mit ausdrücklichem Hinweis gespeichert, ohne Noten zu ändern.

@@ -1,0 +1,1840 @@
+{
+  "schema_version": 1,
+  "title": "Meine Biber haben Fieber",
+  "quarters": 32,
+  "credit": "Text: traditionell und Wolfgang Hering / Bernd Meyerholz · Vorlage: Fidula-Verlag, Boppard/Rhein. Melodie: überliefert.",
+  "source": "Aus dem vom Nutzer bereitgestellten Notenfoto auf ausdrücklichen Auftrag übertragen. Melodie: überliefert. Text: traditionell und Wolfgang Hering / Bernd Meyerholz; Fidula-Verlag, Boppard/Rhein. Mitsing-Zuordnung der Strophen 3 und 5 vom Nutzer freigegeben.",
+  "verses": [
+    {
+      "id": "beavers",
+      "label": "Biber",
+      "lines": [
+        {
+          "text": "Meine Biber haben Fieber, o die Armen!",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 0.75,
+              "text": "Mei",
+              "spaceAfter": false
+            },
+            {
+              "at": 0.75,
+              "duration": 0.25,
+              "text": "ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 0.75,
+              "text": "Bi",
+              "spaceAfter": false
+            },
+            {
+              "at": 1.75,
+              "duration": 0.25,
+              "text": "ber",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 0.75,
+              "text": "ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 2.75,
+              "duration": 0.25,
+              "text": "ben",
+              "spaceAfter": true
+            },
+            {
+              "at": 3,
+              "duration": 0.75,
+              "text": "Fie",
+              "spaceAfter": false
+            },
+            {
+              "at": 3.75,
+              "duration": 0.25,
+              "text": "ber,",
+              "spaceAfter": true
+            },
+            {
+              "at": 4,
+              "duration": 0.75,
+              "text": "o",
+              "spaceAfter": true
+            },
+            {
+              "at": 4.75,
+              "duration": 0.25,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 5,
+              "duration": 1,
+              "text": "Ar",
+              "spaceAfter": false
+            },
+            {
+              "at": 6,
+              "duration": 1,
+              "text": "men!",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Will sich keiner denn der armen Tier’ erbarmen?",
+          "cues": [
+            {
+              "at": 8,
+              "duration": 0.75,
+              "text": "Will",
+              "spaceAfter": true
+            },
+            {
+              "at": 8.75,
+              "duration": 0.25,
+              "text": "sich",
+              "spaceAfter": true
+            },
+            {
+              "at": 9,
+              "duration": 0.75,
+              "text": "kei",
+              "spaceAfter": false
+            },
+            {
+              "at": 9.75,
+              "duration": 0.25,
+              "text": "ner",
+              "spaceAfter": true
+            },
+            {
+              "at": 10,
+              "duration": 0.75,
+              "text": "denn",
+              "spaceAfter": true
+            },
+            {
+              "at": 10.75,
+              "duration": 0.25,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 0.75,
+              "text": "ar",
+              "spaceAfter": false
+            },
+            {
+              "at": 11.75,
+              "duration": 0.25,
+              "text": "men",
+              "spaceAfter": true
+            },
+            {
+              "at": 12,
+              "duration": 0.75,
+              "text": "Tier’",
+              "spaceAfter": true
+            },
+            {
+              "at": 12.75,
+              "duration": 0.25,
+              "text": "er",
+              "spaceAfter": false
+            },
+            {
+              "at": 13,
+              "duration": 1,
+              "text": "bar",
+              "spaceAfter": false
+            },
+            {
+              "at": 14,
+              "duration": 1,
+              "text": "men?",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Meine Biber haben Fieber,",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 0.75,
+              "text": "Mei",
+              "spaceAfter": false
+            },
+            {
+              "at": 16.75,
+              "duration": 0.25,
+              "text": "ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 0.75,
+              "text": "Bi",
+              "spaceAfter": false
+            },
+            {
+              "at": 17.75,
+              "duration": 0.25,
+              "text": "ber",
+              "spaceAfter": true
+            },
+            {
+              "at": 18,
+              "duration": 0.75,
+              "text": "ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 18.75,
+              "duration": 0.25,
+              "text": "ben",
+              "spaceAfter": true
+            },
+            {
+              "at": 19,
+              "duration": 0.75,
+              "text": "Fie",
+              "spaceAfter": false
+            },
+            {
+              "at": 19.75,
+              "duration": 0.25,
+              "text": "ber,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "sagt der Farmbesitzer Sieber,",
+          "cues": [
+            {
+              "at": 20,
+              "duration": 0.75,
+              "text": "sagt",
+              "spaceAfter": true
+            },
+            {
+              "at": 20.75,
+              "duration": 0.25,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 21,
+              "duration": 0.75,
+              "text": "Farm",
+              "spaceAfter": false
+            },
+            {
+              "at": 21.75,
+              "duration": 0.25,
+              "text": "be",
+              "spaceAfter": false
+            },
+            {
+              "at": 22,
+              "duration": 0.75,
+              "text": "sit",
+              "spaceAfter": false
+            },
+            {
+              "at": 22.75,
+              "duration": 0.25,
+              "text": "zer",
+              "spaceAfter": true
+            },
+            {
+              "at": 23,
+              "duration": 0.75,
+              "text": "Sie",
+              "spaceAfter": false
+            },
+            {
+              "at": 23.75,
+              "duration": 0.25,
+              "text": "ber,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "hätt ich selber lieber Fieber",
+          "cues": [
+            {
+              "at": 24,
+              "duration": 0.75,
+              "text": "hätt",
+              "spaceAfter": true
+            },
+            {
+              "at": 24.75,
+              "duration": 0.25,
+              "text": "ich",
+              "spaceAfter": true
+            },
+            {
+              "at": 25,
+              "duration": 0.75,
+              "text": "sel",
+              "spaceAfter": false
+            },
+            {
+              "at": 25.75,
+              "duration": 0.25,
+              "text": "ber",
+              "spaceAfter": true
+            },
+            {
+              "at": 26,
+              "duration": 0.75,
+              "text": "lie",
+              "spaceAfter": false
+            },
+            {
+              "at": 26.75,
+              "duration": 0.25,
+              "text": "ber",
+              "spaceAfter": true
+            },
+            {
+              "at": 27,
+              "duration": 0.75,
+              "text": "Fie",
+              "spaceAfter": false
+            },
+            {
+              "at": 27.75,
+              "duration": 0.25,
+              "text": "ber",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "und den Bibern ging’ es gut.",
+          "cues": [
+            {
+              "at": 28,
+              "duration": 0.75,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 28.75,
+              "duration": 0.25,
+              "text": "den",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 0.75,
+              "text": "Bi",
+              "spaceAfter": false
+            },
+            {
+              "at": 29.75,
+              "duration": 0.25,
+              "text": "bern",
+              "spaceAfter": true
+            },
+            {
+              "at": 30,
+              "duration": 0.75,
+              "text": "ging’",
+              "spaceAfter": true
+            },
+            {
+              "at": 30.75,
+              "duration": 0.25,
+              "text": "es",
+              "spaceAfter": true
+            },
+            {
+              "at": 31,
+              "duration": 1,
+              "text": "gut.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ],
+      "historical_number": 1
+    },
+    {
+      "id": "mice",
+      "label": "Mäuse",
+      "lines": [
+        {
+          "text": "Meine Mäuse haben Läuse, o die Armen!",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 0.75,
+              "text": "Mei",
+              "spaceAfter": false
+            },
+            {
+              "at": 0.75,
+              "duration": 0.25,
+              "text": "ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 0.75,
+              "text": "Mäu",
+              "spaceAfter": false
+            },
+            {
+              "at": 1.75,
+              "duration": 0.25,
+              "text": "se",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 0.75,
+              "text": "ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 2.75,
+              "duration": 0.25,
+              "text": "ben",
+              "spaceAfter": true
+            },
+            {
+              "at": 3,
+              "duration": 0.75,
+              "text": "Läu",
+              "spaceAfter": false
+            },
+            {
+              "at": 3.75,
+              "duration": 0.25,
+              "text": "se,",
+              "spaceAfter": true
+            },
+            {
+              "at": 4,
+              "duration": 0.75,
+              "text": "o",
+              "spaceAfter": true
+            },
+            {
+              "at": 4.75,
+              "duration": 0.25,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 5,
+              "duration": 1,
+              "text": "Ar",
+              "spaceAfter": false
+            },
+            {
+              "at": 6,
+              "duration": 1,
+              "text": "men!",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Will sich keiner denn der armen Tier’ erbarmen?",
+          "cues": [
+            {
+              "at": 8,
+              "duration": 0.75,
+              "text": "Will",
+              "spaceAfter": true
+            },
+            {
+              "at": 8.75,
+              "duration": 0.25,
+              "text": "sich",
+              "spaceAfter": true
+            },
+            {
+              "at": 9,
+              "duration": 0.75,
+              "text": "kei",
+              "spaceAfter": false
+            },
+            {
+              "at": 9.75,
+              "duration": 0.25,
+              "text": "ner",
+              "spaceAfter": true
+            },
+            {
+              "at": 10,
+              "duration": 0.75,
+              "text": "denn",
+              "spaceAfter": true
+            },
+            {
+              "at": 10.75,
+              "duration": 0.25,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 0.75,
+              "text": "ar",
+              "spaceAfter": false
+            },
+            {
+              "at": 11.75,
+              "duration": 0.25,
+              "text": "men",
+              "spaceAfter": true
+            },
+            {
+              "at": 12,
+              "duration": 0.75,
+              "text": "Tier’",
+              "spaceAfter": true
+            },
+            {
+              "at": 12.75,
+              "duration": 0.25,
+              "text": "er",
+              "spaceAfter": false
+            },
+            {
+              "at": 13,
+              "duration": 1,
+              "text": "bar",
+              "spaceAfter": false
+            },
+            {
+              "at": 14,
+              "duration": 1,
+              "text": "men?",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Meine Mäuse haben Läuse,",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 0.75,
+              "text": "Mei",
+              "spaceAfter": false
+            },
+            {
+              "at": 16.75,
+              "duration": 0.25,
+              "text": "ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 0.75,
+              "text": "Mäu",
+              "spaceAfter": false
+            },
+            {
+              "at": 17.75,
+              "duration": 0.25,
+              "text": "se",
+              "spaceAfter": true
+            },
+            {
+              "at": 18,
+              "duration": 0.75,
+              "text": "ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 18.75,
+              "duration": 0.25,
+              "text": "ben",
+              "spaceAfter": true
+            },
+            {
+              "at": 19,
+              "duration": 0.75,
+              "text": "Läu",
+              "spaceAfter": false
+            },
+            {
+              "at": 19.75,
+              "duration": 0.25,
+              "text": "se,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "ach, es krabbelt im Gehäuse.",
+          "cues": [
+            {
+              "at": 20,
+              "duration": 0.75,
+              "text": "ach,",
+              "spaceAfter": true
+            },
+            {
+              "at": 20.75,
+              "duration": 0.25,
+              "text": "es",
+              "spaceAfter": true
+            },
+            {
+              "at": 21,
+              "duration": 0.75,
+              "text": "krab",
+              "spaceAfter": false
+            },
+            {
+              "at": 21.75,
+              "duration": 0.25,
+              "text": "belt",
+              "spaceAfter": true
+            },
+            {
+              "at": 22,
+              "duration": 0.75,
+              "text": "im",
+              "spaceAfter": true
+            },
+            {
+              "at": 22.75,
+              "duration": 0.25,
+              "text": "Ge",
+              "spaceAfter": false
+            },
+            {
+              "at": 23,
+              "duration": 0.75,
+              "text": "häu",
+              "spaceAfter": false
+            },
+            {
+              "at": 23.75,
+              "duration": 0.25,
+              "text": "se.",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Hätt ich selber lieber Läuse",
+          "cues": [
+            {
+              "at": 24,
+              "duration": 0.75,
+              "text": "Hätt",
+              "spaceAfter": true
+            },
+            {
+              "at": 24.75,
+              "duration": 0.25,
+              "text": "ich",
+              "spaceAfter": true
+            },
+            {
+              "at": 25,
+              "duration": 0.75,
+              "text": "sel",
+              "spaceAfter": false
+            },
+            {
+              "at": 25.75,
+              "duration": 0.25,
+              "text": "ber",
+              "spaceAfter": true
+            },
+            {
+              "at": 26,
+              "duration": 0.75,
+              "text": "lie",
+              "spaceAfter": false
+            },
+            {
+              "at": 26.75,
+              "duration": 0.25,
+              "text": "ber",
+              "spaceAfter": true
+            },
+            {
+              "at": 27,
+              "duration": 0.75,
+              "text": "Läu",
+              "spaceAfter": false
+            },
+            {
+              "at": 27.75,
+              "duration": 0.25,
+              "text": "se",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "und den Mäusen ging’ es gut.",
+          "cues": [
+            {
+              "at": 28,
+              "duration": 0.75,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 28.75,
+              "duration": 0.25,
+              "text": "den",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 0.75,
+              "text": "Mäu",
+              "spaceAfter": false
+            },
+            {
+              "at": 29.75,
+              "duration": 0.25,
+              "text": "sen",
+              "spaceAfter": true
+            },
+            {
+              "at": 30,
+              "duration": 0.75,
+              "text": "ging’",
+              "spaceAfter": true
+            },
+            {
+              "at": 30.75,
+              "duration": 0.25,
+              "text": "es",
+              "spaceAfter": true
+            },
+            {
+              "at": 31,
+              "duration": 1,
+              "text": "gut.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ],
+      "historical_number": 2
+    },
+    {
+      "id": "hares",
+      "label": "Hasen",
+      "performance_note": "Melisma: „Gra-“ in „Grasen“ über zwei Töne singen (doppelt unterstrichen).",
+      "lines": [
+        {
+          "text": "Meine Hasen haben Blasen, o die Armen!",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 0.75,
+              "text": "Mei",
+              "spaceAfter": false
+            },
+            {
+              "at": 0.75,
+              "duration": 0.25,
+              "text": "ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 0.75,
+              "text": "Ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 1.75,
+              "duration": 0.25,
+              "text": "sen",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 0.75,
+              "text": "ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 2.75,
+              "duration": 0.25,
+              "text": "ben",
+              "spaceAfter": true
+            },
+            {
+              "at": 3,
+              "duration": 0.75,
+              "text": "Bla",
+              "spaceAfter": false
+            },
+            {
+              "at": 3.75,
+              "duration": 0.25,
+              "text": "sen,",
+              "spaceAfter": true
+            },
+            {
+              "at": 4,
+              "duration": 0.75,
+              "text": "o",
+              "spaceAfter": true
+            },
+            {
+              "at": 4.75,
+              "duration": 0.25,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 5,
+              "duration": 1,
+              "text": "Ar",
+              "spaceAfter": false
+            },
+            {
+              "at": 6,
+              "duration": 1,
+              "text": "men!",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Will sich keiner denn der armen Tier’ erbarmen?",
+          "cues": [
+            {
+              "at": 8,
+              "duration": 0.75,
+              "text": "Will",
+              "spaceAfter": true
+            },
+            {
+              "at": 8.75,
+              "duration": 0.25,
+              "text": "sich",
+              "spaceAfter": true
+            },
+            {
+              "at": 9,
+              "duration": 0.75,
+              "text": "kei",
+              "spaceAfter": false
+            },
+            {
+              "at": 9.75,
+              "duration": 0.25,
+              "text": "ner",
+              "spaceAfter": true
+            },
+            {
+              "at": 10,
+              "duration": 0.75,
+              "text": "denn",
+              "spaceAfter": true
+            },
+            {
+              "at": 10.75,
+              "duration": 0.25,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 0.75,
+              "text": "ar",
+              "spaceAfter": false
+            },
+            {
+              "at": 11.75,
+              "duration": 0.25,
+              "text": "men",
+              "spaceAfter": true
+            },
+            {
+              "at": 12,
+              "duration": 0.75,
+              "text": "Tier’",
+              "spaceAfter": true
+            },
+            {
+              "at": 12.75,
+              "duration": 0.25,
+              "text": "er",
+              "spaceAfter": false
+            },
+            {
+              "at": 13,
+              "duration": 1,
+              "text": "bar",
+              "spaceAfter": false
+            },
+            {
+              "at": 14,
+              "duration": 1,
+              "text": "men?",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Meine Hasen haben Blasen",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 0.75,
+              "text": "Mei",
+              "spaceAfter": false
+            },
+            {
+              "at": 16.75,
+              "duration": 0.25,
+              "text": "ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 0.75,
+              "text": "Ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 17.75,
+              "duration": 0.25,
+              "text": "sen",
+              "spaceAfter": true
+            },
+            {
+              "at": 18,
+              "duration": 0.75,
+              "text": "ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 18.75,
+              "duration": 0.25,
+              "text": "ben",
+              "spaceAfter": true
+            },
+            {
+              "at": 19,
+              "duration": 0.75,
+              "text": "Bla",
+              "spaceAfter": false
+            },
+            {
+              "at": 19.75,
+              "duration": 0.25,
+              "text": "sen",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "vom Grasen auf dem Rasen.",
+          "cues": [
+            {
+              "at": 20,
+              "duration": 0.75,
+              "text": "vom",
+              "spaceAfter": true
+            },
+            {
+              "at": 20.75,
+              "duration": 1,
+              "text": "Gra",
+              "spaceAfter": false
+            },
+            {
+              "at": 21.75,
+              "duration": 0.25,
+              "text": "sen",
+              "spaceAfter": true
+            },
+            {
+              "at": 22,
+              "duration": 0.75,
+              "text": "auf",
+              "spaceAfter": true
+            },
+            {
+              "at": 22.75,
+              "duration": 0.25,
+              "text": "dem",
+              "spaceAfter": true
+            },
+            {
+              "at": 23,
+              "duration": 0.75,
+              "text": "Ra",
+              "spaceAfter": false
+            },
+            {
+              "at": 23.75,
+              "duration": 0.25,
+              "text": "sen.",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Hätt ich selber lieber Blasen",
+          "cues": [
+            {
+              "at": 24,
+              "duration": 0.75,
+              "text": "Hätt",
+              "spaceAfter": true
+            },
+            {
+              "at": 24.75,
+              "duration": 0.25,
+              "text": "ich",
+              "spaceAfter": true
+            },
+            {
+              "at": 25,
+              "duration": 0.75,
+              "text": "sel",
+              "spaceAfter": false
+            },
+            {
+              "at": 25.75,
+              "duration": 0.25,
+              "text": "ber",
+              "spaceAfter": true
+            },
+            {
+              "at": 26,
+              "duration": 0.75,
+              "text": "lie",
+              "spaceAfter": false
+            },
+            {
+              "at": 26.75,
+              "duration": 0.25,
+              "text": "ber",
+              "spaceAfter": true
+            },
+            {
+              "at": 27,
+              "duration": 0.75,
+              "text": "Bla",
+              "spaceAfter": false
+            },
+            {
+              "at": 27.75,
+              "duration": 0.25,
+              "text": "sen",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "und den Hasen ging’ es gut.",
+          "cues": [
+            {
+              "at": 28,
+              "duration": 0.75,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 28.75,
+              "duration": 0.25,
+              "text": "den",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 0.75,
+              "text": "Ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 29.75,
+              "duration": 0.25,
+              "text": "sen",
+              "spaceAfter": true
+            },
+            {
+              "at": 30,
+              "duration": 0.75,
+              "text": "ging’",
+              "spaceAfter": true
+            },
+            {
+              "at": 30.75,
+              "duration": 0.25,
+              "text": "es",
+              "spaceAfter": true
+            },
+            {
+              "at": 31,
+              "duration": 1,
+              "text": "gut.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ],
+      "historical_number": 3
+    },
+    {
+      "id": "lobsters",
+      "label": "Hummer",
+      "lines": [
+        {
+          "text": "Meine Hummer haben Kummer, o die Armen!",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 0.75,
+              "text": "Mei",
+              "spaceAfter": false
+            },
+            {
+              "at": 0.75,
+              "duration": 0.25,
+              "text": "ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 0.75,
+              "text": "Hum",
+              "spaceAfter": false
+            },
+            {
+              "at": 1.75,
+              "duration": 0.25,
+              "text": "mer",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 0.75,
+              "text": "ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 2.75,
+              "duration": 0.25,
+              "text": "ben",
+              "spaceAfter": true
+            },
+            {
+              "at": 3,
+              "duration": 0.75,
+              "text": "Kum",
+              "spaceAfter": false
+            },
+            {
+              "at": 3.75,
+              "duration": 0.25,
+              "text": "mer,",
+              "spaceAfter": true
+            },
+            {
+              "at": 4,
+              "duration": 0.75,
+              "text": "o",
+              "spaceAfter": true
+            },
+            {
+              "at": 4.75,
+              "duration": 0.25,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 5,
+              "duration": 1,
+              "text": "Ar",
+              "spaceAfter": false
+            },
+            {
+              "at": 6,
+              "duration": 1,
+              "text": "men!",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Will sich keiner denn der armen Tier’ erbarmen?",
+          "cues": [
+            {
+              "at": 8,
+              "duration": 0.75,
+              "text": "Will",
+              "spaceAfter": true
+            },
+            {
+              "at": 8.75,
+              "duration": 0.25,
+              "text": "sich",
+              "spaceAfter": true
+            },
+            {
+              "at": 9,
+              "duration": 0.75,
+              "text": "kei",
+              "spaceAfter": false
+            },
+            {
+              "at": 9.75,
+              "duration": 0.25,
+              "text": "ner",
+              "spaceAfter": true
+            },
+            {
+              "at": 10,
+              "duration": 0.75,
+              "text": "denn",
+              "spaceAfter": true
+            },
+            {
+              "at": 10.75,
+              "duration": 0.25,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 0.75,
+              "text": "ar",
+              "spaceAfter": false
+            },
+            {
+              "at": 11.75,
+              "duration": 0.25,
+              "text": "men",
+              "spaceAfter": true
+            },
+            {
+              "at": 12,
+              "duration": 0.75,
+              "text": "Tier’",
+              "spaceAfter": true
+            },
+            {
+              "at": 12.75,
+              "duration": 0.25,
+              "text": "er",
+              "spaceAfter": false
+            },
+            {
+              "at": 13,
+              "duration": 1,
+              "text": "bar",
+              "spaceAfter": false
+            },
+            {
+              "at": 14,
+              "duration": 1,
+              "text": "men?",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Meine Hummer haben Kummer,",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 0.75,
+              "text": "Mei",
+              "spaceAfter": false
+            },
+            {
+              "at": 16.75,
+              "duration": 0.25,
+              "text": "ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 0.75,
+              "text": "Hum",
+              "spaceAfter": false
+            },
+            {
+              "at": 17.75,
+              "duration": 0.25,
+              "text": "mer",
+              "spaceAfter": true
+            },
+            {
+              "at": 18,
+              "duration": 0.75,
+              "text": "ha",
+              "spaceAfter": false
+            },
+            {
+              "at": 18.75,
+              "duration": 0.25,
+              "text": "ben",
+              "spaceAfter": true
+            },
+            {
+              "at": 19,
+              "duration": 0.75,
+              "text": "Kum",
+              "spaceAfter": false
+            },
+            {
+              "at": 19.75,
+              "duration": 0.25,
+              "text": "mer,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "sagt der Zoologe Brummer.",
+          "cues": [
+            {
+              "at": 20,
+              "duration": 0.75,
+              "text": "sagt",
+              "spaceAfter": true
+            },
+            {
+              "at": 20.75,
+              "duration": 0.25,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 21,
+              "duration": 0.75,
+              "text": "Zo",
+              "spaceAfter": false
+            },
+            {
+              "at": 21.75,
+              "duration": 0.25,
+              "text": "o",
+              "spaceAfter": false
+            },
+            {
+              "at": 22,
+              "duration": 0.75,
+              "text": "lo",
+              "spaceAfter": false
+            },
+            {
+              "at": 22.75,
+              "duration": 0.25,
+              "text": "ge",
+              "spaceAfter": true
+            },
+            {
+              "at": 23,
+              "duration": 0.75,
+              "text": "Brum",
+              "spaceAfter": false
+            },
+            {
+              "at": 23.75,
+              "duration": 0.25,
+              "text": "mer.",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Hätt ich selber lieber Kummer",
+          "cues": [
+            {
+              "at": 24,
+              "duration": 0.75,
+              "text": "Hätt",
+              "spaceAfter": true
+            },
+            {
+              "at": 24.75,
+              "duration": 0.25,
+              "text": "ich",
+              "spaceAfter": true
+            },
+            {
+              "at": 25,
+              "duration": 0.75,
+              "text": "sel",
+              "spaceAfter": false
+            },
+            {
+              "at": 25.75,
+              "duration": 0.25,
+              "text": "ber",
+              "spaceAfter": true
+            },
+            {
+              "at": 26,
+              "duration": 0.75,
+              "text": "lie",
+              "spaceAfter": false
+            },
+            {
+              "at": 26.75,
+              "duration": 0.25,
+              "text": "ber",
+              "spaceAfter": true
+            },
+            {
+              "at": 27,
+              "duration": 0.75,
+              "text": "Kum",
+              "spaceAfter": false
+            },
+            {
+              "at": 27.75,
+              "duration": 0.25,
+              "text": "mer",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "und den Hummern ging’ es gut.",
+          "cues": [
+            {
+              "at": 28,
+              "duration": 0.75,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 28.75,
+              "duration": 0.25,
+              "text": "den",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 0.75,
+              "text": "Hum",
+              "spaceAfter": false
+            },
+            {
+              "at": 29.75,
+              "duration": 0.25,
+              "text": "mern",
+              "spaceAfter": true
+            },
+            {
+              "at": 30,
+              "duration": 0.75,
+              "text": "ging’",
+              "spaceAfter": true
+            },
+            {
+              "at": 30.75,
+              "duration": 0.25,
+              "text": "es",
+              "spaceAfter": true
+            },
+            {
+              "at": 31,
+              "duration": 1,
+              "text": "gut.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ],
+      "historical_number": 4
+    },
+    {
+      "id": "swans",
+      "label": "Schwäne",
+      "performance_note": "Mitsing-Anpassung: „eigent-“ mit zwei kurzen Silben auf einem Ton, danach „lich“. Die Melodie bleibt unverändert.",
+      "lines": [
+        {
+          "text": "Meine Schwäne kriegen Zähne, o die Armen!",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 0.75,
+              "text": "Mei",
+              "spaceAfter": false
+            },
+            {
+              "at": 0.75,
+              "duration": 0.25,
+              "text": "ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 0.75,
+              "text": "Schwä",
+              "spaceAfter": false
+            },
+            {
+              "at": 1.75,
+              "duration": 0.25,
+              "text": "ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 0.75,
+              "text": "krie",
+              "spaceAfter": false
+            },
+            {
+              "at": 2.75,
+              "duration": 0.25,
+              "text": "gen",
+              "spaceAfter": true
+            },
+            {
+              "at": 3,
+              "duration": 0.75,
+              "text": "Zäh",
+              "spaceAfter": false
+            },
+            {
+              "at": 3.75,
+              "duration": 0.25,
+              "text": "ne,",
+              "spaceAfter": true
+            },
+            {
+              "at": 4,
+              "duration": 0.75,
+              "text": "o",
+              "spaceAfter": true
+            },
+            {
+              "at": 4.75,
+              "duration": 0.25,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 5,
+              "duration": 1,
+              "text": "Ar",
+              "spaceAfter": false
+            },
+            {
+              "at": 6,
+              "duration": 1,
+              "text": "men!",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Will sich keiner denn der armen Tier’ erbarmen?",
+          "cues": [
+            {
+              "at": 8,
+              "duration": 0.75,
+              "text": "Will",
+              "spaceAfter": true
+            },
+            {
+              "at": 8.75,
+              "duration": 0.25,
+              "text": "sich",
+              "spaceAfter": true
+            },
+            {
+              "at": 9,
+              "duration": 0.75,
+              "text": "kei",
+              "spaceAfter": false
+            },
+            {
+              "at": 9.75,
+              "duration": 0.25,
+              "text": "ner",
+              "spaceAfter": true
+            },
+            {
+              "at": 10,
+              "duration": 0.75,
+              "text": "denn",
+              "spaceAfter": true
+            },
+            {
+              "at": 10.75,
+              "duration": 0.25,
+              "text": "der",
+              "spaceAfter": true
+            },
+            {
+              "at": 11,
+              "duration": 0.75,
+              "text": "ar",
+              "spaceAfter": false
+            },
+            {
+              "at": 11.75,
+              "duration": 0.25,
+              "text": "men",
+              "spaceAfter": true
+            },
+            {
+              "at": 12,
+              "duration": 0.75,
+              "text": "Tier’",
+              "spaceAfter": true
+            },
+            {
+              "at": 12.75,
+              "duration": 0.25,
+              "text": "er",
+              "spaceAfter": false
+            },
+            {
+              "at": 13,
+              "duration": 1,
+              "text": "bar",
+              "spaceAfter": false
+            },
+            {
+              "at": 14,
+              "duration": 1,
+              "text": "men?",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Meine Schwäne kriegen Zähne,",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 0.75,
+              "text": "Mei",
+              "spaceAfter": false
+            },
+            {
+              "at": 16.75,
+              "duration": 0.25,
+              "text": "ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 0.75,
+              "text": "Schwä",
+              "spaceAfter": false
+            },
+            {
+              "at": 17.75,
+              "duration": 0.25,
+              "text": "ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 18,
+              "duration": 0.75,
+              "text": "krie",
+              "spaceAfter": false
+            },
+            {
+              "at": 18.75,
+              "duration": 0.25,
+              "text": "gen",
+              "spaceAfter": true
+            },
+            {
+              "at": 19,
+              "duration": 0.75,
+              "text": "Zäh",
+              "spaceAfter": false
+            },
+            {
+              "at": 19.75,
+              "duration": 0.25,
+              "text": "ne,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "eigentlich Quatsch, dass ich’s erwähne.",
+          "cues": [
+            {
+              "at": 20,
+              "duration": 0.75,
+              "text": "eigent",
+              "spaceAfter": false
+            },
+            {
+              "at": 20.75,
+              "duration": 0.25,
+              "text": "lich",
+              "spaceAfter": true
+            },
+            {
+              "at": 21,
+              "duration": 0.75,
+              "text": "Quatsch,",
+              "spaceAfter": true
+            },
+            {
+              "at": 21.75,
+              "duration": 0.25,
+              "text": "dass",
+              "spaceAfter": true
+            },
+            {
+              "at": 22,
+              "duration": 0.75,
+              "text": "ich’s",
+              "spaceAfter": true
+            },
+            {
+              "at": 22.75,
+              "duration": 0.25,
+              "text": "er",
+              "spaceAfter": false
+            },
+            {
+              "at": 23,
+              "duration": 0.75,
+              "text": "wäh",
+              "spaceAfter": false
+            },
+            {
+              "at": 23.75,
+              "duration": 0.25,
+              "text": "ne.",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "Kriegt ich selber lieber Zähne",
+          "cues": [
+            {
+              "at": 24,
+              "duration": 0.75,
+              "text": "Kriegt",
+              "spaceAfter": true
+            },
+            {
+              "at": 24.75,
+              "duration": 0.25,
+              "text": "ich",
+              "spaceAfter": true
+            },
+            {
+              "at": 25,
+              "duration": 0.75,
+              "text": "sel",
+              "spaceAfter": false
+            },
+            {
+              "at": 25.75,
+              "duration": 0.25,
+              "text": "ber",
+              "spaceAfter": true
+            },
+            {
+              "at": 26,
+              "duration": 0.75,
+              "text": "lie",
+              "spaceAfter": false
+            },
+            {
+              "at": 26.75,
+              "duration": 0.25,
+              "text": "ber",
+              "spaceAfter": true
+            },
+            {
+              "at": 27,
+              "duration": 0.75,
+              "text": "Zäh",
+              "spaceAfter": false
+            },
+            {
+              "at": 27.75,
+              "duration": 0.25,
+              "text": "ne",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "und den Schwänen ging’ es gut.",
+          "cues": [
+            {
+              "at": 28,
+              "duration": 0.75,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 28.75,
+              "duration": 0.25,
+              "text": "den",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 0.75,
+              "text": "Schwä",
+              "spaceAfter": false
+            },
+            {
+              "at": 29.75,
+              "duration": 0.25,
+              "text": "nen",
+              "spaceAfter": true
+            },
+            {
+              "at": 30,
+              "duration": 0.75,
+              "text": "ging’",
+              "spaceAfter": true
+            },
+            {
+              "at": 30.75,
+              "duration": 0.25,
+              "text": "es",
+              "spaceAfter": true
+            },
+            {
+              "at": 31,
+              "duration": 1,
+              "text": "gut.",
+              "spaceAfter": true
+            }
+          ]
+        }
+      ],
+      "historical_number": 5
+    }
+  ]
+}

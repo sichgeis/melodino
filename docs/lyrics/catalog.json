@@ -1,7 +1,20 @@
 {
   "schema_version": 1,
   "songs": [
-    {"slug":"schlaf-kindlein-schlaf-klarinette","url":"lyrics/schlaf-kindlein-schlaf.json","preferredVersion":"researched"},
-    {"slug":"der-mond-ist-aufgegangen","url":"lyrics/der-mond-ist-aufgegangen.json","preferredVersion":"original"}
+    {
+      "slug": "schlaf-kindlein-schlaf-klarinette",
+      "url": "lyrics/schlaf-kindlein-schlaf.json",
+      "preferredVersion": "researched"
+    },
+    {
+      "slug": "der-mond-ist-aufgegangen",
+      "url": "lyrics/der-mond-ist-aufgegangen.json",
+      "preferredVersion": "original"
+    },
+    {
+      "slug": "meine-biber-haben-fieber",
+      "url": "lyrics/meine-biber-haben-fieber.json",
+      "preferredVersion": "original"
+    }
   ]
 }

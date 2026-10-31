@@ -100,3 +100,18 @@ test('all five Mond texts play through with exact verse starts and no final gap'
   assert.equal(clock.frame,clock.frameAt(256));
   for(const invalid of [0,21,1.5,NaN,'5'])assert.throws(()=>clock.load(melody,'clarinet',88,invalid));
 });
+
+test('Biber texts cover all original notes; melisma holds across its note boundary',()=>{
+  const text=read('lyrics/meine-biber-haben-fieber.json'),score=read('assets/meine-biber-haben-fieber/playback.json');
+  validateLyrics(text,score);
+  assert.equal(score.quarters,32);assert.equal(score.notes.length,55);
+  assert.deepEqual(text.verses.map(v=>v.lines.map(l=>l.cues[0].at)),Array(5).fill([0,8,16,20,24,28]));
+  const hares=text.verses[2],cue=hares.lines[3].cues[1];
+  assert.deepEqual([cue.text,cue.at,cue.duration],['Gra',20.75,1]);
+  for(const q of [20.75,21,21.749])assert.equal(lyricPosition([hares],32,{state:'playing',quarter:q}).cueIndex,1);
+  assert.equal(lyricPosition([hares],32,{state:'playing',quarter:21.75}).cueIndex,2);
+  for(const q of [7,7.99,15,15.99])assert.equal(lyricPosition(text.verses,32,{state:'playing',quarter:q}).cueIndex,-1);
+  const bad=structuredClone(text);bad.verses[2].lines[3].cues[1].duration=.5;assert.throws(()=>validateLyrics(bad,score));
+  const acrossRest=structuredClone(text);acrossRest.verses[0].lines[0].cues.at(-1).duration=2;assert.throws(()=>validateLyrics(acrossRest,score));
+  const missing=structuredClone(text);missing.verses[0].lines[0].cues.shift();assert.throws(()=>validateLyrics(missing,score));
+});

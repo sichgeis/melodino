@@ -1,0 +1,19 @@
+{
+  "title": "Meine Biber haben Fieber",
+  "source": "Aus MusicXML importiert",
+  "bpm": 88.0,
+  "instrument": "clarinet",
+  "duration_seconds": 21.818181818181817,
+  "score_duration_seconds": 21.818181818181817,
+  "quarters": 32.0,
+  "note_count": 55,
+  "transpose": 0,
+  "measure_quarters": 2.0,
+  "verse_gap_bars": 1,
+  "files": {
+    "midi": "melody.mid",
+    "musicxml": "score.musicxml",
+    "csv": "notes.csv",
+    "playback": "playback.json"
+  }
+}

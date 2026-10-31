@@ -72,6 +72,41 @@
       ]
     },
     {
+      "slug": "meine-biber-haben-fieber",
+      "versions": [
+        {
+          "id": "original",
+          "label": "Übertragene Melodie",
+          "variants": [
+            {
+              "id": "reference",
+              "label": "Solo · ohne Begleitung",
+              "description": "Nur die Melodie, mit eurem Wunschinstrument.",
+              "url": "arrangements/meine-biber-haben-fieber-original-reference.json"
+            },
+            {
+              "id": "warm",
+              "label": "Pur und warm",
+              "description": "Sanfte Phrasendynamik und dezenter Raumklang.",
+              "url": "arrangements/meine-biber-haben-fieber-original-warm.json"
+            },
+            {
+              "id": "gentle",
+              "label": "Sanft begleitet",
+              "description": "Klarinette mit leisen Klavierakkorden und akustischem Bass.",
+              "url": "arrangements/meine-biber-haben-fieber-original-gentle.json"
+            },
+            {
+              "id": "lively",
+              "label": "Lebhaft begleitet",
+              "description": "Flöte mit Nylongitarre, Bass und einem leisen Holzpuls.",
+              "url": "arrangements/meine-biber-haben-fieber-original-lively.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "slug": "schilf-bleicht",
       "versions": [
         {

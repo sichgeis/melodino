@@ -392,3 +392,12 @@ Die fünf abgebildeten Textstrophen von „Der Mond ist aufgegangen“ sind auf
 Folgeauftrag als Mitsingtext integriert. Aktive Zeile und frei wählbare
 Strophen folgen der Musik; während der notierten Pause bleibt die Markierung aus.
 Textdaten reproduzieren: `node scripts/prepare-mond-lyrics.mjs`.
+
+## Meine Biber haben Fieber
+
+Fünf auswählbare Textstrophen aus dem auf ausdrücklichen Auftrag bereitgestellten
+Foto, mit Klarinette und optionalen Begleitungen. F-Dur, 2/4, 88 BPM, ein Takt
+Atemzeit zwischen Strophen. Aktive Textteile folgen der Musik; „Gra-“ in Strophe 3
+wird über zwei Töne gesungen und doppelt unterstrichen. Die Textanpassung in
+Strophe 5 ist direkt beim Text erklärt. Autorenangabe bleibt sichtbar; Foto und
+Illustrationen werden nicht veröffentlicht. [Details](specs/012-meine-biber-haben-fieber.md).

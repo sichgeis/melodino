@@ -338,3 +338,40 @@ def test_schilf_singing_form_exports_exact_written_notes():
     xml = converter.parse(str(exported / 'score.musicxml'))
     assert [(int(n.pitch.midi), float(n.quarterLength)) for n in xml.flatten().notes] == [
         (midi_pitch, duration) for _, midi_pitch, duration in expected]
+
+
+def test_biber_photograph_matches_exported_notes_and_shortened_bars():
+    root = EXAMPLE.parent.parent
+    source = load_song(root / 'examples/meine-biber-haben-fieber.musicxml')
+    exported = load_song(root / 'docs/assets/meine-biber-haben-fieber/score.musicxml')
+    expected = [
+        [('C5', .75), ('C5', .25)],
+        [('F4', .75), ('F4', .25)] * 2,
+        [('A4', .75), ('A4', .25)] * 2,
+        [('G4', 1), ('G4', 1)],
+        [('rest', 1), ('C5', .75), ('C5', .25)],
+    ]
+    expected += expected[1:5]
+    expected += [
+        [('F4', .75), ('F4', .25)] * 2,
+        [('A4', .75), ('A4', .25)] * 2,
+        [('B-4', .75), ('B-4', .25)] * 2,
+        [('B4', .75), ('B4', .25)] * 2,
+        [('C5', .75), ('C5', .25)] * 2,
+        [('C5', .75), ('C5', .25), ('C4', .75), ('C4', .25)],
+        [('A4', .75), ('A4', .25), ('A4', .75), ('G4', .25)],
+        [('F4', 1)],
+    ]
+    for song in [source, exported]:
+        measures = list(song.score.parts[0].getElementsByClass('Measure'))
+        assert [float(m.duration.quarterLength) for m in measures] == [1] + [2] * 15 + [1]
+        assert [[('rest' if n.isRest else n.nameWithOctave, float(n.quarterLength))
+                 for n in m.notesAndRests] for m in measures] == expected
+    original = [e for e in events(source.score, True) if e[2] is not None]
+    playback = json.loads((root / 'docs/assets/meine-biber-haben-fieber/playback.json').read_text())
+    assert playback['quarters'] == 32
+    assert playback['notes'] == [dict(at=o, duration=d, midi=p) for o, d, p, _, _ in original]
+    actual_midi = midi_events(root / 'docs/assets/meine-biber-haben-fieber/melody.mid')
+    assert len(actual_midi) == len(original) == 55
+    for actual, wanted in zip(actual_midi, original):
+        assert actual == pytest.approx((wanted[0], wanted[2], wanted[1]), abs=.002)

@@ -2,10 +2,12 @@ export function validateLyrics(data, score) {
   if(!data||data.schema_version!==1||typeof data.title!=='string'||!Number.isFinite(data.quarters)||data.quarters<=0||
       !Array.isArray(data.verses)||!data.verses.length||data.verses.length>20)throw Error('Ungültiger Liedtext.');
   const ids=new Set();
+  if(data.credit!==undefined&&(typeof data.credit!=='string'||data.credit.length>500))throw Error('Ungültige Quellenangabe.');
   for(const verse of data.verses){
     if(!verse||typeof verse.id!=='string'||!/^[a-z]+$/.test(verse.id)||ids.has(verse.id)||typeof verse.label!=='string'||
         !Array.isArray(verse.lines)||!verse.lines.length||verse.lines.length>20)throw Error('Ungültige Textstrophe.');
     ids.add(verse.id);let end=0,count=0;
+    if(verse.performance_note!==undefined&&(typeof verse.performance_note!=='string'||verse.performance_note.length>500))throw Error('Ungültiger Strophenhinweis.');
     for(const line of verse.lines){
       if(typeof line.text!=='string'||!line.text.length||line.text.length>500||!Array.isArray(line.cues)||!line.cues.length)throw Error('Ungültige Textzeile.');
       let text='';
@@ -19,8 +21,19 @@ export function validateLyrics(data, score) {
     if(Math.abs(end-data.quarters)>1e-7||count>1000)throw Error('Unvollständige Textzuordnung.');
     if(score){
       const cues=verse.lines.flatMap(l=>l.cues);
-      if(score.schema_version!==1||score.quarters!==data.quarters||score.notes.length!==cues.length||
-          cues.some((cue,i)=>cue.at!==score.notes[i].at||cue.duration!==score.notes[i].duration))throw Error('Text und Melodierhythmus passen nicht zusammen.');
+      const mismatch=()=>{throw Error('Text und Melodierhythmus passen nicht zusammen.');};
+      if(score.schema_version!==1||score.quarters!==data.quarters)mismatch();
+      let index=0;
+      for(const cue of cues){
+        let at=cue.at;
+        const end=cue.at+cue.duration;
+        do {
+          const note=score.notes[index++];
+          if(!note||note.at!==at||note.at+note.duration>end)mismatch();
+          at=note.at+note.duration;
+        } while(at<end);
+      }
+      if(index!==score.notes.length)mismatch();
     }
   }
   return data;

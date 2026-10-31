@@ -7,3 +7,8 @@
 .automatic-count{font-size:12px;color:var(--muted);align-self:end;min-height:46px;display:flex;align-items:center}
 .text-note{font-size:11px;color:var(--muted);margin:0 0 16px}
 @media(max-width:420px){.strophe-panel{padding:16px 8px}.strophe-line{font-size:20px}}
+
+.strophe-cue.active-cue { background: #f7df98; color: #34230d; border-radius: .15em; }
+.strophe-cue.melisma { text-decoration-line: underline; text-decoration-style: double; text-underline-offset: .2em; }
+.strophe-hint { font-size: .9rem; line-height: 1.5; }
+.strophe-hint:empty { display: none; }
