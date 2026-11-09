@@ -56,3 +56,12 @@ zugeordneter Melodie darf das letzte Text-Cue vor dem Strophenende enden,
 wenn danach ausschließlich notierte Pause folgt. Weiterhin alle Melodietöne
 genau einmal abdecken und keine Pause mit Text überspannen. Ohne zugeordnete
 Melodie bleibt vollständige zeitliche Abdeckung bis Strophenende erforderlich.
+
+## Tonhöhenlose Sprechstellen (9.11.2026)
+
+Silben-Cues dürfen optional `kind: "spoken"` tragen. Sie verwenden dieselbe
+musikalische Uhr und Textmarkierung wie gesungene Silben, benötigen aber keine
+Melodienote. Bei Validierung gegen playback.json muss die gesamte Sprechdauer
+frei von Melodienoten sein; alle gesungenen Noten müssen weiterhin lückenlos
+zugeordnet werden. Andere `kind`-Werte werden abgelehnt. Beispiel:
+„Hab ’ne Tante aus Marokko“, sechs gesprochene Viertel „hipp–hopp“.

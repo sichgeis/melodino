@@ -1,5 +1,5 @@
-import {createStrophePanel,validateTextCatalog} from './strophe-panel.js?v=20261031-closing-rest';
-import {validateLyrics} from './lyric-timing.js?v=20261031-closing-rest';
+import {createStrophePanel,validateTextCatalog} from './strophe-panel.js?v=20261109-spoken-cues';
+import {validateLyrics} from './lyric-timing.js?v=20261109-spoken-cues';
 import {validateArrangements} from './song-options.js?v=20261016-strophes';
 import {player} from './player.js?v=20261031-melisma';
 import {instruments} from './score-clock.js?v=20261016-strophes';

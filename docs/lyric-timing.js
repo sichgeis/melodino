@@ -13,7 +13,8 @@ export function validateLyrics(data, score) {
       let text='';
       for(const cue of line.cues){
         if(!cue||!Number.isFinite(cue.at)||cue.at<end-1e-7||(count===0&&cue.at!==0)||!Number.isFinite(cue.duration)||cue.duration<=0||
-            cue.at+cue.duration>data.quarters+1e-7||typeof cue.text!=='string'||!cue.text.length||cue.text.length>80||typeof cue.spaceAfter!=='boolean')throw Error('Ungültige Silbenposition.');
+            cue.at+cue.duration>data.quarters+1e-7||typeof cue.text!=='string'||!cue.text.length||cue.text.length>80||typeof cue.spaceAfter!=='boolean'||
+            (cue.kind!==undefined&&cue.kind!=='spoken'))throw Error('Ungültige Silbenposition.');
         text+=cue.text+(cue.spaceAfter?' ':'');end=cue.at+cue.duration;count++;
       }
       if(text.trimEnd()!==line.text)throw Error('Text und Silben stimmen nicht überein.');
@@ -27,6 +28,11 @@ export function validateLyrics(data, score) {
       for(const cue of cues){
         let at=cue.at;
         const end=cue.at+cue.duration;
+        if(cue.kind==='spoken'){
+          // Speech has timing but no melody pitch. It must fit entirely in silence.
+          if(score.notes.some(note=>note.at<end&&note.at+note.duration>at))mismatch();
+          continue;
+        }
         do {
           const note=score.notes[index++];
           if(!note||note.at!==at||note.at+note.duration>end)mismatch();

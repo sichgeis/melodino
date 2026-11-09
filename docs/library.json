@@ -60,6 +60,26 @@
     "slug": "ging-ein-weiblein"
   },
   {
+    "title": "Hab ’ne Tante aus Marokko",
+    "source": "Aus MusicXML importiert",
+    "bpm": 104.0,
+    "instrument": "clarinet",
+    "duration_seconds": 18.46153846153846,
+    "score_duration_seconds": 18.46153846153846,
+    "quarters": 32.0,
+    "note_count": 49,
+    "transpose": 0,
+    "measure_quarters": 4.0,
+    "verse_gap_bars": 1,
+    "files": {
+      "midi": "assets/hab-ne-tante-aus-marokko/melody.mid",
+      "musicxml": "assets/hab-ne-tante-aus-marokko/score.musicxml",
+      "csv": "assets/hab-ne-tante-aus-marokko/notes.csv",
+      "playback": "assets/hab-ne-tante-aus-marokko/playback.json"
+    },
+    "slug": "hab-ne-tante-aus-marokko"
+  },
+  {
     "title": "In einem Harung, jung und stramm",
     "source": "Aus MusicXML importiert",
     "bpm": 104.0,

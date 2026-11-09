@@ -152,3 +152,23 @@ test('Weiblein aligns three texts to both canon sections and leaves written clos
   const acrossRest=structuredClone(text);acrossRest.verses[0].lines.at(-1).cues.at(-1).duration=2;
   assert.throws(()=>validateLyrics(acrossRest,melody));
 });
+
+test('Tante preserves six unpitched speech beats without inventing melody notes',()=>{
+  const text=read('lyrics/hab-ne-tante-aus-marokko.json'),score=read('assets/hab-ne-tante-aus-marokko/playback.json');
+  assert.equal(validateLyrics(text,score),text);
+  assert.equal(score.quarters,32);assert.equal(score.notes.length,49);
+  const cues=text.verses[0].lines.flatMap(l=>l.cues),spoken=cues.filter(c=>c.kind==='spoken');
+  assert.deepEqual(spoken.map(c=>[c.at,c.duration]),[6,7,14,15,30,31].map(at=>[at,1]));
+  assert.deepEqual(cues.filter(c=>!c.kind).map(c=>[c.at,c.duration]),score.notes.map(n=>[n.at,n.duration]));
+  assert.deepEqual(score.notes.filter(n=>n.at>=21&&n.at<25).map(n=>n.midi),[64,64,64,64,69,67,66,64]);
+  for(const quarter of [6,7.5,14.2,15.9,30,31.9]){
+    const pos=lyricPosition(text.verses,32,{state:'playing',quarter});
+    assert.equal(text.verses[0].lines[pos.lineIndex].cues[pos.cueIndex].kind,'spoken');
+  }
+  const pitched=structuredClone(score);pitched.notes.push({at:6,duration:1,midi:67});pitched.notes.sort((a,b)=>a.at-b.at);
+  assert.throws(()=>validateLyrics(text,pitched));
+  const missing=structuredClone(text);delete missing.verses[0].lines[0].cues.find(c=>c.kind).kind;
+  assert.throws(()=>validateLyrics(missing,score));
+  const hidden=structuredClone(text);hidden.verses[0].lines[0].cues[0].kind='spoken';
+  assert.throws(()=>validateLyrics(hidden,score));
+});

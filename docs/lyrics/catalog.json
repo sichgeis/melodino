@@ -25,6 +25,11 @@
       "slug": "ging-ein-weiblein",
       "url": "lyrics/ging-ein-weiblein.json",
       "preferredVersion": "original"
+    },
+    {
+      "slug": "hab-ne-tante-aus-marokko",
+      "url": "lyrics/hab-ne-tante-aus-marokko.json",
+      "preferredVersion": "original"
     }
   ]
 }

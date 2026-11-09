@@ -413,3 +413,13 @@ Strophenauswahl und synchrone Textmarkierung auf der Hauptseite; eigene optional
 Begleitungen nach den gedruckten Akkorden. Foto und Illustrationen bleiben privat.
 Reproduzieren: CLI-Export gemäß specs/013-in-einem-harung.md, danach
 `node scripts/prepare-harung-lyrics.mjs` und `node scripts/prepare-library-arrangements.mjs`.
+
+## Hab ’ne Tante aus Marokko
+
+Die vollständig notierte erste Strophe aus dem Foto ist als Melodie mit synchronem
+Mitsingtext verfügbar: G-Dur, 4/4 mit Achtelauftakt, 104 BPM. „Hipp–hopp“
+wird gesprochen; das Melodieinstrument bleibt dort still. Ein Takt Atemzeit
+zwischen Durchgängen, vier optionale Klangvarianten. Weitere kumulative Strophen
+enthalten nicht ausnotierte Sprechzusätze und sind noch nicht enthalten.
+Reproduzieren: CLI-Export gemäß specs/014-tante-aus-marokko.md, danach
+`node scripts/prepare-tante-lyrics.mjs` und `node scripts/prepare-library-arrangements.mjs`.

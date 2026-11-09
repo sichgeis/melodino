@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "title": "Hab ’ne Tante aus Marokko",
+  "quarters": 32,
+  "credit": "Volkslied · Erste Strophe und Melodie gemäß dem bereitgestellten Notenfoto.",
+  "source": "Auf ausdrücklichen Nutzerauftrag übertragen. Die weiteren kumulativen Strophen enthalten nicht ausnotierte Sprechzusätze und sind hier noch nicht enthalten.",
+  "verses": [
+    {
+      "id": "aunt",
+      "label": "Tante aus Marokko",
+      "historical_number": 1,
+      "performance_note": "„Hipp–hopp“ sprechen; das Melodieinstrument bleibt dort still. Enthalten ist die vollständig notierte erste Strophe. Weitere Strophen mit zusätzlichen Geräuschen sind noch nicht vertont.",
+      "lines": [
+        {
+          "text": "Hab ’ne Tante aus Marokko, und die kommt, hipp hopp,",
+          "cues": [
+            {
+              "at": 0,
+              "duration": 0.5,
+              "text": "Hab",
+              "spaceAfter": true
+            },
+            {
+              "at": 0.5,
+              "duration": 0.5,
+              "text": "’ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 1,
+              "duration": 0.5,
+              "text": "Tan",
+              "spaceAfter": false
+            },
+            {
+              "at": 1.5,
+              "duration": 0.5,
+              "text": "te",
+              "spaceAfter": true
+            },
+            {
+              "at": 2,
+              "duration": 0.5,
+              "text": "aus",
+              "spaceAfter": true
+            },
+            {
+              "at": 2.5,
+              "duration": 0.5,
+              "text": "Ma",
+              "spaceAfter": false
+            },
+            {
+              "at": 3,
+              "duration": 0.5,
+              "text": "rok",
+              "spaceAfter": false
+            },
+            {
+              "at": 3.5,
+              "duration": 0.5,
+              "text": "ko,",
+              "spaceAfter": true
+            },
+            {
+              "at": 4,
+              "duration": 0.5,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 4.5,
+              "duration": 0.5,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 5,
+              "duration": 1,
+              "text": "kommt,",
+              "spaceAfter": true
+            },
+            {
+              "at": 6,
+              "duration": 1,
+              "text": "hipp",
+              "spaceAfter": true,
+              "kind": "spoken"
+            },
+            {
+              "at": 7,
+              "duration": 1,
+              "text": "hopp,",
+              "spaceAfter": true,
+              "kind": "spoken"
+            }
+          ]
+        },
+        {
+          "text": "’hab ’ne Tante aus Marokko, und die kommt, hipp hopp,",
+          "cues": [
+            {
+              "at": 8,
+              "duration": 0.5,
+              "text": "’hab",
+              "spaceAfter": true
+            },
+            {
+              "at": 8.5,
+              "duration": 0.5,
+              "text": "’ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 9,
+              "duration": 0.5,
+              "text": "Tan",
+              "spaceAfter": false
+            },
+            {
+              "at": 9.5,
+              "duration": 0.5,
+              "text": "te",
+              "spaceAfter": true
+            },
+            {
+              "at": 10,
+              "duration": 0.5,
+              "text": "aus",
+              "spaceAfter": true
+            },
+            {
+              "at": 10.5,
+              "duration": 0.5,
+              "text": "Ma",
+              "spaceAfter": false
+            },
+            {
+              "at": 11,
+              "duration": 0.5,
+              "text": "rok",
+              "spaceAfter": false
+            },
+            {
+              "at": 11.5,
+              "duration": 0.5,
+              "text": "ko,",
+              "spaceAfter": true
+            },
+            {
+              "at": 12,
+              "duration": 0.5,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 12.5,
+              "duration": 0.5,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 13,
+              "duration": 1,
+              "text": "kommt,",
+              "spaceAfter": true
+            },
+            {
+              "at": 14,
+              "duration": 1,
+              "text": "hipp",
+              "spaceAfter": true,
+              "kind": "spoken"
+            },
+            {
+              "at": 15,
+              "duration": 1,
+              "text": "hopp,",
+              "spaceAfter": true,
+              "kind": "spoken"
+            }
+          ]
+        },
+        {
+          "text": "hab ’ne Tante aus Marokko,",
+          "cues": [
+            {
+              "at": 16,
+              "duration": 0.5,
+              "text": "hab",
+              "spaceAfter": true
+            },
+            {
+              "at": 16.5,
+              "duration": 0.5,
+              "text": "’ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 17,
+              "duration": 0.5,
+              "text": "Tan",
+              "spaceAfter": false
+            },
+            {
+              "at": 17.5,
+              "duration": 0.5,
+              "text": "te",
+              "spaceAfter": true
+            },
+            {
+              "at": 18,
+              "duration": 0.5,
+              "text": "aus",
+              "spaceAfter": true
+            },
+            {
+              "at": 18.5,
+              "duration": 0.5,
+              "text": "Ma",
+              "spaceAfter": false
+            },
+            {
+              "at": 19,
+              "duration": 0.5,
+              "text": "rok",
+              "spaceAfter": false
+            },
+            {
+              "at": 19.5,
+              "duration": 0.5,
+              "text": "ko,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "hab ’ne Tante aus Marokko,",
+          "cues": [
+            {
+              "at": 20,
+              "duration": 0.5,
+              "text": "hab",
+              "spaceAfter": true
+            },
+            {
+              "at": 20.5,
+              "duration": 0.5,
+              "text": "’ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 21,
+              "duration": 0.5,
+              "text": "Tan",
+              "spaceAfter": false
+            },
+            {
+              "at": 21.5,
+              "duration": 0.5,
+              "text": "te",
+              "spaceAfter": true
+            },
+            {
+              "at": 22,
+              "duration": 0.5,
+              "text": "aus",
+              "spaceAfter": true
+            },
+            {
+              "at": 22.5,
+              "duration": 0.5,
+              "text": "Ma",
+              "spaceAfter": false
+            },
+            {
+              "at": 23,
+              "duration": 0.5,
+              "text": "rok",
+              "spaceAfter": false
+            },
+            {
+              "at": 23.5,
+              "duration": 0.5,
+              "text": "ko,",
+              "spaceAfter": true
+            }
+          ]
+        },
+        {
+          "text": "hab ’ne Tante aus Marokko, und die kommt, hipp hopp.",
+          "cues": [
+            {
+              "at": 24,
+              "duration": 0.5,
+              "text": "hab",
+              "spaceAfter": true
+            },
+            {
+              "at": 24.5,
+              "duration": 0.5,
+              "text": "’ne",
+              "spaceAfter": true
+            },
+            {
+              "at": 25,
+              "duration": 0.5,
+              "text": "Tan",
+              "spaceAfter": false
+            },
+            {
+              "at": 25.5,
+              "duration": 0.5,
+              "text": "te",
+              "spaceAfter": true
+            },
+            {
+              "at": 26,
+              "duration": 0.5,
+              "text": "aus",
+              "spaceAfter": true
+            },
+            {
+              "at": 26.5,
+              "duration": 0.5,
+              "text": "Ma",
+              "spaceAfter": false
+            },
+            {
+              "at": 27,
+              "duration": 0.5,
+              "text": "rok",
+              "spaceAfter": false
+            },
+            {
+              "at": 27.5,
+              "duration": 0.5,
+              "text": "ko,",
+              "spaceAfter": true
+            },
+            {
+              "at": 28,
+              "duration": 0.5,
+              "text": "und",
+              "spaceAfter": true
+            },
+            {
+              "at": 28.5,
+              "duration": 0.5,
+              "text": "die",
+              "spaceAfter": true
+            },
+            {
+              "at": 29,
+              "duration": 1,
+              "text": "kommt,",
+              "spaceAfter": true
+            },
+            {
+              "at": 30,
+              "duration": 1,
+              "text": "hipp",
+              "spaceAfter": true,
+              "kind": "spoken"
+            },
+            {
+              "at": 31,
+              "duration": 1,
+              "text": "hopp.",
+              "spaceAfter": true,
+              "kind": "spoken"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

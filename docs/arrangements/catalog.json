@@ -107,6 +107,41 @@
       ]
     },
     {
+      "slug": "hab-ne-tante-aus-marokko",
+      "versions": [
+        {
+          "id": "original",
+          "label": "Übertragene Melodie",
+          "variants": [
+            {
+              "id": "reference",
+              "label": "Solo · ohne Begleitung",
+              "description": "Nur die Melodie, mit eurem Wunschinstrument.",
+              "url": "arrangements/hab-ne-tante-aus-marokko-original-reference.json"
+            },
+            {
+              "id": "warm",
+              "label": "Pur und warm",
+              "description": "Sanfte Phrasendynamik und dezenter Raumklang.",
+              "url": "arrangements/hab-ne-tante-aus-marokko-original-warm.json"
+            },
+            {
+              "id": "gentle",
+              "label": "Sanft begleitet",
+              "description": "Klarinette mit leisen Klavierakkorden und akustischem Bass.",
+              "url": "arrangements/hab-ne-tante-aus-marokko-original-gentle.json"
+            },
+            {
+              "id": "lively",
+              "label": "Lebhaft begleitet",
+              "description": "Flöte mit Nylongitarre, Bass und einem leisen Holzpuls.",
+              "url": "arrangements/hab-ne-tante-aus-marokko-original-lively.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "slug": "in-einem-harung",
       "versions": [
         {

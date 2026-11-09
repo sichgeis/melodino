@@ -4,6 +4,7 @@ const read=path=>JSON.parse(readFileSync(path,'utf8'));
 const write=(path,data)=>writeFileSync(path,JSON.stringify(data,null,2)+'\n');
 const output='docs/arrangements';mkdirSync(output,{recursive:true});
 const curated={
+  'hab-ne-tante-aus-marokko':{measure:4,pickup:1,plan:[[1,'G'],[5,'G'],[9,'G'],[13,'D'],[17,'G'],[21,'C'],[25,'D'],[29,'G']]},
   'ging-ein-weiblein':{measure:2,pickup:0,plan:[[0,'G'],[1,'C'],[2,'G'],[4,'D'],[6,'G'],[8,'G'],[9,'C'],[10,'G'],[12,'D'],[14,'G'],[16,'G'],[17,'C'],[18,'G'],[20,'D'],[22,'G'],[24,'G'],[25,'C'],[26,'G'],[28,'D'],[30,'G']]},
   'in-einem-harung':{measure:4,pickup:1.5,plan:[[1.5,'G'],[5.5,'D'],[9.5,'D'],[13.5,'G'],[17.5,'G'],[21.5,'D'],[25.5,'D'],[29.5,'G'],[33.5,'C'],[37.5,'G'],[41.5,'D'],[45.5,'G'],[49.5,'C'],[53.5,'G'],[57.5,'D7'],[61.5,'G']]},
   'meine-biber-haben-fieber':{measure:2,pickup:1,plan:[[1,'F'],[11,'C'],[17,'F'],[19,'F7'],[21,'Bb'],[23,'G'],[25,'C'],[31,'F']]},
